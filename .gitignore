@@ -1,0 +1,8 @@
+.DS_Store
+work/*
+!work/tts-cache/
+!work/tts-cache/*.wav
+outputs/
+*.log
+__pycache__/
+.venv/
