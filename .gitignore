@@ -1,7 +1,7 @@
 .DS_Store
+.wrangler/
 work/*
-!work/tts-cache/
-!work/tts-cache/*.wav
+work/tts-cache/
 outputs/
 *.log
 __pycache__/
