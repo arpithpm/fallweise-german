@@ -2,7 +2,9 @@
 
 An interactive German course covering A1, A2, and B1 grammar, tenses, vocabulary, pronunciation, and practical communication.
 
-The GitHub Pages build includes pre-generated Vivian pronunciation audio at Slow, Learn, and Natural speeds.
+Pre-generated Vivian pronunciation audio is delivered from Cloudflare R2 at Slow, Learn, and Natural speeds. Learner progress and spaced review are persisted with Supabase.
+
+Operational setup, safe project identifiers, recovery commands, and credential boundaries are documented in [OPERATIONS.md](OPERATIONS.md).
 
 ## Run locally
 
