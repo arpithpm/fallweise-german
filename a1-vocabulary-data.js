@@ -3,8 +3,8 @@
   const U=(id,title,icon,goal,items)=>({id,title,icon,goal,items:items.map((row,index)=>{
     const [de,en,type='phrase',article='',plural='']=row;
     const display=article?`${article} ${de}`:de;
-    const example=type==='noun'?`Das ist ${article} ${de}.`:type==='verb'?`Ich kann ${de}.`:type==='adjective'?`Das ist ${de}.`:type==='adverb'?`${de[0].toUpperCase()+de.slice(1)} lerne ich Deutsch.`:de;
-    return {id:`a1-${id}-${String(index+1).padStart(2,'0')}`,unit:id,de,en,type,article,plural,example,exampleEn:type==='noun'?`That is the ${en}.`:type==='verb'?`I can ${en.replace(/^to /,'')}.`:type==='adjective'?`That is ${en}.`:type==='adverb'?`I learn German ${en}.`:en};
+    const example=type==='noun'?`Das ist ${article} ${de}.`:type==='verb'?`Man kann ${de}.`:type==='adjective'?`Das ist ${de}.`:type==='adverb'?`Das passiert ${de}.`:de;
+    return {id:`a1-${id}-${String(index+1).padStart(2,'0')}`,unit:id,de,en,type,article,plural,example,exampleEn:type==='noun'?`That is the ${en}.`:type==='verb'?`One can ${en.replace(/^to /,'')}.`:type==='adjective'?`That is ${en}.`:type==='adverb'?`That happens ${en}.`:en};
   })});
   const N=(de,en,article,plural)=>[de,en,'noun',article,plural];
   const V=(de,en)=>[de,en,'verb'];

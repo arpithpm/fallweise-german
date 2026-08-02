@@ -14,8 +14,12 @@ def key(text:str,rate:float)->Path:
     digest=hashlib.sha256(f'{MODEL_ID}|{SPEAKER}|{rate}|{text}'.encode()).hexdigest()
     return CACHE/f'{digest}.wav'
 
-def curriculum()->list[str]:
-    source="global.window=global;require('./a1-vocabulary-data.js');process.stdout.write(JSON.stringify(A1Vocabulary.items.map(x=>x.article?`${x.article} ${x.de}`:x.de)))"
+def curriculum(sentences:bool=False,expanded:bool=False)->list[str]:
+    if expanded:
+        source="global.window=global;require('./a1-vocabulary-data.js');require('./advanced-vocabulary-data.js');const advanced=['A2','B1'].flatMap(l=>AdvancedVocabulary[l].items.flatMap(x=>[x.article?`${x.article} ${x.de}`:x.de,x.example]));process.stdout.write(JSON.stringify([...A1Vocabulary.items.map(x=>x.example),...advanced]))"
+    else:
+        field='x.example' if sentences else '(x.article?`${x.article} ${x.de}`:x.de)'
+        source=f"global.window=global;require('./a1-vocabulary-data.js');process.stdout.write(JSON.stringify(A1Vocabulary.items.map(x=>{field})))"
     result=subprocess.run(['node','-e',source],cwd=ROOT,check=True,capture_output=True,text=True)
     return list(dict.fromkeys(json.loads(result.stdout)))
 
@@ -23,10 +27,10 @@ def valid(path:Path)->bool:
     return path.exists() and path.stat().st_size>1000
 
 def main()->int:
-    parser=argparse.ArgumentParser();parser.add_argument('--batch-size',type=int,default=4);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--batch-size',type=int,default=4);parser.add_argument('--sentences',action='store_true');parser.add_argument('--expanded',action='store_true');args=parser.parse_args()
     import librosa, numpy as np, soundfile as sf, torch
     from qwen_tts import Qwen3TTSModel
-    CACHE.mkdir(parents=True,exist_ok=True);texts=curriculum()
+    CACHE.mkdir(parents=True,exist_ok=True);texts=curriculum(args.sentences,args.expanded)
     missing=[text for text in texts if not valid(key(text,1.0))]
     print(f'curriculum={len(texts)} natural_missing={len(missing)} batch_size={args.batch_size}',flush=True)
     if missing:
