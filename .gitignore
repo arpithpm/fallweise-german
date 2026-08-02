@@ -6,3 +6,4 @@ outputs/
 *.log
 __pycache__/
 .venv/
+supabase/.temp/
