@@ -86,5 +86,5 @@
     function renderQ(){locked=false;const x=quiz[qi];quizCount.textContent=`Question ${qi+1} of ${quiz.length}`;quizQ.textContent=x.q;answers.innerHTML='';feedback.textContent='';next.style.display='none';x.a.forEach((v,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=v;b.onclick=()=>answer(i,b);answers.appendChild(b)})}
     function answer(i,b){if(locked)return;locked=true;const x=quiz[qi];document.querySelectorAll('.answer')[x.ok].classList.add('correct');if(i===x.ok){points++;score.textContent=points;feedback.textContent='Richtig! '+x.why}else{b.classList.add('wrong');feedback.textContent='Not quite — '+x.why}next.style.display='inline-block';next.textContent=qi===quiz.length-1?'Try again ↻':'Next question →'}
     next.onclick=()=>{if(qi===quiz.length-1){qi=0;points=0;score.textContent=0}else qi++;renderQ()};renderQ();
-  </script><script src="immersive.js"></script><script src="speech.js?v=20260802-2"></script><script src="adaptive-sentences.js?v=20260802-1"></script><script src="persistence.js?v=20260802-5"></script>
+  </script><script src="immersive.js"></script><script src="speech.js?v=20260802-2"></script><script src="adaptive-sentences.js?v=20260802-1"></script><script src="persistence.js?v=20260802-6"></script>
 </body></html>
