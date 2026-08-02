@@ -16,7 +16,7 @@ def key(text:str,rate:float)->Path:
 
 def curriculum(sentences:bool=False,expanded:bool=False)->list[str]:
     if expanded:
-        source="global.window=global;require('./a1-vocabulary-data.js');require('./advanced-vocabulary-data.js');const advanced=['A2','B1'].flatMap(l=>AdvancedVocabulary[l].items.flatMap(x=>[x.article?`${x.article} ${x.de}`:x.de,x.example]));process.stdout.write(JSON.stringify([...A1Vocabulary.items.map(x=>x.example),...advanced]))"
+        source="global.window=global;require('./a1-vocabulary-data.js');require('./advanced-vocabulary-data.js');require('./a2-vocabulary-expansion.js');const advanced=['A2','B1'].flatMap(l=>AdvancedVocabulary[l].items.flatMap(x=>[x.article?`${x.article} ${x.de}`:x.de,x.example]));process.stdout.write(JSON.stringify([...A1Vocabulary.items.map(x=>x.example),...advanced]))"
     else:
         field='x.example' if sentences else '(x.article?`${x.article} ${x.de}`:x.de)'
         source=f"global.window=global;require('./a1-vocabulary-data.js');process.stdout.write(JSON.stringify(A1Vocabulary.items.map(x=>{field})))"
