@@ -207,17 +207,27 @@ curl -I \
 
 Do not audit thousands of `r2.dev` objects with high request concurrency; the development endpoint responds with rate-limit `403`s. Verify representative files at learner-like rates, or use authenticated R2 APIs for inventory checks.
 
-## Credential and secret policy
-
-## Gemini Live voice tutor
+## LiveKit voice tutor
 
 - Frontend: `voice-tutor.html`, `voice-tutor.js`, and `voice-tutor.css`
 - Token Worker: `worker/`
 - Worker name: `fallweise-voice-session`
-- Endpoint: `https://fallweise-voice-session.arpithpmuddi-0ee.workers.dev`
-- Model: `gemini-3.1-flash-live-preview`
+- Session endpoint: `https://fallweise-voice-session.arpithpmuddi-0ee.workers.dev/api/livekit/session`
+- LiveKit project: `Fallweise Voice Tutor` (`p_51dz02760v8`)
+- LiveKit URL: `wss://fallweise-voice-tutor-kj8dmd31.livekit.cloud`
+- Agent: `fallweise-livekit-agent` (`CA_SDjAeg2yABwU`), deployed in `eu-central`
+- STT: Deepgram Flux multilingual through LiveKit Inference
+- TTS: Cartesia Sonic 3.5 through LiveKit Inference
+- Agent source: `fallweise-livekit-agent/`
 
-The browser authenticates with its Supabase access token. The Worker verifies that token through Supabase Auth, checks the request origin, and exchanges the server-only Gemini key for a one-use ephemeral token. The long-lived Gemini key must exist only as the Worker secret `GEMINI_API_KEY`.
+The browser authenticates with its Supabase access token. The Worker verifies the token through Supabase Auth, checks the request origin, creates a unique LiveKit room, explicitly dispatches the named agent, and returns a short-lived room token. `LIVEKIT_API_KEY` and `LIVEKIT_API_SECRET` exist only as encrypted Worker secrets and in the agent's ignored local environment file.
+
+The browser owns the deterministic lesson, grading, visible card, and progression. The agent is media transport only: it transcribes learner audio and speaks exact text commands. It has no LLM and cannot improvise, repeat, or reorder curriculum content.
+
+Data topics:
+
+- Browser → agent: `fallweise.lesson` (`hello`, `speak`, `interrupt`)
+- Agent → browser: `fallweise.agent` (`ready`, speech lifecycle, transcript, agent state)
 
 Deploy after authenticating Wrangler:
 
@@ -227,7 +237,26 @@ npm install
 npm run deploy
 ```
 
-The first browser gesture starts microphone access; after that the lesson speaks, listens, grades, responds, and advances hands-free. The browser sends live microphone PCM to Gemini but does not save recordings. Transcripts and learning progress are persisted through the existing Supabase integration.
+Deploy or inspect the LiveKit agent:
+
+```sh
+cd fallweise-livekit-agent
+lk agent status
+lk agent deploy
+lk agent logs
+```
+
+Run agent checks before deployment:
+
+```sh
+uv run ruff format --check src tests
+uv run ruff check src tests
+uv run pytest
+```
+
+Agent observability is intentionally disabled to avoid additional charges and audio retention. Azure pronunciation assessment is not yet integrated. The browser streams microphone audio only during the room session and stores progress plus text transcripts, not recordings.
+
+## Credential and secret policy
 
 Safe to commit:
 

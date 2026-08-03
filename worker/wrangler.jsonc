@@ -3,8 +3,9 @@
   "name": "fallweise-voice-session",
   "main": "src/worker.js",
   "compatibility_date": "2026-08-03",
+  "compatibility_flags": ["nodejs_compat"],
   "vars": {
-    "GEMINI_LIVE_MODEL": "gemini-3.1-flash-live-preview",
+    "LIVEKIT_URL": "wss://fallweise-voice-tutor-kj8dmd31.livekit.cloud",
     "SUPABASE_URL": "https://xysuwcwgcbbnbpmfdwor.supabase.co"
   }
 }
