@@ -39,7 +39,15 @@ server = AgentServer()
 
 def build_session() -> AgentSession:
     return AgentSession(
-        stt=inference.STT(model="deepgram/nova-3", language="multi"),
+        stt=inference.STT(
+            model="deepgram/nova-3",
+            language="de",
+            extra_kwargs={
+                "endpointing": 300,
+                "interim_results": True,
+                "utterance_end": True,
+            },
+        ),
         tts=inference.TTS(
             model="cartesia/sonic-3.5",
             voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
@@ -47,7 +55,8 @@ def build_session() -> AgentSession:
         ),
         llm=None,
         turn_handling=TurnHandlingOptions(
-            turn_detection=inference.TurnDetector(),
+            turn_detection="vad",
+            endpointing={"min_delay": 0.4, "max_delay": 1.2},
             interruption={"enabled": True},
         ),
     )
