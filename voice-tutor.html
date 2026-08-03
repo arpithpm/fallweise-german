@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="voice-tutor.css?v=20260803-2">
+  <link rel="stylesheet" href="voice-tutor.css?v=20260803-3">
   <title>AI voice tutor — Fallweise</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
       <p>She explains one idea, listens to your German, responds, and moves on automatically. Say “repeat” or “pause” whenever you need.</p>
     </header>
     <section class="tutor" id="tutor">
-      <div class="session-top"><span id="lessonMeta">A1 · 8 MIN</span><button id="pause" class="icon" hidden aria-label="Pause lesson">Ⅱ</button></div>
+      <div class="session-top"><span id="lessonMeta">A1 · LESSON 1 OF 12</span><div class="session-actions"><button id="journeyToggle" class="journey-toggle" type="button" aria-expanded="false" aria-controls="journey">View A1 journey</button><button id="pause" class="icon" hidden aria-label="Pause lesson">Ⅱ</button></div></div>
       <div class="progress"><i id="progressBar"></i></div>
       <div class="guide"><div class="avatar" aria-hidden="true"><span></span></div><div><small>MIA · YOUR GERMAN GUIDE</small><h2 id="status">Ready when you are</h2></div><b id="liveDot"></b></div>
       <article class="lesson-card">
@@ -31,9 +31,9 @@
       <p class="privacy">Your microphone streams securely during this lesson for transcription. Fallweise stores progress and text answers—not recordings.</p>
       <div class="fallback" id="fallback" hidden><input id="typed" placeholder="Or type your answer"><button id="send">Send</button></div>
     </section>
-    <aside><b>Try saying</b><span>“Repeat that”</span><span>“Pause the lesson”</span><span>“mit dem Zug”</span></aside>
+    <aside class="journey" id="journey" aria-label="A1 voice curriculum"><div class="journey-head"><div><small>YOUR A1 JOURNEY</small><b id="journeyCount">0 of 12 complete</b></div><button id="journeyClose" type="button" aria-label="Close curriculum">×</button></div><div class="journey-progress"><i id="journeyBar"></i></div><div id="journeyList" class="journey-list"></div><div class="voice-help"><strong>Voice controls</strong><span>Say “repeat” or “pause” at any time.</span></div></aside>
   </main>
   <script src="persistence.js?v=20260802-7"></script>
-  <script src="voice-tutor.js?v=20260803-10"></script>
+  <script src="voice-tutor.js?v=20260803-11"></script>
 </body>
 </html>
