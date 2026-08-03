@@ -79,10 +79,11 @@ async def fallweise_agent(ctx: JobContext):
         text = command.get("text", "").strip()
         if not command_id or not text:
             return
+        logger.info("speech requested", extra={"command_id": command_id, "text": text})
         await publish(ctx, {"type": "speech_started", "id": command_id})
         try:
-            handle = session.say(text, allow_interruptions=True, add_to_chat_ctx=False)
-            await handle.wait_for_playout()
+            handle = session.say(text, allow_interruptions=False, add_to_chat_ctx=False)
+            await asyncio.wait_for(handle.wait_for_playout(), timeout=45)
             await publish(
                 ctx,
                 {
@@ -90,6 +91,10 @@ async def fallweise_agent(ctx: JobContext):
                     "id": command_id,
                     "interrupted": handle.interrupted,
                 },
+            )
+            logger.info(
+                "speech finished",
+                extra={"command_id": command_id, "interrupted": handle.interrupted},
             )
         except Exception:
             logger.exception("TTS command failed")
