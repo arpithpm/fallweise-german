@@ -37,6 +37,22 @@ async def publish(ctx: JobContext, payload: dict) -> None:
 server = AgentServer()
 
 
+def build_session() -> AgentSession:
+    return AgentSession(
+        stt=inference.STT(model="deepgram/nova-3", language="multi"),
+        tts=inference.TTS(
+            model="cartesia/sonic-3.5",
+            voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
+            language="de",
+        ),
+        llm=None,
+        turn_handling=TurnHandlingOptions(
+            turn_detection=inference.TurnDetector(),
+            interruption={"enabled": True},
+        ),
+    )
+
+
 @server.rtc_session(agent_name="fallweise-livekit-agent")
 async def fallweise_agent(ctx: JobContext):
     ctx.log_context_fields = {"room": ctx.room.name}
@@ -47,19 +63,7 @@ async def fallweise_agent(ctx: JobContext):
         background_tasks.add(task)
         task.add_done_callback(background_tasks.discard)
 
-    session = AgentSession(
-        stt=inference.STT(model="deepgram/flux-general-multi", language="multi"),
-        tts=inference.TTS(
-            model="cartesia/sonic-3.5",
-            voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
-            language="de",
-        ),
-        llm=None,
-        turn_handling=TurnHandlingOptions(
-            turn_detection="stt",
-            interruption={"enabled": True},
-        ),
-    )
+    session = build_session()
 
     async def speak(command: dict) -> None:
         command_id = command.get("id")
@@ -102,6 +106,14 @@ async def fallweise_agent(ctx: JobContext):
 
     @session.on("user_input_transcribed")
     def on_transcript(event):
+        logger.info(
+            "user input transcribed",
+            extra={
+                "is_final": event.is_final,
+                "language": event.language,
+                "transcript": event.transcript,
+            },
+        )
         if event.is_final and event.transcript.strip():
             spawn(
                 publish(
@@ -113,6 +125,11 @@ async def fallweise_agent(ctx: JobContext):
     @session.on("agent_state_changed")
     def on_agent_state(event):
         spawn(publish(ctx, {"type": "agent_state", "state": event.new_state}))
+
+    @session.on("user_state_changed")
+    def on_user_state(event):
+        logger.info("user state changed", extra={"state": event.new_state})
+        spawn(publish(ctx, {"type": "user_state", "state": event.new_state}))
 
     # Connect explicitly so the browser can see this participant before model
     # initialization. AgentSession detects the existing connection and reuses it.
