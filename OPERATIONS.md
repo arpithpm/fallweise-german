@@ -209,6 +209,26 @@ Do not audit thousands of `r2.dev` objects with high request concurrency; the de
 
 ## Credential and secret policy
 
+## Gemini Live voice tutor
+
+- Frontend: `voice-tutor.html`, `voice-tutor.js`, and `voice-tutor.css`
+- Token Worker: `worker/`
+- Worker name: `fallweise-voice-session`
+- Endpoint: `https://fallweise-voice-session.arpithpmuddi-0ee.workers.dev`
+- Model: `gemini-3.1-flash-live-preview`
+
+The browser authenticates with its Supabase access token. The Worker verifies that token through Supabase Auth, checks the request origin, and exchanges the server-only Gemini key for a one-use ephemeral token. The long-lived Gemini key must exist only as the Worker secret `GEMINI_API_KEY`.
+
+Deploy after authenticating Wrangler:
+
+```sh
+cd worker
+npm install
+npm run deploy
+```
+
+The first browser gesture starts microphone access; after that the lesson speaks, listens, grades, responds, and advances hands-free. The browser sends live microphone PCM to Gemini but does not save recordings. Transcripts and learning progress are persisted through the existing Supabase integration.
+
 Safe to commit:
 
 - project refs, account IDs, bucket names, and public URLs;
@@ -242,4 +262,3 @@ Review any matches manually. Do not print credential files to logs or chat.
 6. Keep WAVs in R2/local cache—not Git.
 7. Validate curriculum counts, responsive layout, Supabase progress, and real Cloudflare playback.
 8. Push only after local validation; verify the remote hash and public GitHub Pages result.
-

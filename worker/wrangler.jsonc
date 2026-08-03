@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fallweise-voice-session",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-08-03",
+  "vars": {
+    "GEMINI_LIVE_MODEL": "gemini-3.1-flash-live-preview",
+    "SUPABASE_URL": "https://xysuwcwgcbbnbpmfdwor.supabase.co"
+  }
+}

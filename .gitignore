@@ -9,4 +9,5 @@ outputs/
 *.log
 __pycache__/
 .venv/
+node_modules/
 supabase/.temp/
