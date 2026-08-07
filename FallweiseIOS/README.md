@@ -18,4 +18,5 @@ Regenerate the project after changing `project.yml` with `xcodegen generate`. Re
 - Deepgram STT and Cartesia TTS via the existing LiveKit agent.
 - Supabase REST/Auth for anonymous identity and lesson progress.
 - `UserDefaults` local-first resume when offline.
-- 27 units, 108 five-word sessions, and all 540 A1 vocabulary entries.
+- Complete 12-chapter A1 course covering introductions, cases, present tense, word order, modals, pronunciation, time, dialogues, negation, possessives, daily life, and speaking.
+- 27 units, 108 five-word sessions, and all 540 A1 vocabulary entries interleaved with the core course.

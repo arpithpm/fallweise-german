@@ -21,6 +21,10 @@ struct VoiceTutorView: View {
                 header
                 progressHeader
                 miaHeader
+                if let message = store.errorMessage {
+                    HStack(spacing: 8) { Image(systemName: "icloud.slash"); Text(message); Spacer(); Button("×") { store.errorMessage = nil } }
+                        .font(.caption).foregroundStyle(FallweiseTheme.green).padding(12).background(FallweiseTheme.lime.opacity(0.35), in: Capsule())
+                }
                 lessonCard
                 transcriptView
                 actionButton
@@ -31,9 +35,6 @@ struct VoiceTutorView: View {
         }
         .onAppear { resetForSelection(); configureVoice() }
         .onChange(of: store.selectedLessonID) { resetForSelection() }
-        .alert("Fallweise", isPresented: .constant(store.errorMessage != nil)) {
-            Button("OK") { store.errorMessage = nil }
-        } message: { Text(store.errorMessage ?? "") }
     }
 
     private var header: some View {
@@ -54,7 +55,7 @@ struct VoiceTutorView: View {
 
     private var progressHeader: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("WORDS \((lesson.wordStart ?? 0) + 1)–\((lesson.wordStart ?? 0) + 5) OF 540 · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)")
+            Text(lessonPosition)
                 .font(.caption2.bold()).tracking(1.1).foregroundStyle(FallweiseTheme.green)
             GeometryReader { proxy in
                 ZStack(alignment: .leading) {
@@ -63,6 +64,12 @@ struct VoiceTutorView: View {
                 }
             }.frame(height: 6)
         }
+    }
+
+    private var lessonPosition: String {
+        if let start = lesson.wordStart { return "WORDS \(start + 1)–\(start + 5) OF 540 · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)" }
+        let chapter = (store.coreLessons.firstIndex(of: lesson) ?? 0) + 1
+        return "A1 CHAPTER \(chapter) OF 12 · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)"
     }
 
     private var miaHeader: some View {

@@ -4,6 +4,7 @@ struct JourneyView: View {
     @Environment(LearningStore.self) private var store
     @Environment(\.dismiss) private var dismiss
     @State private var expanded: Set<String> = []
+    @State private var section = 0
 
     var body: some View {
         NavigationStack {
@@ -13,19 +14,41 @@ struct JourneyView: View {
                     Text("\(store.learnedCount) of 540 words learned").font(.system(size: 34, weight: .bold, design: .serif))
                     ProgressView(value: Double(store.learnedCount), total: 540).tint(FallweiseTheme.green)
                     Text("\(store.completedCount) of \(store.lessons.count) voice sessions complete").font(.subheadline).foregroundStyle(.secondary)
+                    Picker("Curriculum", selection: $section) {
+                        Text("A1 Course").tag(0)
+                        Text("540 Words").tag(1)
+                    }.pickerStyle(.segmented)
                     LazyVStack(spacing: 10) {
-                        ForEach(store.vocabulary.units) { unit in
-                            unitCard(unit)
+                        if section == 0 {
+                            ForEach(Array(store.coreLessons.enumerated()), id: \.element.id) { index, lesson in
+                                coreCard(lesson, index: index)
+                            }
+                        } else {
+                            ForEach(store.vocabulary.units) { unit in
+                                unitCard(unit)
+                            }
                         }
                     }
                 }.padding(20)
             }
             .background(FallweiseTheme.cream)
-            .navigationTitle("A1 · 540 words")
+            .navigationTitle("Complete A1")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { Button("Done") { dismiss() } }
         }
         .presentationDetents([.large])
+    }
+
+    private func coreCard(_ lesson: VoiceLesson, index: Int) -> some View {
+        Button { store.select(lesson); dismiss() } label: {
+            HStack(spacing: 14) {
+                Text(String(format: "%02d", index + 1)).font(.title2.bold()).foregroundStyle(FallweiseTheme.coral).frame(width: 38)
+                VStack(alignment: .leading, spacing: 5) { Kicker(text: lesson.type); Text(lesson.title).font(.headline); Text(lesson.goal).font(.caption).foregroundStyle(.secondary).multilineTextAlignment(.leading) }
+                Spacer()
+                if store.progress[store.lessonID(lesson)]?.status == "completed" { Image(systemName: "checkmark.circle.fill").foregroundStyle(FallweiseTheme.green) }
+                else { Image(systemName: "arrow.up.right") }
+            }.padding(16).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 20)).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black.opacity(0.1)))
+        }.buttonStyle(.plain)
     }
 
     private func unitCard(_ unit: VocabularyUnit) -> some View {

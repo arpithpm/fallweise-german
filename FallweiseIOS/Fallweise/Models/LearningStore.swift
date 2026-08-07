@@ -45,6 +45,9 @@ final class LearningStore {
     var selectedIndex: Int { lessons.firstIndex(where: { $0.id == selectedLessonID }) ?? 0 }
     var learnedCount: Int { learnedWords.count }
     var completedCount: Int { progress.values.filter { $0.status == "completed" }.count }
+    var coreLessons: [VoiceLesson] { lessons.filter { $0.unit == nil } }
+    var vocabularyLessons: [VoiceLesson] { lessons.filter { $0.unit != nil } }
+    var completedCoreCount: Int { coreLessons.filter { progress[lessonID($0)]?.status == "completed" }.count }
 
     func select(_ lesson: VoiceLesson) {
         selectedLessonID = lesson.id
