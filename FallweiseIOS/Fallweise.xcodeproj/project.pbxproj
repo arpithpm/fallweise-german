@@ -18,6 +18,7 @@
 		7ED153A2074CE03B6A0541CE /* a1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */; };
 		8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */; };
 		B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC974896CE59F5EED5626408 /* Theme.swift */; };
+		F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		87C5D908133FFB641C0E5DEB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		93BFE0CA7CD50C51BC8C1B2C /* Fallweise.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Fallweise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7572FF179E539E365A906C7 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
+		B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfStudyView.swift; sourceTree = "<group>"; };
 		B9AF2CE89D4C46C12B3B88B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a1-vocabulary.json"; sourceTree = "<group>"; };
 		EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				084642FCAF1BE7DF6CB033E2 /* JourneyView.swift */,
 				87C5D908133FFB641C0E5DEB /* RootView.swift */,
+				B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */,
 				FC974896CE59F5EED5626408 /* Theme.swift */,
 				7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */,
 			);
@@ -202,6 +205,7 @@
 				481E05C3CA903A9033776273 /* JourneyView.swift in Sources */,
 				50AD5ED58E5CD66E1FDEDA65 /* LearningStore.swift in Sources */,
 				1743B2456724A1B12D217C25 /* RootView.swift in Sources */,
+				F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */,
 				284B3387253EA8AE8FAB1306 /* SupabaseService.swift in Sources */,
 				B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */,
 				78CBC9AF24EC7187FBE4D054 /* VoiceService.swift in Sources */,

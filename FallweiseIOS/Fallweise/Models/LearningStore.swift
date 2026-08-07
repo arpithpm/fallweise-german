@@ -1,6 +1,11 @@
 import Foundation
 import Observation
 
+enum LearningMode: String {
+    case voice
+    case selfStudy
+}
+
 struct SavedLesson: Codable, Hashable {
     let userID: String?
     let lessonID: String
@@ -24,12 +29,14 @@ final class LearningStore {
     private(set) var progress: [String: SavedLesson] = [:]
     private(set) var learnedWords: Set<String> = []
     var selectedLessonID: String
+    var learningMode: LearningMode
     var showingJourney = false
     var errorMessage: String?
 
     private let progressKey = "fallweise.ios.lesson-progress"
     private let wordsKey = "fallweise.ios.learned-words"
     private let selectedKey = "fallweise.ios.selected-lesson"
+    private let modeKey = "fallweise.ios.learning-mode"
 
     init() {
         let loaded = (try? CurriculumLoader.loadVocabulary()) ?? VocabularyData(units: [], items: [], count: 0)
@@ -37,6 +44,7 @@ final class LearningStore {
         let generated = CurriculumLoader.lessons(from: loaded)
         lessons = generated
         selectedLessonID = UserDefaults.standard.string(forKey: selectedKey) ?? generated.first?.id ?? ""
+        learningMode = LearningMode(rawValue: UserDefaults.standard.string(forKey: modeKey) ?? "") ?? .voice
         loadLocal()
         Task { await sync() }
     }
@@ -49,10 +57,16 @@ final class LearningStore {
     var vocabularyLessons: [VoiceLesson] { lessons.filter { $0.unit != nil } }
     var completedCoreCount: Int { coreLessons.filter { progress[lessonID($0)]?.status == "completed" }.count }
 
-    func select(_ lesson: VoiceLesson) {
+    func select(_ lesson: VoiceLesson, mode: LearningMode? = nil) {
         selectedLessonID = lesson.id
         UserDefaults.standard.set(lesson.id, forKey: selectedKey)
+        if let mode { setMode(mode) }
         showingJourney = false
+    }
+
+    func setMode(_ mode: LearningMode) {
+        learningMode = mode
+        UserDefaults.standard.set(mode.rawValue, forKey: modeKey)
     }
 
     func nextLesson() -> VoiceLesson? {

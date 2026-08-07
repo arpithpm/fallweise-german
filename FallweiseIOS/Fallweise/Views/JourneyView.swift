@@ -5,6 +5,8 @@ struct JourneyView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var expanded: Set<String> = []
     @State private var section = 0
+    @State private var pendingLesson: VoiceLesson?
+    @State private var showingModeChoice = false
 
     var body: some View {
         NavigationStack {
@@ -37,10 +39,21 @@ struct JourneyView: View {
             .toolbar { Button("Done") { dismiss() } }
         }
         .presentationDetents([.large])
+        .confirmationDialog(
+            pendingLesson?.title ?? "Choose how to learn",
+            isPresented: $showingModeChoice,
+            titleVisibility: .visible
+        ) {
+            Button("Learn with Mia") { begin(.voice) }
+            Button("Study myself") { begin(.selfStudy) }
+            Button("Cancel", role: .cancel) { pendingLesson = nil }
+        } message: {
+            Text("You can switch modes at any time. Both save to the same A1 progress.")
+        }
     }
 
     private func coreCard(_ lesson: VoiceLesson, index: Int) -> some View {
-        Button { store.select(lesson); dismiss() } label: {
+        Button { chooseMode(for: lesson) } label: {
             HStack(spacing: 14) {
                 Text(String(format: "%02d", index + 1)).font(.title2.bold()).foregroundStyle(FallweiseTheme.coral).frame(width: 38)
                 VStack(alignment: .leading, spacing: 5) { Kicker(text: lesson.type); Text(lesson.title).font(.headline); Text(lesson.goal).font(.caption).foregroundStyle(.secondary).multilineTextAlignment(.leading) }
@@ -67,7 +80,7 @@ struct JourneyView: View {
             if expanded.contains(unit.id) {
                 VStack(spacing: 8) {
                     ForEach(sessions) { lesson in
-                        Button { store.select(lesson); dismiss() } label: {
+                        Button { chooseMode(for: lesson) } label: {
                             HStack {
                                 VStack(alignment: .leading) { Text("SET \((lesson.batch ?? 0) + 1) · WORDS \((lesson.batch ?? 0) * 5 + 1)–\((lesson.batch ?? 0) * 5 + 5)").font(.caption2.bold()); Text(lesson.title).font(.subheadline.bold()) }
                                 Spacer()
@@ -79,5 +92,17 @@ struct JourneyView: View {
                 }.padding(10)
             }
         }.background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 20)).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black.opacity(0.1)))
+    }
+
+    private func chooseMode(for lesson: VoiceLesson) {
+        pendingLesson = lesson
+        showingModeChoice = true
+    }
+
+    private func begin(_ mode: LearningMode) {
+        guard let lesson = pendingLesson else { return }
+        store.select(lesson, mode: mode)
+        pendingLesson = nil
+        dismiss()
     }
 }

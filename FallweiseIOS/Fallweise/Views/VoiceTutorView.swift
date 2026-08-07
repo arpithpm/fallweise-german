@@ -35,6 +35,7 @@ struct VoiceTutorView: View {
         }
         .onAppear { resetForSelection(); configureVoice() }
         .onChange(of: store.selectedLessonID) { resetForSelection() }
+        .onDisappear { Task { await voice.disconnect() } }
     }
 
     private var header: some View {
@@ -44,6 +45,11 @@ struct VoiceTutorView: View {
                 Text("fallweise.").font(.title2.bold()).foregroundStyle(FallweiseTheme.ink)
             }
             Spacer()
+            Button { store.setMode(.selfStudy) } label: {
+                Image(systemName: "book.pages")
+            }
+            .buttonStyle(.bordered)
+            .accessibilityLabel("Study this lesson myself")
             Button { store.showingJourney = true } label: {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text("A1 JOURNEY").font(.caption2.bold())

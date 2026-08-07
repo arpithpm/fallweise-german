@@ -9,7 +9,8 @@ final class VoiceService: ObservableObject {
     private var room: Room?
     private let endpoint = URL(string: "https://fallweise-voice-session.arpithpmuddi-0ee.workers.dev/api/livekit/session")!
 
-    func connect() async throws {
+    func connect(microphoneEnabled: Bool = true) async throws {
+        if isConnected { return }
         let accessToken = try await SupabaseService.shared.accessToken()
         var request = URLRequest(url: endpoint)
         request.httpMethod = "POST"
@@ -20,7 +21,9 @@ final class VoiceService: ObservableObject {
         let room = Room(delegate: self)
         self.room = room
         try await room.connect(url: credentials.serverURL, token: credentials.participantToken)
-        try await room.localParticipant.setMicrophone(enabled: true)
+        if microphoneEnabled {
+            try await room.localParticipant.setMicrophone(enabled: true)
+        }
         isConnected = true
         try await publish(["type": "hello"])
     }
