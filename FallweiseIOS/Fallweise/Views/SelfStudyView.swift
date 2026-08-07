@@ -65,6 +65,10 @@ struct SelfStudyView: View {
                 .disabled(audioState == "Connecting")
             }
 
+            if let word = step.word {
+                VocabularyMemoryScene(word: word)
+            }
+
             Text(step.visual)
                 .font(.system(size: 34, weight: .bold, design: .serif))
                 .minimumScaleFactor(0.6)

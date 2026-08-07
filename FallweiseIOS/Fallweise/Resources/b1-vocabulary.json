@@ -18,7 +18,8 @@
           "plural": "die Gesellschaften",
           "example": "Das ist die Gesellschaft.",
           "exampleEn": "That is the society.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🌍"
         },
         {
           "id": "b1-society-02",
@@ -30,7 +31,8 @@
           "plural": "die Bevölkerungen",
           "example": "Das ist die Bevölkerung.",
           "exampleEn": "That is the population.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "👥"
         },
         {
           "id": "b1-society-03",
@@ -42,7 +44,8 @@
           "plural": "die Gemeinschaften",
           "example": "Das ist die Gemeinschaft.",
           "exampleEn": "That is the community.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🤝"
         },
         {
           "id": "b1-society-04",
@@ -54,7 +57,8 @@
           "plural": "die Ehrenämter",
           "example": "Das ist das Ehrenamt.",
           "exampleEn": "That is the voluntary work.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🙋"
         },
         {
           "id": "b1-society-05",
@@ -66,7 +70,8 @@
           "plural": "die Vereine",
           "example": "Das ist der Verein.",
           "exampleEn": "That is the association.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🏛️"
         },
         {
           "id": "b1-society-06",
@@ -78,7 +83,8 @@
           "plural": "die Veranstaltungen",
           "example": "Das ist die Veranstaltung.",
           "exampleEn": "That is the event.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🎪"
         },
         {
           "id": "b1-society-07",
@@ -90,7 +96,8 @@
           "plural": "—",
           "example": "Das ist die Integration.",
           "exampleEn": "That is the integration.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🧩"
         },
         {
           "id": "b1-society-08",
@@ -102,7 +109,8 @@
           "plural": "—",
           "example": "Das ist die Gleichheit.",
           "exampleEn": "That is the equality.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "⚖️"
         },
         {
           "id": "b1-society-09",
@@ -114,7 +122,8 @@
           "plural": "—",
           "example": "Das ist die Armut.",
           "exampleEn": "That is the poverty.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🪙"
         },
         {
           "id": "b1-society-10",
@@ -126,7 +135,8 @@
           "plural": "—",
           "example": "Das ist die Sicherheit.",
           "exampleEn": "That is the security.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🛡️"
         },
         {
           "id": "b1-society-11",
@@ -138,7 +148,8 @@
           "plural": "die Beiträge",
           "example": "Das ist der Beitrag.",
           "exampleEn": "That is the contribution.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "➕"
         },
         {
           "id": "b1-society-12",
@@ -150,7 +161,8 @@
           "plural": "die Mehrheiten",
           "example": "Das ist die Mehrheit.",
           "exampleEn": "That is the majority.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "📊"
         },
         {
           "id": "b1-society-13",
@@ -162,7 +174,8 @@
           "plural": "",
           "example": "Das ist öffentlich.",
           "exampleEn": "That is public.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🌐"
         },
         {
           "id": "b1-society-14",
@@ -174,7 +187,8 @@
           "plural": "",
           "example": "Das ist sozial.",
           "exampleEn": "That is social.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🤲"
         },
         {
           "id": "b1-society-15",
@@ -186,7 +200,8 @@
           "plural": "",
           "example": "Das ist freiwillig.",
           "exampleEn": "That is voluntary.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "❤️"
         },
         {
           "id": "b1-society-16",
@@ -198,7 +213,8 @@
           "plural": "",
           "example": "Man kann sich engagieren.",
           "exampleEn": "One can get involved.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🙋"
         },
         {
           "id": "b1-society-17",
@@ -210,7 +226,8 @@
           "plural": "",
           "example": "Man kann unterstützen.",
           "exampleEn": "One can support.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🤝"
         },
         {
           "id": "b1-society-18",
@@ -222,7 +239,8 @@
           "plural": "",
           "example": "Man kann fördern.",
           "exampleEn": "One can promote.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🌱"
         },
         {
           "id": "b1-society-19",
@@ -234,7 +252,8 @@
           "plural": "",
           "example": "Man kann fordern.",
           "exampleEn": "One can demand.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "✊"
         },
         {
           "id": "b1-society-20",
@@ -246,7 +265,8 @@
           "plural": "",
           "example": "Man kann abstimmen.",
           "exampleEn": "One can vote.",
-          "unitTitle": "Society & community"
+          "unitTitle": "Society & community",
+          "symbol": "🗳️"
         }
       ]
     },
@@ -267,7 +287,8 @@
           "plural": "—",
           "example": "Das ist die Umwelt.",
           "exampleEn": "That is the environment.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🌍"
         },
         {
           "id": "b1-environment-02",
@@ -279,7 +300,8 @@
           "plural": "—",
           "example": "Das ist der Klimawandel.",
           "exampleEn": "That is the climate change.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🌡️"
         },
         {
           "id": "b1-environment-03",
@@ -291,7 +313,8 @@
           "plural": "die Energien",
           "example": "Das ist die Energie.",
           "exampleEn": "That is the energy.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "⚡"
         },
         {
           "id": "b1-environment-04",
@@ -303,7 +326,8 @@
           "plural": "—",
           "example": "Das ist der Verbrauch.",
           "exampleEn": "That is the consumption.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "📊"
         },
         {
           "id": "b1-environment-05",
@@ -315,7 +339,8 @@
           "plural": "die Verpackungen",
           "example": "Das ist die Verpackung.",
           "exampleEn": "That is the packaging.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "📦"
         },
         {
           "id": "b1-environment-06",
@@ -327,7 +352,8 @@
           "plural": "die Abfälle",
           "example": "Das ist der Abfall.",
           "exampleEn": "That is the waste.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🗑️"
         },
         {
           "id": "b1-environment-07",
@@ -339,7 +365,8 @@
           "plural": "die Rohstoffe",
           "example": "Das ist der Rohstoff.",
           "exampleEn": "That is the raw material.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🪨"
         },
         {
           "id": "b1-environment-08",
@@ -351,7 +378,8 @@
           "plural": "—",
           "example": "Das ist der Verkehr.",
           "exampleEn": "That is the traffic.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🚗"
         },
         {
           "id": "b1-environment-09",
@@ -363,7 +391,8 @@
           "plural": "—",
           "example": "Das ist die Landwirtschaft.",
           "exampleEn": "That is the agriculture.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🚜"
         },
         {
           "id": "b1-environment-10",
@@ -375,7 +404,8 @@
           "plural": "—",
           "example": "Das ist der Umweltschutz.",
           "exampleEn": "That is the environmental protection.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🛡️"
         },
         {
           "id": "b1-environment-11",
@@ -387,7 +417,8 @@
           "plural": "",
           "example": "Das ist nachhaltig.",
           "exampleEn": "That is sustainable.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "♻️"
         },
         {
           "id": "b1-environment-12",
@@ -399,7 +430,8 @@
           "plural": "",
           "example": "Das ist schädlich.",
           "exampleEn": "That is harmful.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "☣️"
         },
         {
           "id": "b1-environment-13",
@@ -411,7 +443,8 @@
           "plural": "",
           "example": "Das ist erneuerbar.",
           "exampleEn": "That is renewable.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "☀️"
         },
         {
           "id": "b1-environment-14",
@@ -423,7 +456,8 @@
           "plural": "",
           "example": "Das ist regional.",
           "exampleEn": "That is regional.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "📍"
         },
         {
           "id": "b1-environment-15",
@@ -435,7 +469,8 @@
           "plural": "",
           "example": "Das ist bewusst.",
           "exampleEn": "That is conscious.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🧠"
         },
         {
           "id": "b1-environment-16",
@@ -447,7 +482,8 @@
           "plural": "",
           "example": "Man kann recyceln.",
           "exampleEn": "One can recycle.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "♻️"
         },
         {
           "id": "b1-environment-17",
@@ -459,7 +495,8 @@
           "plural": "",
           "example": "Man kann vermeiden.",
           "exampleEn": "One can avoid.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🚫"
         },
         {
           "id": "b1-environment-18",
@@ -471,7 +508,8 @@
           "plural": "",
           "example": "Man kann schützen.",
           "exampleEn": "One can protect.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "🛡️"
         },
         {
           "id": "b1-environment-19",
@@ -483,7 +521,8 @@
           "plural": "",
           "example": "Man kann verschwenden.",
           "exampleEn": "One can waste.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "💧"
         },
         {
           "id": "b1-environment-20",
@@ -495,7 +534,8 @@
           "plural": "",
           "example": "Man kann reduzieren.",
           "exampleEn": "One can reduce.",
-          "unitTitle": "Environment & sustainability"
+          "unitTitle": "Environment & sustainability",
+          "symbol": "📉"
         }
       ]
     },
@@ -516,7 +556,8 @@
           "plural": "die Medien",
           "example": "Das ist das Medium.",
           "exampleEn": "That is the medium.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "📡"
         },
         {
           "id": "b1-media-02",
@@ -528,7 +569,8 @@
           "plural": "die Berichte",
           "example": "Das ist der Bericht.",
           "exampleEn": "That is the report.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "📰"
         },
         {
           "id": "b1-media-03",
@@ -540,7 +582,8 @@
           "plural": "die Meldungen",
           "example": "Das ist die Meldung.",
           "exampleEn": "That is the news report.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "📢"
         },
         {
           "id": "b1-media-04",
@@ -552,7 +595,8 @@
           "plural": "die Quellen",
           "example": "Das ist die Quelle.",
           "exampleEn": "That is the source.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🔗"
         },
         {
           "id": "b1-media-05",
@@ -564,7 +608,8 @@
           "plural": "die Werbungen",
           "example": "Das ist die Werbung.",
           "exampleEn": "That is the advertising.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "📣"
         },
         {
           "id": "b1-media-06",
@@ -576,7 +621,8 @@
           "plural": "—",
           "example": "Das ist der Datenschutz.",
           "exampleEn": "That is the data protection.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🔒"
         },
         {
           "id": "b1-media-07",
@@ -588,7 +634,8 @@
           "plural": "die Passwörter",
           "example": "Das ist das Passwort.",
           "exampleEn": "That is the password.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🔑"
         },
         {
           "id": "b1-media-08",
@@ -600,7 +647,8 @@
           "plural": "die Netzwerke",
           "example": "Das ist das Netzwerk.",
           "exampleEn": "That is the network.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🌐"
         },
         {
           "id": "b1-media-09",
@@ -612,7 +660,8 @@
           "plural": "—",
           "example": "Das ist die Bildschirmzeit.",
           "exampleEn": "That is the screen time.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "⏱️"
         },
         {
           "id": "b1-media-10",
@@ -624,7 +673,8 @@
           "plural": "die Nutzer",
           "example": "Das ist der Nutzer.",
           "exampleEn": "That is the user.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "👤"
         },
         {
           "id": "b1-media-11",
@@ -636,7 +686,8 @@
           "plural": "",
           "example": "Das ist aktuell.",
           "exampleEn": "That is current.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "⚡"
         },
         {
           "id": "b1-media-12",
@@ -648,7 +699,8 @@
           "plural": "",
           "example": "Das ist digital.",
           "exampleEn": "That is digital.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "💻"
         },
         {
           "id": "b1-media-13",
@@ -660,7 +712,8 @@
           "plural": "",
           "example": "Das ist glaubwürdig.",
           "exampleEn": "That is credible.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "✅"
         },
         {
           "id": "b1-media-14",
@@ -672,7 +725,8 @@
           "plural": "",
           "example": "Das ist verfügbar.",
           "exampleEn": "That is available.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🟢"
         },
         {
           "id": "b1-media-15",
@@ -684,7 +738,8 @@
           "plural": "",
           "example": "Das ist abhängig.",
           "exampleEn": "That is dependent.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🔗"
         },
         {
           "id": "b1-media-16",
@@ -696,7 +751,8 @@
           "plural": "",
           "example": "Man kann veröffentlichen.",
           "exampleEn": "One can publish.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "📤"
         },
         {
           "id": "b1-media-17",
@@ -708,7 +764,8 @@
           "plural": "",
           "example": "Man kann herunterladen.",
           "exampleEn": "One can download.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "📥"
         },
         {
           "id": "b1-media-18",
@@ -720,7 +777,8 @@
           "plural": "",
           "example": "Man kann teilen.",
           "exampleEn": "One can share.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "↗️"
         },
         {
           "id": "b1-media-19",
@@ -732,7 +790,8 @@
           "plural": "",
           "example": "Man kann überprüfen.",
           "exampleEn": "One can check.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🔍"
         },
         {
           "id": "b1-media-20",
@@ -744,7 +803,8 @@
           "plural": "",
           "example": "Man kann beeinflussen.",
           "exampleEn": "One can influence.",
-          "unitTitle": "Media & technology"
+          "unitTitle": "Media & technology",
+          "symbol": "🎯"
         }
       ]
     },
@@ -765,7 +825,8 @@
           "plural": "—",
           "example": "Das ist die Bildung.",
           "exampleEn": "That is the education.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🎓"
         },
         {
           "id": "b1-education-02",
@@ -777,7 +838,8 @@
           "plural": "die Kenntnisse",
           "example": "Das ist die Kenntnis.",
           "exampleEn": "That is the knowledge / skill.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🧠"
         },
         {
           "id": "b1-education-03",
@@ -789,7 +851,8 @@
           "plural": "die Fähigkeiten",
           "example": "Das ist die Fähigkeit.",
           "exampleEn": "That is the ability.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "💪"
         },
         {
           "id": "b1-education-04",
@@ -801,7 +864,8 @@
           "plural": "die Fortbildungen",
           "example": "Das ist die Fortbildung.",
           "exampleEn": "That is the further training.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "📚"
         },
         {
           "id": "b1-education-05",
@@ -813,7 +877,8 @@
           "plural": "die Studien",
           "example": "Das ist das Studium.",
           "exampleEn": "That is the university studies.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🏛️"
         },
         {
           "id": "b1-education-06",
@@ -825,7 +890,8 @@
           "plural": "die Abschlüsse",
           "example": "Das ist der Abschluss.",
           "exampleEn": "That is the qualification.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "📜"
         },
         {
           "id": "b1-education-07",
@@ -837,7 +903,8 @@
           "plural": "die Forschungen",
           "example": "Das ist die Forschung.",
           "exampleEn": "That is the research.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🔬"
         },
         {
           "id": "b1-education-08",
@@ -849,7 +916,8 @@
           "plural": "die Fortschritte",
           "example": "Das ist der Fortschritt.",
           "exampleEn": "That is the progress.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "📈"
         },
         {
           "id": "b1-education-09",
@@ -861,7 +929,8 @@
           "plural": "die Ziele",
           "example": "Das ist das Ziel.",
           "exampleEn": "That is the goal.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🎯"
         },
         {
           "id": "b1-education-10",
@@ -873,7 +942,8 @@
           "plural": "die Methoden",
           "example": "Das ist die Methode.",
           "exampleEn": "That is the method.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🧭"
         },
         {
           "id": "b1-education-11",
@@ -885,7 +955,8 @@
           "plural": "",
           "example": "Das ist selbstständig.",
           "exampleEn": "That is independent.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🧍"
         },
         {
           "id": "b1-education-12",
@@ -897,7 +968,8 @@
           "plural": "",
           "example": "Das ist neugierig.",
           "exampleEn": "That is curious.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🔎"
         },
         {
           "id": "b1-education-13",
@@ -909,7 +981,8 @@
           "plural": "",
           "example": "Das ist praktisch.",
           "exampleEn": "That is practical.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🛠️"
         },
         {
           "id": "b1-education-14",
@@ -921,7 +994,8 @@
           "plural": "",
           "example": "Das ist theoretisch.",
           "exampleEn": "That is theoretical.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "📐"
         },
         {
           "id": "b1-education-15",
@@ -933,7 +1007,8 @@
           "plural": "",
           "example": "Das ist lebenslang.",
           "exampleEn": "That is lifelong.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "♾️"
         },
         {
           "id": "b1-education-16",
@@ -945,7 +1020,8 @@
           "plural": "",
           "example": "Man kann sich entwickeln.",
           "exampleEn": "One can develop.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🌱"
         },
         {
           "id": "b1-education-17",
@@ -957,7 +1033,8 @@
           "plural": "",
           "example": "Man kann anwenden.",
           "exampleEn": "One can apply.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "🧰"
         },
         {
           "id": "b1-education-18",
@@ -969,7 +1046,8 @@
           "plural": "",
           "example": "Man kann begründen.",
           "exampleEn": "One can justify.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "💬"
         },
         {
           "id": "b1-education-19",
@@ -981,7 +1059,8 @@
           "plural": "",
           "example": "Man kann beurteilen.",
           "exampleEn": "One can assess.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "⚖️"
         },
         {
           "id": "b1-education-20",
@@ -993,7 +1072,8 @@
           "plural": "",
           "example": "Man kann verbessern.",
           "exampleEn": "One can improve.",
-          "unitTitle": "Education & development"
+          "unitTitle": "Education & development",
+          "symbol": "⬆️"
         }
       ]
     },
@@ -1014,7 +1094,8 @@
           "plural": "die Standpunkte",
           "example": "Das ist der Standpunkt.",
           "exampleEn": "That is the point of view.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "📍"
         },
         {
           "id": "b1-arguments-02",
@@ -1026,7 +1107,8 @@
           "plural": "die Argumente",
           "example": "Das ist das Argument.",
           "exampleEn": "That is the argument.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "💬"
         },
         {
           "id": "b1-arguments-03",
@@ -1038,7 +1120,8 @@
           "plural": "die Vorteile",
           "example": "Das ist der Vorteil.",
           "exampleEn": "That is the advantage.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "➕"
         },
         {
           "id": "b1-arguments-04",
@@ -1050,7 +1133,8 @@
           "plural": "die Nachteile",
           "example": "Das ist der Nachteil.",
           "exampleEn": "That is the disadvantage.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "➖"
         },
         {
           "id": "b1-arguments-05",
@@ -1062,7 +1146,8 @@
           "plural": "die Gründe",
           "example": "Das ist der Grund.",
           "exampleEn": "That is the reason.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "💡"
         },
         {
           "id": "b1-arguments-06",
@@ -1074,7 +1159,8 @@
           "plural": "die Folgen",
           "example": "Das ist die Folge.",
           "exampleEn": "That is the consequence.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "➡️"
         },
         {
           "id": "b1-arguments-07",
@@ -1086,7 +1172,8 @@
           "plural": "die Lösungen",
           "example": "Das ist die Lösung.",
           "exampleEn": "That is the solution.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "🧩"
         },
         {
           "id": "b1-arguments-08",
@@ -1098,7 +1185,8 @@
           "plural": "die Entscheidungen",
           "example": "Das ist die Entscheidung.",
           "exampleEn": "That is the decision.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "⚖️"
         },
         {
           "id": "b1-arguments-09",
@@ -1110,7 +1198,8 @@
           "plural": "die Möglichkeiten",
           "example": "Das ist die Möglichkeit.",
           "exampleEn": "That is the possibility.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "🛣️"
         },
         {
           "id": "b1-arguments-10",
@@ -1122,7 +1211,8 @@
           "plural": "die Unterschiede",
           "example": "Das ist der Unterschied.",
           "exampleEn": "That is the difference.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "↔️"
         },
         {
           "id": "b1-arguments-11",
@@ -1134,7 +1224,8 @@
           "plural": "",
           "example": "Das passiert einerseits.",
           "exampleEn": "That happens on the one hand.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "1️⃣"
         },
         {
           "id": "b1-arguments-12",
@@ -1146,7 +1237,8 @@
           "plural": "",
           "example": "Das passiert andererseits.",
           "exampleEn": "That happens on the other hand.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "2️⃣"
         },
         {
           "id": "b1-arguments-13",
@@ -1158,7 +1250,8 @@
           "plural": "",
           "example": "Das passiert trotzdem.",
           "exampleEn": "That happens nevertheless.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "↩️"
         },
         {
           "id": "b1-arguments-14",
@@ -1170,7 +1263,8 @@
           "plural": "",
           "example": "Das passiert deshalb.",
           "exampleEn": "That happens therefore.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "➡️"
         },
         {
           "id": "b1-arguments-15",
@@ -1182,7 +1276,8 @@
           "plural": "",
           "example": "Das passiert wahrscheinlich.",
           "exampleEn": "That happens probably.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "🎲"
         },
         {
           "id": "b1-arguments-16",
@@ -1194,7 +1289,8 @@
           "plural": "",
           "example": "Man kann behaupten.",
           "exampleEn": "One can claim.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "📢"
         },
         {
           "id": "b1-arguments-17",
@@ -1206,7 +1302,8 @@
           "plural": "",
           "example": "Man kann zustimmen.",
           "exampleEn": "One can agree.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "👍"
         },
         {
           "id": "b1-arguments-18",
@@ -1218,7 +1315,8 @@
           "plural": "",
           "example": "Man kann widersprechen.",
           "exampleEn": "One can disagree.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "👎"
         },
         {
           "id": "b1-arguments-19",
@@ -1230,7 +1328,8 @@
           "plural": "",
           "example": "Man kann vergleichen.",
           "exampleEn": "One can compare.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "⚖️"
         },
         {
           "id": "b1-arguments-20",
@@ -1242,7 +1341,8 @@
           "plural": "",
           "example": "Man kann überzeugen.",
           "exampleEn": "One can convince.",
-          "unitTitle": "Opinions & arguments"
+          "unitTitle": "Opinions & arguments",
+          "symbol": "🎯"
         }
       ]
     }

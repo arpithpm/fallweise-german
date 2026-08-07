@@ -15,7 +15,8 @@
           "article": "",
           "plural": "",
           "example": "Hallo!",
-          "exampleEn": "Hello!"
+          "exampleEn": "Hello!",
+          "symbol": "👋"
         },
         {
           "id": "a1-hello-02",
@@ -26,7 +27,8 @@
           "article": "",
           "plural": "",
           "example": "Guten Morgen!",
-          "exampleEn": "Good morning!"
+          "exampleEn": "Good morning!",
+          "symbol": "🌅"
         },
         {
           "id": "a1-hello-03",
@@ -37,7 +39,8 @@
           "article": "",
           "plural": "",
           "example": "Guten Tag!",
-          "exampleEn": "Good afternoon!"
+          "exampleEn": "Good afternoon!",
+          "symbol": "☀️"
         },
         {
           "id": "a1-hello-04",
@@ -48,7 +51,8 @@
           "article": "",
           "plural": "",
           "example": "Guten Abend!",
-          "exampleEn": "Good evening!"
+          "exampleEn": "Good evening!",
+          "symbol": "🌇"
         },
         {
           "id": "a1-hello-05",
@@ -59,7 +63,8 @@
           "article": "",
           "plural": "",
           "example": "Gute Nacht!",
-          "exampleEn": "Good night!"
+          "exampleEn": "Good night!",
+          "symbol": "🌙"
         },
         {
           "id": "a1-hello-06",
@@ -70,7 +75,8 @@
           "article": "",
           "plural": "",
           "example": "Tschüss!",
-          "exampleEn": "Bye!"
+          "exampleEn": "Bye!",
+          "symbol": "👋"
         },
         {
           "id": "a1-hello-07",
@@ -81,7 +87,8 @@
           "article": "",
           "plural": "",
           "example": "Auf Wiedersehen!",
-          "exampleEn": "Goodbye!"
+          "exampleEn": "Goodbye!",
+          "symbol": "🚪"
         },
         {
           "id": "a1-hello-08",
@@ -92,7 +99,8 @@
           "article": "",
           "plural": "",
           "example": "Bis bald!",
-          "exampleEn": "See you soon!"
+          "exampleEn": "See you soon!",
+          "symbol": "⏳"
         },
         {
           "id": "a1-hello-09",
@@ -103,7 +111,8 @@
           "article": "",
           "plural": "",
           "example": "Bis morgen!",
-          "exampleEn": "See you tomorrow!"
+          "exampleEn": "See you tomorrow!",
+          "symbol": "🌄"
         },
         {
           "id": "a1-hello-10",
@@ -114,7 +123,8 @@
           "article": "",
           "plural": "",
           "example": "Willkommen!",
-          "exampleEn": "Welcome!"
+          "exampleEn": "Welcome!",
+          "symbol": "🤗"
         },
         {
           "id": "a1-hello-11",
@@ -125,7 +135,8 @@
           "article": "",
           "plural": "",
           "example": "Danke.",
-          "exampleEn": "Thank you."
+          "exampleEn": "Thank you.",
+          "symbol": "🙏"
         },
         {
           "id": "a1-hello-12",
@@ -136,7 +147,8 @@
           "article": "",
           "plural": "",
           "example": "Vielen Dank.",
-          "exampleEn": "Thank you very much."
+          "exampleEn": "Thank you very much.",
+          "symbol": "💐"
         },
         {
           "id": "a1-hello-13",
@@ -147,7 +159,8 @@
           "article": "",
           "plural": "",
           "example": "Bitte.",
-          "exampleEn": "Please / you are welcome."
+          "exampleEn": "Please / you are welcome.",
+          "symbol": "🤲"
         },
         {
           "id": "a1-hello-14",
@@ -158,7 +171,8 @@
           "article": "",
           "plural": "",
           "example": "Entschuldigung.",
-          "exampleEn": "Excuse me / sorry."
+          "exampleEn": "Excuse me / sorry.",
+          "symbol": "🙇"
         },
         {
           "id": "a1-hello-15",
@@ -169,7 +183,8 @@
           "article": "",
           "plural": "",
           "example": "Kein Problem.",
-          "exampleEn": "No problem."
+          "exampleEn": "No problem.",
+          "symbol": "👌"
         },
         {
           "id": "a1-hello-16",
@@ -180,7 +195,8 @@
           "article": "",
           "plural": "",
           "example": "Ja.",
-          "exampleEn": "Yes."
+          "exampleEn": "Yes.",
+          "symbol": "✅"
         },
         {
           "id": "a1-hello-17",
@@ -191,7 +207,8 @@
           "article": "",
           "plural": "",
           "example": "Nein.",
-          "exampleEn": "No."
+          "exampleEn": "No.",
+          "symbol": "❌"
         },
         {
           "id": "a1-hello-18",
@@ -202,7 +219,8 @@
           "article": "",
           "plural": "",
           "example": "Vielleicht.",
-          "exampleEn": "Maybe."
+          "exampleEn": "Maybe.",
+          "symbol": "🤔"
         },
         {
           "id": "a1-hello-19",
@@ -213,7 +231,8 @@
           "article": "",
           "plural": "",
           "example": "Gern.",
-          "exampleEn": "Gladly."
+          "exampleEn": "Gladly.",
+          "symbol": "😊"
         },
         {
           "id": "a1-hello-20",
@@ -224,7 +243,8 @@
           "article": "",
           "plural": "",
           "example": "Wie geht es dir?",
-          "exampleEn": "How are you?"
+          "exampleEn": "How are you?",
+          "symbol": "💬"
         }
       ]
     },
@@ -243,7 +263,8 @@
           "article": "der",
           "plural": "die Namen",
           "example": "Das ist der Name.",
-          "exampleEn": "That is the name."
+          "exampleEn": "That is the name.",
+          "symbol": "🏷️"
         },
         {
           "id": "a1-identity-02",
@@ -254,7 +275,8 @@
           "article": "der",
           "plural": "die Vornamen",
           "example": "Das ist der Vorname.",
-          "exampleEn": "That is the first name."
+          "exampleEn": "That is the first name.",
+          "symbol": "👤"
         },
         {
           "id": "a1-identity-03",
@@ -265,7 +287,8 @@
           "article": "der",
           "plural": "die Nachnamen",
           "example": "Das ist der Nachname.",
-          "exampleEn": "That is the surname."
+          "exampleEn": "That is the surname.",
+          "symbol": "🪪"
         },
         {
           "id": "a1-identity-04",
@@ -276,7 +299,8 @@
           "article": "die",
           "plural": "die Adressen",
           "example": "Das ist die Adresse.",
-          "exampleEn": "That is the address."
+          "exampleEn": "That is the address.",
+          "symbol": "🏠"
         },
         {
           "id": "a1-identity-05",
@@ -287,7 +311,8 @@
           "article": "die",
           "plural": "die Straßen",
           "example": "Das ist die Straße.",
-          "exampleEn": "That is the street."
+          "exampleEn": "That is the street.",
+          "symbol": "🛣️"
         },
         {
           "id": "a1-identity-06",
@@ -298,7 +323,8 @@
           "article": "die",
           "plural": "die Hausnummern",
           "example": "Das ist die Hausnummer.",
-          "exampleEn": "That is the house number."
+          "exampleEn": "That is the house number.",
+          "symbol": "🔢"
         },
         {
           "id": "a1-identity-07",
@@ -309,7 +335,8 @@
           "article": "die",
           "plural": "die Städte",
           "example": "Das ist die Stadt.",
-          "exampleEn": "That is the city."
+          "exampleEn": "That is the city.",
+          "symbol": "🏙️"
         },
         {
           "id": "a1-identity-08",
@@ -320,7 +347,8 @@
           "article": "das",
           "plural": "die Länder",
           "example": "Das ist das Land.",
-          "exampleEn": "That is the country."
+          "exampleEn": "That is the country.",
+          "symbol": "🌍"
         },
         {
           "id": "a1-identity-09",
@@ -331,7 +359,8 @@
           "article": "die",
           "plural": "die Telefonnummern",
           "example": "Das ist die Telefonnummer.",
-          "exampleEn": "That is the phone number."
+          "exampleEn": "That is the phone number.",
+          "symbol": "☎️"
         },
         {
           "id": "a1-identity-10",
@@ -342,7 +371,8 @@
           "article": "die",
           "plural": "die E-Mail-Adressen",
           "example": "Das ist die E-Mail-Adresse.",
-          "exampleEn": "That is the email address."
+          "exampleEn": "That is the email address.",
+          "symbol": "📧"
         },
         {
           "id": "a1-identity-11",
@@ -353,7 +383,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Alter.",
-          "exampleEn": "That is the age."
+          "exampleEn": "That is the age.",
+          "symbol": "🎂"
         },
         {
           "id": "a1-identity-12",
@@ -364,7 +395,8 @@
           "article": "der",
           "plural": "die Geburtsorte",
           "example": "Das ist der Geburtsort.",
-          "exampleEn": "That is the place of birth."
+          "exampleEn": "That is the place of birth.",
+          "symbol": "📍"
         },
         {
           "id": "a1-identity-13",
@@ -375,7 +407,8 @@
           "article": "die",
           "plural": "die Nationalitäten",
           "example": "Das ist die Nationalität.",
-          "exampleEn": "That is the nationality."
+          "exampleEn": "That is the nationality.",
+          "symbol": "🏳️"
         },
         {
           "id": "a1-identity-14",
@@ -386,7 +419,8 @@
           "article": "die",
           "plural": "die Sprachen",
           "example": "Das ist die Sprache.",
-          "exampleEn": "That is the language."
+          "exampleEn": "That is the language.",
+          "symbol": "🗣️"
         },
         {
           "id": "a1-identity-15",
@@ -397,7 +431,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann heißen.",
-          "exampleEn": "One can be called."
+          "exampleEn": "One can be called.",
+          "symbol": "📛"
         },
         {
           "id": "a1-identity-16",
@@ -408,7 +443,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann wohnen.",
-          "exampleEn": "One can live."
+          "exampleEn": "One can live.",
+          "symbol": "🏡"
         },
         {
           "id": "a1-identity-17",
@@ -419,7 +455,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann kommen.",
-          "exampleEn": "One can come."
+          "exampleEn": "One can come.",
+          "symbol": "➡️"
         },
         {
           "id": "a1-identity-18",
@@ -430,7 +467,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann sprechen.",
-          "exampleEn": "One can speak."
+          "exampleEn": "One can speak.",
+          "symbol": "💬"
         },
         {
           "id": "a1-identity-19",
@@ -441,7 +479,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann buchstabieren.",
-          "exampleEn": "One can spell."
+          "exampleEn": "One can spell.",
+          "symbol": "🔤"
         },
         {
           "id": "a1-identity-20",
@@ -452,7 +491,8 @@
           "article": "",
           "plural": "",
           "example": "Ich bin …",
-          "exampleEn": "I am …"
+          "exampleEn": "I am …",
+          "symbol": "🙋"
         }
       ]
     },
@@ -471,7 +511,8 @@
           "article": "die",
           "plural": "die Familien",
           "example": "Das ist die Familie.",
-          "exampleEn": "That is the family."
+          "exampleEn": "That is the family.",
+          "symbol": "👪"
         },
         {
           "id": "a1-family-02",
@@ -482,7 +523,8 @@
           "article": "die",
           "plural": "die Mütter",
           "example": "Das ist die Mutter.",
-          "exampleEn": "That is the mother."
+          "exampleEn": "That is the mother.",
+          "symbol": "👩"
         },
         {
           "id": "a1-family-03",
@@ -493,7 +535,8 @@
           "article": "der",
           "plural": "die Väter",
           "example": "Das ist der Vater.",
-          "exampleEn": "That is the father."
+          "exampleEn": "That is the father.",
+          "symbol": "👨"
         },
         {
           "id": "a1-family-04",
@@ -504,7 +547,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Eltern.",
-          "exampleEn": "That is the parents."
+          "exampleEn": "That is the parents.",
+          "symbol": "👫"
         },
         {
           "id": "a1-family-05",
@@ -515,7 +559,8 @@
           "article": "der",
           "plural": "die Söhne",
           "example": "Das ist der Sohn.",
-          "exampleEn": "That is the son."
+          "exampleEn": "That is the son.",
+          "symbol": "👦"
         },
         {
           "id": "a1-family-06",
@@ -526,7 +571,8 @@
           "article": "die",
           "plural": "die Töchter",
           "example": "Das ist die Tochter.",
-          "exampleEn": "That is the daughter."
+          "exampleEn": "That is the daughter.",
+          "symbol": "👧"
         },
         {
           "id": "a1-family-07",
@@ -537,7 +583,8 @@
           "article": "das",
           "plural": "die Kinder",
           "example": "Das ist das Kind.",
-          "exampleEn": "That is the child."
+          "exampleEn": "That is the child.",
+          "symbol": "🧒"
         },
         {
           "id": "a1-family-08",
@@ -548,7 +595,8 @@
           "article": "der",
           "plural": "die Brüder",
           "example": "Das ist der Bruder.",
-          "exampleEn": "That is the brother."
+          "exampleEn": "That is the brother.",
+          "symbol": "👦"
         },
         {
           "id": "a1-family-09",
@@ -559,7 +607,8 @@
           "article": "die",
           "plural": "die Schwestern",
           "example": "Das ist die Schwester.",
-          "exampleEn": "That is the sister."
+          "exampleEn": "That is the sister.",
+          "symbol": "👧"
         },
         {
           "id": "a1-family-10",
@@ -570,7 +619,8 @@
           "article": "die",
           "plural": "die Großmütter",
           "example": "Das ist die Großmutter.",
-          "exampleEn": "That is the grandmother."
+          "exampleEn": "That is the grandmother.",
+          "symbol": "👵"
         },
         {
           "id": "a1-family-11",
@@ -581,7 +631,8 @@
           "article": "der",
           "plural": "die Großväter",
           "example": "Das ist der Großvater.",
-          "exampleEn": "That is the grandfather."
+          "exampleEn": "That is the grandfather.",
+          "symbol": "👴"
         },
         {
           "id": "a1-family-12",
@@ -592,7 +643,8 @@
           "article": "die",
           "plural": "die Omas",
           "example": "Das ist die Oma.",
-          "exampleEn": "That is the grandma."
+          "exampleEn": "That is the grandma.",
+          "symbol": "👵"
         },
         {
           "id": "a1-family-13",
@@ -603,7 +655,8 @@
           "article": "der",
           "plural": "die Opas",
           "example": "Das ist der Opa.",
-          "exampleEn": "That is the grandpa."
+          "exampleEn": "That is the grandpa.",
+          "symbol": "👴"
         },
         {
           "id": "a1-family-14",
@@ -614,7 +667,8 @@
           "article": "der",
           "plural": "die Männer",
           "example": "Das ist der Mann.",
-          "exampleEn": "That is the husband / man."
+          "exampleEn": "That is the husband / man.",
+          "symbol": "🤵"
         },
         {
           "id": "a1-family-15",
@@ -625,7 +679,8 @@
           "article": "die",
           "plural": "die Frauen",
           "example": "Das ist die Frau.",
-          "exampleEn": "That is the wife / woman."
+          "exampleEn": "That is the wife / woman.",
+          "symbol": "👩"
         },
         {
           "id": "a1-family-16",
@@ -636,7 +691,8 @@
           "article": "der",
           "plural": "die Partner",
           "example": "Das ist der Partner.",
-          "exampleEn": "That is the partner."
+          "exampleEn": "That is the partner.",
+          "symbol": "🧑"
         },
         {
           "id": "a1-family-17",
@@ -647,7 +703,8 @@
           "article": "die",
           "plural": "die Partnerinnen",
           "example": "Das ist die Partnerin.",
-          "exampleEn": "That is the female partner."
+          "exampleEn": "That is the female partner.",
+          "symbol": "👩‍🦰"
         },
         {
           "id": "a1-family-18",
@@ -658,7 +715,8 @@
           "article": "das",
           "plural": "die Babys",
           "example": "Das ist das Baby.",
-          "exampleEn": "That is the baby."
+          "exampleEn": "That is the baby.",
+          "symbol": "👶"
         },
         {
           "id": "a1-family-19",
@@ -669,7 +727,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist verheiratet.",
-          "exampleEn": "That is married."
+          "exampleEn": "That is married.",
+          "symbol": "💍"
         },
         {
           "id": "a1-family-20",
@@ -680,7 +739,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist ledig.",
-          "exampleEn": "That is single."
+          "exampleEn": "That is single.",
+          "symbol": "☝️"
         }
       ]
     },
@@ -699,7 +759,8 @@
           "article": "der",
           "plural": "die Menschen",
           "example": "Das ist der Mensch.",
-          "exampleEn": "That is the person / human."
+          "exampleEn": "That is the person / human.",
+          "symbol": "🧑"
         },
         {
           "id": "a1-people-02",
@@ -710,7 +771,8 @@
           "article": "der",
           "plural": "die Freunde",
           "example": "Das ist der Freund.",
-          "exampleEn": "That is the male friend."
+          "exampleEn": "That is the male friend.",
+          "symbol": "🧔"
         },
         {
           "id": "a1-people-03",
@@ -721,7 +783,8 @@
           "article": "die",
           "plural": "die Freundinnen",
           "example": "Das ist die Freundin.",
-          "exampleEn": "That is the female friend."
+          "exampleEn": "That is the female friend.",
+          "symbol": "👩"
         },
         {
           "id": "a1-people-04",
@@ -732,7 +795,8 @@
           "article": "der",
           "plural": "die Nachbarn",
           "example": "Das ist der Nachbar.",
-          "exampleEn": "That is the male neighbor."
+          "exampleEn": "That is the male neighbor.",
+          "symbol": "🏘️"
         },
         {
           "id": "a1-people-05",
@@ -743,7 +807,8 @@
           "article": "die",
           "plural": "die Nachbarinnen",
           "example": "Das ist die Nachbarin.",
-          "exampleEn": "That is the female neighbor."
+          "exampleEn": "That is the female neighbor.",
+          "symbol": "👩‍🦰"
         },
         {
           "id": "a1-people-06",
@@ -754,7 +819,8 @@
           "article": "der",
           "plural": "die Jungen",
           "example": "Das ist der Junge.",
-          "exampleEn": "That is the boy."
+          "exampleEn": "That is the boy.",
+          "symbol": "👦"
         },
         {
           "id": "a1-people-07",
@@ -765,7 +831,8 @@
           "article": "das",
           "plural": "die Mädchen",
           "example": "Das ist das Mädchen.",
-          "exampleEn": "That is the girl."
+          "exampleEn": "That is the girl.",
+          "symbol": "👧"
         },
         {
           "id": "a1-people-08",
@@ -776,7 +843,8 @@
           "article": "der",
           "plural": "die Herren",
           "example": "Das ist der Herr.",
-          "exampleEn": "That is the Mr. / gentleman."
+          "exampleEn": "That is the Mr. / gentleman.",
+          "symbol": "🎩"
         },
         {
           "id": "a1-people-09",
@@ -787,7 +855,8 @@
           "article": "die",
           "plural": "die Damen",
           "example": "Das ist die Dame.",
-          "exampleEn": "That is the lady."
+          "exampleEn": "That is the lady.",
+          "symbol": "👒"
         },
         {
           "id": "a1-people-10",
@@ -798,7 +867,8 @@
           "article": "der",
           "plural": "die Gäste",
           "example": "Das ist der Gast.",
-          "exampleEn": "That is the guest."
+          "exampleEn": "That is the guest.",
+          "symbol": "🛎️"
         },
         {
           "id": "a1-people-11",
@@ -809,7 +879,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist jung.",
-          "exampleEn": "That is young."
+          "exampleEn": "That is young.",
+          "symbol": "🌱"
         },
         {
           "id": "a1-people-12",
@@ -820,7 +891,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist alt.",
-          "exampleEn": "That is old."
+          "exampleEn": "That is old.",
+          "symbol": "🧓"
         },
         {
           "id": "a1-people-13",
@@ -831,7 +903,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist groß.",
-          "exampleEn": "That is tall / big."
+          "exampleEn": "That is tall / big.",
+          "symbol": "📏"
         },
         {
           "id": "a1-people-14",
@@ -842,7 +915,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist klein.",
-          "exampleEn": "That is short / small."
+          "exampleEn": "That is short / small.",
+          "symbol": "🤏"
         },
         {
           "id": "a1-people-15",
@@ -853,7 +927,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist nett.",
-          "exampleEn": "That is nice."
+          "exampleEn": "That is nice.",
+          "symbol": "😊"
         },
         {
           "id": "a1-people-16",
@@ -864,7 +939,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist freundlich.",
-          "exampleEn": "That is friendly."
+          "exampleEn": "That is friendly.",
+          "symbol": "🤝"
         },
         {
           "id": "a1-people-17",
@@ -875,7 +951,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist lustig.",
-          "exampleEn": "That is funny."
+          "exampleEn": "That is funny.",
+          "symbol": "😂"
         },
         {
           "id": "a1-people-18",
@@ -886,7 +963,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist ruhig.",
-          "exampleEn": "That is quiet."
+          "exampleEn": "That is quiet.",
+          "symbol": "🤫"
         },
         {
           "id": "a1-people-19",
@@ -897,7 +975,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist müde.",
-          "exampleEn": "That is tired."
+          "exampleEn": "That is tired.",
+          "symbol": "🥱"
         },
         {
           "id": "a1-people-20",
@@ -908,7 +987,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist glücklich.",
-          "exampleEn": "That is happy."
+          "exampleEn": "That is happy.",
+          "symbol": "😄"
         }
       ]
     },
@@ -927,7 +1007,8 @@
           "article": "das",
           "plural": "die Häuser",
           "example": "Das ist das Haus.",
-          "exampleEn": "That is the house."
+          "exampleEn": "That is the house.",
+          "symbol": "🏠"
         },
         {
           "id": "a1-home-02",
@@ -938,7 +1019,8 @@
           "article": "die",
           "plural": "die Wohnungen",
           "example": "Das ist die Wohnung.",
-          "exampleEn": "That is the apartment."
+          "exampleEn": "That is the apartment.",
+          "symbol": "🏢"
         },
         {
           "id": "a1-home-03",
@@ -949,7 +1031,8 @@
           "article": "das",
           "plural": "die Zimmer",
           "example": "Das ist das Zimmer.",
-          "exampleEn": "That is the room."
+          "exampleEn": "That is the room.",
+          "symbol": "🚪"
         },
         {
           "id": "a1-home-04",
@@ -960,7 +1043,8 @@
           "article": "das",
           "plural": "die Wohnzimmer",
           "example": "Das ist das Wohnzimmer.",
-          "exampleEn": "That is the living room."
+          "exampleEn": "That is the living room.",
+          "symbol": "🛋️"
         },
         {
           "id": "a1-home-05",
@@ -971,7 +1055,8 @@
           "article": "das",
           "plural": "die Schlafzimmer",
           "example": "Das ist das Schlafzimmer.",
-          "exampleEn": "That is the bedroom."
+          "exampleEn": "That is the bedroom.",
+          "symbol": "🛏️"
         },
         {
           "id": "a1-home-06",
@@ -982,7 +1067,8 @@
           "article": "das",
           "plural": "die Kinderzimmer",
           "example": "Das ist das Kinderzimmer.",
-          "exampleEn": "That is the child’s room."
+          "exampleEn": "That is the child’s room.",
+          "symbol": "🧸"
         },
         {
           "id": "a1-home-07",
@@ -993,7 +1079,8 @@
           "article": "die",
           "plural": "die Küchen",
           "example": "Das ist die Küche.",
-          "exampleEn": "That is the kitchen."
+          "exampleEn": "That is the kitchen.",
+          "symbol": "🍳"
         },
         {
           "id": "a1-home-08",
@@ -1004,7 +1091,8 @@
           "article": "das",
           "plural": "die Bäder",
           "example": "Das ist das Bad.",
-          "exampleEn": "That is the bathroom."
+          "exampleEn": "That is the bathroom.",
+          "symbol": "🛁"
         },
         {
           "id": "a1-home-09",
@@ -1015,7 +1103,8 @@
           "article": "die",
           "plural": "die Toiletten",
           "example": "Das ist die Toilette.",
-          "exampleEn": "That is the toilet."
+          "exampleEn": "That is the toilet.",
+          "symbol": "🚽"
         },
         {
           "id": "a1-home-10",
@@ -1026,7 +1115,8 @@
           "article": "der",
           "plural": "die Flure",
           "example": "Das ist der Flur.",
-          "exampleEn": "That is the hallway."
+          "exampleEn": "That is the hallway.",
+          "symbol": "🚶"
         },
         {
           "id": "a1-home-11",
@@ -1037,7 +1127,8 @@
           "article": "der",
           "plural": "die Balkone",
           "example": "Das ist der Balkon.",
-          "exampleEn": "That is the balcony."
+          "exampleEn": "That is the balcony.",
+          "symbol": "🌇"
         },
         {
           "id": "a1-home-12",
@@ -1048,7 +1139,8 @@
           "article": "der",
           "plural": "die Gärten",
           "example": "Das ist der Garten.",
-          "exampleEn": "That is the garden."
+          "exampleEn": "That is the garden.",
+          "symbol": "🌻"
         },
         {
           "id": "a1-home-13",
@@ -1059,7 +1151,8 @@
           "article": "der",
           "plural": "die Keller",
           "example": "Das ist der Keller.",
-          "exampleEn": "That is the cellar."
+          "exampleEn": "That is the cellar.",
+          "symbol": "📦"
         },
         {
           "id": "a1-home-14",
@@ -1070,7 +1163,8 @@
           "article": "der",
           "plural": "die Stockwerke",
           "example": "Das ist der Stock.",
-          "exampleEn": "That is the floor / storey."
+          "exampleEn": "That is the floor / storey.",
+          "symbol": "🏬"
         },
         {
           "id": "a1-home-15",
@@ -1081,7 +1175,8 @@
           "article": "die",
           "plural": "die Türen",
           "example": "Das ist die Tür.",
-          "exampleEn": "That is the door."
+          "exampleEn": "That is the door.",
+          "symbol": "🚪"
         },
         {
           "id": "a1-home-16",
@@ -1092,7 +1187,8 @@
           "article": "das",
           "plural": "die Fenster",
           "example": "Das ist das Fenster.",
-          "exampleEn": "That is the window."
+          "exampleEn": "That is the window.",
+          "symbol": "🪟"
         },
         {
           "id": "a1-home-17",
@@ -1103,7 +1199,8 @@
           "article": "die",
           "plural": "die Wände",
           "example": "Das ist die Wand.",
-          "exampleEn": "That is the wall."
+          "exampleEn": "That is the wall.",
+          "symbol": "🧱"
         },
         {
           "id": "a1-home-18",
@@ -1114,7 +1211,8 @@
           "article": "der",
           "plural": "die Böden",
           "example": "Das ist der Boden.",
-          "exampleEn": "That is the floor."
+          "exampleEn": "That is the floor.",
+          "symbol": "🪵"
         },
         {
           "id": "a1-home-19",
@@ -1125,7 +1223,8 @@
           "article": "die",
           "plural": "die Mieten",
           "example": "Das ist die Miete.",
-          "exampleEn": "That is the rent."
+          "exampleEn": "That is the rent.",
+          "symbol": "💶"
         },
         {
           "id": "a1-home-20",
@@ -1136,7 +1235,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann umziehen.",
-          "exampleEn": "One can move house."
+          "exampleEn": "One can move house.",
+          "symbol": "📦"
         }
       ]
     },
@@ -1155,7 +1255,8 @@
           "article": "der",
           "plural": "die Tische",
           "example": "Das ist der Tisch.",
-          "exampleEn": "That is the table."
+          "exampleEn": "That is the table.",
+          "symbol": "🪵"
         },
         {
           "id": "a1-furniture-02",
@@ -1166,7 +1267,8 @@
           "article": "der",
           "plural": "die Stühle",
           "example": "Das ist der Stuhl.",
-          "exampleEn": "That is the chair."
+          "exampleEn": "That is the chair.",
+          "symbol": "🪑"
         },
         {
           "id": "a1-furniture-03",
@@ -1177,7 +1279,8 @@
           "article": "das",
           "plural": "die Sofas",
           "example": "Das ist das Sofa.",
-          "exampleEn": "That is the sofa."
+          "exampleEn": "That is the sofa.",
+          "symbol": "🛋️"
         },
         {
           "id": "a1-furniture-04",
@@ -1188,7 +1291,8 @@
           "article": "das",
           "plural": "die Betten",
           "example": "Das ist das Bett.",
-          "exampleEn": "That is the bed."
+          "exampleEn": "That is the bed.",
+          "symbol": "🛏️"
         },
         {
           "id": "a1-furniture-05",
@@ -1199,7 +1303,8 @@
           "article": "der",
           "plural": "die Schränke",
           "example": "Das ist der Schrank.",
-          "exampleEn": "That is the cupboard."
+          "exampleEn": "That is the cupboard.",
+          "symbol": "🚪"
         },
         {
           "id": "a1-furniture-06",
@@ -1210,7 +1315,8 @@
           "article": "das",
           "plural": "die Regale",
           "example": "Das ist das Regal.",
-          "exampleEn": "That is the shelf."
+          "exampleEn": "That is the shelf.",
+          "symbol": "📚"
         },
         {
           "id": "a1-furniture-07",
@@ -1221,7 +1327,8 @@
           "article": "die",
           "plural": "die Lampen",
           "example": "Das ist die Lampe.",
-          "exampleEn": "That is the lamp."
+          "exampleEn": "That is the lamp.",
+          "symbol": "💡"
         },
         {
           "id": "a1-furniture-08",
@@ -1232,7 +1339,8 @@
           "article": "der",
           "plural": "die Teppiche",
           "example": "Das ist der Teppich.",
-          "exampleEn": "That is the carpet."
+          "exampleEn": "That is the carpet.",
+          "symbol": "🧶"
         },
         {
           "id": "a1-furniture-09",
@@ -1243,7 +1351,8 @@
           "article": "der",
           "plural": "die Spiegel",
           "example": "Das ist der Spiegel.",
-          "exampleEn": "That is the mirror."
+          "exampleEn": "That is the mirror.",
+          "symbol": "🪞"
         },
         {
           "id": "a1-furniture-10",
@@ -1254,7 +1363,8 @@
           "article": "die",
           "plural": "die Duschen",
           "example": "Das ist die Dusche.",
-          "exampleEn": "That is the shower."
+          "exampleEn": "That is the shower.",
+          "symbol": "🚿"
         },
         {
           "id": "a1-furniture-11",
@@ -1265,7 +1375,8 @@
           "article": "der",
           "plural": "die Kühlschränke",
           "example": "Das ist der Kühlschrank.",
-          "exampleEn": "That is the fridge."
+          "exampleEn": "That is the fridge.",
+          "symbol": "🧊"
         },
         {
           "id": "a1-furniture-12",
@@ -1276,7 +1387,8 @@
           "article": "der",
           "plural": "die Herde",
           "example": "Das ist der Herd.",
-          "exampleEn": "That is the stove."
+          "exampleEn": "That is the stove.",
+          "symbol": "🔥"
         },
         {
           "id": "a1-furniture-13",
@@ -1287,7 +1399,8 @@
           "article": "die",
           "plural": "die Waschmaschinen",
           "example": "Das ist die Waschmaschine.",
-          "exampleEn": "That is the washing machine."
+          "exampleEn": "That is the washing machine.",
+          "symbol": "🫧"
         },
         {
           "id": "a1-furniture-14",
@@ -1298,7 +1411,8 @@
           "article": "der",
           "plural": "die Fernseher",
           "example": "Das ist der Fernseher.",
-          "exampleEn": "That is the television."
+          "exampleEn": "That is the television.",
+          "symbol": "📺"
         },
         {
           "id": "a1-furniture-15",
@@ -1309,7 +1423,8 @@
           "article": "der",
           "plural": "die Schlüssel",
           "example": "Das ist der Schlüssel.",
-          "exampleEn": "That is the key."
+          "exampleEn": "That is the key.",
+          "symbol": "🔑"
         },
         {
           "id": "a1-furniture-16",
@@ -1320,7 +1435,8 @@
           "article": "die",
           "plural": "die Tassen",
           "example": "Das ist die Tasse.",
-          "exampleEn": "That is the cup."
+          "exampleEn": "That is the cup.",
+          "symbol": "☕"
         },
         {
           "id": "a1-furniture-17",
@@ -1331,7 +1447,8 @@
           "article": "das",
           "plural": "die Gläser",
           "example": "Das ist das Glas.",
-          "exampleEn": "That is the glass."
+          "exampleEn": "That is the glass.",
+          "symbol": "🥛"
         },
         {
           "id": "a1-furniture-18",
@@ -1342,7 +1459,8 @@
           "article": "der",
           "plural": "die Teller",
           "example": "Das ist der Teller.",
-          "exampleEn": "That is the plate."
+          "exampleEn": "That is the plate.",
+          "symbol": "🍽️"
         },
         {
           "id": "a1-furniture-19",
@@ -1353,7 +1471,8 @@
           "article": "das",
           "plural": "die Messer",
           "example": "Das ist das Messer.",
-          "exampleEn": "That is the knife."
+          "exampleEn": "That is the knife.",
+          "symbol": "🔪"
         },
         {
           "id": "a1-furniture-20",
@@ -1364,7 +1483,8 @@
           "article": "die",
           "plural": "die Gabeln",
           "example": "Das ist die Gabel.",
-          "exampleEn": "That is the fork."
+          "exampleEn": "That is the fork.",
+          "symbol": "🍴"
         }
       ]
     },
@@ -1383,7 +1503,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Essen.",
-          "exampleEn": "That is the food."
+          "exampleEn": "That is the food.",
+          "symbol": "🍽️"
         },
         {
           "id": "a1-food-02",
@@ -1394,7 +1515,8 @@
           "article": "das",
           "plural": "die Frühstücke",
           "example": "Das ist das Frühstück.",
-          "exampleEn": "That is the breakfast."
+          "exampleEn": "That is the breakfast.",
+          "symbol": "🥐"
         },
         {
           "id": "a1-food-03",
@@ -1405,7 +1527,8 @@
           "article": "das",
           "plural": "die Mittagessen",
           "example": "Das ist das Mittagessen.",
-          "exampleEn": "That is the lunch."
+          "exampleEn": "That is the lunch.",
+          "symbol": "🥗"
         },
         {
           "id": "a1-food-04",
@@ -1416,7 +1539,8 @@
           "article": "das",
           "plural": "die Abendessen",
           "example": "Das ist das Abendessen.",
-          "exampleEn": "That is the dinner."
+          "exampleEn": "That is the dinner.",
+          "symbol": "🍲"
         },
         {
           "id": "a1-food-05",
@@ -1427,7 +1551,8 @@
           "article": "das",
           "plural": "die Brote",
           "example": "Das ist das Brot.",
-          "exampleEn": "That is the bread."
+          "exampleEn": "That is the bread.",
+          "symbol": "🍞"
         },
         {
           "id": "a1-food-06",
@@ -1438,7 +1563,8 @@
           "article": "das",
           "plural": "die Brötchen",
           "example": "Das ist das Brötchen.",
-          "exampleEn": "That is the bread roll."
+          "exampleEn": "That is the bread roll.",
+          "symbol": "🥖"
         },
         {
           "id": "a1-food-07",
@@ -1449,7 +1575,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Butter.",
-          "exampleEn": "That is the butter."
+          "exampleEn": "That is the butter.",
+          "symbol": "🧈"
         },
         {
           "id": "a1-food-08",
@@ -1460,7 +1587,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Käse.",
-          "exampleEn": "That is the cheese."
+          "exampleEn": "That is the cheese.",
+          "symbol": "🧀"
         },
         {
           "id": "a1-food-09",
@@ -1471,7 +1599,8 @@
           "article": "das",
           "plural": "die Eier",
           "example": "Das ist das Ei.",
-          "exampleEn": "That is the egg."
+          "exampleEn": "That is the egg.",
+          "symbol": "🥚"
         },
         {
           "id": "a1-food-10",
@@ -1482,7 +1611,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Fleisch.",
-          "exampleEn": "That is the meat."
+          "exampleEn": "That is the meat.",
+          "symbol": "🥩"
         },
         {
           "id": "a1-food-11",
@@ -1493,7 +1623,8 @@
           "article": "der",
           "plural": "die Fische",
           "example": "Das ist der Fisch.",
-          "exampleEn": "That is the fish."
+          "exampleEn": "That is the fish.",
+          "symbol": "🐟"
         },
         {
           "id": "a1-food-12",
@@ -1504,7 +1635,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Reis.",
-          "exampleEn": "That is the rice."
+          "exampleEn": "That is the rice.",
+          "symbol": "🍚"
         },
         {
           "id": "a1-food-13",
@@ -1515,7 +1647,8 @@
           "article": "die",
           "plural": "die Nudeln",
           "example": "Das ist die Nudel.",
-          "exampleEn": "That is the noodle."
+          "exampleEn": "That is the noodle.",
+          "symbol": "🍝"
         },
         {
           "id": "a1-food-14",
@@ -1526,7 +1659,8 @@
           "article": "die",
           "plural": "die Kartoffeln",
           "example": "Das ist die Kartoffel.",
-          "exampleEn": "That is the potato."
+          "exampleEn": "That is the potato.",
+          "symbol": "🥔"
         },
         {
           "id": "a1-food-15",
@@ -1537,7 +1671,8 @@
           "article": "die",
           "plural": "die Suppen",
           "example": "Das ist die Suppe.",
-          "exampleEn": "That is the soup."
+          "exampleEn": "That is the soup.",
+          "symbol": "🥣"
         },
         {
           "id": "a1-food-16",
@@ -1548,7 +1683,8 @@
           "article": "der",
           "plural": "die Salate",
           "example": "Das ist der Salat.",
-          "exampleEn": "That is the salad."
+          "exampleEn": "That is the salad.",
+          "symbol": "🥗"
         },
         {
           "id": "a1-food-17",
@@ -1559,7 +1695,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Gemüse.",
-          "exampleEn": "That is the vegetables."
+          "exampleEn": "That is the vegetables.",
+          "symbol": "🥦"
         },
         {
           "id": "a1-food-18",
@@ -1570,7 +1707,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Obst.",
-          "exampleEn": "That is the fruit."
+          "exampleEn": "That is the fruit.",
+          "symbol": "🍇"
         },
         {
           "id": "a1-food-19",
@@ -1581,7 +1719,8 @@
           "article": "der",
           "plural": "die Äpfel",
           "example": "Das ist der Apfel.",
-          "exampleEn": "That is the apple."
+          "exampleEn": "That is the apple.",
+          "symbol": "🍎"
         },
         {
           "id": "a1-food-20",
@@ -1592,7 +1731,8 @@
           "article": "die",
           "plural": "die Bananen",
           "example": "Das ist die Banane.",
-          "exampleEn": "That is the banana."
+          "exampleEn": "That is the banana.",
+          "symbol": "🍌"
         }
       ]
     },
@@ -1611,7 +1751,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Wasser.",
-          "exampleEn": "That is the water."
+          "exampleEn": "That is the water.",
+          "symbol": "💧"
         },
         {
           "id": "a1-drinks-02",
@@ -1622,7 +1763,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Kaffee.",
-          "exampleEn": "That is the coffee."
+          "exampleEn": "That is the coffee.",
+          "symbol": "☕"
         },
         {
           "id": "a1-drinks-03",
@@ -1633,7 +1775,8 @@
           "article": "der",
           "plural": "die Tees",
           "example": "Das ist der Tee.",
-          "exampleEn": "That is the tea."
+          "exampleEn": "That is the tea.",
+          "symbol": "🍵"
         },
         {
           "id": "a1-drinks-04",
@@ -1644,7 +1787,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Milch.",
-          "exampleEn": "That is the milk."
+          "exampleEn": "That is the milk.",
+          "symbol": "🥛"
         },
         {
           "id": "a1-drinks-05",
@@ -1655,7 +1799,8 @@
           "article": "der",
           "plural": "die Säfte",
           "example": "Das ist der Saft.",
-          "exampleEn": "That is the juice."
+          "exampleEn": "That is the juice.",
+          "symbol": "🧃"
         },
         {
           "id": "a1-drinks-06",
@@ -1666,7 +1811,8 @@
           "article": "das",
           "plural": "die Biere",
           "example": "Das ist das Bier.",
-          "exampleEn": "That is the beer."
+          "exampleEn": "That is the beer.",
+          "symbol": "🍺"
         },
         {
           "id": "a1-drinks-07",
@@ -1677,7 +1823,8 @@
           "article": "der",
           "plural": "die Weine",
           "example": "Das ist der Wein.",
-          "exampleEn": "That is the wine."
+          "exampleEn": "That is the wine.",
+          "symbol": "🍷"
         },
         {
           "id": "a1-drinks-08",
@@ -1688,7 +1835,8 @@
           "article": "die",
           "plural": "die Flaschen",
           "example": "Das ist die Flasche.",
-          "exampleEn": "That is the bottle."
+          "exampleEn": "That is the bottle.",
+          "symbol": "🍾"
         },
         {
           "id": "a1-drinks-09",
@@ -1699,7 +1847,8 @@
           "article": "der",
           "plural": "die Becher",
           "example": "Das ist der Becher.",
-          "exampleEn": "That is the mug / cup."
+          "exampleEn": "That is the mug / cup.",
+          "symbol": "🥤"
         },
         {
           "id": "a1-drinks-10",
@@ -1710,7 +1859,8 @@
           "article": "der",
           "plural": "die Löffel",
           "example": "Das ist der Löffel.",
-          "exampleEn": "That is the spoon."
+          "exampleEn": "That is the spoon.",
+          "symbol": "🥄"
         },
         {
           "id": "a1-drinks-11",
@@ -1721,7 +1871,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Zucker.",
-          "exampleEn": "That is the sugar."
+          "exampleEn": "That is the sugar.",
+          "symbol": "🧂"
         },
         {
           "id": "a1-drinks-12",
@@ -1732,7 +1883,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Salz.",
-          "exampleEn": "That is the salt."
+          "exampleEn": "That is the salt.",
+          "symbol": "🧂"
         },
         {
           "id": "a1-drinks-13",
@@ -1743,7 +1895,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Pfeffer.",
-          "exampleEn": "That is the pepper."
+          "exampleEn": "That is the pepper.",
+          "symbol": "🌶️"
         },
         {
           "id": "a1-drinks-14",
@@ -1754,7 +1907,8 @@
           "article": "der",
           "plural": "die Kuchen",
           "example": "Das ist der Kuchen.",
-          "exampleEn": "That is the cake."
+          "exampleEn": "That is the cake.",
+          "symbol": "🍰"
         },
         {
           "id": "a1-drinks-15",
@@ -1765,7 +1919,8 @@
           "article": "die",
           "plural": "die Schokoladen",
           "example": "Das ist die Schokolade.",
-          "exampleEn": "That is the chocolate."
+          "exampleEn": "That is the chocolate.",
+          "symbol": "🍫"
         },
         {
           "id": "a1-drinks-16",
@@ -1776,7 +1931,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann essen.",
-          "exampleEn": "One can eat."
+          "exampleEn": "One can eat.",
+          "symbol": "🍴"
         },
         {
           "id": "a1-drinks-17",
@@ -1787,7 +1943,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann trinken.",
-          "exampleEn": "One can drink."
+          "exampleEn": "One can drink.",
+          "symbol": "🥤"
         },
         {
           "id": "a1-drinks-18",
@@ -1798,7 +1955,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann kochen.",
-          "exampleEn": "One can cook."
+          "exampleEn": "One can cook.",
+          "symbol": "🍳"
         },
         {
           "id": "a1-drinks-19",
@@ -1809,7 +1967,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist lecker.",
-          "exampleEn": "That is delicious."
+          "exampleEn": "That is delicious.",
+          "symbol": "😋"
         },
         {
           "id": "a1-drinks-20",
@@ -1820,7 +1979,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist hungrig.",
-          "exampleEn": "That is hungry."
+          "exampleEn": "That is hungry.",
+          "symbol": "🤤"
         }
       ]
     },
@@ -1839,7 +1999,8 @@
           "article": "das",
           "plural": "die Geschäfte",
           "example": "Das ist das Geschäft.",
-          "exampleEn": "That is the shop."
+          "exampleEn": "That is the shop.",
+          "symbol": "🏪"
         },
         {
           "id": "a1-shopping-02",
@@ -1850,7 +2011,8 @@
           "article": "der",
           "plural": "die Supermärkte",
           "example": "Das ist der Supermarkt.",
-          "exampleEn": "That is the supermarket."
+          "exampleEn": "That is the supermarket.",
+          "symbol": "🛒"
         },
         {
           "id": "a1-shopping-03",
@@ -1861,7 +2023,8 @@
           "article": "der",
           "plural": "die Märkte",
           "example": "Das ist der Markt.",
-          "exampleEn": "That is the market."
+          "exampleEn": "That is the market.",
+          "symbol": "🧺"
         },
         {
           "id": "a1-shopping-04",
@@ -1872,7 +2035,8 @@
           "article": "die",
           "plural": "die Bäckereien",
           "example": "Das ist die Bäckerei.",
-          "exampleEn": "That is the bakery."
+          "exampleEn": "That is the bakery.",
+          "symbol": "🥐"
         },
         {
           "id": "a1-shopping-05",
@@ -1883,7 +2047,8 @@
           "article": "die",
           "plural": "die Kassen",
           "example": "Das ist die Kasse.",
-          "exampleEn": "That is the checkout / till."
+          "exampleEn": "That is the checkout / till.",
+          "symbol": "🧾"
         },
         {
           "id": "a1-shopping-06",
@@ -1894,7 +2059,8 @@
           "article": "der",
           "plural": "die Preise",
           "example": "Das ist der Preis.",
-          "exampleEn": "That is the price."
+          "exampleEn": "That is the price.",
+          "symbol": "🏷️"
         },
         {
           "id": "a1-shopping-07",
@@ -1905,7 +2071,8 @@
           "article": "der",
           "plural": "die Euro",
           "example": "Das ist der Euro.",
-          "exampleEn": "That is the euro."
+          "exampleEn": "That is the euro.",
+          "symbol": "💶"
         },
         {
           "id": "a1-shopping-08",
@@ -1916,7 +2083,8 @@
           "article": "der",
           "plural": "die Cent",
           "example": "Das ist der Cent.",
-          "exampleEn": "That is the cent."
+          "exampleEn": "That is the cent.",
+          "symbol": "🪙"
         },
         {
           "id": "a1-shopping-09",
@@ -1927,7 +2095,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Geld.",
-          "exampleEn": "That is the money."
+          "exampleEn": "That is the money.",
+          "symbol": "💰"
         },
         {
           "id": "a1-shopping-10",
@@ -1938,7 +2107,8 @@
           "article": "die",
           "plural": "die Karten",
           "example": "Das ist die Karte.",
-          "exampleEn": "That is the card."
+          "exampleEn": "That is the card.",
+          "symbol": "💳"
         },
         {
           "id": "a1-shopping-11",
@@ -1949,7 +2119,8 @@
           "article": "der",
           "plural": "die Kassenbons",
           "example": "Das ist der Kassenbon.",
-          "exampleEn": "That is the receipt."
+          "exampleEn": "That is the receipt.",
+          "symbol": "🧾"
         },
         {
           "id": "a1-shopping-12",
@@ -1960,7 +2131,8 @@
           "article": "das",
           "plural": "die Angebote",
           "example": "Das ist das Angebot.",
-          "exampleEn": "That is the special offer."
+          "exampleEn": "That is the special offer.",
+          "symbol": "🏷️"
         },
         {
           "id": "a1-shopping-13",
@@ -1971,7 +2143,8 @@
           "article": "das",
           "plural": "die Kilos",
           "example": "Das ist das Kilo.",
-          "exampleEn": "That is the kilogram."
+          "exampleEn": "That is the kilogram.",
+          "symbol": "⚖️"
         },
         {
           "id": "a1-shopping-14",
@@ -1982,7 +2155,8 @@
           "article": "das",
           "plural": "die Gramm",
           "example": "Das ist das Gramm.",
-          "exampleEn": "That is the gram."
+          "exampleEn": "That is the gram.",
+          "symbol": "⚖️"
         },
         {
           "id": "a1-shopping-15",
@@ -1993,7 +2167,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann kaufen.",
-          "exampleEn": "One can buy."
+          "exampleEn": "One can buy.",
+          "symbol": "🛍️"
         },
         {
           "id": "a1-shopping-16",
@@ -2004,7 +2179,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann bezahlen.",
-          "exampleEn": "One can pay."
+          "exampleEn": "One can pay.",
+          "symbol": "💳"
         },
         {
           "id": "a1-shopping-17",
@@ -2015,7 +2191,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann kosten.",
-          "exampleEn": "One can cost."
+          "exampleEn": "One can cost.",
+          "symbol": "🏷️"
         },
         {
           "id": "a1-shopping-18",
@@ -2026,7 +2203,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann brauchen.",
-          "exampleEn": "One can need."
+          "exampleEn": "One can need.",
+          "symbol": "🧺"
         },
         {
           "id": "a1-shopping-19",
@@ -2037,7 +2215,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist billig.",
-          "exampleEn": "That is cheap."
+          "exampleEn": "That is cheap.",
+          "symbol": "⬇️"
         },
         {
           "id": "a1-shopping-20",
@@ -2048,7 +2227,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist teuer.",
-          "exampleEn": "That is expensive."
+          "exampleEn": "That is expensive.",
+          "symbol": "⬆️"
         }
       ]
     },
@@ -2067,7 +2247,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Kleidung.",
-          "exampleEn": "That is the clothing."
+          "exampleEn": "That is the clothing.",
+          "symbol": "👚"
         },
         {
           "id": "a1-clothes-02",
@@ -2078,7 +2259,8 @@
           "article": "die",
           "plural": "die Hosen",
           "example": "Das ist die Hose.",
-          "exampleEn": "That is the trousers."
+          "exampleEn": "That is the trousers.",
+          "symbol": "👖"
         },
         {
           "id": "a1-clothes-03",
@@ -2089,7 +2271,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Jeans.",
-          "exampleEn": "That is the jeans."
+          "exampleEn": "That is the jeans.",
+          "symbol": "👖"
         },
         {
           "id": "a1-clothes-04",
@@ -2100,7 +2283,8 @@
           "article": "der",
           "plural": "die Röcke",
           "example": "Das ist der Rock.",
-          "exampleEn": "That is the skirt."
+          "exampleEn": "That is the skirt.",
+          "symbol": "👗"
         },
         {
           "id": "a1-clothes-05",
@@ -2111,7 +2295,8 @@
           "article": "das",
           "plural": "die Kleider",
           "example": "Das ist das Kleid.",
-          "exampleEn": "That is the dress."
+          "exampleEn": "That is the dress.",
+          "symbol": "👗"
         },
         {
           "id": "a1-clothes-06",
@@ -2122,7 +2307,8 @@
           "article": "das",
           "plural": "die Hemden",
           "example": "Das ist das Hemd.",
-          "exampleEn": "That is the shirt."
+          "exampleEn": "That is the shirt.",
+          "symbol": "👔"
         },
         {
           "id": "a1-clothes-07",
@@ -2133,7 +2319,8 @@
           "article": "das",
           "plural": "die T-Shirts",
           "example": "Das ist das T-Shirt.",
-          "exampleEn": "That is the T-shirt."
+          "exampleEn": "That is the T-shirt.",
+          "symbol": "👕"
         },
         {
           "id": "a1-clothes-08",
@@ -2144,7 +2331,8 @@
           "article": "der",
           "plural": "die Pullover",
           "example": "Das ist der Pullover.",
-          "exampleEn": "That is the sweater."
+          "exampleEn": "That is the sweater.",
+          "symbol": "🧶"
         },
         {
           "id": "a1-clothes-09",
@@ -2155,7 +2343,8 @@
           "article": "die",
           "plural": "die Jacken",
           "example": "Das ist die Jacke.",
-          "exampleEn": "That is the jacket."
+          "exampleEn": "That is the jacket.",
+          "symbol": "🧥"
         },
         {
           "id": "a1-clothes-10",
@@ -2166,7 +2355,8 @@
           "article": "der",
           "plural": "die Mäntel",
           "example": "Das ist der Mantel.",
-          "exampleEn": "That is the coat."
+          "exampleEn": "That is the coat.",
+          "symbol": "🧥"
         },
         {
           "id": "a1-clothes-11",
@@ -2177,7 +2367,8 @@
           "article": "der",
           "plural": "die Schuhe",
           "example": "Das ist der Schuh.",
-          "exampleEn": "That is the shoe."
+          "exampleEn": "That is the shoe.",
+          "symbol": "👞"
         },
         {
           "id": "a1-clothes-12",
@@ -2188,7 +2379,8 @@
           "article": "die",
           "plural": "die Socken",
           "example": "Das ist die Socke.",
-          "exampleEn": "That is the sock."
+          "exampleEn": "That is the sock.",
+          "symbol": "🧦"
         },
         {
           "id": "a1-clothes-13",
@@ -2199,7 +2391,8 @@
           "article": "die",
           "plural": "die Mützen",
           "example": "Das ist die Mütze.",
-          "exampleEn": "That is the cap."
+          "exampleEn": "That is the cap.",
+          "symbol": "🧢"
         },
         {
           "id": "a1-clothes-14",
@@ -2210,7 +2403,8 @@
           "article": "die",
           "plural": "die Größen",
           "example": "Das ist die Größe.",
-          "exampleEn": "That is the size."
+          "exampleEn": "That is the size.",
+          "symbol": "📐"
         },
         {
           "id": "a1-clothes-15",
@@ -2221,7 +2415,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist rot.",
-          "exampleEn": "That is red."
+          "exampleEn": "That is red.",
+          "symbol": "🔴"
         },
         {
           "id": "a1-clothes-16",
@@ -2232,7 +2427,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist blau.",
-          "exampleEn": "That is blue."
+          "exampleEn": "That is blue.",
+          "symbol": "🔵"
         },
         {
           "id": "a1-clothes-17",
@@ -2243,7 +2439,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist grün.",
-          "exampleEn": "That is green."
+          "exampleEn": "That is green.",
+          "symbol": "🟢"
         },
         {
           "id": "a1-clothes-18",
@@ -2254,7 +2451,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist schwarz.",
-          "exampleEn": "That is black."
+          "exampleEn": "That is black.",
+          "symbol": "⚫"
         },
         {
           "id": "a1-clothes-19",
@@ -2265,7 +2463,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist weiß.",
-          "exampleEn": "That is white."
+          "exampleEn": "That is white.",
+          "symbol": "⚪"
         },
         {
           "id": "a1-clothes-20",
@@ -2276,7 +2475,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist gelb.",
-          "exampleEn": "That is yellow."
+          "exampleEn": "That is yellow.",
+          "symbol": "🟡"
         }
       ]
     },
@@ -2295,7 +2495,8 @@
           "article": "",
           "plural": "",
           "example": "null",
-          "exampleEn": "zero"
+          "exampleEn": "zero",
+          "symbol": "0️⃣"
         },
         {
           "id": "a1-numbers-02",
@@ -2306,7 +2507,8 @@
           "article": "",
           "plural": "",
           "example": "eins",
-          "exampleEn": "one"
+          "exampleEn": "one",
+          "symbol": "1️⃣"
         },
         {
           "id": "a1-numbers-03",
@@ -2317,7 +2519,8 @@
           "article": "",
           "plural": "",
           "example": "zwei",
-          "exampleEn": "two"
+          "exampleEn": "two",
+          "symbol": "2️⃣"
         },
         {
           "id": "a1-numbers-04",
@@ -2328,7 +2531,8 @@
           "article": "",
           "plural": "",
           "example": "drei",
-          "exampleEn": "three"
+          "exampleEn": "three",
+          "symbol": "3️⃣"
         },
         {
           "id": "a1-numbers-05",
@@ -2339,7 +2543,8 @@
           "article": "",
           "plural": "",
           "example": "vier",
-          "exampleEn": "four"
+          "exampleEn": "four",
+          "symbol": "4️⃣"
         },
         {
           "id": "a1-numbers-06",
@@ -2350,7 +2555,8 @@
           "article": "",
           "plural": "",
           "example": "fünf",
-          "exampleEn": "five"
+          "exampleEn": "five",
+          "symbol": "5️⃣"
         },
         {
           "id": "a1-numbers-07",
@@ -2361,7 +2567,8 @@
           "article": "",
           "plural": "",
           "example": "sechs",
-          "exampleEn": "six"
+          "exampleEn": "six",
+          "symbol": "6️⃣"
         },
         {
           "id": "a1-numbers-08",
@@ -2372,7 +2579,8 @@
           "article": "",
           "plural": "",
           "example": "sieben",
-          "exampleEn": "seven"
+          "exampleEn": "seven",
+          "symbol": "7️⃣"
         },
         {
           "id": "a1-numbers-09",
@@ -2383,7 +2591,8 @@
           "article": "",
           "plural": "",
           "example": "acht",
-          "exampleEn": "eight"
+          "exampleEn": "eight",
+          "symbol": "8️⃣"
         },
         {
           "id": "a1-numbers-10",
@@ -2394,7 +2603,8 @@
           "article": "",
           "plural": "",
           "example": "neun",
-          "exampleEn": "nine"
+          "exampleEn": "nine",
+          "symbol": "9️⃣"
         },
         {
           "id": "a1-numbers-11",
@@ -2405,7 +2615,8 @@
           "article": "",
           "plural": "",
           "example": "zehn",
-          "exampleEn": "ten"
+          "exampleEn": "ten",
+          "symbol": "🔟"
         },
         {
           "id": "a1-numbers-12",
@@ -2416,7 +2627,8 @@
           "article": "",
           "plural": "",
           "example": "elf",
-          "exampleEn": "eleven"
+          "exampleEn": "eleven",
+          "symbol": "1️⃣1️⃣"
         },
         {
           "id": "a1-numbers-13",
@@ -2427,7 +2639,8 @@
           "article": "",
           "plural": "",
           "example": "zwölf",
-          "exampleEn": "twelve"
+          "exampleEn": "twelve",
+          "symbol": "1️⃣2️⃣"
         },
         {
           "id": "a1-numbers-14",
@@ -2438,7 +2651,8 @@
           "article": "",
           "plural": "",
           "example": "dreizehn",
-          "exampleEn": "thirteen"
+          "exampleEn": "thirteen",
+          "symbol": "1️⃣3️⃣"
         },
         {
           "id": "a1-numbers-15",
@@ -2449,7 +2663,8 @@
           "article": "",
           "plural": "",
           "example": "zwanzig",
-          "exampleEn": "twenty"
+          "exampleEn": "twenty",
+          "symbol": "2️⃣0️⃣"
         },
         {
           "id": "a1-numbers-16",
@@ -2460,7 +2675,8 @@
           "article": "",
           "plural": "",
           "example": "dreißig",
-          "exampleEn": "thirty"
+          "exampleEn": "thirty",
+          "symbol": "3️⃣0️⃣"
         },
         {
           "id": "a1-numbers-17",
@@ -2471,7 +2687,8 @@
           "article": "",
           "plural": "",
           "example": "hundert",
-          "exampleEn": "one hundred"
+          "exampleEn": "one hundred",
+          "symbol": "💯"
         },
         {
           "id": "a1-numbers-18",
@@ -2482,7 +2699,8 @@
           "article": "",
           "plural": "",
           "example": "tausend",
-          "exampleEn": "one thousand"
+          "exampleEn": "one thousand",
+          "symbol": "1️⃣K"
         },
         {
           "id": "a1-numbers-19",
@@ -2493,7 +2711,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist viel.",
-          "exampleEn": "That is much / many."
+          "exampleEn": "That is much / many.",
+          "symbol": "📚"
         },
         {
           "id": "a1-numbers-20",
@@ -2504,7 +2723,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist wenig.",
-          "exampleEn": "That is little / few."
+          "exampleEn": "That is little / few.",
+          "symbol": "🤏"
         }
       ]
     },
@@ -2523,7 +2743,8 @@
           "article": "die",
           "plural": "die Zeiten",
           "example": "Das ist die Zeit.",
-          "exampleEn": "That is the time."
+          "exampleEn": "That is the time.",
+          "symbol": "⏳"
         },
         {
           "id": "a1-time-02",
@@ -2534,7 +2755,8 @@
           "article": "die",
           "plural": "die Uhren",
           "example": "Das ist die Uhr.",
-          "exampleEn": "That is the clock / o’clock."
+          "exampleEn": "That is the clock / o’clock.",
+          "symbol": "🕰️"
         },
         {
           "id": "a1-time-03",
@@ -2545,7 +2767,8 @@
           "article": "die",
           "plural": "die Stunden",
           "example": "Das ist die Stunde.",
-          "exampleEn": "That is the hour."
+          "exampleEn": "That is the hour.",
+          "symbol": "⌛"
         },
         {
           "id": "a1-time-04",
@@ -2556,7 +2779,8 @@
           "article": "die",
           "plural": "die Minuten",
           "example": "Das ist die Minute.",
-          "exampleEn": "That is the minute."
+          "exampleEn": "That is the minute.",
+          "symbol": "⏱️"
         },
         {
           "id": "a1-time-05",
@@ -2567,7 +2791,8 @@
           "article": "der",
           "plural": "die Termine",
           "example": "Das ist der Termin.",
-          "exampleEn": "That is the appointment."
+          "exampleEn": "That is the appointment.",
+          "symbol": "📆"
         },
         {
           "id": "a1-time-06",
@@ -2578,7 +2803,8 @@
           "article": "die",
           "plural": "die Pausen",
           "example": "Das ist die Pause.",
-          "exampleEn": "That is the break."
+          "exampleEn": "That is the break.",
+          "symbol": "☕"
         },
         {
           "id": "a1-time-07",
@@ -2589,7 +2815,8 @@
           "article": "der",
           "plural": "die Anfänge",
           "example": "Das ist der Anfang.",
-          "exampleEn": "That is the beginning."
+          "exampleEn": "That is the beginning.",
+          "symbol": "▶️"
         },
         {
           "id": "a1-time-08",
@@ -2600,7 +2827,8 @@
           "article": "das",
           "plural": "die Enden",
           "example": "Das ist das Ende.",
-          "exampleEn": "That is the end."
+          "exampleEn": "That is the end.",
+          "symbol": "⏹️"
         },
         {
           "id": "a1-time-09",
@@ -2611,7 +2839,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert heute.",
-          "exampleEn": "That happens today."
+          "exampleEn": "That happens today.",
+          "symbol": "📍"
         },
         {
           "id": "a1-time-10",
@@ -2622,7 +2851,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert gestern.",
-          "exampleEn": "That happens yesterday."
+          "exampleEn": "That happens yesterday.",
+          "symbol": "⬅️"
         },
         {
           "id": "a1-time-11",
@@ -2633,7 +2863,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert morgen.",
-          "exampleEn": "That happens tomorrow."
+          "exampleEn": "That happens tomorrow.",
+          "symbol": "➡️"
         },
         {
           "id": "a1-time-12",
@@ -2644,7 +2875,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert jetzt.",
-          "exampleEn": "That happens now."
+          "exampleEn": "That happens now.",
+          "symbol": "⚡"
         },
         {
           "id": "a1-time-13",
@@ -2655,7 +2887,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert gleich.",
-          "exampleEn": "That happens in a moment."
+          "exampleEn": "That happens in a moment.",
+          "symbol": "⏭️"
         },
         {
           "id": "a1-time-14",
@@ -2666,7 +2899,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert früh.",
-          "exampleEn": "That happens early."
+          "exampleEn": "That happens early.",
+          "symbol": "🌅"
         },
         {
           "id": "a1-time-15",
@@ -2677,7 +2911,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert spät.",
-          "exampleEn": "That happens late."
+          "exampleEn": "That happens late.",
+          "symbol": "🌙"
         },
         {
           "id": "a1-time-16",
@@ -2688,7 +2923,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert morgens.",
-          "exampleEn": "That happens in the mornings."
+          "exampleEn": "That happens in the mornings.",
+          "symbol": "🌄"
         },
         {
           "id": "a1-time-17",
@@ -2699,7 +2935,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert mittags.",
-          "exampleEn": "That happens at noon."
+          "exampleEn": "That happens at noon.",
+          "symbol": "☀️"
         },
         {
           "id": "a1-time-18",
@@ -2710,7 +2947,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert abends.",
-          "exampleEn": "That happens in the evenings."
+          "exampleEn": "That happens in the evenings.",
+          "symbol": "🌆"
         },
         {
           "id": "a1-time-19",
@@ -2721,7 +2959,8 @@
           "article": "",
           "plural": "",
           "example": "Wie spät ist es?",
-          "exampleEn": "What time is it?"
+          "exampleEn": "What time is it?",
+          "symbol": "❓"
         },
         {
           "id": "a1-time-20",
@@ -2732,7 +2971,8 @@
           "article": "",
           "plural": "",
           "example": "um halb acht",
-          "exampleEn": "at half past seven"
+          "exampleEn": "at half past seven",
+          "symbol": "🕢"
         }
       ]
     },
@@ -2751,7 +2991,8 @@
           "article": "der",
           "plural": "die Montage",
           "example": "Das ist der Montag.",
-          "exampleEn": "That is the Monday."
+          "exampleEn": "That is the Monday.",
+          "symbol": "1️⃣"
         },
         {
           "id": "a1-calendar-02",
@@ -2762,7 +3003,8 @@
           "article": "der",
           "plural": "die Dienstage",
           "example": "Das ist der Dienstag.",
-          "exampleEn": "That is the Tuesday."
+          "exampleEn": "That is the Tuesday.",
+          "symbol": "2️⃣"
         },
         {
           "id": "a1-calendar-03",
@@ -2773,7 +3015,8 @@
           "article": "der",
           "plural": "die Mittwoche",
           "example": "Das ist der Mittwoch.",
-          "exampleEn": "That is the Wednesday."
+          "exampleEn": "That is the Wednesday.",
+          "symbol": "3️⃣"
         },
         {
           "id": "a1-calendar-04",
@@ -2784,7 +3027,8 @@
           "article": "der",
           "plural": "die Donnerstage",
           "example": "Das ist der Donnerstag.",
-          "exampleEn": "That is the Thursday."
+          "exampleEn": "That is the Thursday.",
+          "symbol": "4️⃣"
         },
         {
           "id": "a1-calendar-05",
@@ -2795,7 +3039,8 @@
           "article": "der",
           "plural": "die Freitage",
           "example": "Das ist der Freitag.",
-          "exampleEn": "That is the Friday."
+          "exampleEn": "That is the Friday.",
+          "symbol": "5️⃣"
         },
         {
           "id": "a1-calendar-06",
@@ -2806,7 +3051,8 @@
           "article": "der",
           "plural": "die Samstage",
           "example": "Das ist der Samstag.",
-          "exampleEn": "That is the Saturday."
+          "exampleEn": "That is the Saturday.",
+          "symbol": "6️⃣"
         },
         {
           "id": "a1-calendar-07",
@@ -2817,7 +3063,8 @@
           "article": "der",
           "plural": "die Sonntage",
           "example": "Das ist der Sonntag.",
-          "exampleEn": "That is the Sunday."
+          "exampleEn": "That is the Sunday.",
+          "symbol": "7️⃣"
         },
         {
           "id": "a1-calendar-08",
@@ -2828,7 +3075,8 @@
           "article": "die",
           "plural": "die Wochen",
           "example": "Das ist die Woche.",
-          "exampleEn": "That is the week."
+          "exampleEn": "That is the week.",
+          "symbol": "📅"
         },
         {
           "id": "a1-calendar-09",
@@ -2839,7 +3087,8 @@
           "article": "das",
           "plural": "die Wochenenden",
           "example": "Das ist das Wochenende.",
-          "exampleEn": "That is the weekend."
+          "exampleEn": "That is the weekend.",
+          "symbol": "🎉"
         },
         {
           "id": "a1-calendar-10",
@@ -2850,7 +3099,8 @@
           "article": "der",
           "plural": "die Monate",
           "example": "Das ist der Monat.",
-          "exampleEn": "That is the month."
+          "exampleEn": "That is the month.",
+          "symbol": "🗓️"
         },
         {
           "id": "a1-calendar-11",
@@ -2861,7 +3111,8 @@
           "article": "das",
           "plural": "die Jahre",
           "example": "Das ist das Jahr.",
-          "exampleEn": "That is the year."
+          "exampleEn": "That is the year.",
+          "symbol": "🎆"
         },
         {
           "id": "a1-calendar-12",
@@ -2872,7 +3123,8 @@
           "article": "das",
           "plural": "die Daten",
           "example": "Das ist das Datum.",
-          "exampleEn": "That is the date."
+          "exampleEn": "That is the date.",
+          "symbol": "📆"
         },
         {
           "id": "a1-calendar-13",
@@ -2883,7 +3135,8 @@
           "article": "der",
           "plural": "die Geburtstage",
           "example": "Das ist der Geburtstag.",
-          "exampleEn": "That is the birthday."
+          "exampleEn": "That is the birthday.",
+          "symbol": "🎂"
         },
         {
           "id": "a1-calendar-14",
@@ -2894,7 +3147,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Frühling.",
-          "exampleEn": "That is the spring."
+          "exampleEn": "That is the spring.",
+          "symbol": "🌷"
         },
         {
           "id": "a1-calendar-15",
@@ -2905,7 +3159,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Sommer.",
-          "exampleEn": "That is the summer."
+          "exampleEn": "That is the summer.",
+          "symbol": "☀️"
         },
         {
           "id": "a1-calendar-16",
@@ -2916,7 +3171,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Herbst.",
-          "exampleEn": "That is the autumn."
+          "exampleEn": "That is the autumn.",
+          "symbol": "🍂"
         },
         {
           "id": "a1-calendar-17",
@@ -2927,7 +3183,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Winter.",
-          "exampleEn": "That is the winter."
+          "exampleEn": "That is the winter.",
+          "symbol": "❄️"
         },
         {
           "id": "a1-calendar-18",
@@ -2938,7 +3195,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert montags.",
-          "exampleEn": "That happens on Mondays."
+          "exampleEn": "That happens on Mondays.",
+          "symbol": "🔁"
         },
         {
           "id": "a1-calendar-19",
@@ -2949,7 +3207,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert täglich.",
-          "exampleEn": "That happens daily."
+          "exampleEn": "That happens daily.",
+          "symbol": "☀️"
         },
         {
           "id": "a1-calendar-20",
@@ -2960,7 +3219,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert manchmal.",
-          "exampleEn": "That happens sometimes."
+          "exampleEn": "That happens sometimes.",
+          "symbol": "🎲"
         }
       ]
     },
@@ -2979,7 +3239,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Wetter.",
-          "exampleEn": "That is the weather."
+          "exampleEn": "That is the weather.",
+          "symbol": "🌦️"
         },
         {
           "id": "a1-weather-02",
@@ -2990,7 +3251,8 @@
           "article": "die",
           "plural": "die Sonnen",
           "example": "Das ist die Sonne.",
-          "exampleEn": "That is the sun."
+          "exampleEn": "That is the sun.",
+          "symbol": "☀️"
         },
         {
           "id": "a1-weather-03",
@@ -3001,7 +3263,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Regen.",
-          "exampleEn": "That is the rain."
+          "exampleEn": "That is the rain.",
+          "symbol": "🌧️"
         },
         {
           "id": "a1-weather-04",
@@ -3012,7 +3275,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Schnee.",
-          "exampleEn": "That is the snow."
+          "exampleEn": "That is the snow.",
+          "symbol": "❄️"
         },
         {
           "id": "a1-weather-05",
@@ -3023,7 +3287,8 @@
           "article": "der",
           "plural": "die Winde",
           "example": "Das ist der Wind.",
-          "exampleEn": "That is the wind."
+          "exampleEn": "That is the wind.",
+          "symbol": "💨"
         },
         {
           "id": "a1-weather-06",
@@ -3034,7 +3299,8 @@
           "article": "die",
           "plural": "die Wolken",
           "example": "Das ist die Wolke.",
-          "exampleEn": "That is the cloud."
+          "exampleEn": "That is the cloud.",
+          "symbol": "☁️"
         },
         {
           "id": "a1-weather-07",
@@ -3045,7 +3311,8 @@
           "article": "das",
           "plural": "die Grad",
           "example": "Das ist das Grad.",
-          "exampleEn": "That is the degree."
+          "exampleEn": "That is the degree.",
+          "symbol": "🌡️"
         },
         {
           "id": "a1-weather-08",
@@ -3056,7 +3323,8 @@
           "article": "der",
           "plural": "die Himmel",
           "example": "Das ist der Himmel.",
-          "exampleEn": "That is the sky."
+          "exampleEn": "That is the sky.",
+          "symbol": "🌌"
         },
         {
           "id": "a1-weather-09",
@@ -3067,7 +3335,8 @@
           "article": "der",
           "plural": "die Bäume",
           "example": "Das ist der Baum.",
-          "exampleEn": "That is the tree."
+          "exampleEn": "That is the tree.",
+          "symbol": "🌳"
         },
         {
           "id": "a1-weather-10",
@@ -3078,7 +3347,8 @@
           "article": "die",
           "plural": "die Blumen",
           "example": "Das ist die Blume.",
-          "exampleEn": "That is the flower."
+          "exampleEn": "That is the flower.",
+          "symbol": "🌸"
         },
         {
           "id": "a1-weather-11",
@@ -3089,7 +3359,8 @@
           "article": "der",
           "plural": "die Berge",
           "example": "Das ist der Berg.",
-          "exampleEn": "That is the mountain."
+          "exampleEn": "That is the mountain.",
+          "symbol": "⛰️"
         },
         {
           "id": "a1-weather-12",
@@ -3100,7 +3371,8 @@
           "article": "der",
           "plural": "die Seen",
           "example": "Das ist der See.",
-          "exampleEn": "That is the lake."
+          "exampleEn": "That is the lake.",
+          "symbol": "🏞️"
         },
         {
           "id": "a1-weather-13",
@@ -3111,7 +3383,8 @@
           "article": "das",
           "plural": "die Meere",
           "example": "Das ist das Meer.",
-          "exampleEn": "That is the sea."
+          "exampleEn": "That is the sea.",
+          "symbol": "🌊"
         },
         {
           "id": "a1-weather-14",
@@ -3122,7 +3395,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist warm.",
-          "exampleEn": "That is warm."
+          "exampleEn": "That is warm.",
+          "symbol": "♨️"
         },
         {
           "id": "a1-weather-15",
@@ -3133,7 +3407,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist kalt.",
-          "exampleEn": "That is cold."
+          "exampleEn": "That is cold.",
+          "symbol": "🥶"
         },
         {
           "id": "a1-weather-16",
@@ -3144,7 +3419,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist heiß.",
-          "exampleEn": "That is hot."
+          "exampleEn": "That is hot.",
+          "symbol": "🔥"
         },
         {
           "id": "a1-weather-17",
@@ -3155,7 +3431,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist sonnig.",
-          "exampleEn": "That is sunny."
+          "exampleEn": "That is sunny.",
+          "symbol": "😎"
         },
         {
           "id": "a1-weather-18",
@@ -3166,7 +3443,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist windig.",
-          "exampleEn": "That is windy."
+          "exampleEn": "That is windy.",
+          "symbol": "🌬️"
         },
         {
           "id": "a1-weather-19",
@@ -3177,7 +3455,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist bewölkt.",
-          "exampleEn": "That is cloudy."
+          "exampleEn": "That is cloudy.",
+          "symbol": "🌥️"
         },
         {
           "id": "a1-weather-20",
@@ -3188,7 +3467,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann regnen.",
-          "exampleEn": "One can rain."
+          "exampleEn": "One can rain.",
+          "symbol": "☔"
         }
       ]
     },
@@ -3207,7 +3487,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann aufstehen.",
-          "exampleEn": "One can get up."
+          "exampleEn": "One can get up.",
+          "symbol": "🛏️"
         },
         {
           "id": "a1-routine-02",
@@ -3218,7 +3499,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann aufwachen.",
-          "exampleEn": "One can wake up."
+          "exampleEn": "One can wake up.",
+          "symbol": "⏰"
         },
         {
           "id": "a1-routine-03",
@@ -3229,7 +3511,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann duschen.",
-          "exampleEn": "One can shower."
+          "exampleEn": "One can shower.",
+          "symbol": "🚿"
         },
         {
           "id": "a1-routine-04",
@@ -3240,7 +3523,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann sich anziehen.",
-          "exampleEn": "One can get dressed."
+          "exampleEn": "One can get dressed.",
+          "symbol": "👕"
         },
         {
           "id": "a1-routine-05",
@@ -3251,7 +3535,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann frühstücken.",
-          "exampleEn": "One can eat breakfast."
+          "exampleEn": "One can eat breakfast.",
+          "symbol": "🥐"
         },
         {
           "id": "a1-routine-06",
@@ -3262,7 +3547,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann anfangen.",
-          "exampleEn": "One can begin."
+          "exampleEn": "One can begin.",
+          "symbol": "▶️"
         },
         {
           "id": "a1-routine-07",
@@ -3273,7 +3559,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann arbeiten.",
-          "exampleEn": "One can work."
+          "exampleEn": "One can work.",
+          "symbol": "💼"
         },
         {
           "id": "a1-routine-08",
@@ -3284,7 +3571,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann lernen.",
-          "exampleEn": "One can learn."
+          "exampleEn": "One can learn.",
+          "symbol": "📖"
         },
         {
           "id": "a1-routine-09",
@@ -3295,7 +3583,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann einkaufen.",
-          "exampleEn": "One can shop."
+          "exampleEn": "One can shop.",
+          "symbol": "🛒"
         },
         {
           "id": "a1-routine-10",
@@ -3306,7 +3595,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann aufräumen.",
-          "exampleEn": "One can tidy up."
+          "exampleEn": "One can tidy up.",
+          "symbol": "🧹"
         },
         {
           "id": "a1-routine-11",
@@ -3317,7 +3607,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann putzen.",
-          "exampleEn": "One can clean."
+          "exampleEn": "One can clean.",
+          "symbol": "🧽"
         },
         {
           "id": "a1-routine-12",
@@ -3328,7 +3619,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann waschen.",
-          "exampleEn": "One can wash."
+          "exampleEn": "One can wash.",
+          "symbol": "🫧"
         },
         {
           "id": "a1-routine-13",
@@ -3339,7 +3631,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann fernsehen.",
-          "exampleEn": "One can watch television."
+          "exampleEn": "One can watch television.",
+          "symbol": "📺"
         },
         {
           "id": "a1-routine-14",
@@ -3350,7 +3643,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann anrufen.",
-          "exampleEn": "One can call."
+          "exampleEn": "One can call.",
+          "symbol": "☎️"
         },
         {
           "id": "a1-routine-15",
@@ -3361,7 +3655,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann nach Hause gehen.",
-          "exampleEn": "One can go home."
+          "exampleEn": "One can go home.",
+          "symbol": "🏠"
         },
         {
           "id": "a1-routine-16",
@@ -3372,7 +3667,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann schlafen.",
-          "exampleEn": "One can sleep."
+          "exampleEn": "One can sleep.",
+          "symbol": "😴"
         },
         {
           "id": "a1-routine-17",
@@ -3383,7 +3679,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert immer.",
-          "exampleEn": "That happens always."
+          "exampleEn": "That happens always.",
+          "symbol": "♾️"
         },
         {
           "id": "a1-routine-18",
@@ -3394,7 +3691,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert oft.",
-          "exampleEn": "That happens often."
+          "exampleEn": "That happens often.",
+          "symbol": "🔁"
         },
         {
           "id": "a1-routine-19",
@@ -3405,7 +3703,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert selten.",
-          "exampleEn": "That happens rarely."
+          "exampleEn": "That happens rarely.",
+          "symbol": "🌙"
         },
         {
           "id": "a1-routine-20",
@@ -3416,7 +3715,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert nie.",
-          "exampleEn": "That happens never."
+          "exampleEn": "That happens never.",
+          "symbol": "🚫"
         }
       ]
     },
@@ -3435,7 +3735,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann sein.",
-          "exampleEn": "One can be."
+          "exampleEn": "One can be.",
+          "symbol": "🟰"
         },
         {
           "id": "a1-actions-02",
@@ -3446,7 +3747,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann haben.",
-          "exampleEn": "One can have."
+          "exampleEn": "One can have.",
+          "symbol": "🎒"
         },
         {
           "id": "a1-actions-03",
@@ -3457,7 +3759,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann machen.",
-          "exampleEn": "One can do / make."
+          "exampleEn": "One can do / make.",
+          "symbol": "🛠️"
         },
         {
           "id": "a1-actions-04",
@@ -3468,7 +3771,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann gehen.",
-          "exampleEn": "One can go."
+          "exampleEn": "One can go.",
+          "symbol": "🚶"
         },
         {
           "id": "a1-actions-05",
@@ -3479,7 +3783,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann fahren.",
-          "exampleEn": "One can travel / drive."
+          "exampleEn": "One can travel / drive.",
+          "symbol": "🚗"
         },
         {
           "id": "a1-actions-06",
@@ -3490,7 +3795,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann bleiben.",
-          "exampleEn": "One can stay."
+          "exampleEn": "One can stay.",
+          "symbol": "🛑"
         },
         {
           "id": "a1-actions-07",
@@ -3501,7 +3807,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann geben.",
-          "exampleEn": "One can give."
+          "exampleEn": "One can give.",
+          "symbol": "🎁"
         },
         {
           "id": "a1-actions-08",
@@ -3512,7 +3819,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann nehmen.",
-          "exampleEn": "One can take."
+          "exampleEn": "One can take.",
+          "symbol": "✋"
         },
         {
           "id": "a1-actions-09",
@@ -3523,7 +3831,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann finden.",
-          "exampleEn": "One can find."
+          "exampleEn": "One can find.",
+          "symbol": "🔎"
         },
         {
           "id": "a1-actions-10",
@@ -3534,7 +3843,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann suchen.",
-          "exampleEn": "One can look for."
+          "exampleEn": "One can look for.",
+          "symbol": "🔍"
         },
         {
           "id": "a1-actions-11",
@@ -3545,7 +3855,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann sehen.",
-          "exampleEn": "One can see."
+          "exampleEn": "One can see.",
+          "symbol": "👁️"
         },
         {
           "id": "a1-actions-12",
@@ -3556,7 +3867,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann hören.",
-          "exampleEn": "One can hear."
+          "exampleEn": "One can hear.",
+          "symbol": "👂"
         },
         {
           "id": "a1-actions-13",
@@ -3567,7 +3879,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann lesen.",
-          "exampleEn": "One can read."
+          "exampleEn": "One can read.",
+          "symbol": "📖"
         },
         {
           "id": "a1-actions-14",
@@ -3578,7 +3891,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann schreiben.",
-          "exampleEn": "One can write."
+          "exampleEn": "One can write.",
+          "symbol": "✍️"
         },
         {
           "id": "a1-actions-15",
@@ -3589,7 +3903,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann fragen.",
-          "exampleEn": "One can ask."
+          "exampleEn": "One can ask.",
+          "symbol": "❓"
         },
         {
           "id": "a1-actions-16",
@@ -3600,7 +3915,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann antworten.",
-          "exampleEn": "One can answer."
+          "exampleEn": "One can answer.",
+          "symbol": "💬"
         },
         {
           "id": "a1-actions-17",
@@ -3611,7 +3927,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann helfen.",
-          "exampleEn": "One can help."
+          "exampleEn": "One can help.",
+          "symbol": "🤝"
         },
         {
           "id": "a1-actions-18",
@@ -3622,7 +3939,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann warten.",
-          "exampleEn": "One can wait."
+          "exampleEn": "One can wait.",
+          "symbol": "⏳"
         },
         {
           "id": "a1-actions-19",
@@ -3633,7 +3951,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann öffnen.",
-          "exampleEn": "One can open."
+          "exampleEn": "One can open.",
+          "symbol": "🔓"
         },
         {
           "id": "a1-actions-20",
@@ -3644,7 +3963,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann schließen.",
-          "exampleEn": "One can close."
+          "exampleEn": "One can close.",
+          "symbol": "🔒"
         }
       ]
     },
@@ -3663,7 +3983,8 @@
           "article": "die",
           "plural": "die Schulen",
           "example": "Das ist die Schule.",
-          "exampleEn": "That is the school."
+          "exampleEn": "That is the school.",
+          "symbol": "🏫"
         },
         {
           "id": "a1-school-02",
@@ -3674,7 +3995,8 @@
           "article": "der",
           "plural": "die Kurse",
           "example": "Das ist der Kurs.",
-          "exampleEn": "That is the course."
+          "exampleEn": "That is the course.",
+          "symbol": "📚"
         },
         {
           "id": "a1-school-03",
@@ -3685,7 +4007,8 @@
           "article": "die",
           "plural": "die Klassen",
           "example": "Das ist die Klasse.",
-          "exampleEn": "That is the class."
+          "exampleEn": "That is the class.",
+          "symbol": "👥"
         },
         {
           "id": "a1-school-04",
@@ -3696,7 +4019,8 @@
           "article": "der",
           "plural": "die Lehrer",
           "example": "Das ist der Lehrer.",
-          "exampleEn": "That is the male teacher."
+          "exampleEn": "That is the male teacher.",
+          "symbol": "👨‍🏫"
         },
         {
           "id": "a1-school-05",
@@ -3707,7 +4031,8 @@
           "article": "die",
           "plural": "die Lehrerinnen",
           "example": "Das ist die Lehrerin.",
-          "exampleEn": "That is the female teacher."
+          "exampleEn": "That is the female teacher.",
+          "symbol": "👩‍🏫"
         },
         {
           "id": "a1-school-06",
@@ -3718,7 +4043,8 @@
           "article": "der",
           "plural": "die Schüler",
           "example": "Das ist der Schüler.",
-          "exampleEn": "That is the male pupil."
+          "exampleEn": "That is the male pupil.",
+          "symbol": "👦"
         },
         {
           "id": "a1-school-07",
@@ -3729,7 +4055,8 @@
           "article": "die",
           "plural": "die Schülerinnen",
           "example": "Das ist die Schülerin.",
-          "exampleEn": "That is the female pupil."
+          "exampleEn": "That is the female pupil.",
+          "symbol": "👧"
         },
         {
           "id": "a1-school-08",
@@ -3740,7 +4067,8 @@
           "article": "die",
           "plural": "die Aufgaben",
           "example": "Das ist die Aufgabe.",
-          "exampleEn": "That is the exercise / task."
+          "exampleEn": "That is the exercise / task.",
+          "symbol": "📝"
         },
         {
           "id": "a1-school-09",
@@ -3751,7 +4079,8 @@
           "article": "die",
           "plural": "die Fragen",
           "example": "Das ist die Frage.",
-          "exampleEn": "That is the question."
+          "exampleEn": "That is the question.",
+          "symbol": "❓"
         },
         {
           "id": "a1-school-10",
@@ -3762,7 +4091,8 @@
           "article": "die",
           "plural": "die Antworten",
           "example": "Das ist die Antwort.",
-          "exampleEn": "That is the answer."
+          "exampleEn": "That is the answer.",
+          "symbol": "✅"
         },
         {
           "id": "a1-school-11",
@@ -3773,7 +4103,8 @@
           "article": "das",
           "plural": "die Bücher",
           "example": "Das ist das Buch.",
-          "exampleEn": "That is the book."
+          "exampleEn": "That is the book.",
+          "symbol": "📕"
         },
         {
           "id": "a1-school-12",
@@ -3784,7 +4115,8 @@
           "article": "das",
           "plural": "die Hefte",
           "example": "Das ist das Heft.",
-          "exampleEn": "That is the notebook."
+          "exampleEn": "That is the notebook.",
+          "symbol": "📓"
         },
         {
           "id": "a1-school-13",
@@ -3795,7 +4127,8 @@
           "article": "der",
           "plural": "die Stifte",
           "example": "Das ist der Stift.",
-          "exampleEn": "That is the pen."
+          "exampleEn": "That is the pen.",
+          "symbol": "🖊️"
         },
         {
           "id": "a1-school-14",
@@ -3806,7 +4139,8 @@
           "article": "das",
           "plural": "die Papiere",
           "example": "Das ist das Papier.",
-          "exampleEn": "That is the paper."
+          "exampleEn": "That is the paper.",
+          "symbol": "📄"
         },
         {
           "id": "a1-school-15",
@@ -3817,7 +4151,8 @@
           "article": "das",
           "plural": "die Wörter",
           "example": "Das ist das Wort.",
-          "exampleEn": "That is the word."
+          "exampleEn": "That is the word.",
+          "symbol": "🔤"
         },
         {
           "id": "a1-school-16",
@@ -3828,7 +4163,8 @@
           "article": "der",
           "plural": "die Sätze",
           "example": "Das ist der Satz.",
-          "exampleEn": "That is the sentence."
+          "exampleEn": "That is the sentence.",
+          "symbol": "💬"
         },
         {
           "id": "a1-school-17",
@@ -3839,7 +4175,8 @@
           "article": "der",
           "plural": "die Texte",
           "example": "Das ist der Text.",
-          "exampleEn": "That is the text."
+          "exampleEn": "That is the text.",
+          "symbol": "📃"
         },
         {
           "id": "a1-school-18",
@@ -3850,7 +4187,8 @@
           "article": "die",
           "plural": "die Prüfungen",
           "example": "Das ist die Prüfung.",
-          "exampleEn": "That is the exam."
+          "exampleEn": "That is the exam.",
+          "symbol": "📋"
         },
         {
           "id": "a1-school-19",
@@ -3861,7 +4199,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann verstehen.",
-          "exampleEn": "One can understand."
+          "exampleEn": "One can understand.",
+          "symbol": "💡"
         },
         {
           "id": "a1-school-20",
@@ -3872,7 +4211,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann wiederholen.",
-          "exampleEn": "One can repeat."
+          "exampleEn": "One can repeat.",
+          "symbol": "🔁"
         }
       ]
     },
@@ -3891,7 +4231,8 @@
           "article": "die",
           "plural": "die Arbeiten",
           "example": "Das ist die Arbeit.",
-          "exampleEn": "That is the work."
+          "exampleEn": "That is the work.",
+          "symbol": "💼"
         },
         {
           "id": "a1-work-02",
@@ -3902,7 +4243,8 @@
           "article": "der",
           "plural": "die Berufe",
           "example": "Das ist der Beruf.",
-          "exampleEn": "That is the profession."
+          "exampleEn": "That is the profession.",
+          "symbol": "🧑‍🔧"
         },
         {
           "id": "a1-work-03",
@@ -3913,7 +4255,8 @@
           "article": "die",
           "plural": "die Firmen",
           "example": "Das ist die Firma.",
-          "exampleEn": "That is the company."
+          "exampleEn": "That is the company.",
+          "symbol": "🏢"
         },
         {
           "id": "a1-work-04",
@@ -3924,7 +4267,8 @@
           "article": "das",
           "plural": "die Büros",
           "example": "Das ist das Büro.",
-          "exampleEn": "That is the office."
+          "exampleEn": "That is the office.",
+          "symbol": "🖥️"
         },
         {
           "id": "a1-work-05",
@@ -3935,7 +4279,8 @@
           "article": "der",
           "plural": "die Chefs",
           "example": "Das ist der Chef.",
-          "exampleEn": "That is the male boss."
+          "exampleEn": "That is the male boss.",
+          "symbol": "👔"
         },
         {
           "id": "a1-work-06",
@@ -3946,7 +4291,8 @@
           "article": "die",
           "plural": "die Chefinnen",
           "example": "Das ist die Chefin.",
-          "exampleEn": "That is the female boss."
+          "exampleEn": "That is the female boss.",
+          "symbol": "👩‍💼"
         },
         {
           "id": "a1-work-07",
@@ -3957,7 +4303,8 @@
           "article": "der",
           "plural": "die Kollegen",
           "example": "Das ist der Kollege.",
-          "exampleEn": "That is the male colleague."
+          "exampleEn": "That is the male colleague.",
+          "symbol": "🧑‍💼"
         },
         {
           "id": "a1-work-08",
@@ -3968,7 +4315,8 @@
           "article": "die",
           "plural": "die Kolleginnen",
           "example": "Das ist die Kollegin.",
-          "exampleEn": "That is the female colleague."
+          "exampleEn": "That is the female colleague.",
+          "symbol": "👩‍💼"
         },
         {
           "id": "a1-work-09",
@@ -3979,7 +4327,8 @@
           "article": "der",
           "plural": "die Kunden",
           "example": "Das ist der Kunde.",
-          "exampleEn": "That is the male customer."
+          "exampleEn": "That is the male customer.",
+          "symbol": "🧔"
         },
         {
           "id": "a1-work-10",
@@ -3990,7 +4339,8 @@
           "article": "die",
           "plural": "die Kundinnen",
           "example": "Das ist die Kundin.",
-          "exampleEn": "That is the female customer."
+          "exampleEn": "That is the female customer.",
+          "symbol": "👩"
         },
         {
           "id": "a1-work-11",
@@ -4001,7 +4351,8 @@
           "article": "der",
           "plural": "die Computer",
           "example": "Das ist der Computer.",
-          "exampleEn": "That is the computer."
+          "exampleEn": "That is the computer.",
+          "symbol": "💻"
         },
         {
           "id": "a1-work-12",
@@ -4012,7 +4363,8 @@
           "article": "der",
           "plural": "die Bildschirme",
           "example": "Das ist der Bildschirm.",
-          "exampleEn": "That is the screen."
+          "exampleEn": "That is the screen.",
+          "symbol": "🖥️"
         },
         {
           "id": "a1-work-13",
@@ -4023,7 +4375,8 @@
           "article": "das",
           "plural": "die Telefone",
           "example": "Das ist das Telefon.",
-          "exampleEn": "That is the telephone."
+          "exampleEn": "That is the telephone.",
+          "symbol": "☎️"
         },
         {
           "id": "a1-work-14",
@@ -4034,7 +4387,8 @@
           "article": "der",
           "plural": "die Briefe",
           "example": "Das ist der Brief.",
-          "exampleEn": "That is the letter."
+          "exampleEn": "That is the letter.",
+          "symbol": "✉️"
         },
         {
           "id": "a1-work-15",
@@ -4045,7 +4399,8 @@
           "article": "die",
           "plural": "die Besprechungen",
           "example": "Das ist die Besprechung.",
-          "exampleEn": "That is the meeting."
+          "exampleEn": "That is the meeting.",
+          "symbol": "👥"
         },
         {
           "id": "a1-work-16",
@@ -4056,7 +4411,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Feierabend.",
-          "exampleEn": "That is the end of the working day."
+          "exampleEn": "That is the end of the working day.",
+          "symbol": "🌇"
         },
         {
           "id": "a1-work-17",
@@ -4067,7 +4423,8 @@
           "article": "der",
           "plural": "die Ärzte",
           "example": "Das ist der Arzt.",
-          "exampleEn": "That is the male doctor."
+          "exampleEn": "That is the male doctor.",
+          "symbol": "👨‍⚕️"
         },
         {
           "id": "a1-work-18",
@@ -4078,7 +4435,8 @@
           "article": "die",
           "plural": "die Verkäuferinnen",
           "example": "Das ist die Verkäuferin.",
-          "exampleEn": "That is the saleswoman."
+          "exampleEn": "That is the saleswoman.",
+          "symbol": "👩‍💼"
         },
         {
           "id": "a1-work-19",
@@ -4089,7 +4447,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann verdienen.",
-          "exampleEn": "One can earn."
+          "exampleEn": "One can earn.",
+          "symbol": "💶"
         },
         {
           "id": "a1-work-20",
@@ -4100,7 +4459,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist frei.",
-          "exampleEn": "That is off / free."
+          "exampleEn": "That is off / free.",
+          "symbol": "🏖️"
         }
       ]
     },
@@ -4119,7 +4479,8 @@
           "article": "das",
           "plural": "die Zentren",
           "example": "Das ist das Zentrum.",
-          "exampleEn": "That is the center."
+          "exampleEn": "That is the center.",
+          "symbol": "🎯"
         },
         {
           "id": "a1-city-02",
@@ -4130,7 +4491,8 @@
           "article": "der",
           "plural": "die Plätze",
           "example": "Das ist der Platz.",
-          "exampleEn": "That is the square / place."
+          "exampleEn": "That is the square / place.",
+          "symbol": "🏛️"
         },
         {
           "id": "a1-city-03",
@@ -4141,7 +4503,8 @@
           "article": "der",
           "plural": "die Parks",
           "example": "Das ist der Park.",
-          "exampleEn": "That is the park."
+          "exampleEn": "That is the park.",
+          "symbol": "🌳"
         },
         {
           "id": "a1-city-04",
@@ -4152,7 +4515,8 @@
           "article": "der",
           "plural": "die Bahnhöfe",
           "example": "Das ist der Bahnhof.",
-          "exampleEn": "That is the train station."
+          "exampleEn": "That is the train station.",
+          "symbol": "🚉"
         },
         {
           "id": "a1-city-05",
@@ -4163,7 +4527,8 @@
           "article": "die",
           "plural": "die Haltestellen",
           "example": "Das ist die Haltestelle.",
-          "exampleEn": "That is the stop."
+          "exampleEn": "That is the stop.",
+          "symbol": "🚏"
         },
         {
           "id": "a1-city-06",
@@ -4174,7 +4539,8 @@
           "article": "der",
           "plural": "die Flughäfen",
           "example": "Das ist der Flughafen.",
-          "exampleEn": "That is the airport."
+          "exampleEn": "That is the airport.",
+          "symbol": "✈️"
         },
         {
           "id": "a1-city-07",
@@ -4185,7 +4551,8 @@
           "article": "die",
           "plural": "die Banken",
           "example": "Das ist die Bank.",
-          "exampleEn": "That is the bank."
+          "exampleEn": "That is the bank.",
+          "symbol": "🏦"
         },
         {
           "id": "a1-city-08",
@@ -4196,7 +4563,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Post.",
-          "exampleEn": "That is the post office."
+          "exampleEn": "That is the post office.",
+          "symbol": "📮"
         },
         {
           "id": "a1-city-09",
@@ -4207,7 +4575,8 @@
           "article": "die",
           "plural": "die Apotheken",
           "example": "Das ist die Apotheke.",
-          "exampleEn": "That is the pharmacy."
+          "exampleEn": "That is the pharmacy.",
+          "symbol": "⚕️"
         },
         {
           "id": "a1-city-10",
@@ -4218,7 +4587,8 @@
           "article": "das",
           "plural": "die Krankenhäuser",
           "example": "Das ist das Krankenhaus.",
-          "exampleEn": "That is the hospital."
+          "exampleEn": "That is the hospital.",
+          "symbol": "🏥"
         },
         {
           "id": "a1-city-11",
@@ -4229,7 +4599,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Polizei.",
-          "exampleEn": "That is the police."
+          "exampleEn": "That is the police.",
+          "symbol": "👮"
         },
         {
           "id": "a1-city-12",
@@ -4240,7 +4611,8 @@
           "article": "das",
           "plural": "die Rathäuser",
           "example": "Das ist das Rathaus.",
-          "exampleEn": "That is the town hall."
+          "exampleEn": "That is the town hall.",
+          "symbol": "🏛️"
         },
         {
           "id": "a1-city-13",
@@ -4251,7 +4623,8 @@
           "article": "die",
           "plural": "die Bibliotheken",
           "example": "Das ist die Bibliothek.",
-          "exampleEn": "That is the library."
+          "exampleEn": "That is the library.",
+          "symbol": "📚"
         },
         {
           "id": "a1-city-14",
@@ -4262,7 +4635,8 @@
           "article": "das",
           "plural": "die Museen",
           "example": "Das ist das Museum.",
-          "exampleEn": "That is the museum."
+          "exampleEn": "That is the museum.",
+          "symbol": "🏺"
         },
         {
           "id": "a1-city-15",
@@ -4273,7 +4647,8 @@
           "article": "das",
           "plural": "die Kinos",
           "example": "Das ist das Kino.",
-          "exampleEn": "That is the cinema."
+          "exampleEn": "That is the cinema.",
+          "symbol": "🎬"
         },
         {
           "id": "a1-city-16",
@@ -4284,7 +4659,8 @@
           "article": "das",
           "plural": "die Restaurants",
           "example": "Das ist das Restaurant.",
-          "exampleEn": "That is the restaurant."
+          "exampleEn": "That is the restaurant.",
+          "symbol": "🍽️"
         },
         {
           "id": "a1-city-17",
@@ -4295,7 +4671,8 @@
           "article": "das",
           "plural": "die Cafés",
           "example": "Das ist das Café.",
-          "exampleEn": "That is the café."
+          "exampleEn": "That is the café.",
+          "symbol": "☕"
         },
         {
           "id": "a1-city-18",
@@ -4306,7 +4683,8 @@
           "article": "das",
           "plural": "die Hotels",
           "example": "Das ist das Hotel.",
-          "exampleEn": "That is the hotel."
+          "exampleEn": "That is the hotel.",
+          "symbol": "🛎️"
         },
         {
           "id": "a1-city-19",
@@ -4317,7 +4695,8 @@
           "article": "die",
           "plural": "die Kirchen",
           "example": "Das ist die Kirche.",
-          "exampleEn": "That is the church."
+          "exampleEn": "That is the church.",
+          "symbol": "⛪"
         },
         {
           "id": "a1-city-20",
@@ -4328,7 +4707,8 @@
           "article": "das",
           "plural": "die Schwimmbäder",
           "example": "Das ist das Schwimmbad.",
-          "exampleEn": "That is the swimming pool."
+          "exampleEn": "That is the swimming pool.",
+          "symbol": "🏊"
         }
       ]
     },
@@ -4347,7 +4727,8 @@
           "article": "der",
           "plural": "die Wege",
           "example": "Das ist der Weg.",
-          "exampleEn": "That is the way."
+          "exampleEn": "That is the way.",
+          "symbol": "🛣️"
         },
         {
           "id": "a1-directions-02",
@@ -4358,7 +4739,8 @@
           "article": "die",
           "plural": "die Kreuzungen",
           "example": "Das ist die Kreuzung.",
-          "exampleEn": "That is the intersection."
+          "exampleEn": "That is the intersection.",
+          "symbol": "➕"
         },
         {
           "id": "a1-directions-03",
@@ -4369,7 +4751,8 @@
           "article": "die",
           "plural": "die Ampeln",
           "example": "Das ist die Ampel.",
-          "exampleEn": "That is the traffic light."
+          "exampleEn": "That is the traffic light.",
+          "symbol": "🚦"
         },
         {
           "id": "a1-directions-04",
@@ -4380,7 +4763,8 @@
           "article": "die",
           "plural": "die Ecken",
           "example": "Das ist die Ecke.",
-          "exampleEn": "That is the corner."
+          "exampleEn": "That is the corner.",
+          "symbol": "↪️"
         },
         {
           "id": "a1-directions-05",
@@ -4391,7 +4775,8 @@
           "article": "die",
           "plural": "die Brücken",
           "example": "Das ist die Brücke.",
-          "exampleEn": "That is the bridge."
+          "exampleEn": "That is the bridge.",
+          "symbol": "🌉"
         },
         {
           "id": "a1-directions-06",
@@ -4402,7 +4787,8 @@
           "article": "der",
           "plural": "die Busse",
           "example": "Das ist der Bus.",
-          "exampleEn": "That is the bus."
+          "exampleEn": "That is the bus.",
+          "symbol": "🚌"
         },
         {
           "id": "a1-directions-07",
@@ -4413,7 +4799,8 @@
           "article": "die",
           "plural": "die Bahnen",
           "example": "Das ist die Bahn.",
-          "exampleEn": "That is the railway / train."
+          "exampleEn": "That is the railway / train.",
+          "symbol": "🚆"
         },
         {
           "id": "a1-directions-08",
@@ -4424,7 +4811,8 @@
           "article": "der",
           "plural": "die Züge",
           "example": "Das ist der Zug.",
-          "exampleEn": "That is the train."
+          "exampleEn": "That is the train.",
+          "symbol": "🚄"
         },
         {
           "id": "a1-directions-09",
@@ -4435,7 +4823,8 @@
           "article": "die",
           "plural": "die U-Bahnen",
           "example": "Das ist die U-Bahn.",
-          "exampleEn": "That is the underground."
+          "exampleEn": "That is the underground.",
+          "symbol": "🚇"
         },
         {
           "id": "a1-directions-10",
@@ -4446,7 +4835,8 @@
           "article": "die",
           "plural": "die Straßenbahnen",
           "example": "Das ist die Straßenbahn.",
-          "exampleEn": "That is the tram."
+          "exampleEn": "That is the tram.",
+          "symbol": "🚋"
         },
         {
           "id": "a1-directions-11",
@@ -4457,7 +4847,8 @@
           "article": "das",
           "plural": "die Taxis",
           "example": "Das ist das Taxi.",
-          "exampleEn": "That is the taxi."
+          "exampleEn": "That is the taxi.",
+          "symbol": "🚕"
         },
         {
           "id": "a1-directions-12",
@@ -4468,7 +4859,8 @@
           "article": "das",
           "plural": "die Autos",
           "example": "Das ist das Auto.",
-          "exampleEn": "That is the car."
+          "exampleEn": "That is the car.",
+          "symbol": "🚗"
         },
         {
           "id": "a1-directions-13",
@@ -4479,7 +4871,8 @@
           "article": "das",
           "plural": "die Fahrräder",
           "example": "Das ist das Fahrrad.",
-          "exampleEn": "That is the bicycle."
+          "exampleEn": "That is the bicycle.",
+          "symbol": "🚲"
         },
         {
           "id": "a1-directions-14",
@@ -4490,7 +4883,8 @@
           "article": "die",
           "plural": "die Fahrkarten",
           "example": "Das ist die Fahrkarte.",
-          "exampleEn": "That is the ticket."
+          "exampleEn": "That is the ticket.",
+          "symbol": "🎫"
         },
         {
           "id": "a1-directions-15",
@@ -4501,7 +4895,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert links.",
-          "exampleEn": "That happens left."
+          "exampleEn": "That happens left.",
+          "symbol": "⬅️"
         },
         {
           "id": "a1-directions-16",
@@ -4512,7 +4907,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert rechts.",
-          "exampleEn": "That happens right."
+          "exampleEn": "That happens right.",
+          "symbol": "➡️"
         },
         {
           "id": "a1-directions-17",
@@ -4523,7 +4919,8 @@
           "article": "",
           "plural": "",
           "example": "Das passiert geradeaus.",
-          "exampleEn": "That happens straight ahead."
+          "exampleEn": "That happens straight ahead.",
+          "symbol": "⬆️"
         },
         {
           "id": "a1-directions-18",
@@ -4534,7 +4931,8 @@
           "article": "",
           "plural": "",
           "example": "gegenüber",
-          "exampleEn": "opposite"
+          "exampleEn": "opposite",
+          "symbol": "↔️"
         },
         {
           "id": "a1-directions-19",
@@ -4545,7 +4943,8 @@
           "article": "",
           "plural": "",
           "example": "neben",
-          "exampleEn": "next to"
+          "exampleEn": "next to",
+          "symbol": "📍"
         },
         {
           "id": "a1-directions-20",
@@ -4556,7 +4955,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann aussteigen.",
-          "exampleEn": "One can get off."
+          "exampleEn": "One can get off.",
+          "symbol": "🚪"
         }
       ]
     },
@@ -4575,7 +4975,8 @@
           "article": "die",
           "plural": "die Reisen",
           "example": "Das ist die Reise.",
-          "exampleEn": "That is the journey / trip."
+          "exampleEn": "That is the journey / trip.",
+          "symbol": "🗺️"
         },
         {
           "id": "a1-travel-02",
@@ -4586,7 +4987,8 @@
           "article": "der",
           "plural": "die Urlaube",
           "example": "Das ist der Urlaub.",
-          "exampleEn": "That is the holiday."
+          "exampleEn": "That is the holiday.",
+          "symbol": "🏖️"
         },
         {
           "id": "a1-travel-03",
@@ -4597,7 +4999,8 @@
           "article": "der",
           "plural": "die Ausflüge",
           "example": "Das ist der Ausflug.",
-          "exampleEn": "That is the excursion."
+          "exampleEn": "That is the excursion.",
+          "symbol": "🥾"
         },
         {
           "id": "a1-travel-04",
@@ -4608,7 +5011,8 @@
           "article": "der",
           "plural": "die Koffer",
           "example": "Das ist der Koffer.",
-          "exampleEn": "That is the suitcase."
+          "exampleEn": "That is the suitcase.",
+          "symbol": "🧳"
         },
         {
           "id": "a1-travel-05",
@@ -4619,7 +5023,8 @@
           "article": "die",
           "plural": "die Taschen",
           "example": "Das ist die Tasche.",
-          "exampleEn": "That is the bag."
+          "exampleEn": "That is the bag.",
+          "symbol": "👜"
         },
         {
           "id": "a1-travel-06",
@@ -4630,7 +5035,8 @@
           "article": "der",
           "plural": "die Pässe",
           "example": "Das ist der Pass.",
-          "exampleEn": "That is the passport."
+          "exampleEn": "That is the passport.",
+          "symbol": "🛂"
         },
         {
           "id": "a1-travel-07",
@@ -4641,7 +5047,8 @@
           "article": "das",
           "plural": "die Tickets",
           "example": "Das ist das Ticket.",
-          "exampleEn": "That is the ticket."
+          "exampleEn": "That is the ticket.",
+          "symbol": "🎫"
         },
         {
           "id": "a1-travel-08",
@@ -4652,7 +5059,8 @@
           "article": "das",
           "plural": "die Flugzeuge",
           "example": "Das ist das Flugzeug.",
-          "exampleEn": "That is the airplane."
+          "exampleEn": "That is the airplane.",
+          "symbol": "✈️"
         },
         {
           "id": "a1-travel-09",
@@ -4663,7 +5071,8 @@
           "article": "die",
           "plural": "die Rezeptionen",
           "example": "Das ist die Rezeption.",
-          "exampleEn": "That is the reception."
+          "exampleEn": "That is the reception.",
+          "symbol": "🛎️"
         },
         {
           "id": "a1-travel-10",
@@ -4674,7 +5083,8 @@
           "article": "das",
           "plural": "die Einzelzimmer",
           "example": "Das ist das Einzelzimmer.",
-          "exampleEn": "That is the single room."
+          "exampleEn": "That is the single room.",
+          "symbol": "🛏️"
         },
         {
           "id": "a1-travel-11",
@@ -4685,7 +5095,8 @@
           "article": "das",
           "plural": "die Doppelzimmer",
           "example": "Das ist das Doppelzimmer.",
-          "exampleEn": "That is the double room."
+          "exampleEn": "That is the double room.",
+          "symbol": "🛏️🛏️"
         },
         {
           "id": "a1-travel-12",
@@ -4696,7 +5107,8 @@
           "article": "die",
           "plural": "die Nächte",
           "example": "Das ist die Nacht.",
-          "exampleEn": "That is the night."
+          "exampleEn": "That is the night.",
+          "symbol": "🌙"
         },
         {
           "id": "a1-travel-13",
@@ -4707,7 +5119,8 @@
           "article": "die",
           "plural": "die Ankünfte",
           "example": "Das ist die Ankunft.",
-          "exampleEn": "That is the arrival."
+          "exampleEn": "That is the arrival.",
+          "symbol": "🛬"
         },
         {
           "id": "a1-travel-14",
@@ -4718,7 +5131,8 @@
           "article": "die",
           "plural": "die Abfahrten",
           "example": "Das ist die Abfahrt.",
-          "exampleEn": "That is the departure."
+          "exampleEn": "That is the departure.",
+          "symbol": "🚉"
         },
         {
           "id": "a1-travel-15",
@@ -4729,7 +5143,8 @@
           "article": "das",
           "plural": "die Gleise",
           "example": "Das ist das Gleis.",
-          "exampleEn": "That is the platform / track."
+          "exampleEn": "That is the platform / track.",
+          "symbol": "🛤️"
         },
         {
           "id": "a1-travel-16",
@@ -4740,7 +5155,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann reisen.",
-          "exampleEn": "One can travel."
+          "exampleEn": "One can travel.",
+          "symbol": "🌍"
         },
         {
           "id": "a1-travel-17",
@@ -4751,7 +5167,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann buchen.",
-          "exampleEn": "One can book."
+          "exampleEn": "One can book.",
+          "symbol": "📅"
         },
         {
           "id": "a1-travel-18",
@@ -4762,7 +5179,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann reservieren.",
-          "exampleEn": "One can reserve."
+          "exampleEn": "One can reserve.",
+          "symbol": "📝"
         },
         {
           "id": "a1-travel-19",
@@ -4773,7 +5191,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann ankommen.",
-          "exampleEn": "One can arrive."
+          "exampleEn": "One can arrive.",
+          "symbol": "📍"
         },
         {
           "id": "a1-travel-20",
@@ -4784,7 +5203,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann abfahren.",
-          "exampleEn": "One can depart."
+          "exampleEn": "One can depart.",
+          "symbol": "🚆"
         }
       ]
     },
@@ -4803,7 +5223,8 @@
           "article": "der",
           "plural": "die Körper",
           "example": "Das ist der Körper.",
-          "exampleEn": "That is the body."
+          "exampleEn": "That is the body.",
+          "symbol": "🧍"
         },
         {
           "id": "a1-body-02",
@@ -4814,7 +5235,8 @@
           "article": "der",
           "plural": "die Köpfe",
           "example": "Das ist der Kopf.",
-          "exampleEn": "That is the head."
+          "exampleEn": "That is the head.",
+          "symbol": "🙂"
         },
         {
           "id": "a1-body-03",
@@ -4825,7 +5247,8 @@
           "article": "das",
           "plural": "die Gesichter",
           "example": "Das ist das Gesicht.",
-          "exampleEn": "That is the face."
+          "exampleEn": "That is the face.",
+          "symbol": "😊"
         },
         {
           "id": "a1-body-04",
@@ -4836,7 +5259,8 @@
           "article": "das",
           "plural": "die Augen",
           "example": "Das ist das Auge.",
-          "exampleEn": "That is the eye."
+          "exampleEn": "That is the eye.",
+          "symbol": "👁️"
         },
         {
           "id": "a1-body-05",
@@ -4847,7 +5271,8 @@
           "article": "das",
           "plural": "die Ohren",
           "example": "Das ist das Ohr.",
-          "exampleEn": "That is the ear."
+          "exampleEn": "That is the ear.",
+          "symbol": "👂"
         },
         {
           "id": "a1-body-06",
@@ -4858,7 +5283,8 @@
           "article": "die",
           "plural": "die Nasen",
           "example": "Das ist die Nase.",
-          "exampleEn": "That is the nose."
+          "exampleEn": "That is the nose.",
+          "symbol": "👃"
         },
         {
           "id": "a1-body-07",
@@ -4869,7 +5295,8 @@
           "article": "der",
           "plural": "die Münder",
           "example": "Das ist der Mund.",
-          "exampleEn": "That is the mouth."
+          "exampleEn": "That is the mouth.",
+          "symbol": "👄"
         },
         {
           "id": "a1-body-08",
@@ -4880,7 +5307,8 @@
           "article": "der",
           "plural": "die Zähne",
           "example": "Das ist der Zahn.",
-          "exampleEn": "That is the tooth."
+          "exampleEn": "That is the tooth.",
+          "symbol": "🦷"
         },
         {
           "id": "a1-body-09",
@@ -4891,7 +5319,8 @@
           "article": "der",
           "plural": "die Hälse",
           "example": "Das ist der Hals.",
-          "exampleEn": "That is the throat / neck."
+          "exampleEn": "That is the throat / neck.",
+          "symbol": "🧣"
         },
         {
           "id": "a1-body-10",
@@ -4902,7 +5331,8 @@
           "article": "der",
           "plural": "die Rücken",
           "example": "Das ist der Rücken.",
-          "exampleEn": "That is the back."
+          "exampleEn": "That is the back.",
+          "symbol": "🔙"
         },
         {
           "id": "a1-body-11",
@@ -4913,7 +5343,8 @@
           "article": "der",
           "plural": "die Arme",
           "example": "Das ist der Arm.",
-          "exampleEn": "That is the arm."
+          "exampleEn": "That is the arm.",
+          "symbol": "💪"
         },
         {
           "id": "a1-body-12",
@@ -4924,7 +5355,8 @@
           "article": "die",
           "plural": "die Hände",
           "example": "Das ist die Hand.",
-          "exampleEn": "That is the hand."
+          "exampleEn": "That is the hand.",
+          "symbol": "✋"
         },
         {
           "id": "a1-body-13",
@@ -4935,7 +5367,8 @@
           "article": "der",
           "plural": "die Finger",
           "example": "Das ist der Finger.",
-          "exampleEn": "That is the finger."
+          "exampleEn": "That is the finger.",
+          "symbol": "☝️"
         },
         {
           "id": "a1-body-14",
@@ -4946,7 +5379,8 @@
           "article": "der",
           "plural": "die Bäuche",
           "example": "Das ist der Bauch.",
-          "exampleEn": "That is the stomach."
+          "exampleEn": "That is the stomach.",
+          "symbol": "🤰"
         },
         {
           "id": "a1-body-15",
@@ -4957,7 +5391,8 @@
           "article": "das",
           "plural": "die Beine",
           "example": "Das ist das Bein.",
-          "exampleEn": "That is the leg."
+          "exampleEn": "That is the leg.",
+          "symbol": "🦵"
         },
         {
           "id": "a1-body-16",
@@ -4968,7 +5403,8 @@
           "article": "der",
           "plural": "die Füße",
           "example": "Das ist der Fuß.",
-          "exampleEn": "That is the foot."
+          "exampleEn": "That is the foot.",
+          "symbol": "🦶"
         },
         {
           "id": "a1-body-17",
@@ -4979,7 +5415,8 @@
           "article": "das",
           "plural": "die Haare",
           "example": "Das ist das Haar.",
-          "exampleEn": "That is the hair."
+          "exampleEn": "That is the hair.",
+          "symbol": "💇"
         },
         {
           "id": "a1-body-18",
@@ -4990,7 +5427,8 @@
           "article": "das",
           "plural": "die Herzen",
           "example": "Das ist das Herz.",
-          "exampleEn": "That is the heart."
+          "exampleEn": "That is the heart.",
+          "symbol": "❤️"
         },
         {
           "id": "a1-body-19",
@@ -5001,7 +5439,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist gesund.",
-          "exampleEn": "That is healthy."
+          "exampleEn": "That is healthy.",
+          "symbol": "💚"
         },
         {
           "id": "a1-body-20",
@@ -5012,7 +5451,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist krank.",
-          "exampleEn": "That is ill."
+          "exampleEn": "That is ill.",
+          "symbol": "🤒"
         }
       ]
     },
@@ -5031,7 +5471,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Gesundheit.",
-          "exampleEn": "That is the health."
+          "exampleEn": "That is the health.",
+          "symbol": "💚"
         },
         {
           "id": "a1-health-02",
@@ -5042,7 +5483,8 @@
           "article": "die",
           "plural": "die Krankheiten",
           "example": "Das ist die Krankheit.",
-          "exampleEn": "That is the illness."
+          "exampleEn": "That is the illness.",
+          "symbol": "🦠"
         },
         {
           "id": "a1-health-03",
@@ -5053,7 +5495,8 @@
           "article": "der",
           "plural": "die Schmerzen",
           "example": "Das ist der Schmerz.",
-          "exampleEn": "That is the pain."
+          "exampleEn": "That is the pain.",
+          "symbol": "⚡"
         },
         {
           "id": "a1-health-04",
@@ -5064,7 +5507,8 @@
           "article": "der",
           "plural": "die Kopfschmerzen",
           "example": "Das ist der Kopfschmerz.",
-          "exampleEn": "That is the headache."
+          "exampleEn": "That is the headache.",
+          "symbol": "🤕"
         },
         {
           "id": "a1-health-05",
@@ -5075,7 +5519,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Fieber.",
-          "exampleEn": "That is the fever."
+          "exampleEn": "That is the fever.",
+          "symbol": "🌡️"
         },
         {
           "id": "a1-health-06",
@@ -5086,7 +5531,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Husten.",
-          "exampleEn": "That is the cough."
+          "exampleEn": "That is the cough.",
+          "symbol": "😷"
         },
         {
           "id": "a1-health-07",
@@ -5097,7 +5543,8 @@
           "article": "die",
           "plural": "die Erkältungen",
           "example": "Das ist die Erkältung.",
-          "exampleEn": "That is the cold."
+          "exampleEn": "That is the cold.",
+          "symbol": "🤧"
         },
         {
           "id": "a1-health-08",
@@ -5108,7 +5555,8 @@
           "article": "das",
           "plural": "die Medikamente",
           "example": "Das ist das Medikament.",
-          "exampleEn": "That is the medicine."
+          "exampleEn": "That is the medicine.",
+          "symbol": "💊"
         },
         {
           "id": "a1-health-09",
@@ -5119,7 +5567,8 @@
           "article": "die",
           "plural": "die Tabletten",
           "example": "Das ist die Tablette.",
-          "exampleEn": "That is the tablet."
+          "exampleEn": "That is the tablet.",
+          "symbol": "💊"
         },
         {
           "id": "a1-health-10",
@@ -5130,7 +5579,8 @@
           "article": "die",
           "plural": "die Praxen",
           "example": "Das ist die Praxis.",
-          "exampleEn": "That is the doctor’s office."
+          "exampleEn": "That is the doctor’s office.",
+          "symbol": "🩺"
         },
         {
           "id": "a1-health-11",
@@ -5141,7 +5591,8 @@
           "article": "der",
           "plural": "die Notfälle",
           "example": "Das ist der Notfall.",
-          "exampleEn": "That is the emergency."
+          "exampleEn": "That is the emergency.",
+          "symbol": "🚨"
         },
         {
           "id": "a1-health-12",
@@ -5152,7 +5603,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Hilfe.",
-          "exampleEn": "That is the help."
+          "exampleEn": "That is the help.",
+          "symbol": "🆘"
         },
         {
           "id": "a1-health-13",
@@ -5163,7 +5615,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann wehtun.",
-          "exampleEn": "One can hurt."
+          "exampleEn": "One can hurt.",
+          "symbol": "🤕"
         },
         {
           "id": "a1-health-14",
@@ -5174,7 +5627,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann husten.",
-          "exampleEn": "One can cough."
+          "exampleEn": "One can cough.",
+          "symbol": "😷"
         },
         {
           "id": "a1-health-15",
@@ -5185,7 +5639,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann sich fühlen.",
-          "exampleEn": "One can feel."
+          "exampleEn": "One can feel.",
+          "symbol": "🙂"
         },
         {
           "id": "a1-health-16",
@@ -5196,7 +5651,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann ausruhen.",
-          "exampleEn": "One can rest."
+          "exampleEn": "One can rest.",
+          "symbol": "🛌"
         },
         {
           "id": "a1-health-17",
@@ -5207,7 +5663,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann einnehmen.",
-          "exampleEn": "One can take medicine."
+          "exampleEn": "One can take medicine.",
+          "symbol": "💊"
         },
         {
           "id": "a1-health-18",
@@ -5218,7 +5675,8 @@
           "article": "",
           "plural": "",
           "example": "Gute Besserung!",
-          "exampleEn": "Get well soon!"
+          "exampleEn": "Get well soon!",
+          "symbol": "🌷"
         },
         {
           "id": "a1-health-19",
@@ -5229,7 +5687,8 @@
           "article": "",
           "plural": "",
           "example": "Ich brauche einen Arzt.",
-          "exampleEn": "I need a doctor."
+          "exampleEn": "I need a doctor.",
+          "symbol": "👨‍⚕️"
         },
         {
           "id": "a1-health-20",
@@ -5240,7 +5699,8 @@
           "article": "",
           "plural": "",
           "example": "Rufen Sie bitte 112.",
-          "exampleEn": "Please call 112."
+          "exampleEn": "Please call 112.",
+          "symbol": "☎️"
         }
       ]
     },
@@ -5259,7 +5719,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Freizeit.",
-          "exampleEn": "That is the free time."
+          "exampleEn": "That is the free time.",
+          "symbol": "⏰"
         },
         {
           "id": "a1-free-time-02",
@@ -5270,7 +5731,8 @@
           "article": "das",
           "plural": "die Hobbys",
           "example": "Das ist das Hobby.",
-          "exampleEn": "That is the hobby."
+          "exampleEn": "That is the hobby.",
+          "symbol": "🎯"
         },
         {
           "id": "a1-free-time-03",
@@ -5281,7 +5743,8 @@
           "article": "die",
           "plural": "—",
           "example": "Das ist die Musik.",
-          "exampleEn": "That is the music."
+          "exampleEn": "That is the music.",
+          "symbol": "🎵"
         },
         {
           "id": "a1-free-time-04",
@@ -5292,7 +5755,8 @@
           "article": "das",
           "plural": "die Fotos",
           "example": "Das ist das Foto.",
-          "exampleEn": "That is the photo."
+          "exampleEn": "That is the photo.",
+          "symbol": "📷"
         },
         {
           "id": "a1-free-time-05",
@@ -5303,7 +5767,8 @@
           "article": "die",
           "plural": "die Kameras",
           "example": "Das ist die Kamera.",
-          "exampleEn": "That is the camera."
+          "exampleEn": "That is the camera.",
+          "symbol": "📸"
         },
         {
           "id": "a1-free-time-06",
@@ -5314,7 +5779,8 @@
           "article": "die",
           "plural": "die Partys",
           "example": "Das ist die Party.",
-          "exampleEn": "That is the party."
+          "exampleEn": "That is the party.",
+          "symbol": "🎉"
         },
         {
           "id": "a1-free-time-07",
@@ -5325,7 +5791,8 @@
           "article": "das",
           "plural": "die Spiele",
           "example": "Das ist das Spiel.",
-          "exampleEn": "That is the game."
+          "exampleEn": "That is the game.",
+          "symbol": "🎲"
         },
         {
           "id": "a1-free-time-08",
@@ -5336,7 +5803,8 @@
           "article": "die",
           "plural": "die Gitarren",
           "example": "Das ist die Gitarre.",
-          "exampleEn": "That is the guitar."
+          "exampleEn": "That is the guitar.",
+          "symbol": "🎸"
         },
         {
           "id": "a1-free-time-09",
@@ -5347,7 +5815,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann spielen.",
-          "exampleEn": "One can play."
+          "exampleEn": "One can play.",
+          "symbol": "🎮"
         },
         {
           "id": "a1-free-time-10",
@@ -5358,7 +5827,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann tanzen.",
-          "exampleEn": "One can dance."
+          "exampleEn": "One can dance.",
+          "symbol": "💃"
         },
         {
           "id": "a1-free-time-11",
@@ -5369,7 +5839,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann singen.",
-          "exampleEn": "One can sing."
+          "exampleEn": "One can sing.",
+          "symbol": "🎤"
         },
         {
           "id": "a1-free-time-12",
@@ -5380,7 +5851,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann fotografieren.",
-          "exampleEn": "One can photograph."
+          "exampleEn": "One can photograph.",
+          "symbol": "📸"
         },
         {
           "id": "a1-free-time-13",
@@ -5391,7 +5863,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann malen.",
-          "exampleEn": "One can paint."
+          "exampleEn": "One can paint.",
+          "symbol": "🎨"
         },
         {
           "id": "a1-free-time-14",
@@ -5402,7 +5875,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann zeichnen.",
-          "exampleEn": "One can draw."
+          "exampleEn": "One can draw.",
+          "symbol": "✏️"
         },
         {
           "id": "a1-free-time-15",
@@ -5413,7 +5887,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann wandern.",
-          "exampleEn": "One can hike."
+          "exampleEn": "One can hike.",
+          "symbol": "🥾"
         },
         {
           "id": "a1-free-time-16",
@@ -5424,7 +5899,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann spazieren gehen.",
-          "exampleEn": "One can go for a walk."
+          "exampleEn": "One can go for a walk.",
+          "symbol": "🚶"
         },
         {
           "id": "a1-free-time-17",
@@ -5435,7 +5911,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann Freunde treffen.",
-          "exampleEn": "One can meet friends."
+          "exampleEn": "One can meet friends.",
+          "symbol": "🧑‍🤝‍🧑"
         },
         {
           "id": "a1-free-time-18",
@@ -5446,7 +5923,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann Musik hören.",
-          "exampleEn": "One can listen to music."
+          "exampleEn": "One can listen to music.",
+          "symbol": "🎧"
         },
         {
           "id": "a1-free-time-19",
@@ -5457,7 +5935,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann einladen.",
-          "exampleEn": "One can invite."
+          "exampleEn": "One can invite.",
+          "symbol": "💌"
         },
         {
           "id": "a1-free-time-20",
@@ -5468,7 +5947,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist interessant.",
-          "exampleEn": "That is interesting."
+          "exampleEn": "That is interesting.",
+          "symbol": "💡"
         }
       ]
     },
@@ -5487,7 +5967,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Sport.",
-          "exampleEn": "That is the sport."
+          "exampleEn": "That is the sport.",
+          "symbol": "🏅"
         },
         {
           "id": "a1-sport-02",
@@ -5498,7 +5979,8 @@
           "article": "der",
           "plural": "—",
           "example": "Das ist der Fußball.",
-          "exampleEn": "That is the football."
+          "exampleEn": "That is the football.",
+          "symbol": "⚽"
         },
         {
           "id": "a1-sport-03",
@@ -5509,7 +5991,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Tennis.",
-          "exampleEn": "That is the tennis."
+          "exampleEn": "That is the tennis.",
+          "symbol": "🎾"
         },
         {
           "id": "a1-sport-04",
@@ -5520,7 +6003,8 @@
           "article": "die",
           "plural": "die Mannschaften",
           "example": "Das ist die Mannschaft.",
-          "exampleEn": "That is the team."
+          "exampleEn": "That is the team.",
+          "symbol": "👥"
         },
         {
           "id": "a1-sport-05",
@@ -5531,7 +6015,8 @@
           "article": "der",
           "plural": "die Bälle",
           "example": "Das ist der Ball.",
-          "exampleEn": "That is the ball."
+          "exampleEn": "That is the ball.",
+          "symbol": "⚽"
         },
         {
           "id": "a1-sport-06",
@@ -5542,7 +6027,8 @@
           "article": "das",
           "plural": "die Radios",
           "example": "Das ist das Radio.",
-          "exampleEn": "That is the radio."
+          "exampleEn": "That is the radio.",
+          "symbol": "📻"
         },
         {
           "id": "a1-sport-07",
@@ -5553,7 +6039,8 @@
           "article": "die",
           "plural": "die Zeitungen",
           "example": "Das ist die Zeitung.",
-          "exampleEn": "That is the newspaper."
+          "exampleEn": "That is the newspaper.",
+          "symbol": "📰"
         },
         {
           "id": "a1-sport-08",
@@ -5564,7 +6051,8 @@
           "article": "die",
           "plural": "die Nachrichten",
           "example": "Das ist die Nachricht.",
-          "exampleEn": "That is the message / news item."
+          "exampleEn": "That is the message / news item.",
+          "symbol": "💬"
         },
         {
           "id": "a1-sport-09",
@@ -5575,7 +6063,8 @@
           "article": "der",
           "plural": "die Filme",
           "example": "Das ist der Film.",
-          "exampleEn": "That is the film."
+          "exampleEn": "That is the film.",
+          "symbol": "🎬"
         },
         {
           "id": "a1-sport-10",
@@ -5586,7 +6075,8 @@
           "article": "die",
           "plural": "die Serien",
           "example": "Das ist die Serie.",
-          "exampleEn": "That is the series."
+          "exampleEn": "That is the series.",
+          "symbol": "📺"
         },
         {
           "id": "a1-sport-11",
@@ -5597,7 +6087,8 @@
           "article": "das",
           "plural": "—",
           "example": "Das ist das Internet.",
-          "exampleEn": "That is the internet."
+          "exampleEn": "That is the internet.",
+          "symbol": "🌐"
         },
         {
           "id": "a1-sport-12",
@@ -5608,7 +6099,8 @@
           "article": "das",
           "plural": "die Handys",
           "example": "Das ist das Handy.",
-          "exampleEn": "That is the mobile phone."
+          "exampleEn": "That is the mobile phone.",
+          "symbol": "📱"
         },
         {
           "id": "a1-sport-13",
@@ -5619,7 +6111,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann schwimmen.",
-          "exampleEn": "One can swim."
+          "exampleEn": "One can swim.",
+          "symbol": "🏊"
         },
         {
           "id": "a1-sport-14",
@@ -5630,7 +6123,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann laufen.",
-          "exampleEn": "One can run."
+          "exampleEn": "One can run.",
+          "symbol": "🏃"
         },
         {
           "id": "a1-sport-15",
@@ -5641,7 +6135,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann Rad fahren.",
-          "exampleEn": "One can cycle."
+          "exampleEn": "One can cycle.",
+          "symbol": "🚴"
         },
         {
           "id": "a1-sport-16",
@@ -5652,7 +6147,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann trainieren.",
-          "exampleEn": "One can train."
+          "exampleEn": "One can train.",
+          "symbol": "🏋️"
         },
         {
           "id": "a1-sport-17",
@@ -5663,7 +6159,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann gewinnen.",
-          "exampleEn": "One can win."
+          "exampleEn": "One can win.",
+          "symbol": "🏆"
         },
         {
           "id": "a1-sport-18",
@@ -5674,7 +6171,8 @@
           "article": "",
           "plural": "",
           "example": "Man kann verlieren.",
-          "exampleEn": "One can lose."
+          "exampleEn": "One can lose.",
+          "symbol": "😞"
         },
         {
           "id": "a1-sport-19",
@@ -5685,7 +6183,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist schnell.",
-          "exampleEn": "That is fast."
+          "exampleEn": "That is fast.",
+          "symbol": "⚡"
         },
         {
           "id": "a1-sport-20",
@@ -5696,7 +6195,8 @@
           "article": "",
           "plural": "",
           "example": "Das ist langsam.",
-          "exampleEn": "That is slow."
+          "exampleEn": "That is slow.",
+          "symbol": "🐢"
         }
       ]
     },
@@ -5715,7 +6215,8 @@
           "article": "",
           "plural": "",
           "example": "Wie bitte?",
-          "exampleEn": "Pardon?"
+          "exampleEn": "Pardon?",
+          "symbol": "👂"
         },
         {
           "id": "a1-conversation-02",
@@ -5726,7 +6227,8 @@
           "article": "",
           "plural": "",
           "example": "Noch einmal, bitte.",
-          "exampleEn": "Once again, please."
+          "exampleEn": "Once again, please.",
+          "symbol": "🔁"
         },
         {
           "id": "a1-conversation-03",
@@ -5737,7 +6239,8 @@
           "article": "",
           "plural": "",
           "example": "Langsamer, bitte.",
-          "exampleEn": "More slowly, please."
+          "exampleEn": "More slowly, please.",
+          "symbol": "🐢"
         },
         {
           "id": "a1-conversation-04",
@@ -5748,7 +6251,8 @@
           "article": "",
           "plural": "",
           "example": "Ich verstehe nicht.",
-          "exampleEn": "I do not understand."
+          "exampleEn": "I do not understand.",
+          "symbol": "🤷"
         },
         {
           "id": "a1-conversation-05",
@@ -5759,7 +6263,8 @@
           "article": "",
           "plural": "",
           "example": "Was bedeutet das?",
-          "exampleEn": "What does that mean?"
+          "exampleEn": "What does that mean?",
+          "symbol": "❓"
         },
         {
           "id": "a1-conversation-06",
@@ -5770,7 +6275,8 @@
           "article": "",
           "plural": "",
           "example": "Wie sagt man das auf Deutsch?",
-          "exampleEn": "How do you say that in German?"
+          "exampleEn": "How do you say that in German?",
+          "symbol": "🇩🇪"
         },
         {
           "id": "a1-conversation-07",
@@ -5781,7 +6287,8 @@
           "article": "",
           "plural": "",
           "example": "Können Sie mir helfen?",
-          "exampleEn": "Can you help me?"
+          "exampleEn": "Can you help me?",
+          "symbol": "🆘"
         },
         {
           "id": "a1-conversation-08",
@@ -5792,7 +6299,8 @@
           "article": "",
           "plural": "",
           "example": "Ich weiß es nicht.",
-          "exampleEn": "I do not know."
+          "exampleEn": "I do not know.",
+          "symbol": "🤔"
         },
         {
           "id": "a1-conversation-09",
@@ -5803,7 +6311,8 @@
           "article": "",
           "plural": "",
           "example": "Natürlich.",
-          "exampleEn": "Of course."
+          "exampleEn": "Of course.",
+          "symbol": "✅"
         },
         {
           "id": "a1-conversation-10",
@@ -5814,7 +6323,8 @@
           "article": "",
           "plural": "",
           "example": "Das stimmt.",
-          "exampleEn": "That is correct."
+          "exampleEn": "That is correct.",
+          "symbol": "🎯"
         },
         {
           "id": "a1-conversation-11",
@@ -5825,7 +6335,8 @@
           "article": "",
           "plural": "",
           "example": "Ich glaube schon.",
-          "exampleEn": "I think so."
+          "exampleEn": "I think so.",
+          "symbol": "💭"
         },
         {
           "id": "a1-conversation-12",
@@ -5836,7 +6347,8 @@
           "article": "",
           "plural": "",
           "example": "Einen Moment, bitte.",
-          "exampleEn": "One moment, please."
+          "exampleEn": "One moment, please.",
+          "symbol": "⏳"
         },
         {
           "id": "a1-conversation-13",
@@ -5847,7 +6359,8 @@
           "article": "",
           "plural": "",
           "example": "Tut mir leid.",
-          "exampleEn": "I am sorry."
+          "exampleEn": "I am sorry.",
+          "symbol": "🙇"
         },
         {
           "id": "a1-conversation-14",
@@ -5858,7 +6371,8 @@
           "article": "",
           "plural": "",
           "example": "Was möchten Sie?",
-          "exampleEn": "What would you like?"
+          "exampleEn": "What would you like?",
+          "symbol": "🛍️"
         },
         {
           "id": "a1-conversation-15",
@@ -5869,7 +6383,8 @@
           "article": "",
           "plural": "",
           "example": "Ich hätte gern …",
-          "exampleEn": "I would like …"
+          "exampleEn": "I would like …",
+          "symbol": "🤲"
         },
         {
           "id": "a1-conversation-16",
@@ -5880,7 +6395,8 @@
           "article": "",
           "plural": "",
           "example": "Wo ist …?",
-          "exampleEn": "Where is …?"
+          "exampleEn": "Where is …?",
+          "symbol": "📍"
         },
         {
           "id": "a1-conversation-17",
@@ -5891,7 +6407,8 @@
           "article": "",
           "plural": "",
           "example": "Wann beginnt …?",
-          "exampleEn": "When does … begin?"
+          "exampleEn": "When does … begin?",
+          "symbol": "⏰"
         },
         {
           "id": "a1-conversation-18",
@@ -5902,7 +6419,8 @@
           "article": "",
           "plural": "",
           "example": "Wie viel kostet das?",
-          "exampleEn": "How much does that cost?"
+          "exampleEn": "How much does that cost?",
+          "symbol": "🏷️"
         },
         {
           "id": "a1-conversation-19",
@@ -5913,7 +6431,8 @@
           "article": "",
           "plural": "",
           "example": "Das gefällt mir.",
-          "exampleEn": "I like that."
+          "exampleEn": "I like that.",
+          "symbol": "❤️"
         },
         {
           "id": "a1-conversation-20",
@@ -5924,7 +6443,8 @@
           "article": "",
           "plural": "",
           "example": "Bis später!",
-          "exampleEn": "See you later!"
+          "exampleEn": "See you later!",
+          "symbol": "👋"
         }
       ]
     },
@@ -5943,7 +6463,8 @@
           "article": "",
           "plural": "",
           "example": "ich",
-          "exampleEn": "I"
+          "exampleEn": "I",
+          "symbol": "🙋"
         },
         {
           "id": "a1-core-02",
@@ -5954,7 +6475,8 @@
           "article": "",
           "plural": "",
           "example": "du",
-          "exampleEn": "you (informal)"
+          "exampleEn": "you (informal)",
+          "symbol": "👉"
         },
         {
           "id": "a1-core-03",
@@ -5965,7 +6487,8 @@
           "article": "",
           "plural": "",
           "example": "Sie",
-          "exampleEn": "you (formal)"
+          "exampleEn": "you (formal)",
+          "symbol": "🎩"
         },
         {
           "id": "a1-core-04",
@@ -5976,7 +6499,8 @@
           "article": "",
           "plural": "",
           "example": "er",
-          "exampleEn": "he"
+          "exampleEn": "he",
+          "symbol": "👨"
         },
         {
           "id": "a1-core-05",
@@ -5987,7 +6511,8 @@
           "article": "",
           "plural": "",
           "example": "sie",
-          "exampleEn": "she / they"
+          "exampleEn": "she / they",
+          "symbol": "👩"
         },
         {
           "id": "a1-core-06",
@@ -5998,7 +6523,8 @@
           "article": "",
           "plural": "",
           "example": "es",
-          "exampleEn": "it"
+          "exampleEn": "it",
+          "symbol": "📦"
         },
         {
           "id": "a1-core-07",
@@ -6009,7 +6535,8 @@
           "article": "",
           "plural": "",
           "example": "wir",
-          "exampleEn": "we"
+          "exampleEn": "we",
+          "symbol": "👥"
         },
         {
           "id": "a1-core-08",
@@ -6020,7 +6547,8 @@
           "article": "",
           "plural": "",
           "example": "ihr",
-          "exampleEn": "you all"
+          "exampleEn": "you all",
+          "symbol": "👨‍👩‍👧"
         },
         {
           "id": "a1-core-09",
@@ -6031,7 +6559,8 @@
           "article": "",
           "plural": "",
           "example": "wer",
-          "exampleEn": "who"
+          "exampleEn": "who",
+          "symbol": "❓"
         },
         {
           "id": "a1-core-10",
@@ -6042,7 +6571,8 @@
           "article": "",
           "plural": "",
           "example": "was",
-          "exampleEn": "what"
+          "exampleEn": "what",
+          "symbol": "❔"
         },
         {
           "id": "a1-core-11",
@@ -6053,7 +6583,8 @@
           "article": "",
           "plural": "",
           "example": "wo",
-          "exampleEn": "where"
+          "exampleEn": "where",
+          "symbol": "📍"
         },
         {
           "id": "a1-core-12",
@@ -6064,7 +6595,8 @@
           "article": "",
           "plural": "",
           "example": "woher",
-          "exampleEn": "where from"
+          "exampleEn": "where from",
+          "symbol": "⬅️"
         },
         {
           "id": "a1-core-13",
@@ -6075,7 +6607,8 @@
           "article": "",
           "plural": "",
           "example": "wohin",
-          "exampleEn": "where to"
+          "exampleEn": "where to",
+          "symbol": "➡️"
         },
         {
           "id": "a1-core-14",
@@ -6086,7 +6619,8 @@
           "article": "",
           "plural": "",
           "example": "wann",
-          "exampleEn": "when"
+          "exampleEn": "when",
+          "symbol": "⏰"
         },
         {
           "id": "a1-core-15",
@@ -6097,7 +6631,8 @@
           "article": "",
           "plural": "",
           "example": "wie",
-          "exampleEn": "how"
+          "exampleEn": "how",
+          "symbol": "💭"
         },
         {
           "id": "a1-core-16",
@@ -6108,7 +6643,8 @@
           "article": "",
           "plural": "",
           "example": "warum",
-          "exampleEn": "why"
+          "exampleEn": "why",
+          "symbol": "🤔"
         },
         {
           "id": "a1-core-17",
@@ -6119,7 +6655,8 @@
           "article": "",
           "plural": "",
           "example": "und",
-          "exampleEn": "and"
+          "exampleEn": "and",
+          "symbol": "➕"
         },
         {
           "id": "a1-core-18",
@@ -6130,7 +6667,8 @@
           "article": "",
           "plural": "",
           "example": "oder",
-          "exampleEn": "or"
+          "exampleEn": "or",
+          "symbol": "🔀"
         },
         {
           "id": "a1-core-19",
@@ -6141,7 +6679,8 @@
           "article": "",
           "plural": "",
           "example": "aber",
-          "exampleEn": "but"
+          "exampleEn": "but",
+          "symbol": "↩️"
         },
         {
           "id": "a1-core-20",
@@ -6152,7 +6691,8 @@
           "article": "",
           "plural": "",
           "example": "weil",
-          "exampleEn": "because"
+          "exampleEn": "because",
+          "symbol": "🔗"
         }
       ]
     }

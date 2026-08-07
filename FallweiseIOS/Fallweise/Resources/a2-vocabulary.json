@@ -18,7 +18,8 @@
           "plural": "die Nachbarschaften",
           "example": "Das ist die Nachbarschaft.",
           "exampleEn": "That is the neighbourhood.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🏘️"
         },
         {
           "id": "a2-housing-02",
@@ -30,7 +31,8 @@
           "plural": "die Vermieter",
           "example": "Das ist der Vermieter.",
           "exampleEn": "That is the landlord.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🔑"
         },
         {
           "id": "a2-housing-03",
@@ -42,7 +44,8 @@
           "plural": "die Mieterinnen",
           "example": "Das ist die Mieterin.",
           "exampleEn": "That is the female tenant.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "👩"
         },
         {
           "id": "a2-housing-04",
@@ -54,7 +57,8 @@
           "plural": "die Hausordnungen",
           "example": "Das ist die Hausordnung.",
           "exampleEn": "That is the house rules.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "📜"
         },
         {
           "id": "a2-housing-05",
@@ -66,7 +70,8 @@
           "plural": "die Aufzüge",
           "example": "Das ist der Aufzug.",
           "exampleEn": "That is the lift.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🛗"
         },
         {
           "id": "a2-housing-06",
@@ -78,7 +83,8 @@
           "plural": "die Treppen",
           "example": "Das ist die Treppe.",
           "exampleEn": "That is the stairs.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🪜"
         },
         {
           "id": "a2-housing-07",
@@ -90,7 +96,8 @@
           "plural": "die Heizungen",
           "example": "Das ist die Heizung.",
           "exampleEn": "That is the heating.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "♨️"
         },
         {
           "id": "a2-housing-08",
@@ -102,7 +109,8 @@
           "plural": "—",
           "example": "Das ist der Strom.",
           "exampleEn": "That is the electricity.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "⚡"
         },
         {
           "id": "a2-housing-09",
@@ -114,7 +122,8 @@
           "plural": "—",
           "example": "Das ist der Müll.",
           "exampleEn": "That is the rubbish.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🗑️"
         },
         {
           "id": "a2-housing-10",
@@ -126,7 +135,8 @@
           "plural": "die Briefkästen",
           "example": "Das ist der Briefkasten.",
           "exampleEn": "That is the letterbox.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "📬"
         },
         {
           "id": "a2-housing-11",
@@ -138,7 +148,8 @@
           "plural": "die Reparaturen",
           "example": "Das ist die Reparatur.",
           "exampleEn": "That is the repair.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🔧"
         },
         {
           "id": "a2-housing-12",
@@ -150,7 +161,8 @@
           "plural": "—",
           "example": "Das ist der Lärm.",
           "exampleEn": "That is the noise.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🔊"
         },
         {
           "id": "a2-housing-13",
@@ -162,7 +174,8 @@
           "plural": "",
           "example": "Das ist kaputt.",
           "exampleEn": "That is broken.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "💥"
         },
         {
           "id": "a2-housing-14",
@@ -174,7 +187,8 @@
           "plural": "",
           "example": "Das ist bequem.",
           "exampleEn": "That is comfortable.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🛋️"
         },
         {
           "id": "a2-housing-15",
@@ -186,7 +200,8 @@
           "plural": "",
           "example": "Das ist eng.",
           "exampleEn": "That is cramped.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "↔️"
         },
         {
           "id": "a2-housing-16",
@@ -198,7 +213,8 @@
           "plural": "",
           "example": "Man kann renovieren.",
           "exampleEn": "One can renovate.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🖌️"
         },
         {
           "id": "a2-housing-17",
@@ -210,7 +226,8 @@
           "plural": "",
           "example": "Man kann reparieren.",
           "exampleEn": "One can repair.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "🔨"
         },
         {
           "id": "a2-housing-18",
@@ -222,7 +239,8 @@
           "plural": "",
           "example": "Man kann einziehen.",
           "exampleEn": "One can move in.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "📦➡️"
         },
         {
           "id": "a2-housing-19",
@@ -234,7 +252,8 @@
           "plural": "",
           "example": "Man kann ausziehen.",
           "exampleEn": "One can move out.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "📦⬅️"
         },
         {
           "id": "a2-housing-20",
@@ -246,7 +265,8 @@
           "plural": "",
           "example": "Man kann sich beschweren.",
           "exampleEn": "One can complain.",
-          "unitTitle": "Housing & neighbours"
+          "unitTitle": "Housing & neighbours",
+          "symbol": "📣"
         }
       ]
     },
@@ -267,7 +287,8 @@
           "plural": "die Bewerbungen",
           "example": "Das ist die Bewerbung.",
           "exampleEn": "That is the application.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "📨"
         },
         {
           "id": "a2-work-life-02",
@@ -279,7 +300,8 @@
           "plural": "die Lebensläufe",
           "example": "Das ist der Lebenslauf.",
           "exampleEn": "That is the CV.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "📄"
         },
         {
           "id": "a2-work-life-03",
@@ -291,7 +313,8 @@
           "plural": "die Stellen",
           "example": "Das ist die Stelle.",
           "exampleEn": "That is the position.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "💼"
         },
         {
           "id": "a2-work-life-04",
@@ -303,7 +326,8 @@
           "plural": "die Ausbildungen",
           "example": "Das ist die Ausbildung.",
           "exampleEn": "That is the vocational training.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "🎓"
         },
         {
           "id": "a2-work-life-05",
@@ -315,7 +339,8 @@
           "plural": "die Erfahrungen",
           "example": "Das ist die Erfahrung.",
           "exampleEn": "That is the experience.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "⭐"
         },
         {
           "id": "a2-work-life-06",
@@ -327,7 +352,8 @@
           "plural": "die Arbeitszeiten",
           "example": "Das ist die Arbeitszeit.",
           "exampleEn": "That is the working hours.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "⏰"
         },
         {
           "id": "a2-work-life-07",
@@ -339,7 +365,8 @@
           "plural": "die Gehälter",
           "example": "Das ist das Gehalt.",
           "exampleEn": "That is the salary.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "💶"
         },
         {
           "id": "a2-work-life-08",
@@ -351,7 +378,8 @@
           "plural": "die Verträge",
           "example": "Das ist der Vertrag.",
           "exampleEn": "That is the contract.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "✍️"
         },
         {
           "id": "a2-work-life-09",
@@ -363,7 +391,8 @@
           "plural": "die Aufträge",
           "example": "Das ist der Auftrag.",
           "exampleEn": "That is the assignment.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "📋"
         },
         {
           "id": "a2-work-life-10",
@@ -375,7 +404,8 @@
           "plural": "die Abteilungen",
           "example": "Das ist die Abteilung.",
           "exampleEn": "That is the department.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "🏢"
         },
         {
           "id": "a2-work-life-11",
@@ -387,7 +417,8 @@
           "plural": "die Teams",
           "example": "Das ist das Team.",
           "exampleEn": "That is the team.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "👥"
         },
         {
           "id": "a2-work-life-12",
@@ -399,7 +430,8 @@
           "plural": "—",
           "example": "Das ist die Verantwortung.",
           "exampleEn": "That is the responsibility.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "🛡️"
         },
         {
           "id": "a2-work-life-13",
@@ -411,7 +443,8 @@
           "plural": "",
           "example": "Das ist pünktlich.",
           "exampleEn": "That is punctual.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "⏱️"
         },
         {
           "id": "a2-work-life-14",
@@ -423,7 +456,8 @@
           "plural": "",
           "example": "Das ist zuverlässig.",
           "exampleEn": "That is reliable.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "🤝"
         },
         {
           "id": "a2-work-life-15",
@@ -435,7 +469,8 @@
           "plural": "",
           "example": "Das ist beschäftigt.",
           "exampleEn": "That is busy.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "💻"
         },
         {
           "id": "a2-work-life-16",
@@ -447,7 +482,8 @@
           "plural": "",
           "example": "Man kann sich bewerben.",
           "exampleEn": "One can apply.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "📨"
         },
         {
           "id": "a2-work-life-17",
@@ -459,7 +495,8 @@
           "plural": "",
           "example": "Man kann unterschreiben.",
           "exampleEn": "One can sign.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "✍️"
         },
         {
           "id": "a2-work-life-18",
@@ -471,7 +508,8 @@
           "plural": "",
           "example": "Man kann kündigen.",
           "exampleEn": "One can resign / cancel.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "🚪"
         },
         {
           "id": "a2-work-life-19",
@@ -483,7 +521,8 @@
           "plural": "",
           "example": "Man kann teilnehmen.",
           "exampleEn": "One can participate.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "🙋"
         },
         {
           "id": "a2-work-life-20",
@@ -495,7 +534,8 @@
           "plural": "",
           "example": "Man kann erledigen.",
           "exampleEn": "One can complete.",
-          "unitTitle": "Working life"
+          "unitTitle": "Working life",
+          "symbol": "✅"
         }
       ]
     },
@@ -516,7 +556,8 @@
           "plural": "die Beziehungen",
           "example": "Das ist die Beziehung.",
           "exampleEn": "That is the relationship.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "💞"
         },
         {
           "id": "a2-relationships-02",
@@ -528,7 +569,8 @@
           "plural": "die Bekannten",
           "example": "Das ist der Bekannte.",
           "exampleEn": "That is the acquaintance.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "👋"
         },
         {
           "id": "a2-relationships-03",
@@ -540,7 +582,8 @@
           "plural": "die Einladungen",
           "example": "Das ist die Einladung.",
           "exampleEn": "That is the invitation.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "💌"
         },
         {
           "id": "a2-relationships-04",
@@ -552,7 +595,8 @@
           "plural": "die Hochzeiten",
           "example": "Das ist die Hochzeit.",
           "exampleEn": "That is the wedding.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "💒"
         },
         {
           "id": "a2-relationships-05",
@@ -564,7 +608,8 @@
           "plural": "die Geschenke",
           "example": "Das ist das Geschenk.",
           "exampleEn": "That is the gift.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "🎁"
         },
         {
           "id": "a2-relationships-06",
@@ -576,7 +621,8 @@
           "plural": "die Besuche",
           "example": "Das ist der Besuch.",
           "exampleEn": "That is the visit.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "🚪"
         },
         {
           "id": "a2-relationships-07",
@@ -588,7 +634,8 @@
           "plural": "die Verabredungen",
           "example": "Das ist die Verabredung.",
           "exampleEn": "That is the arrangement.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "📅"
         },
         {
           "id": "a2-relationships-08",
@@ -600,7 +647,8 @@
           "plural": "die Streite",
           "example": "Das ist der Streit.",
           "exampleEn": "That is the argument.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "💥"
         },
         {
           "id": "a2-relationships-09",
@@ -612,7 +660,8 @@
           "plural": "die Meinungen",
           "example": "Das ist die Meinung.",
           "exampleEn": "That is the opinion.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "💭"
         },
         {
           "id": "a2-relationships-10",
@@ -624,7 +673,8 @@
           "plural": "die Gefühle",
           "example": "Das ist das Gefühl.",
           "exampleEn": "That is the feeling.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "❤️"
         },
         {
           "id": "a2-relationships-11",
@@ -636,7 +686,8 @@
           "plural": "",
           "example": "Das passiert gemeinsam.",
           "exampleEn": "That happens together.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "🤝"
         },
         {
           "id": "a2-relationships-12",
@@ -648,7 +699,8 @@
           "plural": "",
           "example": "Das ist persönlich.",
           "exampleEn": "That is personal.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "👤"
         },
         {
           "id": "a2-relationships-13",
@@ -660,7 +712,8 @@
           "plural": "",
           "example": "Das ist überrascht.",
           "exampleEn": "That is surprised.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "😲"
         },
         {
           "id": "a2-relationships-14",
@@ -672,7 +725,8 @@
           "plural": "",
           "example": "Das ist enttäuscht.",
           "exampleEn": "That is disappointed.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "😞"
         },
         {
           "id": "a2-relationships-15",
@@ -684,7 +738,8 @@
           "plural": "",
           "example": "Das ist einverstanden.",
           "exampleEn": "That is in agreement.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "👍"
         },
         {
           "id": "a2-relationships-16",
@@ -696,7 +751,8 @@
           "plural": "",
           "example": "Man kann sich verabreden.",
           "exampleEn": "One can arrange to meet.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "📅"
         },
         {
           "id": "a2-relationships-17",
@@ -708,7 +764,8 @@
           "plural": "",
           "example": "Man kann gratulieren.",
           "exampleEn": "One can congratulate.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "🥂"
         },
         {
           "id": "a2-relationships-18",
@@ -720,7 +777,8 @@
           "plural": "",
           "example": "Man kann feiern.",
           "exampleEn": "One can celebrate.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "🎉"
         },
         {
           "id": "a2-relationships-19",
@@ -732,7 +790,8 @@
           "plural": "",
           "example": "Man kann vermuten.",
           "exampleEn": "One can suppose.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "🤔"
         },
         {
           "id": "a2-relationships-20",
@@ -744,7 +803,8 @@
           "plural": "",
           "example": "Man kann vermissen.",
           "exampleEn": "One can miss.",
-          "unitTitle": "Relationships & invitations"
+          "unitTitle": "Relationships & invitations",
+          "symbol": "💔"
         }
       ]
     },
@@ -765,7 +825,8 @@
           "plural": "die Formulare",
           "example": "Das ist das Formular.",
           "exampleEn": "That is the form.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📄"
         },
         {
           "id": "a2-services-02",
@@ -777,7 +838,8 @@
           "plural": "die Anmeldungen",
           "example": "Das ist die Anmeldung.",
           "exampleEn": "That is the registration.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📝"
         },
         {
           "id": "a2-services-03",
@@ -789,7 +851,8 @@
           "plural": "die Ausweise",
           "example": "Das ist der Ausweis.",
           "exampleEn": "That is the identity card.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🪪"
         },
         {
           "id": "a2-services-04",
@@ -801,7 +864,8 @@
           "plural": "die Versicherungen",
           "example": "Das ist die Versicherung.",
           "exampleEn": "That is the insurance.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🛡️"
         },
         {
           "id": "a2-services-05",
@@ -813,7 +877,8 @@
           "plural": "die Rechnungen",
           "example": "Das ist die Rechnung.",
           "exampleEn": "That is the invoice.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🧾"
         },
         {
           "id": "a2-services-06",
@@ -825,7 +890,8 @@
           "plural": "die Konten",
           "example": "Das ist das Konto.",
           "exampleEn": "That is the account.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🏦"
         },
         {
           "id": "a2-services-07",
@@ -837,7 +903,8 @@
           "plural": "die Unterschriften",
           "example": "Das ist die Unterschrift.",
           "exampleEn": "That is the signature.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "✍️"
         },
         {
           "id": "a2-services-08",
@@ -849,7 +916,8 @@
           "plural": "die Kopien",
           "example": "Das ist die Kopie.",
           "exampleEn": "That is the copy.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📑"
         },
         {
           "id": "a2-services-09",
@@ -861,7 +929,8 @@
           "plural": "die Schalter",
           "example": "Das ist der Schalter.",
           "exampleEn": "That is the counter.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🏛️"
         },
         {
           "id": "a2-services-10",
@@ -873,7 +942,8 @@
           "plural": "die Öffnungszeiten",
           "example": "Das ist die Öffnungszeit.",
           "exampleEn": "That is the opening time.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🕘"
         },
         {
           "id": "a2-services-11",
@@ -885,7 +955,8 @@
           "plural": "die Gebühren",
           "example": "Das ist die Gebühr.",
           "exampleEn": "That is the fee.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "💶"
         },
         {
           "id": "a2-services-12",
@@ -897,7 +968,8 @@
           "plural": "die Anträge",
           "example": "Das ist der Antrag.",
           "exampleEn": "That is the application / request.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📨"
         },
         {
           "id": "a2-services-13",
@@ -909,7 +981,8 @@
           "plural": "",
           "example": "Das ist gültig.",
           "exampleEn": "That is valid.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "✅"
         },
         {
           "id": "a2-services-14",
@@ -921,7 +994,8 @@
           "plural": "",
           "example": "Das ist dringend.",
           "exampleEn": "That is urgent.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🚨"
         },
         {
           "id": "a2-services-15",
@@ -933,7 +1007,8 @@
           "plural": "",
           "example": "Das passiert schriftlich.",
           "exampleEn": "That happens in writing.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "✍️"
         },
         {
           "id": "a2-services-16",
@@ -945,7 +1020,8 @@
           "plural": "",
           "example": "Man kann ausfüllen.",
           "exampleEn": "One can fill in.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "🖊️"
         },
         {
           "id": "a2-services-17",
@@ -957,7 +1033,8 @@
           "plural": "",
           "example": "Man kann beantragen.",
           "exampleEn": "One can apply for.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📬"
         },
         {
           "id": "a2-services-18",
@@ -969,7 +1046,8 @@
           "plural": "",
           "example": "Man kann überweisen.",
           "exampleEn": "One can transfer money.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "💸"
         },
         {
           "id": "a2-services-19",
@@ -981,7 +1059,8 @@
           "plural": "",
           "example": "Man kann abholen.",
           "exampleEn": "One can collect.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📦"
         },
         {
           "id": "a2-services-20",
@@ -993,7 +1072,8 @@
           "plural": "",
           "example": "Man kann vereinbaren.",
           "exampleEn": "One can arrange.",
-          "unitTitle": "Services & administration"
+          "unitTitle": "Services & administration",
+          "symbol": "📅"
         }
       ]
     },
@@ -1014,7 +1094,8 @@
           "plural": "die Erlebnisse",
           "example": "Das ist das Erlebnis.",
           "exampleEn": "That is the experience.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "✨"
         },
         {
           "id": "a2-experiences-02",
@@ -1026,7 +1107,8 @@
           "plural": "die Sehenswürdigkeiten",
           "example": "Das ist die Sehenswürdigkeit.",
           "exampleEn": "That is the sight.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🏰"
         },
         {
           "id": "a2-experiences-03",
@@ -1038,7 +1120,8 @@
           "plural": "die Unterkünfte",
           "example": "Das ist die Unterkunft.",
           "exampleEn": "That is the accommodation.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🏠"
         },
         {
           "id": "a2-experiences-04",
@@ -1050,7 +1133,8 @@
           "plural": "die Jugendherbergen",
           "example": "Das ist die Jugendherberge.",
           "exampleEn": "That is the youth hostel.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🛏️"
         },
         {
           "id": "a2-experiences-05",
@@ -1062,7 +1146,8 @@
           "plural": "die Landschaften",
           "example": "Das ist die Landschaft.",
           "exampleEn": "That is the landscape.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🏞️"
         },
         {
           "id": "a2-experiences-06",
@@ -1074,7 +1159,8 @@
           "plural": "die Grenzen",
           "example": "Das ist die Grenze.",
           "exampleEn": "That is the border.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🚧"
         },
         {
           "id": "a2-experiences-07",
@@ -1086,7 +1172,8 @@
           "plural": "die Verspätungen",
           "example": "Das ist die Verspätung.",
           "exampleEn": "That is the delay.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "⏳"
         },
         {
           "id": "a2-experiences-08",
@@ -1098,7 +1185,8 @@
           "plural": "die Verbindungen",
           "example": "Das ist die Verbindung.",
           "exampleEn": "That is the connection.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🔗"
         },
         {
           "id": "a2-experiences-09",
@@ -1110,7 +1198,8 @@
           "plural": "die Rückfahrten",
           "example": "Das ist die Rückfahrt.",
           "exampleEn": "That is the return journey.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "↩️"
         },
         {
           "id": "a2-experiences-10",
@@ -1122,7 +1211,8 @@
           "plural": "die Reiseführer",
           "example": "Das ist der Reiseführer.",
           "exampleEn": "That is the travel guide.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "📘"
         },
         {
           "id": "a2-experiences-11",
@@ -1134,7 +1224,8 @@
           "plural": "",
           "example": "Das passiert unterwegs.",
           "exampleEn": "That happens on the way.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🚶"
         },
         {
           "id": "a2-experiences-12",
@@ -1146,7 +1237,8 @@
           "plural": "",
           "example": "Das passiert plötzlich.",
           "exampleEn": "That happens suddenly.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "⚡"
         },
         {
           "id": "a2-experiences-13",
@@ -1158,7 +1250,8 @@
           "plural": "",
           "example": "Das passiert rechtzeitig.",
           "exampleEn": "That happens in time.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "⏱️"
         },
         {
           "id": "a2-experiences-14",
@@ -1170,7 +1263,8 @@
           "plural": "",
           "example": "Das ist wunderschön.",
           "exampleEn": "That is beautiful.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "😍"
         },
         {
           "id": "a2-experiences-15",
@@ -1182,7 +1276,8 @@
           "plural": "",
           "example": "Das ist anstrengend.",
           "exampleEn": "That is exhausting.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🥵"
         },
         {
           "id": "a2-experiences-16",
@@ -1194,7 +1289,8 @@
           "plural": "",
           "example": "Man kann besichtigen.",
           "exampleEn": "One can visit / tour.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "👀"
         },
         {
           "id": "a2-experiences-17",
@@ -1206,7 +1302,8 @@
           "plural": "",
           "example": "Man kann entdecken.",
           "exampleEn": "One can discover.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🔎"
         },
         {
           "id": "a2-experiences-18",
@@ -1218,7 +1315,8 @@
           "plural": "",
           "example": "Man kann sich erinnern.",
           "exampleEn": "One can remember.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "💭"
         },
         {
           "id": "a2-experiences-19",
@@ -1230,7 +1328,8 @@
           "plural": "",
           "example": "Man kann verpassen.",
           "exampleEn": "One can miss.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🏃"
         },
         {
           "id": "a2-experiences-20",
@@ -1242,7 +1341,8 @@
           "plural": "",
           "example": "Man kann übernachten.",
           "exampleEn": "One can stay overnight.",
-          "unitTitle": "Travel & experiences"
+          "unitTitle": "Travel & experiences",
+          "symbol": "🛏️"
         }
       ]
     },
@@ -1263,7 +1363,8 @@
           "plural": "die Untersuchungen",
           "example": "Das ist die Untersuchung.",
           "exampleEn": "That is the examination.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🔍"
         },
         {
           "id": "a2-health-care-02",
@@ -1275,7 +1376,8 @@
           "plural": "die Behandlungen",
           "example": "Das ist die Behandlung.",
           "exampleEn": "That is the treatment.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🩹"
         },
         {
           "id": "a2-health-care-03",
@@ -1287,7 +1389,8 @@
           "plural": "die Sprechstunden",
           "example": "Das ist die Sprechstunde.",
           "exampleEn": "That is the consultation hour.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🕘"
         },
         {
           "id": "a2-health-care-04",
@@ -1299,7 +1402,8 @@
           "plural": "die Rezepte",
           "example": "Das ist das Rezept.",
           "exampleEn": "That is the prescription.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "📜"
         },
         {
           "id": "a2-health-care-05",
@@ -1311,7 +1415,8 @@
           "plural": "die Salben",
           "example": "Das ist die Salbe.",
           "exampleEn": "That is the ointment.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🧴"
         },
         {
           "id": "a2-health-care-06",
@@ -1323,7 +1428,8 @@
           "plural": "die Verletzungen",
           "example": "Das ist die Verletzung.",
           "exampleEn": "That is the injury.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🤕"
         },
         {
           "id": "a2-health-care-07",
@@ -1335,7 +1441,8 @@
           "plural": "die Allergien",
           "example": "Das ist die Allergie.",
           "exampleEn": "That is the allergy.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🌼"
         },
         {
           "id": "a2-health-care-08",
@@ -1347,7 +1454,8 @@
           "plural": "die Symptome",
           "example": "Das ist das Symptom.",
           "exampleEn": "That is the symptom.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🩺"
         },
         {
           "id": "a2-health-care-09",
@@ -1359,7 +1467,8 @@
           "plural": "—",
           "example": "Das ist das Blut.",
           "exampleEn": "That is the blood.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🩸"
         },
         {
           "id": "a2-health-care-10",
@@ -1371,7 +1480,8 @@
           "plural": "die Operationen",
           "example": "Das ist die Operation.",
           "exampleEn": "That is the operation.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🏥"
         },
         {
           "id": "a2-health-care-11",
@@ -1383,7 +1493,8 @@
           "plural": "die Krankenversicherungen",
           "example": "Das ist die Krankenversicherung.",
           "exampleEn": "That is the health insurance.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🛡️"
         },
         {
           "id": "a2-health-care-12",
@@ -1395,7 +1506,8 @@
           "plural": "—",
           "example": "Das ist die Genesung.",
           "exampleEn": "That is the recovery.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🌱"
         },
         {
           "id": "a2-health-care-13",
@@ -1407,7 +1519,8 @@
           "plural": "",
           "example": "Man kann untersuchen.",
           "exampleEn": "One can examine.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🔎"
         },
         {
           "id": "a2-health-care-14",
@@ -1419,7 +1532,8 @@
           "plural": "",
           "example": "Man kann behandeln.",
           "exampleEn": "One can treat.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🩹"
         },
         {
           "id": "a2-health-care-15",
@@ -1431,7 +1545,8 @@
           "plural": "",
           "example": "Man kann atmen.",
           "exampleEn": "One can breathe.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🫁"
         },
         {
           "id": "a2-health-care-16",
@@ -1443,7 +1558,8 @@
           "plural": "",
           "example": "Man kann sich verletzen.",
           "exampleEn": "One can injure oneself.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🤕"
         },
         {
           "id": "a2-health-care-17",
@@ -1455,7 +1571,8 @@
           "plural": "",
           "example": "Man kann verschreiben.",
           "exampleEn": "One can prescribe.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "✍️"
         },
         {
           "id": "a2-health-care-18",
@@ -1467,7 +1584,8 @@
           "plural": "",
           "example": "Das ist schwindelig.",
           "exampleEn": "That is dizzy.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "💫"
         },
         {
           "id": "a2-health-care-19",
@@ -1479,7 +1597,8 @@
           "plural": "",
           "example": "Das ist verletzt.",
           "exampleEn": "That is injured.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🩼"
         },
         {
           "id": "a2-health-care-20",
@@ -1491,7 +1610,8 @@
           "plural": "",
           "example": "Das ist allergisch.",
           "exampleEn": "That is allergic.",
-          "unitTitle": "Health care"
+          "unitTitle": "Health care",
+          "symbol": "🌼"
         }
       ]
     },
@@ -1512,7 +1632,8 @@
           "plural": "die Speisekarten",
           "example": "Das ist die Speisekarte.",
           "exampleEn": "That is the menu.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "📖"
         },
         {
           "id": "a2-restaurant-02",
@@ -1524,7 +1645,8 @@
           "plural": "die Gerichte",
           "example": "Das ist das Gericht.",
           "exampleEn": "That is the dish.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🍽️"
         },
         {
           "id": "a2-restaurant-03",
@@ -1536,7 +1658,8 @@
           "plural": "die Vorspeisen",
           "example": "Das ist die Vorspeise.",
           "exampleEn": "That is the starter.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🥗"
         },
         {
           "id": "a2-restaurant-04",
@@ -1548,7 +1671,8 @@
           "plural": "die Hauptgerichte",
           "example": "Das ist das Hauptgericht.",
           "exampleEn": "That is the main course.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🍛"
         },
         {
           "id": "a2-restaurant-05",
@@ -1560,7 +1684,8 @@
           "plural": "die Nachspeisen",
           "example": "Das ist die Nachspeise.",
           "exampleEn": "That is the dessert.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🍰"
         },
         {
           "id": "a2-restaurant-06",
@@ -1572,7 +1697,8 @@
           "plural": "die Bestellungen",
           "example": "Das ist die Bestellung.",
           "exampleEn": "That is the order.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "📝"
         },
         {
           "id": "a2-restaurant-07",
@@ -1584,7 +1710,8 @@
           "plural": "die Bedienungen",
           "example": "Das ist die Bedienung.",
           "exampleEn": "That is the server / service.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🧑‍🍳"
         },
         {
           "id": "a2-restaurant-08",
@@ -1596,7 +1723,8 @@
           "plural": "die Trinkgelder",
           "example": "Das ist das Trinkgeld.",
           "exampleEn": "That is the tip.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "💶"
         },
         {
           "id": "a2-restaurant-09",
@@ -1608,7 +1736,8 @@
           "plural": "die Geschmäcker",
           "example": "Das ist der Geschmack.",
           "exampleEn": "That is the taste.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "👅"
         },
         {
           "id": "a2-restaurant-10",
@@ -1620,7 +1749,8 @@
           "plural": "die Zutaten",
           "example": "Das ist die Zutat.",
           "exampleEn": "That is the ingredient.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🧅"
         },
         {
           "id": "a2-restaurant-11",
@@ -1632,7 +1762,8 @@
           "plural": "die Portionen",
           "example": "Das ist die Portion.",
           "exampleEn": "That is the portion.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🥣"
         },
         {
           "id": "a2-restaurant-12",
@@ -1644,7 +1775,8 @@
           "plural": "die Reservierungen",
           "example": "Das ist die Reservierung.",
           "exampleEn": "That is the reservation.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "📅"
         },
         {
           "id": "a2-restaurant-13",
@@ -1656,7 +1788,8 @@
           "plural": "",
           "example": "Man kann bestellen.",
           "exampleEn": "One can order.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "☝️"
         },
         {
           "id": "a2-restaurant-14",
@@ -1668,7 +1801,8 @@
           "plural": "",
           "example": "Man kann servieren.",
           "exampleEn": "One can serve.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🍽️"
         },
         {
           "id": "a2-restaurant-15",
@@ -1680,7 +1814,8 @@
           "plural": "",
           "example": "Man kann probieren.",
           "exampleEn": "One can try / taste.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🥄"
         },
         {
           "id": "a2-restaurant-16",
@@ -1692,7 +1827,8 @@
           "plural": "",
           "example": "Man kann empfehlen.",
           "exampleEn": "One can recommend.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "👍"
         },
         {
           "id": "a2-restaurant-17",
@@ -1704,7 +1840,8 @@
           "plural": "",
           "example": "Man kann schmecken.",
           "exampleEn": "One can taste.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "😋"
         },
         {
           "id": "a2-restaurant-18",
@@ -1716,7 +1853,8 @@
           "plural": "",
           "example": "Das ist vegetarisch.",
           "exampleEn": "That is vegetarian.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🥦"
         },
         {
           "id": "a2-restaurant-19",
@@ -1728,7 +1866,8 @@
           "plural": "",
           "example": "Das ist scharf.",
           "exampleEn": "That is spicy.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "🌶️"
         },
         {
           "id": "a2-restaurant-20",
@@ -1740,7 +1879,8 @@
           "plural": "",
           "example": "Das ist satt.",
           "exampleEn": "That is full / not hungry.",
-          "unitTitle": "Restaurant & dining"
+          "unitTitle": "Restaurant & dining",
+          "symbol": "😊"
         }
       ]
     },
@@ -1761,7 +1901,8 @@
           "plural": "die Produkte",
           "example": "Das ist das Produkt.",
           "exampleEn": "That is the product.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "📦"
         },
         {
           "id": "a2-consumer-02",
@@ -1773,7 +1914,8 @@
           "plural": "die Qualitäten",
           "example": "Das ist die Qualität.",
           "exampleEn": "That is the quality.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "⭐"
         },
         {
           "id": "a2-consumer-03",
@@ -1785,7 +1927,8 @@
           "plural": "die Marken",
           "example": "Das ist die Marke.",
           "exampleEn": "That is the brand.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "®️"
         },
         {
           "id": "a2-consumer-04",
@@ -1797,7 +1940,8 @@
           "plural": "die Garantien",
           "example": "Das ist die Garantie.",
           "exampleEn": "That is the warranty.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🛡️"
         },
         {
           "id": "a2-consumer-05",
@@ -1809,7 +1953,8 @@
           "plural": "die Umtausche",
           "example": "Das ist der Umtausch.",
           "exampleEn": "That is the exchange.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🔄"
         },
         {
           "id": "a2-consumer-06",
@@ -1821,7 +1966,8 @@
           "plural": "die Rückgaben",
           "example": "Das ist die Rückgabe.",
           "exampleEn": "That is the return.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "↩️"
         },
         {
           "id": "a2-consumer-07",
@@ -1833,7 +1979,8 @@
           "plural": "die Rabatte",
           "example": "Das ist der Rabatt.",
           "exampleEn": "That is the discount.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🏷️"
         },
         {
           "id": "a2-consumer-08",
@@ -1845,7 +1992,8 @@
           "plural": "die Kaufhäuser",
           "example": "Das ist das Kaufhaus.",
           "exampleEn": "That is the department store.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🏬"
         },
         {
           "id": "a2-consumer-09",
@@ -1857,7 +2005,8 @@
           "plural": "die Verkäufer",
           "example": "Das ist der Verkäufer.",
           "exampleEn": "That is the salesman.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🧑‍💼"
         },
         {
           "id": "a2-consumer-10",
@@ -1869,7 +2018,8 @@
           "plural": "die Auswahlen",
           "example": "Das ist die Auswahl.",
           "exampleEn": "That is the selection.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🗂️"
         },
         {
           "id": "a2-consumer-11",
@@ -1881,7 +2031,8 @@
           "plural": "die Lieferungen",
           "example": "Das ist die Lieferung.",
           "exampleEn": "That is the delivery.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🚚"
         },
         {
           "id": "a2-consumer-12",
@@ -1893,7 +2044,8 @@
           "plural": "die Bewertungen",
           "example": "Das ist die Bewertung.",
           "exampleEn": "That is the review / rating.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "⭐"
         },
         {
           "id": "a2-consumer-13",
@@ -1905,7 +2057,8 @@
           "plural": "",
           "example": "Man kann umtauschen.",
           "exampleEn": "One can exchange.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🔄"
         },
         {
           "id": "a2-consumer-14",
@@ -1917,7 +2070,8 @@
           "plural": "",
           "example": "Man kann zurückgeben.",
           "exampleEn": "One can return.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "↩️"
         },
         {
           "id": "a2-consumer-15",
@@ -1929,7 +2083,8 @@
           "plural": "",
           "example": "Man kann vergleichen.",
           "exampleEn": "One can compare.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "⚖️"
         },
         {
           "id": "a2-consumer-16",
@@ -1941,7 +2096,8 @@
           "plural": "",
           "example": "Man kann passen.",
           "exampleEn": "One can fit / suit.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "👕"
         },
         {
           "id": "a2-consumer-17",
@@ -1953,7 +2109,8 @@
           "plural": "",
           "example": "Man kann liefern.",
           "exampleEn": "One can deliver.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🚚"
         },
         {
           "id": "a2-consumer-18",
@@ -1965,7 +2122,8 @@
           "plural": "",
           "example": "Das ist reduziert.",
           "exampleEn": "That is reduced.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "⬇️"
         },
         {
           "id": "a2-consumer-19",
@@ -1977,7 +2135,8 @@
           "plural": "",
           "example": "Das ist gebraucht.",
           "exampleEn": "That is used / second-hand.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "♻️"
         },
         {
           "id": "a2-consumer-20",
@@ -1989,7 +2148,8 @@
           "plural": "",
           "example": "Das ist ausverkauft.",
           "exampleEn": "That is sold out.",
-          "unitTitle": "Products & consumer life"
+          "unitTitle": "Products & consumer life",
+          "symbol": "🚫"
         }
       ]
     },
@@ -2010,7 +2170,8 @@
           "plural": "die Fahrpläne",
           "example": "Das ist der Fahrplan.",
           "exampleEn": "That is the timetable.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🗓️"
         },
         {
           "id": "a2-mobility-02",
@@ -2022,7 +2183,8 @@
           "plural": "die Fahrgäste",
           "example": "Das ist der Fahrgast.",
           "exampleEn": "That is the passenger.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🧍"
         },
         {
           "id": "a2-mobility-03",
@@ -2034,7 +2196,8 @@
           "plural": "die Fahrer",
           "example": "Das ist der Fahrer.",
           "exampleEn": "That is the driver.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🚗"
         },
         {
           "id": "a2-mobility-04",
@@ -2046,7 +2209,8 @@
           "plural": "die Staus",
           "example": "Das ist der Stau.",
           "exampleEn": "That is the traffic jam.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🚙"
         },
         {
           "id": "a2-mobility-05",
@@ -2058,7 +2222,8 @@
           "plural": "die Unfälle",
           "example": "Das ist der Unfall.",
           "exampleEn": "That is the accident.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "💥"
         },
         {
           "id": "a2-mobility-06",
@@ -2070,7 +2235,8 @@
           "plural": "die Umleitungen",
           "example": "Das ist die Umleitung.",
           "exampleEn": "That is the diversion.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "↪️"
         },
         {
           "id": "a2-mobility-07",
@@ -2082,7 +2248,8 @@
           "plural": "die Parkplätze",
           "example": "Das ist der Parkplatz.",
           "exampleEn": "That is the parking space.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🅿️"
         },
         {
           "id": "a2-mobility-08",
@@ -2094,7 +2261,8 @@
           "plural": "die Tankstellen",
           "example": "Das ist die Tankstelle.",
           "exampleEn": "That is the petrol station.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "⛽"
         },
         {
           "id": "a2-mobility-09",
@@ -2106,7 +2274,8 @@
           "plural": "die Führerscheine",
           "example": "Das ist der Führerschein.",
           "exampleEn": "That is the driving licence.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🪪"
         },
         {
           "id": "a2-mobility-10",
@@ -2118,7 +2287,8 @@
           "plural": "die Geschwindigkeiten",
           "example": "Das ist die Geschwindigkeit.",
           "exampleEn": "That is the speed.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "⚡"
         },
         {
           "id": "a2-mobility-11",
@@ -2130,7 +2300,8 @@
           "plural": "die Fahrbahnen",
           "example": "Das ist die Fahrbahn.",
           "exampleEn": "That is the carriageway.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🛣️"
         },
         {
           "id": "a2-mobility-12",
@@ -2142,7 +2313,8 @@
           "plural": "die Fußgänger",
           "example": "Das ist der Fußgänger.",
           "exampleEn": "That is the pedestrian.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🚶"
         },
         {
           "id": "a2-mobility-13",
@@ -2154,7 +2326,8 @@
           "plural": "",
           "example": "Man kann umsteigen.",
           "exampleEn": "One can change transport.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🔄"
         },
         {
           "id": "a2-mobility-14",
@@ -2166,7 +2339,8 @@
           "plural": "",
           "example": "Man kann bremsen.",
           "exampleEn": "One can brake.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🛑"
         },
         {
           "id": "a2-mobility-15",
@@ -2178,7 +2352,8 @@
           "plural": "",
           "example": "Man kann parken.",
           "exampleEn": "One can park.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🅿️"
         },
         {
           "id": "a2-mobility-16",
@@ -2190,7 +2365,8 @@
           "plural": "",
           "example": "Man kann tanken.",
           "exampleEn": "One can refuel.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "⛽"
         },
         {
           "id": "a2-mobility-17",
@@ -2202,7 +2378,8 @@
           "plural": "",
           "example": "Man kann überholen.",
           "exampleEn": "One can overtake.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🏎️"
         },
         {
           "id": "a2-mobility-18",
@@ -2214,7 +2391,8 @@
           "plural": "",
           "example": "Das ist gesperrt.",
           "exampleEn": "That is closed / blocked.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🚧"
         },
         {
           "id": "a2-mobility-19",
@@ -2226,7 +2404,8 @@
           "plural": "",
           "example": "Das ist voll.",
           "exampleEn": "That is full.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "🈵"
         },
         {
           "id": "a2-mobility-20",
@@ -2238,7 +2417,8 @@
           "plural": "",
           "example": "Das ist vorsichtig.",
           "exampleEn": "That is careful.",
-          "unitTitle": "Mobility & traffic"
+          "unitTitle": "Mobility & traffic",
+          "symbol": "⚠️"
         }
       ]
     },
@@ -2259,7 +2439,8 @@
           "plural": "—",
           "example": "Das ist der Unterricht.",
           "exampleEn": "That is the lesson / instruction.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "👨‍🏫"
         },
         {
           "id": "a2-study-02",
@@ -2271,7 +2452,8 @@
           "plural": "die Stundenpläne",
           "example": "Das ist der Stundenplan.",
           "exampleEn": "That is the class timetable.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "📅"
         },
         {
           "id": "a2-study-03",
@@ -2283,7 +2465,8 @@
           "plural": "die Fächer",
           "example": "Das ist das Fach.",
           "exampleEn": "That is the subject.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "📘"
         },
         {
           "id": "a2-study-04",
@@ -2295,7 +2478,8 @@
           "plural": "die Noten",
           "example": "Das ist die Note.",
           "exampleEn": "That is the grade.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "💯"
         },
         {
           "id": "a2-study-05",
@@ -2307,7 +2491,8 @@
           "plural": "die Zeugnisse",
           "example": "Das ist das Zeugnis.",
           "exampleEn": "That is the certificate / report.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "📜"
         },
         {
           "id": "a2-study-06",
@@ -2319,7 +2504,8 @@
           "plural": "die Referate",
           "example": "Das ist das Referat.",
           "exampleEn": "That is the presentation.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🗣️"
         },
         {
           "id": "a2-study-07",
@@ -2331,7 +2517,8 @@
           "plural": "die Gruppen",
           "example": "Das ist die Gruppe.",
           "exampleEn": "That is the group.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "👥"
         },
         {
           "id": "a2-study-08",
@@ -2343,7 +2530,8 @@
           "plural": "die Übungen",
           "example": "Das ist die Übung.",
           "exampleEn": "That is the exercise.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "✏️"
         },
         {
           "id": "a2-study-09",
@@ -2355,7 +2543,8 @@
           "plural": "die Grammatiken",
           "example": "Das ist die Grammatik.",
           "exampleEn": "That is the grammar.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🔤"
         },
         {
           "id": "a2-study-10",
@@ -2367,7 +2556,8 @@
           "plural": "—",
           "example": "Das ist die Aussprache.",
           "exampleEn": "That is the pronunciation.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "👄"
         },
         {
           "id": "a2-study-11",
@@ -2379,7 +2569,8 @@
           "plural": "die Wörterbücher",
           "example": "Das ist das Wörterbuch.",
           "exampleEn": "That is the dictionary.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "📖"
         },
         {
           "id": "a2-study-12",
@@ -2391,7 +2582,8 @@
           "plural": "die Teilnehmer",
           "example": "Das ist der Teilnehmer.",
           "exampleEn": "That is the participant.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🙋"
         },
         {
           "id": "a2-study-13",
@@ -2403,7 +2595,8 @@
           "plural": "",
           "example": "Man kann bestehen.",
           "exampleEn": "One can pass.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "✅"
         },
         {
           "id": "a2-study-14",
@@ -2415,7 +2608,8 @@
           "plural": "",
           "example": "Man kann durchfallen.",
           "exampleEn": "One can fail.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "❌"
         },
         {
           "id": "a2-study-15",
@@ -2427,7 +2621,8 @@
           "plural": "",
           "example": "Man kann nachschlagen.",
           "exampleEn": "One can look up.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🔎"
         },
         {
           "id": "a2-study-16",
@@ -2439,7 +2634,8 @@
           "plural": "",
           "example": "Man kann übersetzen.",
           "exampleEn": "One can translate.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🌐"
         },
         {
           "id": "a2-study-17",
@@ -2451,7 +2647,8 @@
           "plural": "",
           "example": "Man kann vorbereiten.",
           "exampleEn": "One can prepare.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "📝"
         },
         {
           "id": "a2-study-18",
@@ -2463,7 +2660,8 @@
           "plural": "",
           "example": "Das ist mündlich.",
           "exampleEn": "That is oral.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🗣️"
         },
         {
           "id": "a2-study-19",
@@ -2475,7 +2673,8 @@
           "plural": "",
           "example": "Das ist akademisch.",
           "exampleEn": "That is academic.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🎓"
         },
         {
           "id": "a2-study-20",
@@ -2487,7 +2686,8 @@
           "plural": "",
           "example": "Das ist schwierig.",
           "exampleEn": "That is difficult.",
-          "unitTitle": "Study & qualifications"
+          "unitTitle": "Study & qualifications",
+          "symbol": "🧩"
         }
       ]
     },
@@ -2508,7 +2708,8 @@
           "plural": "die Geräte",
           "example": "Das ist das Gerät.",
           "exampleEn": "That is the device.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "📱"
         },
         {
           "id": "a2-digital-life-02",
@@ -2520,7 +2721,8 @@
           "plural": "die Dateien",
           "example": "Das ist die Datei.",
           "exampleEn": "That is the file.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "📄"
         },
         {
           "id": "a2-digital-life-03",
@@ -2532,7 +2734,8 @@
           "plural": "die Ordner",
           "example": "Das ist der Ordner.",
           "exampleEn": "That is the folder.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "📁"
         },
         {
           "id": "a2-digital-life-04",
@@ -2544,7 +2747,8 @@
           "plural": "die Tastaturen",
           "example": "Das ist die Tastatur.",
           "exampleEn": "That is the keyboard.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "⌨️"
         },
         {
           "id": "a2-digital-life-05",
@@ -2556,7 +2760,8 @@
           "plural": "die Mäuse",
           "example": "Das ist die Maus.",
           "exampleEn": "That is the computer mouse.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🖱️"
         },
         {
           "id": "a2-digital-life-06",
@@ -2568,7 +2773,8 @@
           "plural": "die Drucker",
           "example": "Das ist der Drucker.",
           "exampleEn": "That is the printer.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🖨️"
         },
         {
           "id": "a2-digital-life-07",
@@ -2580,7 +2786,8 @@
           "plural": "die Internetseiten",
           "example": "Das ist die Internetseite.",
           "exampleEn": "That is the website.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🌐"
         },
         {
           "id": "a2-digital-life-08",
@@ -2592,7 +2799,8 @@
           "plural": "die Suchmaschinen",
           "example": "Das ist die Suchmaschine.",
           "exampleEn": "That is the search engine.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🔍"
         },
         {
           "id": "a2-digital-life-09",
@@ -2604,7 +2812,8 @@
           "plural": "die Einstellungen",
           "example": "Das ist die Einstellung.",
           "exampleEn": "That is the setting.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "⚙️"
         },
         {
           "id": "a2-digital-life-10",
@@ -2616,7 +2825,8 @@
           "plural": "die Speicher",
           "example": "Das ist der Speicher.",
           "exampleEn": "That is the storage / memory.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "💾"
         },
         {
           "id": "a2-digital-life-11",
@@ -2628,7 +2838,8 @@
           "plural": "die Akkus",
           "example": "Das ist der Akku.",
           "exampleEn": "That is the rechargeable battery.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🔋"
         },
         {
           "id": "a2-digital-life-12",
@@ -2640,7 +2851,8 @@
           "plural": "die Ladegeräte",
           "example": "Das ist das Ladegerät.",
           "exampleEn": "That is the charger.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🔌"
         },
         {
           "id": "a2-digital-life-13",
@@ -2652,7 +2864,8 @@
           "plural": "",
           "example": "Man kann speichern.",
           "exampleEn": "One can save.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "💾"
         },
         {
           "id": "a2-digital-life-14",
@@ -2664,7 +2877,8 @@
           "plural": "",
           "example": "Man kann löschen.",
           "exampleEn": "One can delete.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🗑️"
         },
         {
           "id": "a2-digital-life-15",
@@ -2676,7 +2890,8 @@
           "plural": "",
           "example": "Man kann drucken.",
           "exampleEn": "One can print.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🖨️"
         },
         {
           "id": "a2-digital-life-16",
@@ -2688,7 +2903,8 @@
           "plural": "",
           "example": "Man kann hochladen.",
           "exampleEn": "One can upload.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "☁️"
         },
         {
           "id": "a2-digital-life-17",
@@ -2700,7 +2916,8 @@
           "plural": "",
           "example": "Man kann installieren.",
           "exampleEn": "One can install.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "📲"
         },
         {
           "id": "a2-digital-life-18",
@@ -2712,7 +2929,8 @@
           "plural": "",
           "example": "Das ist online.",
           "exampleEn": "That is online.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🟢"
         },
         {
           "id": "a2-digital-life-19",
@@ -2724,7 +2942,8 @@
           "plural": "",
           "example": "Das ist offline.",
           "exampleEn": "That is offline.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "⚫"
         },
         {
           "id": "a2-digital-life-20",
@@ -2736,7 +2955,8 @@
           "plural": "",
           "example": "Das ist leer.",
           "exampleEn": "That is empty.",
-          "unitTitle": "Digital life"
+          "unitTitle": "Digital life",
+          "symbol": "🪫"
         }
       ]
     },
@@ -2757,7 +2977,8 @@
           "plural": "die Gespräche",
           "example": "Das ist das Gespräch.",
           "exampleEn": "That is the conversation.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "💬"
         },
         {
           "id": "a2-communication-02",
@@ -2769,7 +2990,8 @@
           "plural": "die Anrufe",
           "example": "Das ist der Anruf.",
           "exampleEn": "That is the phone call.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "☎️"
         },
         {
           "id": "a2-communication-03",
@@ -2781,7 +3003,8 @@
           "plural": "die Mailboxen",
           "example": "Das ist die Mailbox.",
           "exampleEn": "That is the voicemail.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📬"
         },
         {
           "id": "a2-communication-04",
@@ -2793,7 +3016,8 @@
           "plural": "die Sprachnachrichten",
           "example": "Das ist die Sprachnachricht.",
           "exampleEn": "That is the voice message.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "🎙️"
         },
         {
           "id": "a2-communication-05",
@@ -2805,7 +3029,8 @@
           "plural": "die Mitteilungen",
           "example": "Das ist die Mitteilung.",
           "exampleEn": "That is the notification / message.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "🔔"
         },
         {
           "id": "a2-communication-06",
@@ -2817,7 +3042,8 @@
           "plural": "die Kontakte",
           "example": "Das ist der Kontakt.",
           "exampleEn": "That is the contact.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "👤"
         },
         {
           "id": "a2-communication-07",
@@ -2829,7 +3055,8 @@
           "plural": "die Empfänger",
           "example": "Das ist der Empfänger.",
           "exampleEn": "That is the recipient.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📥"
         },
         {
           "id": "a2-communication-08",
@@ -2841,7 +3068,8 @@
           "plural": "die Absender",
           "example": "Das ist der Absender.",
           "exampleEn": "That is the sender.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📤"
         },
         {
           "id": "a2-communication-09",
@@ -2853,7 +3081,8 @@
           "plural": "die Betreffe",
           "example": "Das ist der Betreff.",
           "exampleEn": "That is the subject line.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "🏷️"
         },
         {
           "id": "a2-communication-10",
@@ -2865,7 +3094,8 @@
           "plural": "die Anhänge",
           "example": "Das ist der Anhang.",
           "exampleEn": "That is the attachment.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📎"
         },
         {
           "id": "a2-communication-11",
@@ -2877,7 +3107,8 @@
           "plural": "die Rückmeldungen",
           "example": "Das ist die Rückmeldung.",
           "exampleEn": "That is the feedback / reply.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "↩️"
         },
         {
           "id": "a2-communication-12",
@@ -2889,7 +3120,8 @@
           "plural": "die Informationen",
           "example": "Das ist die Information.",
           "exampleEn": "That is the information.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "ℹ️"
         },
         {
           "id": "a2-communication-13",
@@ -2901,7 +3133,8 @@
           "plural": "",
           "example": "Man kann weiterleiten.",
           "exampleEn": "One can forward.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "↪️"
         },
         {
           "id": "a2-communication-14",
@@ -2913,7 +3146,8 @@
           "plural": "",
           "example": "Man kann hinterlassen.",
           "exampleEn": "One can leave behind / leave a message.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📝"
         },
         {
           "id": "a2-communication-15",
@@ -2925,7 +3159,8 @@
           "plural": "",
           "example": "Man kann erreichen.",
           "exampleEn": "One can reach.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "🎯"
         },
         {
           "id": "a2-communication-16",
@@ -2937,7 +3172,8 @@
           "plural": "",
           "example": "Man kann mitteilen.",
           "exampleEn": "One can inform.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📢"
         },
         {
           "id": "a2-communication-17",
@@ -2949,7 +3185,8 @@
           "plural": "",
           "example": "Man kann absagen.",
           "exampleEn": "One can cancel.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "❌"
         },
         {
           "id": "a2-communication-18",
@@ -2961,7 +3198,8 @@
           "plural": "",
           "example": "Das ist erreichbar.",
           "exampleEn": "That is reachable.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "📶"
         },
         {
           "id": "a2-communication-19",
@@ -2973,7 +3211,8 @@
           "plural": "",
           "example": "Das ist besetzt.",
           "exampleEn": "That is busy / occupied.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "☎️"
         },
         {
           "id": "a2-communication-20",
@@ -2985,7 +3224,8 @@
           "plural": "",
           "example": "Das ist höflich.",
           "exampleEn": "That is polite.",
-          "unitTitle": "Communication & messages"
+          "unitTitle": "Communication & messages",
+          "symbol": "🎩"
         }
       ]
     },
@@ -3006,7 +3246,8 @@
           "plural": "—",
           "example": "Das ist die Freude.",
           "exampleEn": "That is the joy.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😄"
         },
         {
           "id": "a2-emotions-02",
@@ -3018,7 +3259,8 @@
           "plural": "die Ängste",
           "example": "Das ist die Angst.",
           "exampleEn": "That is the fear.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😨"
         },
         {
           "id": "a2-emotions-03",
@@ -3030,7 +3272,8 @@
           "plural": "die Sorgen",
           "example": "Das ist die Sorge.",
           "exampleEn": "That is the worry.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😟"
         },
         {
           "id": "a2-emotions-04",
@@ -3042,7 +3285,8 @@
           "plural": "die Hoffnungen",
           "example": "Das ist die Hoffnung.",
           "exampleEn": "That is the hope.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🌟"
         },
         {
           "id": "a2-emotions-05",
@@ -3054,7 +3298,8 @@
           "plural": "die Überraschungen",
           "example": "Das ist die Überraschung.",
           "exampleEn": "That is the surprise.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😲"
         },
         {
           "id": "a2-emotions-06",
@@ -3066,7 +3311,8 @@
           "plural": "die Enttäuschungen",
           "example": "Das ist die Enttäuschung.",
           "exampleEn": "That is the disappointment.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😞"
         },
         {
           "id": "a2-emotions-07",
@@ -3078,7 +3324,8 @@
           "plural": "—",
           "example": "Das ist der Ärger.",
           "exampleEn": "That is the anger / trouble.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😠"
         },
         {
           "id": "a2-emotions-08",
@@ -3090,7 +3337,8 @@
           "plural": "—",
           "example": "Das ist der Stress.",
           "exampleEn": "That is the stress.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😵"
         },
         {
           "id": "a2-emotions-09",
@@ -3102,7 +3350,8 @@
           "plural": "—",
           "example": "Das ist die Geduld.",
           "exampleEn": "That is the patience.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🧘"
         },
         {
           "id": "a2-emotions-10",
@@ -3114,7 +3363,8 @@
           "plural": "die Launen",
           "example": "Das ist die Laune.",
           "exampleEn": "That is the mood.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🙂"
         },
         {
           "id": "a2-emotions-11",
@@ -3126,7 +3376,8 @@
           "plural": "die Reaktionen",
           "example": "Das ist die Reaktion.",
           "exampleEn": "That is the reaction.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "⚡"
         },
         {
           "id": "a2-emotions-12",
@@ -3138,7 +3389,8 @@
           "plural": "die Lächeln",
           "example": "Das ist das Lächeln.",
           "exampleEn": "That is the smile.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😊"
         },
         {
           "id": "a2-emotions-13",
@@ -3150,7 +3402,8 @@
           "plural": "",
           "example": "Man kann sich freuen.",
           "exampleEn": "One can be pleased.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🥳"
         },
         {
           "id": "a2-emotions-14",
@@ -3162,7 +3415,8 @@
           "plural": "",
           "example": "Man kann sich ärgern.",
           "exampleEn": "One can be annoyed.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😤"
         },
         {
           "id": "a2-emotions-15",
@@ -3174,7 +3428,8 @@
           "plural": "",
           "example": "Man kann hoffen.",
           "exampleEn": "One can hope.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🙏"
         },
         {
           "id": "a2-emotions-16",
@@ -3186,7 +3441,8 @@
           "plural": "",
           "example": "Man kann befürchten.",
           "exampleEn": "One can fear.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😰"
         },
         {
           "id": "a2-emotions-17",
@@ -3198,7 +3454,8 @@
           "plural": "",
           "example": "Man kann beruhigen.",
           "exampleEn": "One can calm.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🫶"
         },
         {
           "id": "a2-emotions-18",
@@ -3210,7 +3467,8 @@
           "plural": "",
           "example": "Das ist nervös.",
           "exampleEn": "That is nervous.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😬"
         },
         {
           "id": "a2-emotions-19",
@@ -3222,7 +3480,8 @@
           "plural": "",
           "example": "Das ist stolz.",
           "exampleEn": "That is proud.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "🦚"
         },
         {
           "id": "a2-emotions-20",
@@ -3234,7 +3493,8 @@
           "plural": "",
           "example": "Das ist zufrieden.",
           "exampleEn": "That is satisfied.",
-          "unitTitle": "Emotions & reactions"
+          "unitTitle": "Emotions & reactions",
+          "symbol": "😌"
         }
       ]
     },
@@ -3255,7 +3515,8 @@
           "plural": "die Kulturen",
           "example": "Das ist die Kultur.",
           "exampleEn": "That is the culture.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🌍"
         },
         {
           "id": "a2-culture-02",
@@ -3267,7 +3528,8 @@
           "plural": "die Konzerte",
           "example": "Das ist das Konzert.",
           "exampleEn": "That is the concert.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎵"
         },
         {
           "id": "a2-culture-03",
@@ -3279,7 +3541,8 @@
           "plural": "die Theater",
           "example": "Das ist das Theater.",
           "exampleEn": "That is the theatre.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎭"
         },
         {
           "id": "a2-culture-04",
@@ -3291,7 +3554,8 @@
           "plural": "die Ausstellungen",
           "example": "Das ist die Ausstellung.",
           "exampleEn": "That is the exhibition.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🖼️"
         },
         {
           "id": "a2-culture-05",
@@ -3303,7 +3567,8 @@
           "plural": "die Bühnen",
           "example": "Das ist die Bühne.",
           "exampleEn": "That is the stage.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎪"
         },
         {
           "id": "a2-culture-06",
@@ -3315,7 +3580,8 @@
           "plural": "—",
           "example": "Das ist das Publikum.",
           "exampleEn": "That is the audience.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "👥"
         },
         {
           "id": "a2-culture-07",
@@ -3327,7 +3593,8 @@
           "plural": "die Künstler",
           "example": "Das ist der Künstler.",
           "exampleEn": "That is the artist.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎨"
         },
         {
           "id": "a2-culture-08",
@@ -3339,7 +3606,8 @@
           "plural": "die Schauspieler",
           "example": "Das ist der Schauspieler.",
           "exampleEn": "That is the actor.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎬"
         },
         {
           "id": "a2-culture-09",
@@ -3351,7 +3619,8 @@
           "plural": "die Eintritte",
           "example": "Das ist der Eintritt.",
           "exampleEn": "That is the admission.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🚪"
         },
         {
           "id": "a2-culture-10",
@@ -3363,7 +3632,8 @@
           "plural": "die Vorstellungen",
           "example": "Das ist die Vorstellung.",
           "exampleEn": "That is the performance.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎟️"
         },
         {
           "id": "a2-culture-11",
@@ -3375,7 +3645,8 @@
           "plural": "die Programme",
           "example": "Das ist das Programm.",
           "exampleEn": "That is the programme.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "📖"
         },
         {
           "id": "a2-culture-12",
@@ -3387,7 +3658,8 @@
           "plural": "die Eintrittskarten",
           "example": "Das ist die Eintrittskarte.",
           "exampleEn": "That is the admission ticket.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎫"
         },
         {
           "id": "a2-culture-13",
@@ -3399,7 +3671,8 @@
           "plural": "",
           "example": "Man kann auftreten.",
           "exampleEn": "One can perform.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🎤"
         },
         {
           "id": "a2-culture-14",
@@ -3411,7 +3684,8 @@
           "plural": "",
           "example": "Man kann anschauen.",
           "exampleEn": "One can watch / look at.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "👀"
         },
         {
           "id": "a2-culture-15",
@@ -3423,7 +3697,8 @@
           "plural": "",
           "example": "Man kann gefallen.",
           "exampleEn": "One can please.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "❤️"
         },
         {
           "id": "a2-culture-16",
@@ -3435,7 +3710,8 @@
           "plural": "",
           "example": "Man kann klatschen.",
           "exampleEn": "One can applaud.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "👏"
         },
         {
           "id": "a2-culture-17",
@@ -3447,7 +3723,8 @@
           "plural": "",
           "example": "Man kann sich langweilen.",
           "exampleEn": "One can be bored.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "🥱"
         },
         {
           "id": "a2-culture-18",
@@ -3459,7 +3736,8 @@
           "plural": "",
           "example": "Das ist spannend.",
           "exampleEn": "That is exciting.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "⚡"
         },
         {
           "id": "a2-culture-19",
@@ -3471,7 +3749,8 @@
           "plural": "",
           "example": "Das ist unterhaltsam.",
           "exampleEn": "That is entertaining.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "😄"
         },
         {
           "id": "a2-culture-20",
@@ -3483,7 +3762,8 @@
           "plural": "",
           "example": "Das ist kreativ.",
           "exampleEn": "That is creative.",
-          "unitTitle": "Culture & entertainment"
+          "unitTitle": "Culture & entertainment",
+          "symbol": "💡"
         }
       ]
     },
@@ -3504,7 +3784,8 @@
           "plural": "—",
           "example": "Das ist die Natur.",
           "exampleEn": "That is the nature.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🌿"
         },
         {
           "id": "a2-nature-02",
@@ -3516,7 +3797,8 @@
           "plural": "die Wälder",
           "example": "Das ist der Wald.",
           "exampleEn": "That is the forest.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🌲"
         },
         {
           "id": "a2-nature-03",
@@ -3528,7 +3810,8 @@
           "plural": "die Wiesen",
           "example": "Das ist die Wiese.",
           "exampleEn": "That is the meadow.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🌱"
         },
         {
           "id": "a2-nature-04",
@@ -3540,7 +3823,8 @@
           "plural": "die Flüsse",
           "example": "Das ist der Fluss.",
           "exampleEn": "That is the river.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🏞️"
         },
         {
           "id": "a2-nature-05",
@@ -3552,7 +3836,8 @@
           "plural": "die Inseln",
           "example": "Das ist die Insel.",
           "exampleEn": "That is the island.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🏝️"
         },
         {
           "id": "a2-nature-06",
@@ -3564,7 +3849,8 @@
           "plural": "die Küsten",
           "example": "Das ist die Küste.",
           "exampleEn": "That is the coast.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🌊"
         },
         {
           "id": "a2-nature-07",
@@ -3576,7 +3862,8 @@
           "plural": "die Täler",
           "example": "Das ist das Tal.",
           "exampleEn": "That is the valley.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🏔️"
         },
         {
           "id": "a2-nature-08",
@@ -3588,7 +3875,8 @@
           "plural": "die Pflanzen",
           "example": "Das ist die Pflanze.",
           "exampleEn": "That is the plant.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🪴"
         },
         {
           "id": "a2-nature-09",
@@ -3600,7 +3888,8 @@
           "plural": "die Tiere",
           "example": "Das ist das Tier.",
           "exampleEn": "That is the animal.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🐾"
         },
         {
           "id": "a2-nature-10",
@@ -3612,7 +3901,8 @@
           "plural": "die Vögel",
           "example": "Das ist der Vogel.",
           "exampleEn": "That is the bird.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🐦"
         },
         {
           "id": "a2-nature-11",
@@ -3624,7 +3914,8 @@
           "plural": "die Bauernhöfe",
           "example": "Das ist der Bauernhof.",
           "exampleEn": "That is the farm.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🚜"
         },
         {
           "id": "a2-nature-12",
@@ -3636,7 +3927,8 @@
           "plural": "die Aussichten",
           "example": "Das ist die Aussicht.",
           "exampleEn": "That is the view.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "👀"
         },
         {
           "id": "a2-nature-13",
@@ -3648,7 +3940,8 @@
           "plural": "",
           "example": "Man kann wachsen.",
           "exampleEn": "One can grow.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🌱"
         },
         {
           "id": "a2-nature-14",
@@ -3660,7 +3953,8 @@
           "plural": "",
           "example": "Man kann blühen.",
           "exampleEn": "One can bloom.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🌸"
         },
         {
           "id": "a2-nature-15",
@@ -3672,7 +3966,8 @@
           "plural": "",
           "example": "Man kann beobachten.",
           "exampleEn": "One can observe.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🔭"
         },
         {
           "id": "a2-nature-16",
@@ -3684,7 +3979,8 @@
           "plural": "",
           "example": "Man kann klettern.",
           "exampleEn": "One can climb.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🧗"
         },
         {
           "id": "a2-nature-17",
@@ -3696,7 +3992,8 @@
           "plural": "",
           "example": "Man kann zelten.",
           "exampleEn": "One can camp.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "⛺"
         },
         {
           "id": "a2-nature-18",
@@ -3708,7 +4005,8 @@
           "plural": "",
           "example": "Das ist flach.",
           "exampleEn": "That is flat.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "➖"
         },
         {
           "id": "a2-nature-19",
@@ -3720,7 +4018,8 @@
           "plural": "",
           "example": "Das ist steil.",
           "exampleEn": "That is steep.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "📐"
         },
         {
           "id": "a2-nature-20",
@@ -3732,7 +4031,8 @@
           "plural": "",
           "example": "Das ist wild.",
           "exampleEn": "That is wild.",
-          "unitTitle": "Nature & countryside"
+          "unitTitle": "Nature & countryside",
+          "symbol": "🐺"
         }
       ]
     },
@@ -3753,7 +4053,8 @@
           "plural": "die Haushalte",
           "example": "Das ist der Haushalt.",
           "exampleEn": "That is the household.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🏠"
         },
         {
           "id": "a2-housework-02",
@@ -3765,7 +4066,8 @@
           "plural": "—",
           "example": "Das ist die Wäsche.",
           "exampleEn": "That is the laundry.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "👕"
         },
         {
           "id": "a2-housework-03",
@@ -3777,7 +4079,8 @@
           "plural": "—",
           "example": "Das ist das Geschirr.",
           "exampleEn": "That is the dishes.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🍽️"
         },
         {
           "id": "a2-housework-04",
@@ -3789,7 +4092,8 @@
           "plural": "die Staubsauger",
           "example": "Das ist der Staubsauger.",
           "exampleEn": "That is the vacuum cleaner.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🧹"
         },
         {
           "id": "a2-housework-05",
@@ -3801,7 +4105,8 @@
           "plural": "die Besen",
           "example": "Das ist der Besen.",
           "exampleEn": "That is the broom.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🧹"
         },
         {
           "id": "a2-housework-06",
@@ -3813,7 +4118,8 @@
           "plural": "die Eimer",
           "example": "Das ist der Eimer.",
           "exampleEn": "That is the bucket.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🪣"
         },
         {
           "id": "a2-housework-07",
@@ -3825,7 +4131,8 @@
           "plural": "die Putzmittel",
           "example": "Das ist das Putzmittel.",
           "exampleEn": "That is the cleaning product.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🧴"
         },
         {
           "id": "a2-housework-08",
@@ -3837,7 +4144,8 @@
           "plural": "die Werkzeuge",
           "example": "Das ist das Werkzeug.",
           "exampleEn": "That is the tool.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🧰"
         },
         {
           "id": "a2-housework-09",
@@ -3849,7 +4157,8 @@
           "plural": "die Hämmer",
           "example": "Das ist der Hammer.",
           "exampleEn": "That is the hammer.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🔨"
         },
         {
           "id": "a2-housework-10",
@@ -3861,7 +4170,8 @@
           "plural": "die Schrauben",
           "example": "Das ist die Schraube.",
           "exampleEn": "That is the screw.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🔩"
         },
         {
           "id": "a2-housework-11",
@@ -3873,7 +4183,8 @@
           "plural": "die Glühbirnen",
           "example": "Das ist die Glühbirne.",
           "exampleEn": "That is the light bulb.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "💡"
         },
         {
           "id": "a2-housework-12",
@@ -3885,7 +4196,8 @@
           "plural": "die Pflichten",
           "example": "Das ist die Pflicht.",
           "exampleEn": "That is the duty.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "📋"
         },
         {
           "id": "a2-housework-13",
@@ -3897,7 +4209,8 @@
           "plural": "",
           "example": "Man kann spülen.",
           "exampleEn": "One can wash dishes.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🫧"
         },
         {
           "id": "a2-housework-14",
@@ -3909,7 +4222,8 @@
           "plural": "",
           "example": "Man kann bügeln.",
           "exampleEn": "One can iron.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "👔"
         },
         {
           "id": "a2-housework-15",
@@ -3921,7 +4235,8 @@
           "plural": "",
           "example": "Man kann staubsaugen.",
           "exampleEn": "One can vacuum.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🧹"
         },
         {
           "id": "a2-housework-16",
@@ -3933,7 +4248,8 @@
           "plural": "",
           "example": "Man kann aufhängen.",
           "exampleEn": "One can hang up.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🪝"
         },
         {
           "id": "a2-housework-17",
@@ -3945,7 +4261,8 @@
           "plural": "",
           "example": "Man kann wechseln.",
           "exampleEn": "One can change.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🔄"
         },
         {
           "id": "a2-housework-18",
@@ -3957,7 +4274,8 @@
           "plural": "",
           "example": "Das ist sauber.",
           "exampleEn": "That is clean.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "✨"
         },
         {
           "id": "a2-housework-19",
@@ -3969,7 +4287,8 @@
           "plural": "",
           "example": "Das ist schmutzig.",
           "exampleEn": "That is dirty.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "🟤"
         },
         {
           "id": "a2-housework-20",
@@ -3981,7 +4300,8 @@
           "plural": "",
           "example": "Das ist ordentlich.",
           "exampleEn": "That is tidy.",
-          "unitTitle": "Housework & maintenance"
+          "unitTitle": "Housework & maintenance",
+          "symbol": "📐"
         }
       ]
     },
@@ -4002,7 +4322,8 @@
           "plural": "die Bankkonten",
           "example": "Das ist das Bankkonto.",
           "exampleEn": "That is the bank account.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🏦"
         },
         {
           "id": "a2-money-02",
@@ -4014,7 +4335,8 @@
           "plural": "die Kreditkarten",
           "example": "Das ist die Kreditkarte.",
           "exampleEn": "That is the credit card.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "💳"
         },
         {
           "id": "a2-money-03",
@@ -4026,7 +4348,8 @@
           "plural": "die EC-Karten",
           "example": "Das ist die EC-Karte.",
           "exampleEn": "That is the debit card.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "💳"
         },
         {
           "id": "a2-money-04",
@@ -4038,7 +4361,8 @@
           "plural": "—",
           "example": "Das ist das Bargeld.",
           "exampleEn": "That is the cash.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "💶"
         },
         {
           "id": "a2-money-05",
@@ -4050,7 +4374,8 @@
           "plural": "die Geldautomaten",
           "example": "Das ist der Geldautomat.",
           "exampleEn": "That is the cash machine.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🏧"
         },
         {
           "id": "a2-money-06",
@@ -4062,7 +4387,8 @@
           "plural": "die Überweisungen",
           "example": "Das ist die Überweisung.",
           "exampleEn": "That is the bank transfer.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "💸"
         },
         {
           "id": "a2-money-07",
@@ -4074,7 +4400,8 @@
           "plural": "die Ausgaben",
           "example": "Das ist die Ausgabe.",
           "exampleEn": "That is the expense.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "📤"
         },
         {
           "id": "a2-money-08",
@@ -4086,7 +4413,8 @@
           "plural": "die Einnahmen",
           "example": "Das ist die Einnahme.",
           "exampleEn": "That is the income.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "📥"
         },
         {
           "id": "a2-money-09",
@@ -4098,7 +4426,8 @@
           "plural": "die Schulden",
           "example": "Das ist die Schuld.",
           "exampleEn": "That is the debt.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "📉"
         },
         {
           "id": "a2-money-10",
@@ -4110,7 +4439,8 @@
           "plural": "die Zinsen",
           "example": "Das ist der Zins.",
           "exampleEn": "That is the interest.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "📈"
         },
         {
           "id": "a2-money-11",
@@ -4122,7 +4452,8 @@
           "plural": "die Budgets",
           "example": "Das ist das Budget.",
           "exampleEn": "That is the budget.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🧮"
         },
         {
           "id": "a2-money-12",
@@ -4134,7 +4465,8 @@
           "plural": "die Münzen",
           "example": "Das ist die Münze.",
           "exampleEn": "That is the coin.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🪙"
         },
         {
           "id": "a2-money-13",
@@ -4146,7 +4478,8 @@
           "plural": "",
           "example": "Man kann abheben.",
           "exampleEn": "One can withdraw.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "⬅️💶"
         },
         {
           "id": "a2-money-14",
@@ -4158,7 +4491,8 @@
           "plural": "",
           "example": "Man kann einzahlen.",
           "exampleEn": "One can deposit.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "➡️💶"
         },
         {
           "id": "a2-money-15",
@@ -4170,7 +4504,8 @@
           "plural": "",
           "example": "Man kann sparen.",
           "exampleEn": "One can save money.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🐷"
         },
         {
           "id": "a2-money-16",
@@ -4182,7 +4517,8 @@
           "plural": "",
           "example": "Man kann leihen.",
           "exampleEn": "One can lend / borrow.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🤲"
         },
         {
           "id": "a2-money-17",
@@ -4194,7 +4530,8 @@
           "plural": "",
           "example": "Man kann ausgeben.",
           "exampleEn": "One can spend.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🛍️"
         },
         {
           "id": "a2-money-18",
@@ -4206,7 +4543,8 @@
           "plural": "",
           "example": "Das ist kostenlos.",
           "exampleEn": "That is free of charge.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "🆓"
         },
         {
           "id": "a2-money-19",
@@ -4218,7 +4556,8 @@
           "plural": "",
           "example": "Das ist monatlich.",
           "exampleEn": "That is monthly.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "📅"
         },
         {
           "id": "a2-money-20",
@@ -4230,7 +4569,8 @@
           "plural": "",
           "example": "Das ist finanziell.",
           "exampleEn": "That is financial.",
-          "unitTitle": "Personal finance"
+          "unitTitle": "Personal finance",
+          "symbol": "📊"
         }
       ]
     },
@@ -4251,7 +4591,8 @@
           "plural": "die Fremdsprachen",
           "example": "Das ist die Fremdsprache.",
           "exampleEn": "That is the foreign language.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🌐"
         },
         {
           "id": "a2-language-02",
@@ -4263,7 +4604,8 @@
           "plural": "die Muttersprachen",
           "example": "Das ist die Muttersprache.",
           "exampleEn": "That is the native language.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🏠🗣️"
         },
         {
           "id": "a2-language-03",
@@ -4275,7 +4617,8 @@
           "plural": "die Vokabeln",
           "example": "Das ist die Vokabel.",
           "exampleEn": "That is the vocabulary item.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🔤"
         },
         {
           "id": "a2-language-04",
@@ -4287,7 +4630,8 @@
           "plural": "die Bedeutungen",
           "example": "Das ist die Bedeutung.",
           "exampleEn": "That is the meaning.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "💡"
         },
         {
           "id": "a2-language-05",
@@ -4299,7 +4643,8 @@
           "plural": "die Beispiele",
           "example": "Das ist das Beispiel.",
           "exampleEn": "That is the example.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🧩"
         },
         {
           "id": "a2-language-06",
@@ -4311,7 +4656,8 @@
           "plural": "die Fehler",
           "example": "Das ist der Fehler.",
           "exampleEn": "That is the mistake.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "❌"
         },
         {
           "id": "a2-language-07",
@@ -4323,7 +4669,8 @@
           "plural": "die Regeln",
           "example": "Das ist die Regel.",
           "exampleEn": "That is the rule.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "📏"
         },
         {
           "id": "a2-language-08",
@@ -4335,7 +4682,8 @@
           "plural": "die Akzente",
           "example": "Das ist der Akzent.",
           "exampleEn": "That is the accent.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🗣️"
         },
         {
           "id": "a2-language-09",
@@ -4347,7 +4695,8 @@
           "plural": "die Dialekte",
           "example": "Das ist der Dialekt.",
           "exampleEn": "That is the dialect.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "💬"
         },
         {
           "id": "a2-language-10",
@@ -4359,7 +4708,8 @@
           "plural": "die Fortschritte",
           "example": "Das ist der Fortschritt.",
           "exampleEn": "That is the progress.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "📈"
         },
         {
           "id": "a2-language-11",
@@ -4371,7 +4721,8 @@
           "plural": "die Lernziele",
           "example": "Das ist das Lernziel.",
           "exampleEn": "That is the learning goal.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🎯"
         },
         {
           "id": "a2-language-12",
@@ -4383,7 +4734,8 @@
           "plural": "die Lernpartner",
           "example": "Das ist der Lernpartner.",
           "exampleEn": "That is the learning partner.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "👥"
         },
         {
           "id": "a2-language-13",
@@ -4395,7 +4747,8 @@
           "plural": "",
           "example": "Man kann merken.",
           "exampleEn": "One can remember / notice.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🧠"
         },
         {
           "id": "a2-language-14",
@@ -4407,7 +4760,8 @@
           "plural": "",
           "example": "Man kann üben.",
           "exampleEn": "One can practise.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🏋️"
         },
         {
           "id": "a2-language-15",
@@ -4419,7 +4773,8 @@
           "plural": "",
           "example": "Man kann korrigieren.",
           "exampleEn": "One can correct.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "✏️"
         },
         {
           "id": "a2-language-16",
@@ -4431,7 +4786,8 @@
           "plural": "",
           "example": "Man kann erklären.",
           "exampleEn": "One can explain.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "💬"
         },
         {
           "id": "a2-language-17",
@@ -4443,7 +4799,8 @@
           "plural": "",
           "example": "Man kann aussprechen.",
           "exampleEn": "One can pronounce.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "👄"
         },
         {
           "id": "a2-language-18",
@@ -4455,7 +4812,8 @@
           "plural": "",
           "example": "Das ist fließend.",
           "exampleEn": "That is fluent.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🌊"
         },
         {
           "id": "a2-language-19",
@@ -4467,7 +4825,8 @@
           "plural": "",
           "example": "Das ist deutlich.",
           "exampleEn": "That is clear.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🔊"
         },
         {
           "id": "a2-language-20",
@@ -4479,7 +4838,8 @@
           "plural": "",
           "example": "Das ist regelmäßig.",
           "exampleEn": "That is regular.",
-          "unitTitle": "Language learning"
+          "unitTitle": "Language learning",
+          "symbol": "🔁"
         }
       ]
     },
@@ -4500,7 +4860,8 @@
           "plural": "die Feste",
           "example": "Das ist das Fest.",
           "exampleEn": "That is the celebration.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎊"
         },
         {
           "id": "a2-celebrations-02",
@@ -4512,7 +4873,8 @@
           "plural": "die Feiern",
           "example": "Das ist die Feier.",
           "exampleEn": "That is the party / celebration.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎉"
         },
         {
           "id": "a2-celebrations-03",
@@ -4524,7 +4886,8 @@
           "plural": "die Traditionen",
           "example": "Das ist die Tradition.",
           "exampleEn": "That is the tradition.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🕯️"
         },
         {
           "id": "a2-celebrations-04",
@@ -4536,7 +4899,8 @@
           "plural": "—",
           "example": "Das ist das Weihnachten.",
           "exampleEn": "That is the Christmas.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎄"
         },
         {
           "id": "a2-celebrations-05",
@@ -4548,7 +4912,8 @@
           "plural": "—",
           "example": "Das ist das Ostern.",
           "exampleEn": "That is the Easter.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🐣"
         },
         {
           "id": "a2-celebrations-06",
@@ -4560,7 +4925,8 @@
           "plural": "—",
           "example": "Das ist das Silvester.",
           "exampleEn": "That is the New Year’s Eve.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎆"
         },
         {
           "id": "a2-celebrations-07",
@@ -4572,7 +4938,8 @@
           "plural": "die Jubiläen",
           "example": "Das ist das Jubiläum.",
           "exampleEn": "That is the anniversary.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🏅"
         },
         {
           "id": "a2-celebrations-08",
@@ -4584,7 +4951,8 @@
           "plural": "die Dekorationen",
           "example": "Das ist die Dekoration.",
           "exampleEn": "That is the decoration.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎀"
         },
         {
           "id": "a2-celebrations-09",
@@ -4596,7 +4964,8 @@
           "plural": "die Kerzen",
           "example": "Das ist die Kerze.",
           "exampleEn": "That is the candle.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🕯️"
         },
         {
           "id": "a2-celebrations-10",
@@ -4608,7 +4977,8 @@
           "plural": "die Blumensträuße",
           "example": "Das ist der Blumenstrauß.",
           "exampleEn": "That is the bouquet.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "💐"
         },
         {
           "id": "a2-celebrations-11",
@@ -4620,7 +4990,8 @@
           "plural": "die Glückwünsche",
           "example": "Das ist der Glückwunsch.",
           "exampleEn": "That is the congratulation.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎉"
         },
         {
           "id": "a2-celebrations-12",
@@ -4632,7 +5003,8 @@
           "plural": "die Bräuche",
           "example": "Das ist der Brauch.",
           "exampleEn": "That is the custom.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🪅"
         },
         {
           "id": "a2-celebrations-13",
@@ -4644,7 +5016,8 @@
           "plural": "",
           "example": "Man kann dekorieren.",
           "exampleEn": "One can decorate.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎀"
         },
         {
           "id": "a2-celebrations-14",
@@ -4656,7 +5029,8 @@
           "plural": "",
           "example": "Man kann schenken.",
           "exampleEn": "One can give as a gift.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🎁"
         },
         {
           "id": "a2-celebrations-15",
@@ -4668,7 +5042,8 @@
           "plural": "",
           "example": "Man kann anstoßen.",
           "exampleEn": "One can toast.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🥂"
         },
         {
           "id": "a2-celebrations-16",
@@ -4680,7 +5055,8 @@
           "plural": "",
           "example": "Man kann wünschen.",
           "exampleEn": "One can wish.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🌠"
         },
         {
           "id": "a2-celebrations-17",
@@ -4692,7 +5068,8 @@
           "plural": "",
           "example": "Man kann organisieren.",
           "exampleEn": "One can organise.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "📋"
         },
         {
           "id": "a2-celebrations-18",
@@ -4704,7 +5081,8 @@
           "plural": "",
           "example": "Das ist festlich.",
           "exampleEn": "That is festive.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "✨"
         },
         {
           "id": "a2-celebrations-19",
@@ -4716,7 +5094,8 @@
           "plural": "",
           "example": "Das ist typisch.",
           "exampleEn": "That is typical.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "🏷️"
         },
         {
           "id": "a2-celebrations-20",
@@ -4728,7 +5107,8 @@
           "plural": "",
           "example": "Das ist besonders.",
           "exampleEn": "That is special.",
-          "unitTitle": "Celebrations & traditions"
+          "unitTitle": "Celebrations & traditions",
+          "symbol": "⭐"
         }
       ]
     },
@@ -4749,7 +5129,8 @@
           "plural": "die Probleme",
           "example": "Das ist das Problem.",
           "exampleEn": "That is the problem.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "❓"
         },
         {
           "id": "a2-problems-02",
@@ -4761,7 +5142,8 @@
           "plural": "die Ursachen",
           "example": "Das ist die Ursache.",
           "exampleEn": "That is the cause.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🔍"
         },
         {
           "id": "a2-problems-03",
@@ -4773,7 +5155,8 @@
           "plural": "die Lösungen",
           "example": "Das ist die Lösung.",
           "exampleEn": "That is the solution.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "💡"
         },
         {
           "id": "a2-problems-04",
@@ -4785,7 +5168,8 @@
           "plural": "die Defekte",
           "example": "Das ist der Defekt.",
           "exampleEn": "That is the fault / defect.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "⚙️"
         },
         {
           "id": "a2-problems-05",
@@ -4797,7 +5181,8 @@
           "plural": "die Schäden",
           "example": "Das ist der Schaden.",
           "exampleEn": "That is the damage.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "💥"
         },
         {
           "id": "a2-problems-06",
@@ -4809,7 +5194,8 @@
           "plural": "die Beschwerden",
           "example": "Das ist die Beschwerde.",
           "exampleEn": "That is the complaint.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "📣"
         },
         {
           "id": "a2-problems-07",
@@ -4821,7 +5207,8 @@
           "plural": "—",
           "example": "Das ist der Ersatz.",
           "exampleEn": "That is the replacement.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🔄"
         },
         {
           "id": "a2-problems-08",
@@ -4833,7 +5220,8 @@
           "plural": "die Hindernisse",
           "example": "Das ist das Hindernis.",
           "exampleEn": "That is the obstacle.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🚧"
         },
         {
           "id": "a2-problems-09",
@@ -4845,7 +5233,8 @@
           "plural": "die Missverständnisse",
           "example": "Das ist das Missverständnis.",
           "exampleEn": "That is the misunderstanding.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "💬❓"
         },
         {
           "id": "a2-problems-10",
@@ -4857,7 +5246,8 @@
           "plural": "die Notdienste",
           "example": "Das ist der Notdienst.",
           "exampleEn": "That is the emergency service.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🚨"
         },
         {
           "id": "a2-problems-11",
@@ -4869,7 +5259,8 @@
           "plural": "die Techniker",
           "example": "Das ist der Techniker.",
           "exampleEn": "That is the technician.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🧑‍🔧"
         },
         {
           "id": "a2-problems-12",
@@ -4881,7 +5272,8 @@
           "plural": "die Möglichkeiten",
           "example": "Das ist die Möglichkeit.",
           "exampleEn": "That is the option / possibility.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🛣️"
         },
         {
           "id": "a2-problems-13",
@@ -4893,7 +5285,8 @@
           "plural": "",
           "example": "Man kann lösen.",
           "exampleEn": "One can solve.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🧩"
         },
         {
           "id": "a2-problems-14",
@@ -4905,7 +5298,8 @@
           "plural": "",
           "example": "Man kann prüfen.",
           "exampleEn": "One can check / inspect.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🔎"
         },
         {
           "id": "a2-problems-15",
@@ -4917,7 +5311,8 @@
           "plural": "",
           "example": "Man kann melden.",
           "exampleEn": "One can report.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "📢"
         },
         {
           "id": "a2-problems-16",
@@ -4929,7 +5324,8 @@
           "plural": "",
           "example": "Man kann ersetzen.",
           "exampleEn": "One can replace.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🔄"
         },
         {
           "id": "a2-problems-17",
@@ -4941,7 +5337,8 @@
           "plural": "",
           "example": "Man kann funktionieren.",
           "exampleEn": "One can function.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "⚙️"
         },
         {
           "id": "a2-problems-18",
@@ -4953,7 +5350,8 @@
           "plural": "",
           "example": "Das ist möglich.",
           "exampleEn": "That is possible.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "✅"
         },
         {
           "id": "a2-problems-19",
@@ -4965,7 +5363,8 @@
           "plural": "",
           "example": "Das ist unmöglich.",
           "exampleEn": "That is impossible.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🚫"
         },
         {
           "id": "a2-problems-20",
@@ -4977,7 +5376,8 @@
           "plural": "",
           "example": "Das ist verantwortlich.",
           "exampleEn": "That is responsible.",
-          "unitTitle": "Problems & solutions"
+          "unitTitle": "Problems & solutions",
+          "symbol": "🛡️"
         }
       ]
     },
@@ -4998,7 +5398,8 @@
           "plural": "die Pläne",
           "example": "Das ist der Plan.",
           "exampleEn": "That is the plan.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "📝"
         },
         {
           "id": "a2-planning-02",
@@ -5010,7 +5411,8 @@
           "plural": "die Kalender",
           "example": "Das ist der Kalender.",
           "exampleEn": "That is the calendar.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "📅"
         },
         {
           "id": "a2-planning-03",
@@ -5022,7 +5424,8 @@
           "plural": "die Fristen",
           "example": "Das ist die Frist.",
           "exampleEn": "That is the deadline.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "⏰"
         },
         {
           "id": "a2-planning-04",
@@ -5034,7 +5437,8 @@
           "plural": "die Prioritäten",
           "example": "Das ist die Priorität.",
           "exampleEn": "That is the priority.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "❗"
         },
         {
           "id": "a2-planning-05",
@@ -5046,7 +5450,8 @@
           "plural": "die Listen",
           "example": "Das ist die Liste.",
           "exampleEn": "That is the list.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "📋"
         },
         {
           "id": "a2-planning-06",
@@ -5058,7 +5463,8 @@
           "plural": "die Projekte",
           "example": "Das ist das Projekt.",
           "exampleEn": "That is the project.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "📁"
         },
         {
           "id": "a2-planning-07",
@@ -5070,7 +5476,8 @@
           "plural": "die Schritte",
           "example": "Das ist der Schritt.",
           "exampleEn": "That is the step.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "👣"
         },
         {
           "id": "a2-planning-08",
@@ -5082,7 +5489,8 @@
           "plural": "—",
           "example": "Das ist die Dauer.",
           "exampleEn": "That is the duration.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "⌛"
         },
         {
           "id": "a2-planning-09",
@@ -5094,7 +5502,8 @@
           "plural": "die Änderungen",
           "example": "Das ist die Änderung.",
           "exampleEn": "That is the change.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "🔄"
         },
         {
           "id": "a2-planning-10",
@@ -5106,7 +5515,8 @@
           "plural": "die Vorschläge",
           "example": "Das ist der Vorschlag.",
           "exampleEn": "That is the suggestion.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "💡"
         },
         {
           "id": "a2-planning-11",
@@ -5118,7 +5528,8 @@
           "plural": "die Vorbereitungen",
           "example": "Das ist die Vorbereitung.",
           "exampleEn": "That is the preparation.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "🧰"
         },
         {
           "id": "a2-planning-12",
@@ -5130,7 +5541,8 @@
           "plural": "die Organisationen",
           "example": "Das ist die Organisation.",
           "exampleEn": "That is the organisation.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "🗂️"
         },
         {
           "id": "a2-planning-13",
@@ -5142,7 +5554,8 @@
           "plural": "",
           "example": "Man kann planen.",
           "exampleEn": "One can plan.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "✏️"
         },
         {
           "id": "a2-planning-14",
@@ -5154,7 +5567,8 @@
           "plural": "",
           "example": "Man kann verschieben.",
           "exampleEn": "One can postpone.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "⏭️"
         },
         {
           "id": "a2-planning-15",
@@ -5166,7 +5580,8 @@
           "plural": "",
           "example": "Man kann festlegen.",
           "exampleEn": "One can determine.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "📌"
         },
         {
           "id": "a2-planning-16",
@@ -5178,7 +5593,8 @@
           "plural": "",
           "example": "Man kann notieren.",
           "exampleEn": "One can note down.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "🗒️"
         },
         {
           "id": "a2-planning-17",
@@ -5190,7 +5606,8 @@
           "plural": "",
           "example": "Man kann aufteilen.",
           "exampleEn": "One can divide up.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "➗"
         },
         {
           "id": "a2-planning-18",
@@ -5202,7 +5619,8 @@
           "plural": "",
           "example": "Das ist fristgerecht.",
           "exampleEn": "That is on schedule.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "✅"
         },
         {
           "id": "a2-planning-19",
@@ -5214,7 +5632,8 @@
           "plural": "",
           "example": "Das ist flexibel.",
           "exampleEn": "That is flexible.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "↔️"
         },
         {
           "id": "a2-planning-20",
@@ -5226,7 +5645,8 @@
           "plural": "",
           "example": "Das ist verfügbar.",
           "exampleEn": "That is available.",
-          "unitTitle": "Planning & organisation"
+          "unitTitle": "Planning & organisation",
+          "symbol": "🟢"
         }
       ]
     },
@@ -5247,7 +5667,8 @@
           "plural": "die Verwandten",
           "example": "Das ist der Verwandte.",
           "exampleEn": "That is the relative.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "👪"
         },
         {
           "id": "a2-family-changes-02",
@@ -5259,7 +5680,8 @@
           "plural": "die Ehepaare",
           "example": "Das ist das Ehepaar.",
           "exampleEn": "That is the married couple.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "💑"
         },
         {
           "id": "a2-family-changes-03",
@@ -5271,7 +5693,8 @@
           "plural": "die Ehemänner",
           "example": "Das ist der Ehemann.",
           "exampleEn": "That is the husband.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🤵"
         },
         {
           "id": "a2-family-changes-04",
@@ -5283,7 +5706,8 @@
           "plural": "die Ehefrauen",
           "example": "Das ist die Ehefrau.",
           "exampleEn": "That is the wife.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "👰"
         },
         {
           "id": "a2-family-changes-05",
@@ -5295,7 +5719,8 @@
           "plural": "die Enkel",
           "example": "Das ist der Enkel.",
           "exampleEn": "That is the grandson / grandchild.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "👦"
         },
         {
           "id": "a2-family-changes-06",
@@ -5307,7 +5732,8 @@
           "plural": "die Enkelinnen",
           "example": "Das ist die Enkelin.",
           "exampleEn": "That is the granddaughter.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "👧"
         },
         {
           "id": "a2-family-changes-07",
@@ -5319,7 +5745,8 @@
           "plural": "die Schwäger",
           "example": "Das ist der Schwager.",
           "exampleEn": "That is the brother-in-law.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🧔"
         },
         {
           "id": "a2-family-changes-08",
@@ -5331,7 +5758,8 @@
           "plural": "die Schwägerinnen",
           "example": "Das ist die Schwägerin.",
           "exampleEn": "That is the sister-in-law.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "👩"
         },
         {
           "id": "a2-family-changes-09",
@@ -5343,7 +5771,8 @@
           "plural": "die Geburten",
           "example": "Das ist die Geburt.",
           "exampleEn": "That is the birth.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "👶"
         },
         {
           "id": "a2-family-changes-10",
@@ -5355,7 +5784,8 @@
           "plural": "die Trennungen",
           "example": "Das ist die Trennung.",
           "exampleEn": "That is the separation.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "↔️"
         },
         {
           "id": "a2-family-changes-11",
@@ -5367,7 +5797,8 @@
           "plural": "die Scheidungen",
           "example": "Das ist die Scheidung.",
           "exampleEn": "That is the divorce.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "💔"
         },
         {
           "id": "a2-family-changes-12",
@@ -5379,7 +5810,8 @@
           "plural": "—",
           "example": "Das ist die Erziehung.",
           "exampleEn": "That is the upbringing.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🌱"
         },
         {
           "id": "a2-family-changes-13",
@@ -5391,7 +5823,8 @@
           "plural": "",
           "example": "Man kann heiraten.",
           "exampleEn": "One can marry.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "💍"
         },
         {
           "id": "a2-family-changes-14",
@@ -5403,7 +5836,8 @@
           "plural": "",
           "example": "Man kann sich trennen.",
           "exampleEn": "One can separate.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "↔️"
         },
         {
           "id": "a2-family-changes-15",
@@ -5415,7 +5849,8 @@
           "plural": "",
           "example": "Man kann aufwachsen.",
           "exampleEn": "One can grow up.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🌱"
         },
         {
           "id": "a2-family-changes-16",
@@ -5427,7 +5862,8 @@
           "plural": "",
           "example": "Man kann erziehen.",
           "exampleEn": "One can raise / educate.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🫶"
         },
         {
           "id": "a2-family-changes-17",
@@ -5439,7 +5875,8 @@
           "plural": "",
           "example": "Man kann sich kümmern.",
           "exampleEn": "One can take care.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🤲"
         },
         {
           "id": "a2-family-changes-18",
@@ -5451,7 +5888,8 @@
           "plural": "",
           "example": "Das ist schwanger.",
           "exampleEn": "That is pregnant.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🤰"
         },
         {
           "id": "a2-family-changes-19",
@@ -5463,7 +5901,8 @@
           "plural": "",
           "example": "Das ist erwachsen.",
           "exampleEn": "That is adult.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🧑"
         },
         {
           "id": "a2-family-changes-20",
@@ -5475,7 +5914,8 @@
           "plural": "",
           "example": "Das ist verwandt.",
           "exampleEn": "That is related.",
-          "unitTitle": "Family changes"
+          "unitTitle": "Family changes",
+          "symbol": "🔗"
         }
       ]
     },
@@ -5496,7 +5936,8 @@
           "plural": "die Einwohner",
           "example": "Das ist der Einwohner.",
           "exampleEn": "That is the resident.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🏠"
         },
         {
           "id": "a2-community-02",
@@ -5508,7 +5949,8 @@
           "plural": "die Gemeinden",
           "example": "Das ist die Gemeinde.",
           "exampleEn": "That is the municipality / community.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🏛️"
         },
         {
           "id": "a2-community-03",
@@ -5520,7 +5962,8 @@
           "plural": "die Stadtteile",
           "example": "Das ist der Stadtteil.",
           "exampleEn": "That is the district.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🏙️"
         },
         {
           "id": "a2-community-04",
@@ -5532,7 +5975,8 @@
           "plural": "—",
           "example": "Das ist die Nachbarschaftshilfe.",
           "exampleEn": "That is the neighbourhood assistance.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🤝"
         },
         {
           "id": "a2-community-05",
@@ -5544,7 +5988,8 @@
           "plural": "die Treffpunkte",
           "example": "Das ist der Treffpunkt.",
           "exampleEn": "That is the meeting point.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "📍"
         },
         {
           "id": "a2-community-06",
@@ -5556,7 +6001,8 @@
           "plural": "die Flohmärkte",
           "example": "Das ist der Flohmarkt.",
           "exampleEn": "That is the flea market.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🧺"
         },
         {
           "id": "a2-community-07",
@@ -5568,7 +6014,8 @@
           "plural": "die Spielplätze",
           "example": "Das ist der Spielplatz.",
           "exampleEn": "That is the playground.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🛝"
         },
         {
           "id": "a2-community-08",
@@ -5580,7 +6027,8 @@
           "plural": "die Jugendzentren",
           "example": "Das ist das Jugendzentrum.",
           "exampleEn": "That is the youth centre.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🏫"
         },
         {
           "id": "a2-community-09",
@@ -5592,7 +6040,8 @@
           "plural": "die Bürgerbüros",
           "example": "Das ist das Bürgerbüro.",
           "exampleEn": "That is the citizens’ office.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🏛️"
         },
         {
           "id": "a2-community-10",
@@ -5604,7 +6053,8 @@
           "plural": "—",
           "example": "Das ist die Müllabfuhr.",
           "exampleEn": "That is the waste collection.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🚛"
         },
         {
           "id": "a2-community-11",
@@ -5616,7 +6066,8 @@
           "plural": "die Aushänge",
           "example": "Das ist der Aushang.",
           "exampleEn": "That is the notice.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "📌"
         },
         {
           "id": "a2-community-12",
@@ -5628,7 +6079,8 @@
           "plural": "die Umfragen",
           "example": "Das ist die Umfrage.",
           "exampleEn": "That is the survey.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "📊"
         },
         {
           "id": "a2-community-13",
@@ -5640,7 +6092,8 @@
           "plural": "",
           "example": "Man kann mitmachen.",
           "exampleEn": "One can join in.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🙋"
         },
         {
           "id": "a2-community-14",
@@ -5652,7 +6105,8 @@
           "plural": "",
           "example": "Man kann beitreten.",
           "exampleEn": "One can join.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "➕"
         },
         {
           "id": "a2-community-15",
@@ -5664,7 +6118,8 @@
           "plural": "",
           "example": "Man kann sammeln.",
           "exampleEn": "One can collect.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🧺"
         },
         {
           "id": "a2-community-16",
@@ -5676,7 +6131,8 @@
           "plural": "",
           "example": "Man kann spenden.",
           "exampleEn": "One can donate.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "❤️"
         },
         {
           "id": "a2-community-17",
@@ -5688,7 +6144,8 @@
           "plural": "",
           "example": "Man kann informieren.",
           "exampleEn": "One can inform.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "📢"
         },
         {
           "id": "a2-community-18",
@@ -5700,7 +6157,8 @@
           "plural": "",
           "example": "Das ist lokal.",
           "exampleEn": "That is local.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "📍"
         },
         {
           "id": "a2-community-19",
@@ -5712,7 +6170,8 @@
           "plural": "",
           "example": "Das ist gemeinnützig.",
           "exampleEn": "That is charitable.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🤲"
         },
         {
           "id": "a2-community-20",
@@ -5724,7 +6183,8 @@
           "plural": "",
           "example": "Das ist öffentlich.",
           "exampleEn": "That is public.",
-          "unitTitle": "Community & local life"
+          "unitTitle": "Community & local life",
+          "symbol": "🌐"
         }
       ]
     },
@@ -5745,7 +6205,8 @@
           "plural": "—",
           "example": "Das ist das Gepäck.",
           "exampleEn": "That is the luggage.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🧳"
         },
         {
           "id": "a2-travel-details-02",
@@ -5757,7 +6218,8 @@
           "plural": "—",
           "example": "Das ist das Handgepäck.",
           "exampleEn": "That is the hand luggage.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🎒"
         },
         {
           "id": "a2-travel-details-03",
@@ -5769,7 +6231,8 @@
           "plural": "die Kofferräume",
           "example": "Das ist der Kofferraum.",
           "exampleEn": "That is the boot / trunk.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🚗"
         },
         {
           "id": "a2-travel-details-04",
@@ -5781,7 +6244,8 @@
           "plural": "—",
           "example": "Das ist das Ausland.",
           "exampleEn": "That is the foreign country / abroad.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🌍"
         },
         {
           "id": "a2-travel-details-05",
@@ -5793,7 +6257,8 @@
           "plural": "die Reiseziele",
           "example": "Das ist das Reiseziel.",
           "exampleEn": "That is the destination.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "📍"
         },
         {
           "id": "a2-travel-details-06",
@@ -5805,7 +6270,8 @@
           "plural": "die Reisebüros",
           "example": "Das ist das Reisebüro.",
           "exampleEn": "That is the travel agency.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🏢"
         },
         {
           "id": "a2-travel-details-07",
@@ -5817,7 +6283,8 @@
           "plural": "die Flüge",
           "example": "Das ist der Flug.",
           "exampleEn": "That is the flight.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "✈️"
         },
         {
           "id": "a2-travel-details-08",
@@ -5829,7 +6296,8 @@
           "plural": "die Abflüge",
           "example": "Das ist der Abflug.",
           "exampleEn": "That is the departure flight.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🛫"
         },
         {
           "id": "a2-travel-details-09",
@@ -5841,7 +6309,8 @@
           "plural": "die Landungen",
           "example": "Das ist die Landung.",
           "exampleEn": "That is the landing.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🛬"
         },
         {
           "id": "a2-travel-details-10",
@@ -5853,7 +6322,8 @@
           "plural": "die Kontrollen",
           "example": "Das ist die Kontrolle.",
           "exampleEn": "That is the inspection / control.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🛂"
         },
         {
           "id": "a2-travel-details-11",
@@ -5865,7 +6335,8 @@
           "plural": "—",
           "example": "Das ist der Zoll.",
           "exampleEn": "That is the customs.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🛃"
         },
         {
           "id": "a2-travel-details-12",
@@ -5877,7 +6348,8 @@
           "plural": "die Reiseversicherungen",
           "example": "Das ist die Reiseversicherung.",
           "exampleEn": "That is the travel insurance.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🛡️"
         },
         {
           "id": "a2-travel-details-13",
@@ -5889,7 +6361,8 @@
           "plural": "",
           "example": "Man kann packen.",
           "exampleEn": "One can pack.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🧳"
         },
         {
           "id": "a2-travel-details-14",
@@ -5901,7 +6374,8 @@
           "plural": "",
           "example": "Man kann landen.",
           "exampleEn": "One can land.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🛬"
         },
         {
           "id": "a2-travel-details-15",
@@ -5913,7 +6387,8 @@
           "plural": "",
           "example": "Man kann stornieren.",
           "exampleEn": "One can cancel a booking.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "❌"
         },
         {
           "id": "a2-travel-details-16",
@@ -5925,7 +6400,8 @@
           "plural": "",
           "example": "Man kann sich verspäten.",
           "exampleEn": "One can be delayed.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "⏳"
         },
         {
           "id": "a2-travel-details-17",
@@ -5937,7 +6413,8 @@
           "plural": "",
           "example": "Man kann umbuchen.",
           "exampleEn": "One can rebook.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🔄"
         },
         {
           "id": "a2-travel-details-18",
@@ -5949,7 +6426,8 @@
           "plural": "",
           "example": "Das ist direkt.",
           "exampleEn": "That is direct.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "➡️"
         },
         {
           "id": "a2-travel-details-19",
@@ -5961,7 +6439,8 @@
           "plural": "",
           "example": "Das ist international.",
           "exampleEn": "That is international.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "🌐"
         },
         {
           "id": "a2-travel-details-20",
@@ -5973,7 +6452,8 @@
           "plural": "",
           "example": "Das ist inklusive.",
           "exampleEn": "That is included.",
-          "unitTitle": "Travel details"
+          "unitTitle": "Travel details",
+          "symbol": "➕"
         }
       ]
     },
@@ -5994,7 +6474,8 @@
           "plural": "die Wetterberichte",
           "example": "Das ist der Wetterbericht.",
           "exampleEn": "That is the weather report.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🌦️"
         },
         {
           "id": "a2-news-weather-02",
@@ -6006,7 +6487,8 @@
           "plural": "die Temperaturen",
           "example": "Das ist die Temperatur.",
           "exampleEn": "That is the temperature.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🌡️"
         },
         {
           "id": "a2-news-weather-03",
@@ -6018,7 +6500,8 @@
           "plural": "die Gewitter",
           "example": "Das ist das Gewitter.",
           "exampleEn": "That is the thunderstorm.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "⛈️"
         },
         {
           "id": "a2-news-weather-04",
@@ -6030,7 +6513,8 @@
           "plural": "die Stürme",
           "example": "Das ist der Sturm.",
           "exampleEn": "That is the storm.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🌪️"
         },
         {
           "id": "a2-news-weather-05",
@@ -6042,7 +6526,8 @@
           "plural": "—",
           "example": "Das ist der Nebel.",
           "exampleEn": "That is the fog.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🌫️"
         },
         {
           "id": "a2-news-weather-06",
@@ -6054,7 +6539,8 @@
           "plural": "die Hochwasser",
           "example": "Das ist das Hochwasser.",
           "exampleEn": "That is the flood.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🌊"
         },
         {
           "id": "a2-news-weather-07",
@@ -6066,7 +6552,8 @@
           "plural": "die Meldungen",
           "example": "Das ist die Meldung.",
           "exampleEn": "That is the report / announcement.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📢"
         },
         {
           "id": "a2-news-weather-08",
@@ -6078,7 +6565,8 @@
           "plural": "die Überschriften",
           "example": "Das ist die Überschrift.",
           "exampleEn": "That is the headline.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📰"
         },
         {
           "id": "a2-news-weather-09",
@@ -6090,7 +6578,8 @@
           "plural": "die Artikel",
           "example": "Das ist der Artikel.",
           "exampleEn": "That is the article.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📄"
         },
         {
           "id": "a2-news-weather-10",
@@ -6102,7 +6591,8 @@
           "plural": "die Interviews",
           "example": "Das ist das Interview.",
           "exampleEn": "That is the interview.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🎙️"
         },
         {
           "id": "a2-news-weather-11",
@@ -6114,7 +6604,8 @@
           "plural": "die Ereignisse",
           "example": "Das ist das Ereignis.",
           "exampleEn": "That is the event.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📍"
         },
         {
           "id": "a2-news-weather-12",
@@ -6126,7 +6617,8 @@
           "plural": "die Vorhersagen",
           "example": "Das ist die Vorhersage.",
           "exampleEn": "That is the forecast.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🔮"
         },
         {
           "id": "a2-news-weather-13",
@@ -6138,7 +6630,8 @@
           "plural": "",
           "example": "Man kann berichten.",
           "exampleEn": "One can report.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🗞️"
         },
         {
           "id": "a2-news-weather-14",
@@ -6150,7 +6643,8 @@
           "plural": "",
           "example": "Man kann warnen.",
           "exampleEn": "One can warn.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "⚠️"
         },
         {
           "id": "a2-news-weather-15",
@@ -6162,7 +6656,8 @@
           "plural": "",
           "example": "Man kann steigen.",
           "exampleEn": "One can rise.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📈"
         },
         {
           "id": "a2-news-weather-16",
@@ -6174,7 +6669,8 @@
           "plural": "",
           "example": "Man kann sinken.",
           "exampleEn": "One can fall / decrease.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📉"
         },
         {
           "id": "a2-news-weather-17",
@@ -6186,7 +6682,8 @@
           "plural": "",
           "example": "Man kann stattfinden.",
           "exampleEn": "One can take place.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "📅"
         },
         {
           "id": "a2-news-weather-18",
@@ -6198,7 +6695,8 @@
           "plural": "",
           "example": "Das ist trocken.",
           "exampleEn": "That is dry.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "🏜️"
         },
         {
           "id": "a2-news-weather-19",
@@ -6210,7 +6708,8 @@
           "plural": "",
           "example": "Das ist nass.",
           "exampleEn": "That is wet.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "💧"
         },
         {
           "id": "a2-news-weather-20",
@@ -6222,7 +6721,8 @@
           "plural": "",
           "example": "Das ist heftig.",
           "exampleEn": "That is severe / intense.",
-          "unitTitle": "News & weather events"
+          "unitTitle": "News & weather events",
+          "symbol": "💥"
         }
       ]
     }

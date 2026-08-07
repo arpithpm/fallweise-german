@@ -33,6 +33,7 @@ struct VocabularyItem: Codable, Identifiable, Hashable {
     let example: String
     let exampleEn: String
     let unitTitle: String?
+    let symbol: String?
 
     var display: String { article.isEmpty ? de : "\(article) \(de)" }
 }

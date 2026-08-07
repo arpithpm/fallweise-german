@@ -21,6 +21,7 @@
 		B41C2709A9B1026A7163F6DB /* AdvancedCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */; };
 		D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
 		F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */; };
+		F2D7D5352900E88F3F6DC988 /* VocabularyMemoryScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */; };
 		FAEDB7D4DD5F26F441F23BC0 /* b1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		084642FCAF1BE7DF6CB033E2 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
 		13C4C51E774780913B833927 /* FallweiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseApp.swift; sourceTree = "<group>"; };
 		162C255CCD3950B7DFA2F16D /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
+		40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMemoryScene.swift; sourceTree = "<group>"; };
 		5B14BDACE97D42DB76A4E99A /* LearningStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningStore.swift; sourceTree = "<group>"; };
 		7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "b1-vocabulary.json"; sourceTree = "<group>"; };
 		7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTutorView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				87C5D908133FFB641C0E5DEB /* RootView.swift */,
 				B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */,
 				FC974896CE59F5EED5626408 /* Theme.swift */,
+				40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */,
 				7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */,
 			);
 			path = Views;
@@ -166,7 +169,7 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					6E9FC35C46E8D6C9DE741DF3 = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = AJKFVG2KV2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -220,6 +223,7 @@
 				F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */,
 				284B3387253EA8AE8FAB1306 /* SupabaseService.swift in Sources */,
 				B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */,
+				F2D7D5352900E88F3F6DC988 /* VocabularyMemoryScene.swift in Sources */,
 				78CBC9AF24EC7187FBE4D054 /* VoiceService.swift in Sources */,
 				8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */,
 			);
@@ -263,7 +267,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AJKFVG2KV2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -320,7 +324,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AJKFVG2KV2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

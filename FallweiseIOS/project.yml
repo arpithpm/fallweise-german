@@ -6,7 +6,7 @@ options:
 settings:
   base:
     SWIFT_VERSION: 6.0
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: AJKFVG2KV2
 packages:
   LiveKit:
     url: https://github.com/livekit/client-sdk-swift.git
