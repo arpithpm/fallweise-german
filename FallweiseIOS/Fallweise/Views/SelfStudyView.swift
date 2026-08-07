@@ -29,7 +29,7 @@ struct SelfStudyView: View {
     private var header: some View {
         HStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 4) {
-                Kicker(text: "Study myself · A1")
+                Kicker(text: "Study myself · \(store.selectedLevel.rawValue)")
                 Text("fallweise.").font(.title2.bold())
             }
             Spacer()
@@ -127,8 +127,8 @@ struct SelfStudyView: View {
     }
 
     private var positionLabel: String {
-        if let start = lesson.wordStart { return "WORDS \(start + 1)–\(start + 5) OF 540" }
-        return "A1 CHAPTER \((store.coreLessons.firstIndex(of: lesson) ?? 0) + 1) OF 12"
+        if let start = lesson.wordStart { return "\(lesson.level.rawValue) WORDS \(start + 1)–\(start + 5) OF \(store.wordCount)" }
+        return "\(lesson.level.rawValue) CHAPTER \((store.coreLessons.firstIndex(of: lesson) ?? 0) + 1) OF 12"
     }
 
     private func resetForSelection() {

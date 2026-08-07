@@ -52,8 +52,8 @@ struct VoiceTutorView: View {
             .accessibilityLabel("Study this lesson myself")
             Button { store.showingJourney = true } label: {
                 VStack(alignment: .trailing, spacing: 2) {
-                    Text("A1 JOURNEY").font(.caption2.bold())
-                    Text("\(store.learnedCount)/540 words").font(.caption)
+                    Text("\(store.selectedLevel.rawValue) JOURNEY").font(.caption2.bold())
+                    Text("\(store.learnedCount)/\(store.wordCount) words").font(.caption)
                 }
             }.buttonStyle(.bordered)
         }
@@ -73,9 +73,9 @@ struct VoiceTutorView: View {
     }
 
     private var lessonPosition: String {
-        if let start = lesson.wordStart { return "WORDS \(start + 1)–\(start + 5) OF 540 · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)" }
+        if let start = lesson.wordStart { return "\(lesson.level.rawValue) WORDS \(start + 1)–\(start + 5) OF \(store.wordCount) · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)" }
         let chapter = (store.coreLessons.firstIndex(of: lesson) ?? 0) + 1
-        return "A1 CHAPTER \(chapter) OF 12 · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)"
+        return "\(lesson.level.rawValue) CHAPTER \(chapter) OF 12 · ACTIVITY \(stepIndex + 1) OF \(lesson.steps.count)"
     }
 
     private var miaHeader: some View {
@@ -170,7 +170,7 @@ struct VoiceTutorView: View {
                 await store.save(lesson: lesson, step: stepIndex, complete: true)
                 transcript = "Great work. \(lesson.title) is complete."
                 if let next = store.nextLesson() { store.select(next); resetForSelection(); try? await Task.sleep(for: .milliseconds(600)); present() }
-                else { status = "A1 journey complete"; running = false; await voice.disconnect() }
+                else { status = "\(lesson.level.rawValue) journey complete"; running = false; await voice.disconnect() }
             } else {
                 await store.save(lesson: lesson, step: stepIndex, complete: false)
                 stepIndex += 1; present()

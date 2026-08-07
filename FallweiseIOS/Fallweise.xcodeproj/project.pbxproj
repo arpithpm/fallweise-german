@@ -18,7 +18,10 @@
 		7ED153A2074CE03B6A0541CE /* a1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */; };
 		8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */; };
 		B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC974896CE59F5EED5626408 /* Theme.swift */; };
+		B41C2709A9B1026A7163F6DB /* AdvancedCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */; };
+		D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
 		F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */; };
+		FAEDB7D4DD5F26F441F23BC0 /* b1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +29,16 @@
 		13C4C51E774780913B833927 /* FallweiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseApp.swift; sourceTree = "<group>"; };
 		162C255CCD3950B7DFA2F16D /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		5B14BDACE97D42DB76A4E99A /* LearningStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningStore.swift; sourceTree = "<group>"; };
+		7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "b1-vocabulary.json"; sourceTree = "<group>"; };
 		7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTutorView.swift; sourceTree = "<group>"; };
 		87C5D908133FFB641C0E5DEB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCurriculum.swift; sourceTree = "<group>"; };
 		93BFE0CA7CD50C51BC8C1B2C /* Fallweise.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Fallweise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7572FF179E539E365A906C7 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
 		B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfStudyView.swift; sourceTree = "<group>"; };
 		B9AF2CE89D4C46C12B3B88B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a1-vocabulary.json"; sourceTree = "<group>"; };
+		E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a2-vocabulary.json"; sourceTree = "<group>"; };
 		EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
 		FC974896CE59F5EED5626408 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,7 @@
 		45F4865ADC425F185F461C1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */,
 				A7572FF179E539E365A906C7 /* Curriculum.swift */,
 				5B14BDACE97D42DB76A4E99A /* LearningStore.swift */,
 			);
@@ -112,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */,
+				E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */,
+				7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED153A2074CE03B6A0541CE /* a1-vocabulary.json in Resources */,
+				D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */,
+				FAEDB7D4DD5F26F441F23BC0 /* b1-vocabulary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41C2709A9B1026A7163F6DB /* AdvancedCurriculum.swift in Sources */,
 				72E3D70C54573385CA9584EA /* Curriculum.swift in Sources */,
 				381E4A5410968C76019D2265 /* FallweiseApp.swift in Sources */,
 				481E05C3CA903A9033776273 /* JourneyView.swift in Sources */,

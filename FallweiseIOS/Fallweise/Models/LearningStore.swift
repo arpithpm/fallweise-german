@@ -24,10 +24,11 @@ struct SavedLesson: Codable, Hashable {
 
 @MainActor @Observable
 final class LearningStore {
-    private(set) var vocabulary: VocabularyData
-    private(set) var lessons: [VoiceLesson]
+    private(set) var vocabularies: [CourseLevel: VocabularyData]
+    private(set) var allLessons: [VoiceLesson]
     private(set) var progress: [String: SavedLesson] = [:]
     private(set) var learnedWords: Set<String> = []
+    var selectedLevel: CourseLevel
     var selectedLessonID: String
     var learningMode: LearningMode
     var showingJourney = false
@@ -37,27 +38,39 @@ final class LearningStore {
     private let wordsKey = "fallweise.ios.learned-words"
     private let selectedKey = "fallweise.ios.selected-lesson"
     private let modeKey = "fallweise.ios.learning-mode"
+    private let levelKey = "fallweise.ios.selected-level"
 
     init() {
-        let loaded = (try? CurriculumLoader.loadVocabulary()) ?? VocabularyData(units: [], items: [], count: 0)
-        vocabulary = loaded
-        let generated = CurriculumLoader.lessons(from: loaded)
-        lessons = generated
-        selectedLessonID = UserDefaults.standard.string(forKey: selectedKey) ?? generated.first?.id ?? ""
+        var loaded: [CourseLevel: VocabularyData] = [:]
+        for level in CourseLevel.allCases {
+            loaded[level] = (try? CurriculumLoader.loadVocabulary(level: level)) ?? VocabularyData(units: [], items: [], count: 0)
+        }
+        let generated = CourseLevel.allCases.flatMap { CurriculumLoader.lessons(from: loaded[$0]!, level: $0) }
+        let initialLevel = CourseLevel(rawValue: UserDefaults.standard.string(forKey: levelKey) ?? "") ?? .A1
+        let savedID = UserDefaults.standard.string(forKey: selectedKey)
+        vocabularies = loaded
+        allLessons = generated
+        selectedLevel = initialLevel
+        selectedLessonID = generated.first(where: { $0.id == savedID && $0.level == initialLevel })?.id
+            ?? generated.first(where: { $0.level == initialLevel })?.id ?? ""
         learningMode = LearningMode(rawValue: UserDefaults.standard.string(forKey: modeKey) ?? "") ?? .voice
         loadLocal()
         Task { await sync() }
     }
 
-    var selectedLesson: VoiceLesson { lessons.first(where: { $0.id == selectedLessonID }) ?? lessons[0] }
+    var vocabulary: VocabularyData { vocabularies[selectedLevel]! }
+    var lessons: [VoiceLesson] { allLessons.filter { $0.level == selectedLevel } }
+    var selectedLesson: VoiceLesson { allLessons.first(where: { $0.id == selectedLessonID }) ?? lessons[0] }
     var selectedIndex: Int { lessons.firstIndex(where: { $0.id == selectedLessonID }) ?? 0 }
-    var learnedCount: Int { learnedWords.count }
-    var completedCount: Int { progress.values.filter { $0.status == "completed" }.count }
+    var learnedCount: Int { vocabulary.items.filter { learnedWords.contains($0.id) }.count }
+    var wordCount: Int { vocabulary.count }
+    var completedCount: Int { lessons.filter { progress[lessonID($0)]?.status == "completed" }.count }
     var coreLessons: [VoiceLesson] { lessons.filter { $0.unit == nil } }
     var vocabularyLessons: [VoiceLesson] { lessons.filter { $0.unit != nil } }
     var completedCoreCount: Int { coreLessons.filter { progress[lessonID($0)]?.status == "completed" }.count }
 
     func select(_ lesson: VoiceLesson, mode: LearningMode? = nil) {
+        if lesson.level != selectedLevel { selectLevel(lesson.level) }
         selectedLessonID = lesson.id
         UserDefaults.standard.set(lesson.id, forKey: selectedKey)
         if let mode { setMode(mode) }
@@ -67,6 +80,20 @@ final class LearningStore {
     func setMode(_ mode: LearningMode) {
         learningMode = mode
         UserDefaults.standard.set(mode.rawValue, forKey: modeKey)
+    }
+
+    func selectLevel(_ level: CourseLevel) {
+        selectedLevel = level
+        UserDefaults.standard.set(level.rawValue, forKey: levelKey)
+        let currentValid = allLessons.contains { $0.id == selectedLessonID && $0.level == level }
+        if !currentValid {
+            let levelLessons = allLessons.filter { $0.level == level }
+            let next = levelLessons.first { progress[lessonID($0)]?.status == "in_progress" }
+                ?? levelLessons.first { progress[lessonID($0)]?.status != "completed" }
+                ?? levelLessons.first
+            selectedLessonID = next?.id ?? ""
+            UserDefaults.standard.set(selectedLessonID, forKey: selectedKey)
+        }
     }
 
     func nextLesson() -> VoiceLesson? {
@@ -91,7 +118,7 @@ final class LearningStore {
         do { try await SupabaseService.shared.saveLesson(row) } catch { errorMessage = "Saved on this iPhone. Cloud sync will retry later." }
     }
 
-    func lessonID(_ lesson: VoiceLesson) -> String { "voice-tutor:A1:\(lesson.id)" }
+    func lessonID(_ lesson: VoiceLesson) -> String { "voice-tutor:\(lesson.level.rawValue):\(lesson.id)" }
 
     private func loadLocal() {
         if let data = UserDefaults.standard.data(forKey: progressKey), let rows = try? JSONDecoder.api.decode([SavedLesson].self, from: data) { progress = Dictionary(uniqueKeysWithValues: rows.map { ($0.lessonID, $0) }) }

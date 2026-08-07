@@ -38,7 +38,7 @@ actor SupabaseService {
     func fetchVoiceLessons() async throws -> [SavedLesson] {
         let token = try await accessToken()
         var components = URLComponents(url: baseURL.appending(path: "/rest/v1/lesson_progress"), resolvingAgainstBaseURL: false)!
-        components.queryItems = [.init(name: "select", value: "*"), .init(name: "lesson_id", value: "like.voice-tutor:A1:%")]
+        components.queryItems = [.init(name: "select", value: "*"), .init(name: "lesson_id", value: "like.voice-tutor:%")]
         var request = URLRequest(url: components.url!)
         request.setValue(publishableKey, forHTTPHeaderField: "apikey")
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")

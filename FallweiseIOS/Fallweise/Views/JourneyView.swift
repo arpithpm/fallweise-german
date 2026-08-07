@@ -12,10 +12,11 @@ struct JourneyView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
-                    Kicker(text: "Your A1 journey")
-                    Text("\(store.learnedCount) of 540 words learned").font(.system(size: 34, weight: .bold, design: .serif))
-                    ProgressView(value: Double(store.learnedCount), total: 540).tint(FallweiseTheme.green)
-                    Text("\(store.completedCount) of \(store.lessons.count) voice sessions complete").font(.subheadline).foregroundStyle(.secondary)
+                    Kicker(text: "Your German journey")
+                    levelPicker
+                    Text("\(store.learnedCount) of \(store.wordCount) \(store.selectedLevel.rawValue) words learned").font(.system(size: 32, weight: .bold, design: .serif))
+                    ProgressView(value: Double(store.learnedCount), total: Double(store.wordCount)).tint(FallweiseTheme.green)
+                    Text("\(store.completedCount) of \(store.lessons.count) sessions complete").font(.subheadline).foregroundStyle(.secondary)
                     Picker("Curriculum", selection: $section) {
                         Text("A1 Course").tag(0)
                         Text("540 Words").tag(1)
@@ -34,7 +35,7 @@ struct JourneyView: View {
                 }.padding(20)
             }
             .background(FallweiseTheme.cream)
-            .navigationTitle("Complete A1")
+            .navigationTitle("Complete \(store.selectedLevel.rawValue)")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { Button("Done") { dismiss() } }
         }
@@ -49,6 +50,17 @@ struct JourneyView: View {
             Button("Cancel", role: .cancel) { pendingLesson = nil }
         } message: {
             Text("You can switch modes at any time. Both save to the same A1 progress.")
+        }
+    }
+
+    private var levelPicker: some View {
+        Picker("German level", selection: Bindable(store).selectedLevel) {
+            ForEach(CourseLevel.allCases) { level in Text("\(level.rawValue) · \(level.title)").tag(level) }
+        }
+        .pickerStyle(.menu)
+        .onChange(of: store.selectedLevel) { _, level in
+            store.selectLevel(level)
+            expanded.removeAll()
         }
     }
 
@@ -73,7 +85,7 @@ struct JourneyView: View {
                     Text(unit.icon).font(.title)
                     VStack(alignment: .leading, spacing: 4) { Kicker(text: "Unit \((store.vocabulary.units.firstIndex(of: unit) ?? 0) + 1)"); Text(unit.title).font(.headline) }
                     Spacer()
-                    Text("\(learned)/20").font(.caption.bold()).foregroundStyle(FallweiseTheme.green)
+                    Text("\(learned)/\(unit.items.count)").font(.caption.bold()).foregroundStyle(FallweiseTheme.green)
                     Image(systemName: expanded.contains(unit.id) ? "chevron.up" : "chevron.down")
                 }.padding(16)
             }.buttonStyle(.plain)

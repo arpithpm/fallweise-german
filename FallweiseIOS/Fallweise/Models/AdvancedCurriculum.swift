@@ -1,0 +1,122 @@
+import Foundation
+
+extension CurriculumLoader {
+    static var a2CoreLessons: [VoiceLesson] {
+        [
+            guided(.A2, "01-give-help-belong", "GRAMMAR", "Give, help, belong", "Use the dative for receivers and with dative verbs.",
+                ("Ich gebe der Frau den Schlüssel.", "der Frau receives the key · feminine dative", "The dative often marks the receiver. Listen: Ich gebe der Frau den Schlüssel."),
+                ("I help the man.", "helfen always chooses dative", "How do you say: I help the man?", ["ich helfe dem mann"], "Ich helfe dem Mann."),
+                ("The book belongs to the child.", "gehören + dative", "Say: The book belongs to the child.", ["das buch gehört dem kind", "das buch gehort dem kind"], "Das Buch gehört dem Kind.")),
+            guided(.A2, "02-tell-happened", "PAST", "Tell what happened", "Use Perfekt for everyday spoken past.",
+                ("Ich habe Deutsch gelernt.", "haben/sein + participle at the end", "Spoken German normally uses Perfekt for past events: Ich habe Deutsch gelernt."),
+                ("I bought bread.", "kaufen → gekauft", "Say: I bought bread.", ["ich habe brot gekauft"], "Ich habe Brot gekauft."),
+                ("I went to Berlin.", "movement often uses sein", "Say: I went to Berlin.", ["ich bin nach berlin gefahren"], "Ich bin nach Berlin gefahren.")),
+            guided(.A2, "03-vocabulary", "WORDS", "A2 vocabulary curriculum", "Build 500 practical words for independent daily life.",
+                ("Wohnung · Arbeit · Gesundheit", "housing · work · health", "A2 vocabulary lets you explain needs, problems, and experiences."),
+                ("the application → ?", "feminine noun", "How do you say: the application?", ["die bewerbung"], "Die Bewerbung."),
+                ("The heating is broken.", "die Heizung · kaputt", "Say: The heating is broken.", ["die heizung ist kaputt"], "Die Heizung ist kaputt.")),
+            guided(.A2, "04-where-where-to", "GRAMMAR", "Where or where to?", "Choose dative for location and accusative for destination.",
+                ("in der Küche ↔ in die Küche", "where? dative · where to? accusative", "Location and destination change the case: in der Küche, but in die Küche."),
+                ("The book is on the table.", "location → auf dem Tisch", "Say: The book is on the table.", ["das buch liegt auf dem tisch", "das buch ist auf dem tisch"], "Das Buch liegt auf dem Tisch."),
+                ("I put it on the table.", "destination → auf den Tisch", "Say: I put it on the table.", ["ich lege es auf den tisch"], "Ich lege es auf den Tisch.")),
+            guided(.A2, "05-connect-thoughts", "CONNECTIONS", "Because, that, when", "Connect ideas with weil, dass, and wenn.",
+                ("Ich bleibe, weil es regnet.", "the conjugated verb moves to the end", "After weil, dass, and wenn, the verb moves to the end."),
+                ("I know that he is coming.", "dass er kommt", "Say: I know that he is coming.", ["ich weiß dass er kommt", "ich weiss dass er kommt"], "Ich weiß, dass er kommt."),
+                ("When I have time, I read.", "Wenn ich Zeit habe …", "Say: When I have time, I read.", ["wenn ich zeit habe lese ich"], "Wenn ich Zeit habe, lese ich.")),
+            guided(.A2, "06-compare-describe", "DESCRIPTION", "Compare & describe", "Use comparisons, reflexive verbs, and adjective endings.",
+                ("schnell · schneller · am schnellsten", "base · comparative · superlative", "Comparisons follow a dependable ladder: schnell, schneller, am schnellsten."),
+                ("Berlin is bigger than Bonn.", "größer als", "Say: Berlin is bigger than Bonn.", ["berlin ist größer als bonn", "berlin ist grosser als bonn"], "Berlin ist größer als Bonn."),
+                ("I am interested in music.", "sich interessieren für", "Say: I am interested in music.", ["ich interessiere mich für musik", "ich interessiere mich fur musik"], "Ich interessiere mich für Musik.")),
+            guided(.A2, "07-war-hatte-konnte", "PAST", "war, hatte, konnte", "Use common simple-past forms and useful imperatives.",
+                ("ich war · ich hatte · ich konnte", "common spoken Präteritum forms", "Sein, haben, and modal verbs often use simple past even in conversation."),
+                ("I had no time.", "hatte", "Say: I had no time.", ["ich hatte keine zeit"], "Ich hatte keine Zeit."),
+                ("I could not come.", "konnte nicht", "Say: I could not come.", ["ich konnte nicht kommen"], "Ich konnte nicht kommen.")),
+            guided(.A2, "08-verb-partners", "PATTERNS", "Verb partners", "Use fixed prepositions and wo-/da-compounds.",
+                ("warten auf · sprechen über", "learn the verb and preposition as one package", "Many German verbs keep a fixed preposition. Learn the whole package."),
+                ("I am waiting for the bus.", "warten auf + accusative", "Say: I am waiting for the bus.", ["ich warte auf den bus"], "Ich warte auf den Bus."),
+                ("What are you thinking about?", "Woran denkst du?", "Ask: What are you thinking about?", ["woran denkst du"], "Woran denkst du?")),
+            guided(.A2, "09-ask-indirectly", "QUESTIONS", "Ask indirectly", "Form polite indirect questions with ob and question words.",
+                ("Können Sie mir sagen, wo der Bahnhof ist?", "the embedded verb moves to the end", "An indirect question sounds polite and sends its verb to the end."),
+                ("Do you know whether it is open?", "ob es geöffnet ist", "Say: Do you know whether it is open?", ["weißt du ob es geöffnet ist", "weisst du ob es geoffnet ist"], "Weißt du, ob es geöffnet ist?"),
+                ("Can you tell me when it starts?", "wann es beginnt", "Ask: Can you tell me when it starts?", ["kannst du mir sagen wann es beginnt"], "Kannst du mir sagen, wann es beginnt?")),
+            guided(.A2, "10-adjective-decoder", "ENDINGS", "Adjective decoder", "Choose adjective endings from the article and case signals.",
+                ("der gute Kaffee · ein guter Kaffee", "the determiner and adjective share the signal", "Read the article first; it tells you how much work the adjective must do."),
+                ("I see the red car.", "das rote Auto", "Say: I see the red car.", ["ich sehe das rote auto"], "Ich sehe das rote Auto."),
+                ("with a good friend", "mit einem guten Freund", "Say: with a good friend.", ["mit einem guten freund"], "Mit einem guten Freund.")),
+            guided(.A2, "11-life-communication", "SKILLS", "Life & communication", "Handle health, work, study, reading, and writing.",
+                ("Könnten wir den Termin verschieben?", "a complete polite request", "Useful A2 communication states the issue and asks clearly for a solution."),
+                ("I have had a headache since yesterday.", "seit gestern · present tense", "Say: I have had a headache since yesterday.", ["ich habe seit gestern kopfschmerzen"], "Ich habe seit gestern Kopfschmerzen."),
+                ("Unfortunately I cannot come today.", "leider softens the message", "Say: Unfortunately I cannot come today.", ["ich kann heute leider nicht kommen"], "Ich kann heute leider nicht kommen.")),
+            guided(.A2, "12-speak-respond", "SPEAKING", "Speak & respond", "Retell experiences, give reasons, and manage practical calls.",
+                ("Zuerst … Dann … Danach …", "give your story a visible sequence", "A clear A2 story links short events in order."),
+                ("First we visited the museum.", "zuerst + verb second", "Say: First we visited the museum.", ["zuerst haben wir das museum besucht"], "Zuerst haben wir das Museum besucht."),
+                ("It was interesting because …", "weil + verb at the end", "Begin your reason: It was interesting because …", ["es war interessant weil"], "Es war interessant, weil …"))
+        ]
+    }
+
+    static var b1CoreLessons: [VoiceLesson] {
+        [
+            guided(.B1, "01-written-story", "STORYTELLING", "Tell a written story", "Use Präteritum to narrate connected past events.",
+                ("Er kam, sah und ging.", "Präteritum carries written narration", "Written stories commonly use Präteritum to move the action forward."),
+                ("She opened the door.", "öffnen → öffnete", "Say: She opened the door.", ["sie öffnete die tür", "sie offnete die tur"], "Sie öffnete die Tür."),
+                ("Then he left the house.", "verlassen → verließ", "Say: Then he left the house.", ["dann verließ er das haus", "dann verliess er das haus"], "Dann verließ er das Haus.")),
+            guided(.B1, "02-past-before-past", "TIMELINE", "The past before the past", "Order past events with Plusquamperfekt.",
+                ("Nachdem ich gegessen hatte, ging ich los.", "earlier past: hatte/war + participle", "Plusquamperfekt marks an event already finished before another past event."),
+                ("I had already eaten.", "hatte gegessen", "Say: I had already eaten.", ["ich hatte schon gegessen"], "Ich hatte schon gegessen."),
+                ("After he had arrived, we began.", "nachdem … angekommen war", "Say: After he had arrived, we began.", ["nachdem er angekommen war begannen wir"], "Nachdem er angekommen war, begannen wir.")),
+            guided(.B1, "03-predict-future", "PLANS", "Predict the future", "Use Futur I for predictions, promises, and emphasis.",
+                ("Es wird morgen regnen.", "werden + infinitive", "Futur I highlights a prediction, promise, or assumption."),
+                ("I will call you tomorrow.", "werde … anrufen", "Say: I will call you tomorrow.", ["ich werde dich morgen anrufen"], "Ich werde dich morgen anrufen."),
+                ("He will probably be at home.", "wird wohl … sein", "Say: He will probably be at home.", ["er wird wohl zu hause sein"], "Er wird wohl zu Hause sein.")),
+            guided(.B1, "04-advanced-cases", "GRAMMAR", "Advanced cases", "Use genitive and case inside relative clauses.",
+                ("Das Auto des Mannes", "genitive answers: whose?", "Genitive expresses possession and appears in formal preposition packages."),
+                ("because of the bad weather", "wegen + genitive", "Say: because of the bad weather.", ["wegen des schlechten wetters"], "Wegen des schlechten Wetters."),
+                ("The woman whom I help …", "helfen makes the relative pronoun dative", "Say: The woman whom I help is friendly.", ["die frau der ich helfe ist freundlich"], "Die Frau, der ich helfe, ist freundlich.")),
+            guided(.B1, "05-passive-hypothetical", "PERSPECTIVE", "Passive & hypothetical", "Shift focus with passive and imagine with Konjunktiv II.",
+                ("Das Haus wird gebaut. · Ich würde reisen.", "action focus · imagined possibility", "Passive focuses on the process; Konjunktiv II creates polite or unreal distance."),
+                ("The bridge is being built.", "wird + gebaut", "Say: The bridge is being built.", ["die brücke wird gebaut", "die brucke wird gebaut"], "Die Brücke wird gebaut."),
+                ("I would like more time.", "ich hätte gern", "Say: I would like more time.", ["ich hätte gern mehr zeit", "ich hatte gern mehr zeit"], "Ich hätte gern mehr Zeit.")),
+            guided(.B1, "06-make-your-case", "REAL LIFE", "Make your case", "Structure opinions, connectors, and formal messages.",
+                ("Meiner Meinung nach …, weil …", "position → reason → example", "A convincing B1 argument has a visible structure, not just longer sentences."),
+                ("In my opinion, that is useful.", "Meiner Meinung nach", "Say: In my opinion, that is useful.", ["meiner meinung nach ist das nützlich", "meiner meinung nach ist das nutzlich"], "Meiner Meinung nach ist das nützlich."),
+                ("On one hand … on the other hand …", "einerseits · andererseits", "Say the two-part contrast.", ["einerseits andererseits"], "Einerseits …, andererseits …")),
+            guided(.B1, "07-precise-clauses", "CLAUSES", "Precise clauses", "Use relative clauses and choose zu-infinitive or dass.",
+                ("Der Kollege, mit dem ich arbeite …", "the preposition controls relative-pronoun case", "Relative clauses identify people and things precisely."),
+                ("I plan to move tomorrow.", "planen + zu-infinitive", "Say: I plan to move tomorrow.", ["ich plane morgen umzuziehen"], "Ich plane, morgen umzuziehen."),
+                ("I hope that you come.", "different subject → dass", "Say: I hope that you come.", ["ich hoffe dass du kommst"], "Ich hoffe, dass du kommst.")),
+            guided(.B1, "08-nouns-endings", "FORMS", "Nouns & endings", "Control N-declension and advanced adjective forms.",
+                ("der Student → mit dem Studenten", "many masculine people add -n/-en", "N-declension nouns gain an ending outside nominative singular."),
+                ("I speak with the colleague.", "mit dem Kollegen", "Say: I speak with the colleague.", ["ich spreche mit dem kollegen"], "Ich spreche mit dem Kollegen."),
+                ("despite a big problem", "trotz eines großen Problems", "Say: despite a big problem.", ["trotz eines großen problems", "trotz eines grossen problems"], "Trotz eines großen Problems.")),
+            guided(.B1, "09-preposition-system", "PATTERNS", "Preposition system", "Use fixed verb, noun, and adjective packages.",
+                ("abhängen von · Interesse an · stolz auf", "store the full package", "At B1, fixed prepositions connect verbs, nouns, and adjectives into reusable packages."),
+                ("That depends on the weather.", "abhängen von", "Say: That depends on the weather.", ["das hängt vom wetter ab", "das hangt vom wetter ab"], "Das hängt vom Wetter ab."),
+                ("What are you proud of?", "stolz auf → worauf", "Ask: What are you proud of?", ["worauf bist du stolz"], "Worauf bist du stolz?")),
+            guided(.B1, "10-processes-logic", "REPORTING", "Processes & logic", "Use passive tenses, modal passive, and logical connectors.",
+                ("Die E-Mail wurde geschickt.", "past passive: wurde + participle", "Passive changes tense through werden while keeping the participle."),
+                ("It must be repaired.", "modal + participle + werden", "Say: It must be repaired.", ["es muss repariert werden"], "Es muss repariert werden."),
+                ("One learns by practising.", "indem explains the method", "Say: One learns by practising.", ["man lernt indem man übt", "man lernt indem man ubt"], "Man lernt, indem man übt.")),
+            guided(.B1, "11-independence-lab", "MASTERY", "B1 independence lab", "Use collocations and structure independent communication.",
+                ("eine Entscheidung treffen", "learn argument-ready collocations", "Natural collocations make independent German more precise and fluent."),
+                ("We should save energy.", "Energie sparen", "Say: We should save energy.", ["wir sollten energie sparen"], "Wir sollten Energie sparen."),
+                ("I would add that …", "Dazu möchte ich ergänzen, dass …", "Begin: I would add that …", ["dazu möchte ich ergänzen dass", "dazu mochte ich erganzen dass"], "Dazu möchte ich ergänzen, dass …")),
+            guided(.B1, "12-opinions-aloud", "SPEAKING", "Opinions aloud", "State, balance, defend, and politely challenge an argument.",
+                ("Position → Grund → Beispiel → Schluss", "give a two-minute answer a spine", "Independent speaking becomes easier when each part has a clear job."),
+                ("An example of this is …", "Ein Beispiel dafür ist …", "Say: An example of this is …", ["ein beispiel dafür ist", "ein beispiel dafur ist"], "Ein Beispiel dafür ist …"),
+                ("In conclusion, one can say …", "Abschließend lässt sich sagen …", "Begin your conclusion.", ["abschließend lässt sich sagen", "abschliessend lasst sich sagen"], "Abschließend lässt sich sagen …"))
+        ]
+    }
+
+    private static func guided(
+        _ level: CourseLevel, _ id: String, _ type: String, _ title: String, _ goal: String,
+        _ notice: (String, String, String),
+        _ first: (String, String, String, [String], String),
+        _ second: (String, String, String, [String], String)
+    ) -> VoiceLesson {
+        core(level, id, type, title, goal, [
+            step("notice", "NOTICE", notice.0, notice.1, notice.2),
+            step("retrieve", "YOUR TURN", first.0, first.1, first.2, first.3, "Richtig. \(first.4)", "Listen once more: \(first.4)"),
+            step("transfer", "TRANSFER", second.0, second.1, second.2, second.3, "Sehr gut. \(second.4)", "Try this model: \(second.4)")
+        ])
+    }
+}
