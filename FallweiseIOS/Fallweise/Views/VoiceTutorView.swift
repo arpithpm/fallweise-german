@@ -50,7 +50,7 @@ struct VoiceTutorView: View {
             }
             .buttonStyle(.bordered)
             .accessibilityLabel("Study this lesson myself")
-            Button { store.showingJourney = true } label: {
+            Button { store.leaveLesson(for: .learn) } label: {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text("\(store.selectedLevel.rawValue) JOURNEY").font(.caption2.bold())
                     Text("\(store.learnedCount)/\(store.wordCount) words").font(.caption)

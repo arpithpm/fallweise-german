@@ -35,8 +35,8 @@ struct SelfStudyView: View {
             Spacer()
             Button { store.setMode(.voice) } label: { Image(systemName: "waveform.and.mic") }
                 .buttonStyle(.bordered).accessibilityLabel("Learn this lesson with Mia")
-            Button { store.showingJourney = true } label: { Image(systemName: "map") }
-                .buttonStyle(.bordered).accessibilityLabel("Open A1 curriculum")
+            Button { store.leaveLesson(for: .learn) } label: { Image(systemName: "map") }
+                .buttonStyle(.bordered).accessibilityLabel("Open \(store.selectedLevel.rawValue) curriculum")
         }
     }
 
@@ -123,7 +123,7 @@ struct SelfStudyView: View {
                     Label("Next: \(next.title)", systemImage: "arrow.right").frame(maxWidth: .infinity).padding(.vertical, 10)
                 }.buttonStyle(.borderedProminent).tint(FallweiseTheme.ink)
             }
-            Button("Choose another chapter") { store.showingJourney = true }.buttonStyle(.bordered)
+            Button("Choose another chapter") { store.leaveLesson(for: .learn) }.buttonStyle(.bordered)
             Button("Continue with Mia") { store.setMode(.voice) }.buttonStyle(.bordered)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

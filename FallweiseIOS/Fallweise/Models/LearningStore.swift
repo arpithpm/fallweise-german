@@ -6,6 +6,10 @@ enum LearningMode: String {
     case selfStudy
 }
 
+enum AppTab: Hashable {
+    case home, learn, words, mia, progress
+}
+
 struct SavedLesson: Codable, Hashable {
     let userID: String?
     let lessonID: String
@@ -31,7 +35,8 @@ final class LearningStore {
     var selectedLevel: CourseLevel
     var selectedLessonID: String
     var learningMode: LearningMode
-    var showingJourney = false
+    var selectedTab: AppTab = .home
+    var showingLesson = false
     var errorMessage: String?
 
     private let progressKey = "fallweise.ios.lesson-progress"
@@ -69,12 +74,47 @@ final class LearningStore {
     var vocabularyLessons: [VoiceLesson] { lessons.filter { $0.unit != nil } }
     var completedCoreCount: Int { coreLessons.filter { progress[lessonID($0)]?.status == "completed" }.count }
 
+    var recommendedLesson: VoiceLesson {
+        lessons.first { progress[lessonID($0)]?.status == "in_progress" }
+            ?? lessons.first { progress[lessonID($0)]?.status != "completed" }
+            ?? lessons.first!
+    }
+
+    var totalLearnedCount: Int { vocabularies.values.flatMap(\.items).filter { learnedWords.contains($0.id) }.count }
+    var totalWordCount: Int { vocabularies.values.reduce(0) { $0 + $1.count } }
+    var totalCompletedCount: Int { allLessons.filter { progress[lessonID($0)]?.status == "completed" }.count }
+
+    func learnedCount(for level: CourseLevel) -> Int {
+        (vocabularies[level]?.items ?? []).filter { learnedWords.contains($0.id) }.count
+    }
+
+    func completedCoreCount(for level: CourseLevel) -> Int {
+        allLessons.filter { $0.level == level && $0.unit == nil && progress[lessonID($0)]?.status == "completed" }.count
+    }
+
+    func completedSessionCount(for level: CourseLevel) -> Int {
+        allLessons.filter { $0.level == level && progress[lessonID($0)]?.status == "completed" }.count
+    }
+
+    func start(_ lesson: VoiceLesson, mode: LearningMode) {
+        select(lesson, mode: mode)
+        showingLesson = true
+    }
+
+    func continueLearning(mode: LearningMode) {
+        start(recommendedLesson, mode: mode)
+    }
+
+    func leaveLesson(for tab: AppTab) {
+        showingLesson = false
+        selectedTab = tab
+    }
+
     func select(_ lesson: VoiceLesson, mode: LearningMode? = nil) {
         if lesson.level != selectedLevel { selectLevel(lesson.level) }
         selectedLessonID = lesson.id
         UserDefaults.standard.set(lesson.id, forKey: selectedKey)
         if let mode { setMode(mode) }
-        showingJourney = false
     }
 
     func setMode(_ mode: LearningMode) {

@@ -13,4 +13,10 @@
   <key>NSMicrophoneUsageDescription</key><string>Mia listens to your German so she can respond and continue the lesson.</string>
   <key>UILaunchScreen</key><dict><key>UIColorName</key><string>LaunchBackground</string></dict>
   <key>UISupportedInterfaceOrientations</key><array><string>UIInterfaceOrientationPortrait</string></array>
+  <key>UISupportedInterfaceOrientations~ipad</key><array>
+    <string>UIInterfaceOrientationPortrait</string>
+    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <string>UIInterfaceOrientationLandscapeRight</string>
+  </array>
 </dict></plist>

@@ -18,8 +18,8 @@ struct JourneyView: View {
                     ProgressView(value: Double(store.learnedCount), total: Double(store.wordCount)).tint(FallweiseTheme.green)
                     Text("\(store.completedCount) of \(store.lessons.count) sessions complete").font(.subheadline).foregroundStyle(.secondary)
                     Picker("Curriculum", selection: $section) {
-                        Text("A1 Course").tag(0)
-                        Text("540 Words").tag(1)
+                        Text("\(store.selectedLevel.rawValue) Course").tag(0)
+                        Text("\(store.wordCount) Words").tag(1)
                     }.pickerStyle(.segmented)
                     LazyVStack(spacing: 10) {
                         if section == 0 {
@@ -49,7 +49,7 @@ struct JourneyView: View {
             Button("Study myself") { begin(.selfStudy) }
             Button("Cancel", role: .cancel) { pendingLesson = nil }
         } message: {
-            Text("You can switch modes at any time. Both save to the same A1 progress.")
+            Text("You can switch modes at any time. Both save to the same \(store.selectedLevel.rawValue) progress.")
         }
     }
 
@@ -114,6 +114,7 @@ struct JourneyView: View {
     private func begin(_ mode: LearningMode) {
         guard let lesson = pendingLesson else { return }
         store.select(lesson, mode: mode)
+        store.showingLesson = true
         pendingLesson = nil
         dismiss()
     }
