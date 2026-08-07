@@ -147,8 +147,13 @@ final class LearningStore {
     }
 
     func markWord(_ word: VocabularyItem, correct: Bool) {
-        if correct { learnedWords.insert(word.id) }
+        markWord(id: word.id, correct: correct)
+    }
+
+    func markWord(id: String, correct: Bool) {
+        if correct { learnedWords.insert(id) }
         UserDefaults.standard.set(Array(learnedWords), forKey: wordsKey)
+        PhoneWatchSyncService.shared.sendProgress()
     }
 
     func save(lesson: VoiceLesson, step: Int, complete: Bool) async {

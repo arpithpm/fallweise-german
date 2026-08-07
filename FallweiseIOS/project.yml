@@ -29,10 +29,33 @@ targets:
     dependencies:
       - package: LiveKit
         product: LiveKit
+      - target: FallweiseWatch
+  FallweiseWatch:
+    type: application
+    platform: watchOS
+    deploymentTarget: "10.0"
+    sources:
+      - path: FallweiseWatch
+      - path: Fallweise/Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.arpithpm.fallweise.watchkitapp
+        PRODUCT_NAME: Fallweise Watch
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Fallweise
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.arpithpm.fallweise
+        CODE_SIGN_STYLE: Automatic
 schemes:
   Fallweise:
     build:
       targets:
         Fallweise: all
+    run:
+      config: Debug
+  FallweiseWatch:
+    build:
+      targets:
+        FallweiseWatch: all
     run:
       config: Debug

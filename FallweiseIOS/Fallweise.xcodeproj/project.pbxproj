@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C5171071C225F682E774FC /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
+		06A623ED4823ED1426FFAA0D /* WatchLearningStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D013EC4AE8BC21317B5A6 /* WatchLearningStore.swift */; };
 		0B4A6215BC4DFD6E7A839E6A /* LiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9EB88EF6F3327AF5EED8FEC3 /* LiveKit */; };
+		1411A296EFC7C76BB8DB865A /* WatchSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8CCFE024CD53988C37A21 /* WatchSyncService.swift */; };
 		1743B2456724A1B12D217C25 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5D908133FFB641C0E5DEB /* RootView.swift */; };
+		191674D0A5E747D8D032CDD0 /* FallweiseWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CB91295263A4B23F0A022993 /* FallweiseWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		284B3387253EA8AE8FAB1306 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162C255CCD3950B7DFA2F16D /* SupabaseService.swift */; };
+		2A590BA252B1069AE267D33E /* b1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */; };
 		2E4A45181DBC16604B4FF7A9 /* MiaHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD22254804098C28D6E7469 /* MiaHubView.swift */; };
 		381E4A5410968C76019D2265 /* FallweiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C4C51E774780913B833927 /* FallweiseApp.swift */; };
 		481E05C3CA903A9033776273 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084642FCAF1BE7DF6CB033E2 /* JourneyView.swift */; };
@@ -18,45 +23,83 @@
 		71D298B9E99BFC6104AA1637 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427D46961E5D13447A50620 /* HomeView.swift */; };
 		72E3D70C54573385CA9584EA /* Curriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7572FF179E539E365A906C7 /* Curriculum.swift */; };
 		751274B4E05D8CF66AAE327D /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6011E16191817E37D7EB9E43 /* WordsView.swift */; };
+		7854144DA150DEA25562E820 /* WatchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B134FFA06EFD343B61B1D93 /* WatchHomeView.swift */; };
 		78CBC9AF24EC7187FBE4D054 /* VoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */; };
 		7ED153A2074CE03B6A0541CE /* a1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */; };
 		8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */; };
+		AF8DD4B73E2EA136E99FEDEA /* FallweiseWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */; };
 		B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC974896CE59F5EED5626408 /* Theme.swift */; };
 		B41C2709A9B1026A7163F6DB /* AdvancedCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */; };
 		BF8AB30342EAD16CCE9476D3 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C22E207D82D2142D40E29 /* AppComponents.swift */; };
+		D514461730276EF868A1DFB3 /* a1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */; };
 		D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
+		DDFE1D13E68AB2923A5AA380 /* WatchPronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DCE9A444E2371BD9BFF368 /* WatchPronunciationService.swift */; };
 		E1D93BAAFC40C6CF81EBA5BB /* ProgressViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466C458FF156873F78E92E /* ProgressViewScreen.swift */; };
 		E4DEFC6E9E3A75988C8C636E /* PronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA9E392AECA0FB5B60F83A /* PronunciationService.swift */; };
+		EB34F953E5E20FBD49A8CE51 /* WatchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C20B50BCE972C51B60523B /* WatchModels.swift */; };
+		F0F825E0EF07948B0C1BE3F8 /* PhoneWatchSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35501CC1EDB70CFB1B81D66 /* PhoneWatchSyncService.swift */; };
 		F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */; };
 		F2D7D5352900E88F3F6DC988 /* VocabularyMemoryScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */; };
 		FAEDB7D4DD5F26F441F23BC0 /* b1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8AFC39E88E9D1FF84495F22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78DC902A6ADE4FCE6D7D1D80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C15E22C28B34276D4F7DBEF7;
+			remoteInfo = FallweiseWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38E914CD8A6709F15CDF672C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				191674D0A5E747D8D032CDD0 /* FallweiseWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		084642FCAF1BE7DF6CB033E2 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
 		0A3C22E207D82D2142D40E29 /* AppComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponents.swift; sourceTree = "<group>"; };
 		13C4C51E774780913B833927 /* FallweiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseApp.swift; sourceTree = "<group>"; };
 		162C255CCD3950B7DFA2F16D /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
+		16DCE9A444E2371BD9BFF368 /* WatchPronunciationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPronunciationService.swift; sourceTree = "<group>"; };
 		40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMemoryScene.swift; sourceTree = "<group>"; };
+		47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseWatchApp.swift; sourceTree = "<group>"; };
 		4CD22254804098C28D6E7469 /* MiaHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiaHubView.swift; sourceTree = "<group>"; };
 		52EA9E392AECA0FB5B60F83A /* PronunciationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationService.swift; sourceTree = "<group>"; };
 		5B14BDACE97D42DB76A4E99A /* LearningStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningStore.swift; sourceTree = "<group>"; };
 		6011E16191817E37D7EB9E43 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
+		63C20B50BCE972C51B60523B /* WatchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchModels.swift; sourceTree = "<group>"; };
 		7793A2BD3806DEC395926DBB /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "b1-vocabulary.json"; sourceTree = "<group>"; };
 		7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTutorView.swift; sourceTree = "<group>"; };
 		8427D46961E5D13447A50620 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		87C5D908133FFB641C0E5DEB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		8B134FFA06EFD343B61B1D93 /* WatchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHomeView.swift; sourceTree = "<group>"; };
 		8C466C458FF156873F78E92E /* ProgressViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewScreen.swift; sourceTree = "<group>"; };
 		8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCurriculum.swift; sourceTree = "<group>"; };
 		93BFE0CA7CD50C51BC8C1B2C /* Fallweise.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Fallweise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6A8CCFE024CD53988C37A21 /* WatchSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncService.swift; sourceTree = "<group>"; };
 		A7572FF179E539E365A906C7 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
 		B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfStudyView.swift; sourceTree = "<group>"; };
 		B9AF2CE89D4C46C12B3B88B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a1-vocabulary.json"; sourceTree = "<group>"; };
+		CB91295263A4B23F0A022993 /* FallweiseWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallweiseWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a2-vocabulary.json"; sourceTree = "<group>"; };
 		EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
+		F35501CC1EDB70CFB1B81D66 /* PhoneWatchSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneWatchSyncService.swift; sourceTree = "<group>"; };
 		FC974896CE59F5EED5626408 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		FE1D013EC4AE8BC21317B5A6 /* WatchLearningStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLearningStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				5BFB6FD34CE56A9F4B23C0A1 /* Fallweise */,
+				3A9FA3D387E2632C51D90A96 /* FallweiseWatch */,
 				BBCC9837BC3F43FE9EBBF780 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +129,19 @@
 				13C4C51E774780913B833927 /* FallweiseApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		3A9FA3D387E2632C51D90A96 /* FallweiseWatch */ = {
+			isa = PBXGroup;
+			children = (
+				47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */,
+				8B134FFA06EFD343B61B1D93 /* WatchHomeView.swift */,
+				FE1D013EC4AE8BC21317B5A6 /* WatchLearningStore.swift */,
+				63C20B50BCE972C51B60523B /* WatchModels.swift */,
+				16DCE9A444E2371BD9BFF368 /* WatchPronunciationService.swift */,
+				A6A8CCFE024CD53988C37A21 /* WatchSyncService.swift */,
+			);
+			path = FallweiseWatch;
 			sourceTree = "<group>";
 		};
 		45F4865ADC425F185F461C1C /* Models */ = {
@@ -132,6 +189,7 @@
 		94DEBD150CD40369B79867CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F35501CC1EDB70CFB1B81D66 /* PhoneWatchSyncService.swift */,
 				52EA9E392AECA0FB5B60F83A /* PronunciationService.swift */,
 				162C255CCD3950B7DFA2F16D /* SupabaseService.swift */,
 				EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */,
@@ -153,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				93BFE0CA7CD50C51BC8C1B2C /* Fallweise.app */,
+				CB91295263A4B23F0A022993 /* FallweiseWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,10 +226,12 @@
 				D1F5DEF35C6C6B069410B9C8 /* Sources */,
 				02FCDC6391014C74334CD8D7 /* Resources */,
 				06E5CA492E8F8B17123D1640 /* Frameworks */,
+				38E914CD8A6709F15CDF672C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F772C863E1D8FE7F12A96E54 /* PBXTargetDependency */,
 			);
 			name = Fallweise;
 			packageProductDependencies = (
@@ -178,6 +239,24 @@
 			);
 			productName = Fallweise;
 			productReference = 93BFE0CA7CD50C51BC8C1B2C /* Fallweise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C15E22C28B34276D4F7DBEF7 /* FallweiseWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28824A4AC3A0F2D08049852D /* Build configuration list for PBXNativeTarget "FallweiseWatch" */;
+			buildPhases = (
+				34626874CE239E9A5DC1597B /* Sources */,
+				5A0EE637DDDC4A01D5DC6BDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FallweiseWatch;
+			packageProductDependencies = (
+			);
+			productName = FallweiseWatch;
+			productReference = CB91295263A4B23F0A022993 /* FallweiseWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,6 +269,10 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					6E9FC35C46E8D6C9DE741DF3 = {
+						DevelopmentTeam = AJKFVG2KV2;
+						ProvisioningStyle = Automatic;
+					};
+					C15E22C28B34276D4F7DBEF7 = {
 						DevelopmentTeam = AJKFVG2KV2;
 						ProvisioningStyle = Automatic;
 					};
@@ -213,6 +296,7 @@
 			projectRoot = "";
 			targets = (
 				6E9FC35C46E8D6C9DE741DF3 /* Fallweise */,
+				C15E22C28B34276D4F7DBEF7 /* FallweiseWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -228,9 +312,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A0EE637DDDC4A01D5DC6BDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D514461730276EF868A1DFB3 /* a1-vocabulary.json in Resources */,
+				01C5171071C225F682E774FC /* a2-vocabulary.json in Resources */,
+				2A590BA252B1069AE267D33E /* b1-vocabulary.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		34626874CE239E9A5DC1597B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8DD4B73E2EA136E99FEDEA /* FallweiseWatchApp.swift in Sources */,
+				7854144DA150DEA25562E820 /* WatchHomeView.swift in Sources */,
+				06A623ED4823ED1426FFAA0D /* WatchLearningStore.swift in Sources */,
+				EB34F953E5E20FBD49A8CE51 /* WatchModels.swift in Sources */,
+				DDFE1D13E68AB2923A5AA380 /* WatchPronunciationService.swift in Sources */,
+				1411A296EFC7C76BB8DB865A /* WatchSyncService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F5DEF35C6C6B069410B9C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +351,7 @@
 				608C0CB8A53A41264BFB72BD /* LearnView.swift in Sources */,
 				50AD5ED58E5CD66E1FDEDA65 /* LearningStore.swift in Sources */,
 				2E4A45181DBC16604B4FF7A9 /* MiaHubView.swift in Sources */,
+				F0F825E0EF07948B0C1BE3F8 /* PhoneWatchSyncService.swift in Sources */,
 				E1D93BAAFC40C6CF81EBA5BB /* ProgressViewScreen.swift in Sources */,
 				E4DEFC6E9E3A75988C8C636E /* PronunciationService.swift in Sources */,
 				1743B2456724A1B12D217C25 /* RootView.swift in Sources */,
@@ -259,7 +367,32 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F772C863E1D8FE7F12A96E54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C15E22C28B34276D4F7DBEF7 /* FallweiseWatch */;
+			targetProxy = E8AFC39E88E9D1FF84495F22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		15723A7E08C3FF745D788F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Fallweise;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.arpithpm.fallweise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arpithpm.fallweise.watchkitapp;
+				PRODUCT_NAME = "Fallweise Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
 		C0E0B7273731FF2018F16332 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -310,10 +443,26 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		C7D4B7241A966C7E152A4138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Fallweise;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.arpithpm.fallweise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arpithpm.fallweise.watchkitapp;
+				PRODUCT_NAME = "Fallweise Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -374,7 +523,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
@@ -422,6 +570,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		28824A4AC3A0F2D08049852D /* Build configuration list for PBXNativeTarget "FallweiseWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15723A7E08C3FF745D788F48 /* Debug */,
+				C7D4B7241A966C7E152A4138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		4B13CCE8ADD3F0F1CC7FE777 /* Build configuration list for PBXNativeTarget "Fallweise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

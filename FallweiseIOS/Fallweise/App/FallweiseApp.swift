@@ -9,6 +9,7 @@ struct FallweiseApp: App {
             RootView()
                 .environment(store)
                 .preferredColorScheme(.light)
+                .onAppear { PhoneWatchSyncService.shared.start(store: store) }
         }
     }
 }
