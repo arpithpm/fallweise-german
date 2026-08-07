@@ -60,7 +60,9 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/health") return json({ ok: true }, 200, origin);
     if (url.pathname !== "/api/livekit/session" || request.method !== "POST") return json({ error: "Not found" }, 404, origin);
-    if (!ALLOWED_ORIGINS.has(origin)) return json({ error: "Origin not allowed" }, 403, origin);
+    // Native clients do not send a browser Origin header. They are still
+    // protected by the Supabase bearer-token verification below.
+    if (origin && !ALLOWED_ORIGINS.has(origin)) return json({ error: "Origin not allowed" }, 403, origin);
     const user = await supabaseUser(request, env);
     if (!user) return json({ error: "Sign in required" }, 401, origin);
     try {
