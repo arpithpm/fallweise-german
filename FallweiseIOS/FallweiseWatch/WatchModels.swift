@@ -33,7 +33,7 @@ struct WatchWord: Codable, Identifiable, Hashable {
     let symbol: String?
 
     var display: String { article.isEmpty ? de : "\(article) \(de)" }
-    var isNoun: Bool { type == "noun" && !article.isEmpty }
+    var isNoun: Bool { type == "noun" && ["der", "die", "das"].contains(article) }
 }
 
 struct WatchReview: Codable {

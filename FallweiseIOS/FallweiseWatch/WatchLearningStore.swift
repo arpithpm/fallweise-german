@@ -52,7 +52,7 @@ final class WatchLearningStore {
     func selectLevel(_ newLevel: WatchLevel) {
         level = newLevel
         UserDefaults.standard.set(newLevel.rawValue, forKey: levelKey)
-        refreshDailyWords(force: true)
+        refreshWordsForCurrentMode(force: true)
     }
 
     func setMode(_ newMode: Mode) {
@@ -61,12 +61,7 @@ final class WatchLearningStore {
         revealed = false
         selectedArticle = nil
         answerWasCorrect = nil
-        if newMode == .articleQuiz {
-            let nouns = (vocabulary[level] ?? []).filter(\.isNoun)
-            dailyWords = Array(nouns.shuffled().prefix(5))
-        } else {
-            refreshDailyWords()
-        }
+        refreshWordsForCurrentMode(force: true)
     }
 
     func reveal() {
@@ -107,12 +102,12 @@ final class WatchLearningStore {
         learnedWords.formUnion(learned)
         if let selectedLevel, let value = WatchLevel(rawValue: selectedLevel) { level = value }
         persist()
-        refreshDailyWords(force: true)
+        refreshWordsForCurrentMode(force: true)
     }
 
     private func advance() {
         if index + 1 < dailyWords.count { index += 1 }
-        else { index = 0; refreshDailyWords(force: true) }
+        else { index = 0; refreshWordsForCurrentMode(force: true) }
         revealed = false
         selectedArticle = nil
         answerWasCorrect = nil
@@ -134,6 +129,16 @@ final class WatchLearningStore {
         index = 0
         UserDefaults.standard.set(today, forKey: dayKey)
         UserDefaults.standard.set(dailyWords.map(\.id), forKey: dailyKey)
+    }
+
+    private func refreshWordsForCurrentMode(force: Bool) {
+        if mode == .articleQuiz {
+            let nouns = (vocabulary[level] ?? []).filter(\.isNoun)
+            dailyWords = Array(nouns.shuffled().prefix(5))
+            index = 0
+        } else {
+            refreshDailyWords(force: force)
+        }
     }
 
     private func persist() {
