@@ -2,11 +2,10 @@ import SwiftUI
 
 struct SelfStudyView: View {
     @Environment(LearningStore.self) private var store
-    @StateObject private var voice = VoiceService()
+    @StateObject private var pronunciation = PronunciationService()
     @State private var stepIndex = 0
     @State private var revealed = false
     @State private var finished = false
-    @State private var audioState = ""
 
     private var lesson: VoiceLesson { store.selectedLesson }
     private var step: LessonStep { lesson.steps[min(stepIndex, lesson.steps.count - 1)] }
@@ -21,9 +20,11 @@ struct SelfStudyView: View {
             }
             .padding(20)
         }
-        .onAppear { resetForSelection(); configureAudio() }
-        .onChange(of: store.selectedLessonID) { resetForSelection() }
-        .onDisappear { Task { await voice.disconnect() } }
+        .onAppear { resetForSelection(); pronunciation.prepare(pronunciationText) }
+        .onChange(of: store.selectedLessonID) { resetForSelection(); pronunciation.prepare(pronunciationText) }
+        .onChange(of: stepIndex) { pronunciation.prepare(pronunciationText) }
+        .onChange(of: revealed) { pronunciation.prepare(pronunciationText) }
+        .onDisappear { pronunciation.stop() }
     }
 
     private var header: some View {
@@ -59,10 +60,10 @@ struct SelfStudyView: View {
                 Kicker(text: step.kind)
                 Spacer()
                 Button { playPronunciation() } label: {
-                    Label(audioState.isEmpty ? "Listen" : audioState, systemImage: audioState == "Playing" ? "waveform" : "speaker.wave.2.fill")
+                    Label(audioLabel, systemImage: pronunciation.state == .playing ? "waveform" : "speaker.wave.2.fill")
                 }
                 .buttonStyle(.bordered)
-                .disabled(audioState == "Connecting")
+                .disabled(pronunciation.state == .loading)
             }
 
             if let word = step.word {
@@ -141,7 +142,7 @@ struct SelfStudyView: View {
         // Opening a completed lesson is an intentional review, so begin again
         // instead of trapping the learner on its completion screen.
         finished = false
-        audioState = ""
+        pronunciation.stop()
     }
 
     private func goBack() {
@@ -164,36 +165,23 @@ struct SelfStudyView: View {
         }
     }
 
-    private func configureAudio() {
-        voice.onEvent = { event in
-            switch event {
-            case .ready:
-                audioState = "Playing"
-                Task { try? await voice.speak(pronunciationText, id: "self-\(UUID().uuidString)") }
-            case .speechStarted: audioState = "Playing"
-            case .speechFinished: audioState = "Listen"
-            case .failure: audioState = "Retry"
-            default: break
-            }
-        }
-    }
-
     private var pronunciationText: String {
         if revealed, let answer = step.answers.first { return answer }
         if let word = step.word { return word.display }
         return step.visual.replacingOccurrences(of: "→", with: ". ").replacingOccurrences(of: "·", with: ". ")
     }
 
-    private func playPronunciation() {
-        if voice.isConnected {
-            audioState = "Playing"
-            Task { try? await voice.speak(pronunciationText, id: "self-\(UUID().uuidString)") }
-        } else {
-            audioState = "Connecting"
-            Task {
-                do { try await voice.connect(microphoneEnabled: false) }
-                catch { audioState = "Retry" }
-            }
+    private var audioLabel: String {
+        switch pronunciation.state {
+        case .idle: "Listen"
+        case .loading: "Loading"
+        case .playing: "Playing"
+        case .failed: "Retry"
         }
+    }
+
+    private func playPronunciation() {
+        if pronunciation.state == .playing { pronunciation.stop() }
+        else { Task { await pronunciation.play(pronunciationText) } }
     }
 }

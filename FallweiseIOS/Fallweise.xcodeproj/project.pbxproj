@@ -26,6 +26,7 @@
 		BF8AB30342EAD16CCE9476D3 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C22E207D82D2142D40E29 /* AppComponents.swift */; };
 		D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
 		E1D93BAAFC40C6CF81EBA5BB /* ProgressViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466C458FF156873F78E92E /* ProgressViewScreen.swift */; };
+		E4DEFC6E9E3A75988C8C636E /* PronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA9E392AECA0FB5B60F83A /* PronunciationService.swift */; };
 		F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417BEBDA49A0FF1A8BEB261 /* SelfStudyView.swift */; };
 		F2D7D5352900E88F3F6DC988 /* VocabularyMemoryScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */; };
 		FAEDB7D4DD5F26F441F23BC0 /* b1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */; };
@@ -38,6 +39,7 @@
 		162C255CCD3950B7DFA2F16D /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMemoryScene.swift; sourceTree = "<group>"; };
 		4CD22254804098C28D6E7469 /* MiaHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiaHubView.swift; sourceTree = "<group>"; };
+		52EA9E392AECA0FB5B60F83A /* PronunciationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationService.swift; sourceTree = "<group>"; };
 		5B14BDACE97D42DB76A4E99A /* LearningStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningStore.swift; sourceTree = "<group>"; };
 		6011E16191817E37D7EB9E43 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
 		7793A2BD3806DEC395926DBB /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		94DEBD150CD40369B79867CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				52EA9E392AECA0FB5B60F83A /* PronunciationService.swift */,
 				162C255CCD3950B7DFA2F16D /* SupabaseService.swift */,
 				EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */,
 			);
@@ -242,6 +245,7 @@
 				50AD5ED58E5CD66E1FDEDA65 /* LearningStore.swift in Sources */,
 				2E4A45181DBC16604B4FF7A9 /* MiaHubView.swift in Sources */,
 				E1D93BAAFC40C6CF81EBA5BB /* ProgressViewScreen.swift in Sources */,
+				E4DEFC6E9E3A75988C8C636E /* PronunciationService.swift in Sources */,
 				1743B2456724A1B12D217C25 /* RootView.swift in Sources */,
 				F20F0CB1EB4C0EBF4100851B /* SelfStudyView.swift in Sources */,
 				284B3387253EA8AE8FAB1306 /* SupabaseService.swift in Sources */,
