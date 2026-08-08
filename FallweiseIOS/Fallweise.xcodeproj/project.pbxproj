@@ -27,10 +27,13 @@
 		78CBC9AF24EC7187FBE4D054 /* VoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */; };
 		7ED153A2074CE03B6A0541CE /* a1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */; };
 		8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */; };
+		9BA0F017ADCB7626006EBCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0CFF049B3253D8E9BCE1EA /* Assets.xcassets */; };
 		AF8DD4B73E2EA136E99FEDEA /* FallweiseWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */; };
 		B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC974896CE59F5EED5626408 /* Theme.swift */; };
 		B41C2709A9B1026A7163F6DB /* AdvancedCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */; };
 		BF8AB30342EAD16CCE9476D3 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C22E207D82D2142D40E29 /* AppComponents.swift */; };
+		D18F2A327B20D716EBE0723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37415F3ED59418D3CB147468 /* Assets.xcassets */; };
+		D4CC66290587638F59733BA9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF2A52ADF71AAF0E6E3888 /* PrivacyInfo.xcprivacy */; };
 		D514461730276EF868A1DFB3 /* a1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */; };
 		D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
 		DDFE1D13E68AB2923A5AA380 /* WatchPronunciationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DCE9A444E2371BD9BFF368 /* WatchPronunciationService.swift */; };
@@ -73,6 +76,8 @@
 		13C4C51E774780913B833927 /* FallweiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseApp.swift; sourceTree = "<group>"; };
 		162C255CCD3950B7DFA2F16D /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		16DCE9A444E2371BD9BFF368 /* WatchPronunciationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPronunciationService.swift; sourceTree = "<group>"; };
+		37415F3ED59418D3CB147468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BAF2A52ADF71AAF0E6E3888 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMemoryScene.swift; sourceTree = "<group>"; };
 		47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseWatchApp.swift; sourceTree = "<group>"; };
 		4CD22254804098C28D6E7469 /* MiaHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiaHubView.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 		B9AF2CE89D4C46C12B3B88B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a1-vocabulary.json"; sourceTree = "<group>"; };
 		CB91295263A4B23F0A022993 /* FallweiseWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallweiseWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0CFF049B3253D8E9BCE1EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a2-vocabulary.json"; sourceTree = "<group>"; };
 		EB7F5C4C5D286D7E7A43BE5A /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
 		F35501CC1EDB70CFB1B81D66 /* PhoneWatchSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneWatchSyncService.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 		3A9FA3D387E2632C51D90A96 /* FallweiseWatch */ = {
 			isa = PBXGroup;
 			children = (
+				DD0CFF049B3253D8E9BCE1EA /* Assets.xcassets */,
 				47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */,
 				8B134FFA06EFD343B61B1D93 /* WatchHomeView.swift */,
 				FE1D013EC4AE8BC21317B5A6 /* WatchLearningStore.swift */,
@@ -157,7 +164,9 @@
 		5BFB6FD34CE56A9F4B23C0A1 /* Fallweise */ = {
 			isa = PBXGroup;
 			children = (
+				37415F3ED59418D3CB147468 /* Assets.xcassets */,
 				B9AF2CE89D4C46C12B3B88B0 /* Info.plist */,
+				3BAF2A52ADF71AAF0E6E3888 /* PrivacyInfo.xcprivacy */,
 				1DA7513D54AE2047E35096C7 /* App */,
 				45F4865ADC425F185F461C1C /* Models */,
 				94E11812F6E307C7342E16F4 /* Resources */,
@@ -306,6 +315,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18F2A327B20D716EBE0723E /* Assets.xcassets in Resources */,
+				D4CC66290587638F59733BA9 /* PrivacyInfo.xcprivacy in Resources */,
 				7ED153A2074CE03B6A0541CE /* a1-vocabulary.json in Resources */,
 				D5E3BF03349CD36B6D7DB5FE /* a2-vocabulary.json in Resources */,
 				FAEDB7D4DD5F26F441F23BC0 /* b1-vocabulary.json in Resources */,
@@ -316,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA0F017ADCB7626006EBCDE /* Assets.xcassets in Resources */,
 				D514461730276EF868A1DFB3 /* a1-vocabulary.json in Resources */,
 				01C5171071C225F682E774FC /* a2-vocabulary.json in Resources */,
 				2A590BA252B1069AE267D33E /* b1-vocabulary.json in Resources */,
@@ -427,6 +439,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AJKFVG2KV2;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -440,6 +453,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +514,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = AJKFVG2KV2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -519,6 +534,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -533,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -552,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = NO;
