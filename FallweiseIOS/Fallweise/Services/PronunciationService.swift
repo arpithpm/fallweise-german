@@ -4,7 +4,7 @@ import Foundation
 import OSLog
 
 @MainActor
-final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDelegate {
+final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDelegate, AVSpeechSynthesizerDelegate {
     enum State: Equatable {
         case idle
         case loading
@@ -20,11 +20,18 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     private let speaker = "Vivian"
     private let rate = "1.0"
     private var player: AVAudioPlayer?
+    private let speechSynthesizer = AVSpeechSynthesizer()
     private var preparedText: String?
     private var preparedAudio: Data?
     private var preparationTask: Task<Void, Never>?
     private var queuedTexts: [String] = []
+    private var playingText: String?
     private let logger = Logger(subsystem: "com.arpithpm.fallweise", category: "pronunciation")
+
+    override init() {
+        super.init()
+        speechSynthesizer.delegate = self
+    }
 
     func prepare(_ text: String) {
         prepare([text])
@@ -56,6 +63,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         let texts = texts.filter { !$0.isEmpty }
         guard let first = texts.first else { return }
         player?.stop()
+        speechSynthesizer.stopSpeaking(at: .immediate)
         queuedTexts = Array(texts.dropFirst())
         errorMessage = nil
         state = .loading
@@ -63,6 +71,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     }
 
     private func playNext(_ text: String) async {
+        playingText = text
         do {
             let audio: Data
             if preparedText == text, let preparedAudio {
@@ -86,14 +95,37 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
             state = .playing
         } catch {
             logger.error("Pronunciation failed for \(text, privacy: .public): \(error.localizedDescription, privacy: .public)")
-            errorMessage = userMessage(for: error)
-            player = nil
-            state = .failed
+            playWithDeviceVoice(text)
         }
+    }
+
+    private func playWithDeviceVoice(_ text: String) {
+        player = nil
+        errorMessage = nil
+
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = preferredGermanVoice()
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+        utterance.pitchMultiplier = 1
+        utterance.preUtteranceDelay = 0
+        utterance.postUtteranceDelay = 0
+
+        speechSynthesizer.speak(utterance)
+        state = .playing
+    }
+
+    private func preferredGermanVoice() -> AVSpeechSynthesisVoice? {
+        let germanVoices = AVSpeechSynthesisVoice.speechVoices().filter {
+            $0.language.hasPrefix("de")
+        }
+        return germanVoices.first(where: { $0.quality == .premium })
+            ?? germanVoices.first(where: { $0.quality == .enhanced })
+            ?? AVSpeechSynthesisVoice(language: "de-DE")
     }
 
     func stop() {
         player?.stop()
+        speechSynthesizer.stopSpeaking(at: .immediate)
         player = nil
         queuedTexts = []
         state = .idle
@@ -103,7 +135,11 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         Task { @MainActor in
             self.player = nil
             guard flag else {
-                self.state = .failed
+                if let text = self.playingText {
+                    self.playWithDeviceVoice(text)
+                } else {
+                    self.state = .failed
+                }
                 return
             }
             if let next = self.queuedTexts.first {
@@ -116,10 +152,30 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         }
     }
 
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        Task { @MainActor in
+            await self.playQueuedTextOrFinish()
+        }
+    }
+
+    private func playQueuedTextOrFinish() async {
+        if let next = queuedTexts.first {
+            queuedTexts.removeFirst()
+            state = .loading
+            await playNext(next)
+        } else {
+            state = .idle
+        }
+    }
+
     nonisolated func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
         Task { @MainActor in
             self.player = nil
-            self.state = .failed
+            if let text = self.playingText {
+                self.playWithDeviceVoice(text)
+            } else {
+                self.state = .failed
+            }
         }
     }
 
