@@ -66,6 +66,12 @@ struct SelfStudyView: View {
                 .disabled(pronunciation.state == .loading)
             }
 
+            if let audioError = pronunciation.errorMessage {
+                Label(audioError, systemImage: "exclamationmark.triangle.fill")
+                    .font(.caption)
+                    .foregroundStyle(.red)
+            }
+
             if let word = step.word {
                 VocabularyMemoryScene(word: word)
             }

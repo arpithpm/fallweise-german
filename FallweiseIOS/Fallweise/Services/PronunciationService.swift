@@ -1,6 +1,7 @@
 import AVFoundation
 import CryptoKit
 import Foundation
+import OSLog
 
 @MainActor
 final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDelegate {
@@ -12,6 +13,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     }
 
     @Published private(set) var state: State = .idle
+    @Published private(set) var errorMessage: String?
 
     private let audioCDN = URL(string: "https://pub-b7374a734fb54fb19c76923b93a2e3b6.r2.dev")!
     private let model = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
@@ -21,6 +23,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     private var preparedText: String?
     private var preparedAudio: Data?
     private var preparationTask: Task<Void, Never>?
+    private let logger = Logger(subsystem: "com.arpithpm.fallweise", category: "pronunciation")
 
     func prepare(_ text: String) {
         guard !text.isEmpty, text != preparedText else { return }
@@ -37,6 +40,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     func play(_ text: String) async {
         guard !text.isEmpty else { return }
         player?.stop()
+        errorMessage = nil
         state = .loading
 
         do {
@@ -53,13 +57,17 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
             try session.setCategory(.playback, mode: .spokenAudio)
             try session.setActive(true)
 
-            let player = try AVAudioPlayer(data: audio)
+            let localURL = try cache(audio, for: text)
+            let player = try AVAudioPlayer(contentsOf: localURL)
             player.delegate = self
-            player.prepareToPlay()
-            guard player.play() else { throw AudioError.playbackFailed }
+            guard player.prepareToPlay() else { throw AudioError.couldNotDecode }
             self.player = player
+            guard player.play() else { throw AudioError.playbackFailed }
             state = .playing
         } catch {
+            logger.error("Pronunciation failed for \(text, privacy: .public): \(error.localizedDescription, privacy: .public)")
+            errorMessage = userMessage(for: error)
+            player = nil
             state = .failed
         }
     }
@@ -85,19 +93,68 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     }
 
     private func fetch(_ text: String) async throws -> Data {
+        let cachedURL = cachedURL(for: text)
+        if let data = try? Data(contentsOf: cachedURL), !data.isEmpty { return data }
+
         let source = "\(model)|\(speaker)|\(rate)|\(text)"
         let digest = SHA256.hash(data: Data(source.utf8))
         let hash = digest.map { String(format: "%02x", $0) }.joined()
         let url = audioCDN.appending(path: "\(hash).wav")
-        let (data, response) = try await URLSession.shared.data(from: url)
-        guard (response as? HTTPURLResponse)?.statusCode == 200, !data.isEmpty else {
-            throw AudioError.unavailable
-        }
+        var request = URLRequest(url: url)
+        request.cachePolicy = .returnCacheDataElseLoad
+        request.timeoutInterval = 20
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let http = response as? HTTPURLResponse else { throw AudioError.invalidResponse }
+        guard http.statusCode == 200 else { throw AudioError.httpStatus(http.statusCode) }
+        guard data.count > 44 else { throw AudioError.emptyAudio }
         return data
     }
 
-    private enum AudioError: Error {
-        case unavailable
+    @discardableResult
+    private func cache(_ data: Data, for text: String) throws -> URL {
+        let url = cachedURL(for: text)
+        if !FileManager.default.fileExists(atPath: url.path) {
+            try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try data.write(to: url, options: .atomic)
+        }
+        return url
+    }
+
+    private func cachedURL(for text: String) -> URL {
+        let source = "\(model)|\(speaker)|\(rate)|\(text)"
+        let digest = SHA256.hash(data: Data(source.utf8))
+        let hash = digest.map { String(format: "%02x", $0) }.joined()
+        return URL.cachesDirectory.appending(path: "Pronunciations/\(hash).wav")
+    }
+
+    private func userMessage(for error: Error) -> String {
+        if let urlError = error as? URLError {
+            switch urlError.code {
+            case .notConnectedToInternet: return "No internet connection."
+            case .timedOut: return "Audio download timed out."
+            case .cannotFindHost, .cannotConnectToHost, .dnsLookupFailed: return "The audio service could not be reached."
+            default: return "Audio download failed (\(urlError.code.rawValue))."
+            }
+        }
+        if case AudioError.httpStatus(let status) = error { return "Audio service returned HTTP \(status)." }
+        return "This pronunciation could not be played."
+    }
+
+    private enum AudioError: LocalizedError {
+        case invalidResponse
+        case httpStatus(Int)
+        case emptyAudio
+        case couldNotDecode
         case playbackFailed
+
+        var errorDescription: String? {
+            switch self {
+            case .invalidResponse: "Invalid server response"
+            case .httpStatus(let status): "HTTP \(status)"
+            case .emptyAudio: "Empty audio response"
+            case .couldNotDecode: "Audio decoding failed"
+            case .playbackFailed: "Audio playback failed"
+            }
+        }
     }
 }
