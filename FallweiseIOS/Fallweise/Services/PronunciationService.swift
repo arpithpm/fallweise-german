@@ -18,7 +18,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     private let audioCDN = URL(string: "https://pub-b7374a734fb54fb19c76923b93a2e3b6.r2.dev")!
     private let model = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
     private let speaker = "Vivian"
-    private let rate = "0.88"
+    private let rate = "1.0"
     private var player: AVAudioPlayer?
     private var preparedText: String?
     private var preparedAudio: Data?
