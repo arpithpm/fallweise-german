@@ -13,6 +13,7 @@
   <key>LSApplicationCategoryType</key><string>public.app-category.education</string>
   <key>LSRequiresIPhoneOS</key><true/>
   <key>NSMicrophoneUsageDescription</key><string>Mia listens to your German so she can respond and continue the lesson.</string>
+  <key>NSCameraUsageDescription</key><string>Fallweise may use the camera during interactive voice lessons when visual learning features are enabled.</string>
   <key>UILaunchScreen</key><dict><key>UIColorName</key><string>LaunchBackground</string></dict>
   <key>UISupportedInterfaceOrientations</key><array><string>UIInterfaceOrientationPortrait</string></array>
   <key>UISupportedInterfaceOrientations~ipad</key><array>
