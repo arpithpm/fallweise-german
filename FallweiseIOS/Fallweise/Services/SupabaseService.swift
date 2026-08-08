@@ -17,7 +17,21 @@ actor SupabaseService {
     func accessToken() async throws -> String {
         if session == nil { session = loadSession() }
         if let session, session.expiresAt.timeIntervalSinceNow > 60 { return session.accessToken }
-        if let session { return try await refresh(session.refreshToken).accessToken }
+        if let session {
+            do { return try await refresh(session.refreshToken).accessToken }
+            catch { clearSession() }
+        }
+        return try await signInAnonymously().accessToken
+    }
+
+    /// Renews credentials after an API has rejected a cached access token.
+    /// If the refresh token is no longer accepted, start a new anonymous session.
+    func renewedAccessToken() async throws -> String {
+        if session == nil { session = loadSession() }
+        if let session {
+            do { return try await refresh(session.refreshToken).accessToken }
+            catch { clearSession() }
+        }
         return try await signInAnonymously().accessToken
     }
 
@@ -78,6 +92,11 @@ actor SupabaseService {
     private func loadSession() -> AuthSession? {
         guard let data = UserDefaults.standard.data(forKey: tokenKey) else { return nil }
         return try? JSONDecoder().decode(AuthSession.self, from: data)
+    }
+
+    private func clearSession() {
+        session = nil
+        UserDefaults.standard.removeObject(forKey: tokenKey)
     }
 }
 
