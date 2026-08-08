@@ -20,10 +20,10 @@ struct SelfStudyView: View {
             }
             .padding(20)
         }
-        .onAppear { resetForSelection(); pronunciation.prepare(pronunciationText) }
-        .onChange(of: store.selectedLessonID) { resetForSelection(); pronunciation.prepare(pronunciationText) }
-        .onChange(of: stepIndex) { pronunciation.prepare(pronunciationText) }
-        .onChange(of: revealed) { pronunciation.prepare(pronunciationText) }
+        .onAppear { resetForSelection(); pronunciation.prepare(pronunciationTexts) }
+        .onChange(of: store.selectedLessonID) { resetForSelection(); pronunciation.prepare(pronunciationTexts) }
+        .onChange(of: stepIndex) { pronunciation.prepare(pronunciationTexts) }
+        .onChange(of: revealed) { pronunciation.prepare(pronunciationTexts) }
         .onDisappear { pronunciation.stop() }
     }
 
@@ -171,10 +171,15 @@ struct SelfStudyView: View {
         }
     }
 
-    private var pronunciationText: String {
-        if revealed, let answer = step.answers.first { return answer }
-        if let word = step.word { return word.display }
-        return step.visual.replacingOccurrences(of: "→", with: ". ").replacingOccurrences(of: "·", with: ". ")
+    private var pronunciationTexts: [String] {
+        if revealed, let answer = step.answers.first { return [answer] }
+        if step.id == "intro", let unit = lesson.unit, let batch = lesson.batch {
+            let start = batch * 5
+            return Array(unit.items[start..<min(start + 5, unit.items.count)]).map(\.display)
+        }
+        if step.kind == "USE IT" { return [step.visual] }
+        if let word = step.word { return [word.display] }
+        return [step.visual.replacingOccurrences(of: "→", with: ". ").replacingOccurrences(of: "·", with: ". ")]
     }
 
     private var audioLabel: String {
@@ -188,6 +193,6 @@ struct SelfStudyView: View {
 
     private func playPronunciation() {
         if pronunciation.state == .playing { pronunciation.stop() }
-        else { Task { await pronunciation.play(pronunciationText) } }
+        else { Task { await pronunciation.play(pronunciationTexts) } }
     }
 }

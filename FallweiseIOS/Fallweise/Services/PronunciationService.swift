@@ -23,26 +23,46 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     private var preparedText: String?
     private var preparedAudio: Data?
     private var preparationTask: Task<Void, Never>?
+    private var queuedTexts: [String] = []
     private let logger = Logger(subsystem: "com.arpithpm.fallweise", category: "pronunciation")
 
     func prepare(_ text: String) {
-        guard !text.isEmpty, text != preparedText else { return }
+        prepare([text])
+    }
+
+    func prepare(_ texts: [String]) {
+        let texts = texts.filter { !$0.isEmpty }
+        guard !texts.isEmpty else { return }
         preparationTask?.cancel()
         preparationTask = Task { [weak self] in
             guard let self else { return }
-            let audio = try? await self.fetch(text)
-            guard !Task.isCancelled else { return }
-            self.preparedText = text
-            self.preparedAudio = audio
+            for text in texts {
+                guard !Task.isCancelled else { return }
+                guard let audio = try? await self.fetch(text) else { continue }
+                _ = try? self.cache(audio, for: text)
+                if text == texts.first {
+                    self.preparedText = text
+                    self.preparedAudio = audio
+                }
+            }
         }
     }
 
     func play(_ text: String) async {
-        guard !text.isEmpty else { return }
+        await play([text])
+    }
+
+    func play(_ texts: [String]) async {
+        let texts = texts.filter { !$0.isEmpty }
+        guard let first = texts.first else { return }
         player?.stop()
+        queuedTexts = Array(texts.dropFirst())
         errorMessage = nil
         state = .loading
+        await playNext(first)
+    }
 
+    private func playNext(_ text: String) async {
         do {
             let audio: Data
             if preparedText == text, let preparedAudio {
@@ -75,13 +95,24 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
     func stop() {
         player?.stop()
         player = nil
+        queuedTexts = []
         state = .idle
     }
 
     nonisolated func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         Task { @MainActor in
             self.player = nil
-            self.state = flag ? .idle : .failed
+            guard flag else {
+                self.state = .failed
+                return
+            }
+            if let next = self.queuedTexts.first {
+                self.queuedTexts.removeFirst()
+                self.state = .loading
+                await self.playNext(next)
+            } else {
+                self.state = .idle
+            }
         }
     }
 
