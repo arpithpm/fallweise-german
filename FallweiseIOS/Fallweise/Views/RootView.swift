@@ -18,6 +18,8 @@ struct RootView: View {
                     switch store.learningMode {
                     case .voice: VoiceTutorView()
                     case .selfStudy: SelfStudyView()
+                    case .adaptiveReview: AdaptiveReviewView()
+                    case .adaptiveVoice: AdaptiveVoiceReviewView()
                     }
                 }
                 .toolbar {

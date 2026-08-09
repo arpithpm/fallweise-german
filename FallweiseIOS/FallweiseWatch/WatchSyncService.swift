@@ -33,6 +33,7 @@ final class WatchSyncService: NSObject, WCSessionDelegate {
     nonisolated private func importProgress(_ payload: [String: Any]) {
         let learned = payload["learnedWords"] as? [String] ?? []
         let level = payload["selectedLevel"] as? String
-        Task { @MainActor [weak self] in self?.store?.importProgress(learned: learned, selectedLevel: level) }
+        let due = payload["dueWordIDs"] as? [String] ?? []
+        Task { @MainActor [weak self] in self?.store?.importProgress(learned: learned, selectedLevel: level, dueWordIDs: due) }
     }
 }

@@ -9,6 +9,10 @@ struct ProgressViewScreen: View {
                 VStack(alignment: .leading, spacing: 20) {
                     AppPageHeader(kicker: "Your learning", title: "Progress that helps", subtitle: "See what is becoming familiar and choose your next useful step.")
                     summary
+                    retentionCard
+                    weeklyGoalCard
+                    canDoCard
+                    weakMemoryCard
                     ForEach(CourseLevel.allCases) { level in levelCard(level) }
                     syncCard
                 }.padding(20).padding(.bottom, 16)
@@ -21,9 +25,61 @@ struct ProgressViewScreen: View {
 
     private var summary: some View {
         HStack(spacing: 10) {
-            metric("\(store.totalCompletedCount)", "sessions", FallweiseTheme.coral)
-            metric("\(store.totalLearnedCount)", "words", FallweiseTheme.blue)
-            metric("3", "levels", FallweiseTheme.lime)
+            metric("\(store.strongMemoryCount)", "strong", FallweiseTheme.coral)
+            metric("\(store.dueReviewCount)", "due", FallweiseTheme.blue)
+            metric("\(Int(store.averageRetention * 100))%", "retention", FallweiseTheme.lime)
+        }
+    }
+
+    private var retentionCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack { Text("Memory health").font(.title3.bold()); Spacer(); Image(systemName: "brain.head.profile").foregroundStyle(FallweiseTheme.green) }
+            Text("Completion tells us where you have been. Retention estimates what you can still retrieve now.").font(.caption).foregroundStyle(.secondary)
+            statLine("Estimated retention", Int(store.averageRetention * 100), 100)
+            HStack { Label("\(store.fragileCount) fragile", systemImage: "leaf"); Spacer(); Label("\(store.strongMemoryCount) durable", systemImage: "shield.checkered") }.font(.caption.bold())
+            Button("Practice what is due") { store.beginAdaptiveSession() }.buttonStyle(.borderedProminent).tint(FallweiseTheme.ink)
+        }.padding(18).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 22))
+    }
+
+    private var weeklyGoalCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack { Text("Flexible weekly goal").font(.headline); Spacer(); Text("\(store.practicedMinutesThisWeek)/\(store.weeklyGoalMinutes) MIN").font(.caption.bold()).foregroundStyle(FallweiseTheme.green) }
+            ProgressView(value: Double(store.practicedMinutesThisWeek), total: Double(store.weeklyGoalMinutes)).tint(FallweiseTheme.coral)
+            Text("Missing a day never erases progress. Choose a weekly pace that fits your life.").font(.caption).foregroundStyle(.secondary)
+            Picker("Weekly minutes", selection: Binding(get: { store.weeklyGoalMinutes }, set: { store.setWeeklyGoal($0) })) {
+                ForEach([20, 35, 60, 90], id: \.self) { Text("\($0) min").tag($0) }
+            }.pickerStyle(.segmented)
+        }.padding(18).background(FallweiseTheme.blue.opacity(0.22), in: RoundedRectangle(cornerRadius: 22))
+    }
+
+    private var canDoCard: some View {
+        VStack(alignment: .leading, spacing: 11) {
+            Kicker(text: "CEFR can-do growth")
+            Text("What your German can do").font(.title3.bold())
+            canDo("Handle a simple introduction", chapter: 1)
+            canDo("Ask and answer everyday questions", chapter: 5)
+            canDo("Express needs and plans", chapter: 6)
+            canDo("Complete a short real-world exchange", chapter: 9)
+        }.padding(18).background(FallweiseTheme.lime.opacity(0.25), in: RoundedRectangle(cornerRadius: 22))
+    }
+
+    private func canDo(_ text: String, chapter: Int) -> some View {
+        let achieved = store.completedCoreCount >= chapter
+        return Label(text, systemImage: achieved ? "checkmark.circle.fill" : "circle.dashed")
+            .font(.subheadline).foregroundStyle(achieved ? FallweiseTheme.green : .secondary)
+    }
+
+    private var weakMemoryCard: some View {
+        let weak = store.weakSkills(limit: 4)
+        return Group {
+            if !weak.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Worth strengthening next").font(.headline)
+                    ForEach(weak) { memory in
+                        HStack { Text(memory.kind.title).font(.caption.bold()); Text(memory.skillID.components(separatedBy: ":").suffix(2).joined(separator: " · ")).font(.caption).lineLimit(1); Spacer(); Text("\(Int(memory.mastery * 100))%").font(.caption.bold()).foregroundStyle(FallweiseTheme.coral) }
+                    }
+                }.padding(18).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 22))
+            }
         }
     }
 

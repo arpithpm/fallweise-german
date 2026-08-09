@@ -10,6 +10,7 @@ struct MiaHubView: View {
                 VStack(alignment: .leading, spacing: 21) {
                     AppPageHeader(kicker: "Hands-free tutor", title: "Learn with Mia", subtitle: "Mia explains, listens, responds, and saves your place.")
                     LevelSelector()
+                    adaptiveCard
                     miaCard
                     controls
                     privacy
@@ -19,6 +20,16 @@ struct MiaHubView: View {
             .navigationBarTitleDisplayMode(.inline)
             .fallweiseBackground()
         }
+    }
+
+    private var adaptiveCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack { Kicker(text: "Mia remembers what needs work"); Spacer(); Text("\(store.dueReviewCount) DUE").font(.caption2.bold()) }
+            Text("Speak through today’s weak memories").font(.title3.bold())
+            Text("Mia will mix due vocabulary and grammar into short, corrective exchanges.").font(.caption).foregroundStyle(.secondary)
+            Button { store.beginAdaptiveSession(withMia: true) } label: { Label("Practice hands-free with Mia", systemImage: "waveform.and.mic") }
+                .buttonStyle(.borderedProminent).tint(FallweiseTheme.green)
+        }.padding(18).background(FallweiseTheme.lime.opacity(0.28), in: RoundedRectangle(cornerRadius: 22))
     }
 
     private var miaCard: some View {

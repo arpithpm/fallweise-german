@@ -17,7 +17,8 @@ final class PhoneWatchSyncService: NSObject, WCSessionDelegate {
         guard WCSession.isSupported() else { return }
         let context: [String: Any] = [
             "learnedWords": Array(store?.learnedWords ?? []),
-            "selectedLevel": store?.selectedLevel.rawValue ?? "A1"
+            "selectedLevel": store?.selectedLevel.rawValue ?? "A1",
+            "dueWordIDs": Array(Set(store?.reviewCatalog.filter { $0.word != nil && store?.isDue($0) == true }.compactMap { $0.word?.id } ?? []))
         ]
         try? WCSession.default.updateApplicationContext(context)
     }

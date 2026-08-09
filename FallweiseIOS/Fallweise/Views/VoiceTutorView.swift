@@ -11,6 +11,8 @@ struct VoiceTutorView: View {
     @State private var processing = false
     @State private var speechID = ""
     @State private var advanceAfterSpeech = false
+    @State private var attemptStartedAt = Date.now
+    @State private var attemptsOnStep = 0
 
     private var lesson: VoiceLesson { store.selectedLesson }
     private var step: LessonStep { lesson.steps[min(stepIndex, lesson.steps.count - 1)] }
@@ -146,7 +148,7 @@ struct VoiceTutorView: View {
 
     private func begin() { Task { do { running = true; status = "Connecting to Mia"; try await voice.connect() } catch { running = false; status = "Voice unavailable"; transcript = error.localizedDescription } } }
     private func pause() { Task { await voice.interrupt(); running = false; status = "Lesson paused" } }
-    private func present() { processing = false; transcript = step.prompt; learnerLine = ""; speak(step.prompt) }
+    private func present() { processing = false; transcript = step.prompt; learnerLine = ""; attemptsOnStep = 0; attemptStartedAt = .now; speak(step.prompt) }
     private func speak(_ text: String) { speechID = "\(lesson.id)-\(stepIndex)-\(UUID().uuidString)"; Task { try? await voice.speak(text, id: speechID) } }
 
     private func speechFinished() {
@@ -157,11 +159,23 @@ struct VoiceTutorView: View {
     private func evaluate(_ answer: String) {
         guard !processing, !step.answers.isEmpty else { return }
         processing = true; status = "Thinking with you"
-        let normalized = normalize(answer), correct = step.answers.contains { normalized.contains(normalize($0)) }
-        if let word = step.word { store.markWord(word, correct: correct) }
-        advanceAfterSpeech = correct
-        speak(correct ? step.success : step.retry)
-        if !correct { processing = false }
+        attemptsOnStep += 1
+        let evaluation = AnswerEvaluator.evaluate(answer, expected: step.answers, kind: .speaking)
+        if let item = reviewItem {
+            store.recordReview(item: item, correct: evaluation.correct, confidence: attemptsOnStep == 1 ? .certain : .unsure,
+                hintsUsed: max(0, attemptsOnStep - 1), responseMS: max(250, Int(Date.now.timeIntervalSince(attemptStartedAt) * 1_000)),
+                answer: answer, misconception: evaluation.misconception)
+        } else if let word = step.word { store.markWord(word, correct: evaluation.correct) }
+        advanceAfterSpeech = evaluation.correct
+        if evaluation.correct {
+            speak(step.success + transferPrompt)
+        } else {
+            let correction = "\(evaluation.feedback) \(step.retry)"
+            transcript = correction
+            speak(correction)
+            processing = false
+            attemptStartedAt = .now
+        }
     }
 
     private func advance() {
@@ -179,5 +193,13 @@ struct VoiceTutorView: View {
     }
 
     private func resetForSelection() { stepIndex = store.savedStep(for: lesson); status = running ? "Mia is ready" : "Ready when you are"; transcript = "Next: \(lesson.goal)"; learnerLine = "" }
-    private func normalize(_ value: String) -> String { value.lowercased().folding(options: .diacriticInsensitive, locale: Locale(identifier: "de")).filter { $0.isLetter || $0.isWhitespace }.split(separator: " ").joined(separator: " ") }
+    private var reviewItem: AdaptiveReviewItem? {
+        if let word = step.word { return ReviewItemFactory.vocabulary(word, level: lesson.level, kind: step.kind == "USE IT" ? .sentence : .speaking) }
+        return ReviewItemFactory.grammar(step, lesson: lesson)
+    }
+
+    private var transferPrompt: String {
+        guard step.kind.contains("TRANSFER") || step.kind.contains("USE") else { return "" }
+        return " Good. Keep that pattern; you will meet it again in a different context."
+    }
 }

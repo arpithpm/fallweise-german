@@ -6,6 +6,11 @@ struct SelfStudyView: View {
     @State private var stepIndex = 0
     @State private var revealed = false
     @State private var finished = false
+    @State private var answer = ""
+    @State private var confidence: RecallConfidence = .unsure
+    @State private var hintsUsed = 0
+    @State private var evaluation: AnswerEvaluator.Result?
+    @State private var activityStartedAt = Date.now
 
     private var lesson: VoiceLesson { store.selectedLesson }
     private var step: LessonStep { lesson.steps[min(stepIndex, lesson.steps.count - 1)] }
@@ -89,6 +94,10 @@ struct SelfStudyView: View {
                         Text(step.answers.first ?? "")
                             .font(.system(size: 27, weight: .bold, design: .serif))
                             .foregroundStyle(FallweiseTheme.green)
+                        if let evaluation {
+                            Label(evaluation.feedback, systemImage: evaluation.correct ? "checkmark.circle.fill" : "arrow.triangle.2.circlepath")
+                                .font(.subheadline).foregroundStyle(evaluation.correct ? FallweiseTheme.green : FallweiseTheme.coral)
+                        }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(18).background(FallweiseTheme.lime.opacity(0.32), in: RoundedRectangle(cornerRadius: 18))
@@ -98,9 +107,18 @@ struct SelfStudyView: View {
                             .buttonStyle(.borderedProminent).tint(FallweiseTheme.green)
                     }.frame(maxWidth: .infinity)
                 } else {
-                    Button { withAnimation { revealed = true } } label: {
-                        Label("Reveal answer", systemImage: "eye.fill").frame(maxWidth: .infinity).padding(.vertical, 10)
-                    }.buttonStyle(.borderedProminent).tint(FallweiseTheme.ink)
+                    TextField("Retrieve the German first", text: $answer, axis: .vertical)
+                        .textFieldStyle(.roundedBorder).textInputAutocapitalization(.never).autocorrectionDisabled()
+                    Picker("Confidence", selection: $confidence) {
+                        ForEach(RecallConfidence.allCases, id: \.self) { Text($0.label).tag($0) }
+                    }.pickerStyle(.segmented)
+                    HStack {
+                        Button { hintsUsed = min(2, hintsUsed + 1) } label: { Label("Hint", systemImage: "lightbulb") }.buttonStyle(.bordered)
+                        Button { checkAnswer() } label: { Label("Check", systemImage: "checkmark") }.buttonStyle(.borderedProminent).tint(FallweiseTheme.ink).disabled(answer.isEmpty)
+                    }
+                    if hintsUsed == 1 { Text(step.hint).font(.caption).foregroundStyle(FallweiseTheme.coral) }
+                    if hintsUsed >= 2 { Text("Model: \(step.answers.first ?? "")").font(.caption).foregroundStyle(FallweiseTheme.coral) }
+                    Button("Reveal answer") { revealAnswer() }.font(.caption).foregroundStyle(.secondary)
                 }
             } else {
                 Text(step.prompt).font(.body)
@@ -149,16 +167,20 @@ struct SelfStudyView: View {
         // instead of trapping the learner on its completion screen.
         finished = false
         pronunciation.stop()
+        resetActivity()
     }
 
     private func goBack() {
         guard stepIndex > 0 else { return }
         stepIndex -= 1
-        revealed = false
+        resetActivity()
     }
 
     private func recordAndAdvance(correct: Bool) {
-        if let word = step.word { store.markWord(word, correct: correct) }
+        if let item = reviewItem {
+            let responseMS = max(250, Int(Date.now.timeIntervalSince(activityStartedAt) * 1_000))
+            store.recordReview(item: item, correct: correct, confidence: confidence, hintsUsed: hintsUsed, responseMS: responseMS, answer: answer, misconception: evaluation?.misconception)
+        } else if let word = step.word { store.markWord(word, correct: correct) }
         advance()
     }
 
@@ -167,8 +189,29 @@ struct SelfStudyView: View {
             let isLast = stepIndex == lesson.steps.count - 1
             await store.save(lesson: lesson, step: stepIndex, complete: isLast)
             if isLast { withAnimation { finished = true } }
-            else { stepIndex += 1; revealed = false }
+            else { stepIndex += 1; resetActivity() }
         }
+    }
+
+    private var reviewItem: AdaptiveReviewItem? {
+        if let word = step.word {
+            return ReviewItemFactory.vocabulary(word, level: lesson.level, kind: step.kind == "USE IT" ? .sentence : .meaning)
+        }
+        return ReviewItemFactory.grammar(step, lesson: lesson)
+    }
+
+    private func checkAnswer() {
+        evaluation = AnswerEvaluator.evaluate(answer, expected: step.answers, kind: reviewItem?.kind ?? .grammar)
+        withAnimation(.snappy) { revealed = true }
+    }
+
+    private func revealAnswer() {
+        evaluation = .init(correct: false, misconception: "revealed", feedback: "This will return sooner so you can retrieve it independently.")
+        withAnimation(.snappy) { revealed = true }
+    }
+
+    private func resetActivity() {
+        revealed = false; answer = ""; confidence = .unsure; hintsUsed = 0; evaluation = nil; activityStartedAt = .now
     }
 
     private var pronunciationTexts: [String] {

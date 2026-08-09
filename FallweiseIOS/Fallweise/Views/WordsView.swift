@@ -39,9 +39,9 @@ struct WordsView: View {
         HStack(spacing: 15) {
             ZStack { Circle().fill(FallweiseTheme.blue); Text("\(store.learnedCount)").font(.title2.bold()) }.frame(width: 64, height: 64)
             VStack(alignment: .leading, spacing: 5) {
-                Text("\(store.learnedCount) of \(store.wordCount) learned").font(.headline)
-                ProgressView(value: Double(store.learnedCount), total: Double(store.wordCount)).tint(FallweiseTheme.green)
-                Text("Tap a topic to choose a five-word set.").font(.caption).foregroundStyle(.secondary)
+                Text("\(store.learnedCount) of \(store.wordCount) encountered").font(.headline)
+                ProgressView(value: Double(store.strongMemoryCount), total: Double(max(1, store.wordCount))).tint(FallweiseTheme.green)
+                Text("\(store.strongMemoryCount) durable memories · \(store.dueReviewCount) reviews due").font(.caption).foregroundStyle(.secondary)
             }
         }.padding(17).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 22))
     }

@@ -9,6 +9,7 @@ final class WatchLearningStore {
     private(set) var vocabulary: [WatchLevel: [WatchWord]] = [:]
     private(set) var learnedWords: Set<String> = []
     private(set) var reviews: [String: WatchReview] = [:]
+    private(set) var phoneDueWordIDs: Set<String> = []
     var level: WatchLevel = .A1
     var mode: Mode = .daily
     var index = 0
@@ -98,8 +99,9 @@ final class WatchLearningStore {
         advance()
     }
 
-    func importProgress(learned: [String], selectedLevel: String?) {
+    func importProgress(learned: [String], selectedLevel: String?, dueWordIDs: [String] = []) {
         learnedWords.formUnion(learned)
+        phoneDueWordIDs = Set(dueWordIDs)
         if let selectedLevel, let value = WatchLevel(rawValue: selectedLevel) { level = value }
         persist()
         refreshWordsForCurrentMode(force: true)
@@ -122,7 +124,7 @@ final class WatchLearningStore {
             let selected = ids.compactMap { id in all.first { $0.id == id } }
             if !selected.isEmpty { dailyWords = selected; return }
         }
-        let due = all.filter { (reviews[$0.id]?.dueAt ?? .distantPast) <= .now }
+        let due = all.filter { phoneDueWordIDs.contains($0.id) || (reviews[$0.id]?.dueAt ?? .distantPast) <= .now }
         let unseen = due.filter { !learnedWords.contains($0.id) }
         let review = due.filter { learnedWords.contains($0.id) }
         dailyWords = Array((unseen.shuffled() + review.shuffled() + all.shuffled()).uniqued().prefix(5))
