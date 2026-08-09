@@ -6,6 +6,7 @@ enum LearningMode: String {
     case selfStudy
     case adaptiveReview
     case adaptiveVoice
+    case rolePlay
 }
 
 enum SessionLength: Int, Codable, CaseIterable, Identifiable {
@@ -43,6 +44,7 @@ final class LearningStore {
     private(set) var learnedWords: Set<String> = []
     private(set) var memories: [String: MemoryRecord] = [:]
     private(set) var recentOutcomes: [ReviewOutcome] = []
+    private(set) var preferences: LearnerPreferences
     var selectedLevel: CourseLevel
     var selectedLessonID: String
     var learningMode: LearningMode
@@ -52,6 +54,7 @@ final class LearningStore {
     var sessionLength: SessionLength
     var weeklyGoalMinutes: Int
     var errorMessage: String?
+    var selectedRolePlay: RolePlayScenario?
 
     private let progressKey = "fallweise.ios.lesson-progress"
     private let wordsKey = "fallweise.ios.learned-words"
@@ -62,6 +65,7 @@ final class LearningStore {
     private let outcomesKey = "fallweise.ios.review-outcomes.v2"
     private let sessionLengthKey = "fallweise.ios.session-length"
     private let weeklyGoalKey = "fallweise.ios.weekly-goal-minutes"
+    private let preferencesKey = "fallweise.ios.learner-preferences"
 
     init() {
         var loaded: [CourseLevel: VocabularyData] = [:]
@@ -79,6 +83,7 @@ final class LearningStore {
         learningMode = LearningMode(rawValue: UserDefaults.standard.string(forKey: modeKey) ?? "") ?? .voice
         sessionLength = SessionLength(rawValue: UserDefaults.standard.integer(forKey: sessionLengthKey)) ?? .normal
         weeklyGoalMinutes = max(10, UserDefaults.standard.integer(forKey: weeklyGoalKey) == 0 ? 35 : UserDefaults.standard.integer(forKey: weeklyGoalKey))
+        preferences = (UserDefaults.standard.data(forKey: preferencesKey).flatMap { try? JSONDecoder().decode(LearnerPreferences.self, from: $0) }) ?? LearnerPreferences()
         loadLocal()
         migrateLearnedWords()
         Task { await sync() }
@@ -116,6 +121,14 @@ final class LearningStore {
         let outcomes = recentOutcomes.filter { $0.attemptedAt >= start }
         return Int(ceil(Double(outcomes.reduce(0) { $0 + max(10_000, $1.responseMS) }) / 60_000))
     }
+    var retentionSnapshots: [RetentionSnapshot] { [1, 7, 30].map(retentionSnapshot(days:)) }
+    var calibratedIntervalFactor: Double {
+        let eligible = recentOutcomes.filter { $0.attemptedAt < Date.now.addingTimeInterval(-86_400) }
+        guard eligible.count >= 8 else { return 1 }
+        let rate = Double(eligible.filter(\.correct).count) / Double(eligible.count)
+        return min(1.15, max(0.75, rate / 0.82))
+    }
+    var availableRolePlays: [RolePlayScenario] { RolePlayLibrary.available(for: selectedLevel, goals: preferences.goals) }
 
     var reviewCatalog: [AdaptiveReviewItem] {
         let words = vocabulary.items.flatMap { word -> [AdaptiveReviewItem] in
@@ -163,21 +176,30 @@ final class LearningStore {
             let existing = Set(result.map(\.id))
             result += catalog.filter { !existing.contains($0.id) }.prefix(limit - result.count)
         }
-        return interleaved(result)
+        var mixed = interleaved(result)
+        if let source = mixed.reversed().first(where: { $0.kind == .sentence || $0.kind == .grammar }),
+           let transfer = ReviewItemFactory.transfer(source), mixed.count < limit + 1 {
+            mixed.append(transfer)
+        }
+        return mixed
     }
 
     @discardableResult
     func recordReview(item: AdaptiveReviewItem, correct: Bool, confidence: RecallConfidence, hintsUsed: Int, responseMS: Int, answer: String, misconception: String? = nil, rating explicitRating: RecallRating? = nil) -> MemoryRecord {
         let rating = explicitRating ?? AdaptiveScheduler.inferredRating(correct: correct, confidence: confidence, hints: hintsUsed, responseMS: responseMS)
         let outcome = ReviewOutcome(itemID: item.id, skillID: item.skillID, lessonID: item.lessonID, level: item.level, kind: item.kind, correct: correct, rating: rating, confidence: confidence, hintsUsed: hintsUsed, responseMS: responseMS, answer: answer, misconception: misconception, attemptedAt: .now)
-        let updated = AdaptiveScheduler.update(memories[item.id], item: item, outcome: outcome)
+        let enriched = ReviewOutcome(itemID: outcome.itemID, skillID: outcome.skillID, lessonID: outcome.lessonID, level: outcome.level,
+            kind: outcome.kind, correct: outcome.correct, rating: outcome.rating, confidence: outcome.confidence,
+            hintsUsed: outcome.hintsUsed, responseMS: outcome.responseMS, answer: outcome.answer,
+            misconception: outcome.misconception, attemptedAt: outcome.attemptedAt, format: item.format)
+        let updated = AdaptiveScheduler.update(memories[item.id], item: item, outcome: enriched, calibration: calibratedIntervalFactor)
         memories[item.id] = updated
-        recentOutcomes.append(outcome)
+        recentOutcomes.append(enriched)
         recentOutcomes = Array(recentOutcomes.suffix(2_000))
         if correct, let word = item.word { learnedWords.insert(word.id) }
         saveLearningState()
         PhoneWatchSyncService.shared.sendProgress()
-        Task { try? await SupabaseService.shared.saveLearning(memory: updated, outcome: outcome) }
+        Task { try? await SupabaseService.shared.saveLearning(memory: updated, outcome: enriched) }
         return updated
     }
 
@@ -189,6 +211,28 @@ final class LearningStore {
     func setWeeklyGoal(_ minutes: Int) {
         weeklyGoalMinutes = min(140, max(10, minutes))
         UserDefaults.standard.set(weeklyGoalMinutes, forKey: weeklyGoalKey)
+    }
+
+    func toggleGoal(_ goal: LearningGoal) {
+        if preferences.goals.contains(goal) { preferences.goals.remove(goal) } else { preferences.goals.insert(goal) }
+        savePreferences()
+    }
+
+    func configureReminder(enabled: Bool, hour: Int? = nil, minute: Int? = nil) async {
+        preferences.reminderEnabled = enabled
+        if let hour { preferences.reminderHour = hour }
+        if let minute { preferences.reminderMinute = minute }
+        let accepted = await ReminderService.shared.configure(enabled: enabled, hour: preferences.reminderHour, minute: preferences.reminderMinute, dueCount: dueReviewCount)
+        if enabled && !accepted { preferences.reminderEnabled = false; errorMessage = "Notifications are disabled in iPhone Settings." }
+        savePreferences()
+        Task { try? await SupabaseService.shared.savePreferences(preferences, weeklyGoalMinutes: weeklyGoalMinutes, level: selectedLevel) }
+    }
+
+    func startRolePlay(_ scenario: RolePlayScenario) {
+        selectedRolePlay = scenario
+        learningMode = .rolePlay
+        UserDefaults.standard.set(learningMode.rawValue, forKey: modeKey)
+        showingLesson = true
     }
 
     func mastery(for word: VocabularyItem) -> Double {
@@ -300,6 +344,17 @@ final class LearningStore {
         UserDefaults.standard.set(try? JSONEncoder.api.encode(recentOutcomes), forKey: outcomesKey)
     }
 
+    private func savePreferences() {
+        UserDefaults.standard.set(try? JSONEncoder().encode(preferences), forKey: preferencesKey)
+    }
+
+    private func retentionSnapshot(days: Int) -> RetentionSnapshot {
+        let cutoff = Date.now.addingTimeInterval(-Double(days) * 86_400)
+        let earlier = recentOutcomes.filter { $0.attemptedAt <= cutoff }
+        let lastByItem = Dictionary(grouping: earlier, by: \.itemID).compactMap { $0.value.max(by: { $0.attemptedAt < $1.attemptedAt }) }
+        return RetentionSnapshot(days: days, attempted: lastByItem.count, correct: lastByItem.filter(\.correct).count)
+    }
+
     private func migrateLearnedWords() {
         var changed = false
         for level in CourseLevel.allCases {
@@ -336,6 +391,8 @@ final class LearningStore {
         do {
             async let lessonRows = SupabaseService.shared.fetchVoiceLessons()
             async let memoryRows = SupabaseService.shared.fetchMemories()
+            async let remotePreferences = SupabaseService.shared.fetchPreferences()
+            async let remoteOutcomes = SupabaseService.shared.fetchRecentOutcomes()
             let rows = try await lessonRows
             for row in rows {
                 let local = progress[row.lessonID]
@@ -347,8 +404,26 @@ final class LearningStore {
                     memories[memory.itemID] = memory
                 }
             }
+            if let remote = try await remotePreferences {
+                weeklyGoalMinutes = remote.weeklyGoalMinutes
+                preferences = LearnerPreferences(
+                    goals: Set(remote.learningGoals.compactMap(LearningGoal.init(rawValue:))),
+                    reminderEnabled: remote.reminderEnabled, reminderHour: remote.reminderHour, reminderMinute: remote.reminderMinute
+                )
+                UserDefaults.standard.set(weeklyGoalMinutes, forKey: weeklyGoalKey)
+                savePreferences()
+            }
+            let cloudOutcomes = try await remoteOutcomes
+            if !cloudOutcomes.isEmpty {
+                let combined = (recentOutcomes + cloudOutcomes).sorted { $0.attemptedAt < $1.attemptedAt }
+                var seen = Set<String>()
+                recentOutcomes = combined.filter {
+                    seen.insert("\($0.itemID)|\($0.attemptedAt.timeIntervalSince1970)|\($0.answer)").inserted
+                }.suffix(2_000).map { $0 }
+            }
             saveLocal()
             saveLearningState()
+            _ = await ReminderService.shared.configure(enabled: preferences.reminderEnabled, hour: preferences.reminderHour, minute: preferences.reminderMinute, dueCount: dueReviewCount)
         } catch { errorMessage = "Offline mode · progress stays on this iPhone" }
     }
 }

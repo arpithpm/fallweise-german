@@ -11,6 +11,8 @@ struct ProgressViewScreen: View {
                     summary
                     retentionCard
                     weeklyGoalCard
+                    preferencesCard
+                    retentionHistoryCard
                     canDoCard
                     weakMemoryCard
                     ForEach(CourseLevel.allCases) { level in levelCard(level) }
@@ -21,6 +23,49 @@ struct ProgressViewScreen: View {
             .navigationBarTitleDisplayMode(.inline)
             .fallweiseBackground()
         }
+    }
+
+    private var preferencesCard: some View {
+        VStack(alignment: .leading, spacing: 13) {
+            Text("Make German relevant").font(.headline)
+            Text("Goals influence new examples and the role-play scenes Mia offers.").font(.caption).foregroundStyle(.secondary)
+            FlowLayout(spacing: 8) {
+                ForEach(LearningGoal.allCases) { goal in
+                    Button { store.toggleGoal(goal) } label: { Label(goal.title, systemImage: goal.icon) }
+                        .buttonStyle(.bordered).tint(store.preferences.goals.contains(goal) ? FallweiseTheme.green : .gray)
+                }
+            }
+            Divider()
+            Toggle("Gentle daily review reminder", isOn: Binding(get: { store.preferences.reminderEnabled }, set: { value in Task { await store.configureReminder(enabled: value) } }))
+            if store.preferences.reminderEnabled {
+                DatePicker("Reminder time", selection: reminderTime, displayedComponents: .hourAndMinute).datePickerStyle(.compact)
+            }
+            Text("Reminders are scheduled privately on this iPhone. Missing one never breaks a streak.").font(.caption2).foregroundStyle(.secondary)
+        }.padding(18).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 22))
+    }
+
+    private var reminderTime: Binding<Date> {
+        Binding {
+            Calendar.current.date(from: DateComponents(hour: store.preferences.reminderHour, minute: store.preferences.reminderMinute)) ?? .now
+        } set: { date in
+            let parts = Calendar.current.dateComponents([.hour, .minute], from: date)
+            Task { await store.configureReminder(enabled: true, hour: parts.hour, minute: parts.minute) }
+        }
+    }
+
+    private var retentionHistoryCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack { Text("Delayed recall").font(.headline); Spacer(); Text("1 · 7 · 30 DAYS").font(.caption2.bold()).foregroundStyle(FallweiseTheme.green) }
+            Text("This measures what was still retrievable after time passed—not what was completed once.").font(.caption).foregroundStyle(.secondary)
+            ForEach(store.retentionSnapshots) { snapshot in
+                HStack {
+                    Text("After \(snapshot.days) day\(snapshot.days == 1 ? "" : "s")").font(.subheadline.bold()).frame(width: 100, alignment: .leading)
+                    ProgressView(value: snapshot.rate).tint(FallweiseTheme.green)
+                    Text(snapshot.attempted == 0 ? "Collecting" : "\(Int(snapshot.rate * 100))%").font(.caption.bold()).frame(width: 60, alignment: .trailing)
+                }
+            }
+            Text("Scheduler calibration: \(Int(store.calibratedIntervalFactor * 100))%").font(.caption2).foregroundStyle(.secondary)
+        }.padding(18).background(FallweiseTheme.blue.opacity(0.2), in: RoundedRectangle(cornerRadius: 22))
     }
 
     private var summary: some View {

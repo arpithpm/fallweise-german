@@ -44,6 +44,31 @@ final class LearningScienceTests: XCTestCase {
         XCTAssertTrue(result.correct)
     }
 
+    func testExerciseGeneratorCreatesDeterministicPractice() {
+        let item = AdaptiveReviewItem(id: "lesson:A1:test", skillID: "test", level: .A1, kind: .grammar,
+            prompt: "", cue: "", expected: ["Der Mann sieht den Hund"], displayAnswer: "Der Mann sieht den Hund",
+            audioText: "", hints: [], explanation: "", lessonID: nil, word: nil)
+        let words = ExerciseGenerator.scrambledWords(for: item)
+        XCTAssertEqual(Set(words), Set(item.displayAnswer.split(separator: " ").map(String.init)))
+        XCTAssertNotEqual(words.joined(separator: " "), item.displayAnswer)
+        XCTAssertNotEqual(ExerciseGenerator.incorrectSentence(for: item), item.displayAnswer)
+    }
+
+    func testTransferChangesContextAndPreservesPattern() {
+        let source = AdaptiveReviewItem(id: "sentence", skillID: "travel", level: .A1, kind: .sentence,
+            prompt: "", cue: "", expected: ["Ich fahre mit dem Zug"], displayAnswer: "Ich fahre mit dem Zug",
+            audioText: "", hints: [], explanation: "", lessonID: nil, word: nil)
+        let transfer = ReviewItemFactory.transfer(source)
+        XCTAssertEqual(transfer?.displayAnswer, "Ich fahre mit dem Bus")
+        XCTAssertEqual(transfer?.kind, .speaking)
+    }
+
+    func testRolePlayFilteringRespectsLevelAndGoals() {
+        let travel = RolePlayLibrary.available(for: .A1, goals: [.travel])
+        XCTAssertEqual(travel.map(\.id), ["station"])
+        XCTAssertTrue(RolePlayLibrary.available(for: .B1, goals: [.conversation]).contains { $0.id == "opinion" })
+    }
+
     private func sampleItem(kind: ReviewKind) -> AdaptiveReviewItem {
         AdaptiveReviewItem(id: "word:A1:zug:\(kind.rawValue)", skillID: "word:A1:zug", level: .A1,
             kind: kind, prompt: "Prompt", cue: "train", expected: ["der Zug"], displayAnswer: "der Zug",

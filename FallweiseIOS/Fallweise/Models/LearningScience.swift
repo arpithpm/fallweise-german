@@ -24,6 +24,21 @@ enum ReviewKind: String, Codable, CaseIterable {
     }
 }
 
+enum ExerciseFormat: String, Codable, CaseIterable {
+    case recall, dictation, ordering, correction, discrimination, transfer
+
+    var title: String {
+        switch self {
+        case .recall: "Recall"
+        case .dictation: "Dictation"
+        case .ordering: "Build the sentence"
+        case .correction: "Spot and fix"
+        case .discrimination: "Hear the difference"
+        case .transfer: "New context"
+        }
+    }
+}
+
 enum RecallRating: String, Codable, CaseIterable {
     case again, hard, good, easy
 
@@ -97,6 +112,17 @@ struct ReviewOutcome: Codable, Hashable {
     let answer: String
     let misconception: String?
     let attemptedAt: Date
+    let format: ExerciseFormat?
+
+    init(itemID: String, skillID: String, lessonID: String?, level: CourseLevel, kind: ReviewKind,
+         correct: Bool, rating: RecallRating, confidence: RecallConfidence, hintsUsed: Int,
+         responseMS: Int, answer: String, misconception: String?, attemptedAt: Date,
+         format: ExerciseFormat? = nil) {
+        self.itemID = itemID; self.skillID = skillID; self.lessonID = lessonID; self.level = level; self.kind = kind
+        self.correct = correct; self.rating = rating; self.confidence = confidence; self.hintsUsed = hintsUsed
+        self.responseMS = responseMS; self.answer = answer; self.misconception = misconception
+        self.attemptedAt = attemptedAt; self.format = format
+    }
 }
 
 struct AdaptiveReviewItem: Identifiable, Hashable {
@@ -116,10 +142,17 @@ struct AdaptiveReviewItem: Identifiable, Hashable {
 
     var requiresArticleChoice: Bool { kind == .article }
     var isSpeaking: Bool { kind == .speaking }
+    var format: ExerciseFormat {
+        if kind == .listening { return id.hashValue.isMultiple(of: 2) ? .dictation : .discrimination }
+        if kind == .sentence { return id.hashValue.isMultiple(of: 2) ? .ordering : .transfer }
+        if kind == .grammar { return id.hashValue.isMultiple(of: 2) ? .correction : .ordering }
+        if kind == .speaking { return .transfer }
+        return .recall
+    }
 }
 
 enum AdaptiveScheduler {
-    static func update(_ existing: MemoryRecord?, item: AdaptiveReviewItem, outcome: ReviewOutcome, now: Date = .now) -> MemoryRecord {
+    static func update(_ existing: MemoryRecord?, item: AdaptiveReviewItem, outcome: ReviewOutcome, now: Date = .now, calibration: Double = 1) -> MemoryRecord {
         var memory = existing ?? .new(for: item)
         memory.attempts += 1
         memory.lastReviewedAt = now
@@ -146,7 +179,7 @@ enum AdaptiveScheduler {
             case .good: growth = 2.25 + Double(memory.currentStreak) * 0.08
             case .easy: growth = 3.4 + Double(memory.currentStreak) * 0.12
             }
-            memory.stabilityDays = min(3_650, max(0.25, base * growth * (11 - memory.difficulty) / 6))
+            memory.stabilityDays = min(3_650, max(0.25, base * growth * (11 - memory.difficulty) / 6 * min(1.25, max(0.7, calibration))))
             let interval = memory.stabilityDays * (outcome.rating == .hard ? 0.55 : 0.9)
             memory.dueAt = now.addingTimeInterval(max(4 * 3_600, interval * 86_400))
         } else {
@@ -270,11 +303,55 @@ enum ReviewItemFactory {
         )
     }
 
+    static func transfer(_ source: AdaptiveReviewItem) -> AdaptiveReviewItem? {
+        let swaps: [(String, String)] = [
+            ("Berlin", "Hamburg"), ("Zug", "Bus"), ("Hund", "Mann"), ("Frau", "Mutter"),
+            ("Mann", "Vater"), ("Buch", "Haus"), ("Auto", "Fahrrad"), ("Kaffee", "Tee"),
+            ("Montag", "Dienstag"), ("zehn", "elf"), ("Morgen", "Nachmittag"), ("Abend", "Morgen")
+        ]
+        guard let swap = swaps.first(where: { source.displayAnswer.localizedCaseInsensitiveContains($0.0) }) else { return nil }
+        let answer = source.displayAnswer.replacingOccurrences(of: swap.0, with: swap.1, options: .caseInsensitive)
+        guard answer != source.displayAnswer else { return nil }
+        return AdaptiveReviewItem(
+            id: source.id + ":transfer:\(swap.1.lowercased())", skillID: source.skillID,
+            level: source.level, kind: .speaking, prompt: "Use the same pattern in a new context.",
+            cue: "Change \(swap.0) to \(swap.1).", expected: [answer], displayAnswer: answer,
+            audioText: answer, hints: ["Keep the structure; replace only \(swap.0).", "Model begins: \(answer.split(separator: " ").prefix(2).joined(separator: " ")) …"],
+            explanation: "Changing one detail shows that you understand the pattern rather than memorising one sentence.",
+            lessonID: source.lessonID, word: source.word
+        )
+    }
+
     private static func genderHint(_ article: String) -> String {
         switch article { case "der": "Use the masculine memory character."; case "die": "Use the feminine memory character."; default: "Use the neuter memory character." }
     }
 
     private static func firstWords(_ sentence: String) -> String {
         "It begins: " + sentence.split(separator: " ").prefix(2).joined(separator: " ") + " …"
+    }
+}
+
+enum ExerciseGenerator {
+    static func scrambledWords(for item: AdaptiveReviewItem) -> [String] {
+        let words = item.displayAnswer.split(separator: " ").map(String.init)
+        guard words.count > 2 else { return words.reversed() }
+        let pivot = max(1, words.count / 2)
+        return Array(words[pivot...]) + Array(words[..<pivot])
+    }
+
+    static func incorrectSentence(for item: AdaptiveReviewItem) -> String {
+        var words = item.displayAnswer.split(separator: " ").map(String.init)
+        let articleSwaps = ["der": "die", "die": "das", "das": "der", "den": "der", "dem": "den"]
+        if let index = words.firstIndex(where: { articleSwaps[$0.lowercased()] != nil }), let replacement = articleSwaps[words[index].lowercased()] {
+            words[index] = replacement
+        } else if words.count > 2 {
+            words.swapAt(0, 1)
+        }
+        return words.joined(separator: " ")
+    }
+
+    static func listeningOptions(for item: AdaptiveReviewItem, vocabulary: [VocabularyItem]) -> [String] {
+        let distractors = vocabulary.filter { $0.id != item.word?.id && $0.type == item.word?.type }.prefix(2).map(\.display)
+        return ([item.displayAnswer] + distractors).sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
     }
 }

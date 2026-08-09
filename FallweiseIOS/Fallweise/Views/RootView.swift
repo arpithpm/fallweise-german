@@ -20,6 +20,7 @@ struct RootView: View {
                     case .selfStudy: SelfStudyView()
                     case .adaptiveReview: AdaptiveReviewView()
                     case .adaptiveVoice: AdaptiveVoiceReviewView()
+                    case .rolePlay: RolePlayView()
                     }
                 }
                 .toolbar {

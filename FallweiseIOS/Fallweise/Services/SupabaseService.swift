@@ -82,6 +82,43 @@ actor SupabaseService {
         return try JSONDecoder.api.decode([ReviewRow].self, from: data).compactMap(\.memory)
     }
 
+    func savePreferences(_ preferences: LearnerPreferences, weeklyGoalMinutes: Int, level: CourseLevel) async throws {
+        let token = try await accessToken()
+        guard let userID = session?.userID else { throw URLError(.userAuthenticationRequired) }
+        let payload = [ProfilePreferencesPayload(userID: userID, currentLevel: level.rawValue,
+            weeklyGoalMinutes: weeklyGoalMinutes, learningGoals: preferences.goals.map(\.rawValue).sorted(),
+            reminderEnabled: preferences.reminderEnabled, reminderHour: preferences.reminderHour,
+            reminderMinute: preferences.reminderMinute)]
+        try await upsert(path: "/rest/v1/learner_preferences", payload: payload, token: token)
+    }
+
+    func fetchPreferences() async throws -> RemoteLearnerPreferences? {
+        let token = try await accessToken()
+        var components = URLComponents(url: baseURL.appending(path: "/rest/v1/learner_preferences"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [.init(name: "select", value: "*"), .init(name: "limit", value: "1")]
+        var request = URLRequest(url: components.url!)
+        request.setValue(publishableKey, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw URLError(.badServerResponse) }
+        return try JSONDecoder.api.decode([RemoteLearnerPreferences].self, from: data).first
+    }
+
+    func fetchRecentOutcomes(limit: Int = 2_000) async throws -> [ReviewOutcome] {
+        let token = try await accessToken()
+        var components = URLComponents(url: baseURL.appending(path: "/rest/v1/exercise_attempts"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [
+            .init(name: "select", value: "exercise_id,skill_id,lesson_id,exercise_type,answer,correct,hints_used,response_ms,misconception,attempted_at"),
+            .init(name: "order", value: "attempted_at.desc"), .init(name: "limit", value: String(limit))
+        ]
+        var request = URLRequest(url: components.url!)
+        request.setValue(publishableKey, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw URLError(.badServerResponse) }
+        return try JSONDecoder.api.decode([AttemptRow].self, from: data).compactMap(\.outcome)
+    }
+
     private func upsert<T: Encodable>(path: String, payload: T, token: String) async throws {
         var request = URLRequest(url: baseURL.appending(path: path))
         request.httpMethod = "POST"
@@ -198,10 +235,59 @@ private struct AttemptPayload: Encodable {
     init(outcome: ReviewOutcome, userID: String) {
         self.userID = userID; exerciseID = outcome.itemID; skillID = outcome.skillID; lessonID = outcome.lessonID
         exerciseType = outcome.kind == .listening ? "dictation" : outcome.kind == .speaking ? "speaking" : outcome.kind == .sentence ? "sentence_builder" : outcome.kind == .grammar ? "fill_blank" : "choice"
-        answer = ["text": outcome.answer, "confidence": String(outcome.confidence.rawValue), "rating": outcome.rating.rawValue]
+        answer = ["text": outcome.answer, "confidence": String(outcome.confidence.rawValue), "rating": outcome.rating.rawValue,
+            "level": outcome.level.rawValue, "kind": outcome.kind.rawValue, "format": outcome.format?.rawValue ?? ""]
         correct = outcome.correct; hintsUsed = outcome.hintsUsed; responseMS = outcome.responseMS
         misconception = outcome.misconception; attemptedAt = outcome.attemptedAt
     }
+}
+
+struct RemoteLearnerPreferences: Decodable {
+    let currentLevel: String
+    let weeklyGoalMinutes: Int
+    let learningGoals: [String]
+    let reminderEnabled: Bool
+    let reminderHour: Int
+    let reminderMinute: Int
+}
+
+private struct AttemptRow: Decodable {
+    let exerciseID: String
+    let skillID: String
+    let lessonID: String?
+    let exerciseType: String
+    let answer: [String: String]
+    let correct: Bool
+    let hintsUsed: Int
+    let responseMS: Int?
+    let misconception: String?
+    let attemptedAt: Date
+
+    var outcome: ReviewOutcome? {
+        guard let level = CourseLevel(rawValue: answer["level"] ?? ""),
+              let kind = ReviewKind(rawValue: answer["kind"] ?? inferredKind) else { return nil }
+        let confidence = RecallConfidence(rawValue: Int(answer["confidence"] ?? "2") ?? 2) ?? .unsure
+        let rating = RecallRating(rawValue: answer["rating"] ?? "") ?? (correct ? .good : .again)
+        let format = ExerciseFormat(rawValue: answer["format"] ?? "")
+        return ReviewOutcome(itemID: exerciseID, skillID: skillID, lessonID: lessonID, level: level, kind: kind,
+            correct: correct, rating: rating, confidence: confidence, hintsUsed: hintsUsed,
+            responseMS: responseMS ?? 0, answer: answer["text"] ?? "", misconception: misconception,
+            attemptedAt: attemptedAt, format: format)
+    }
+
+    private var inferredKind: String {
+        switch exerciseType { case "dictation", "listening": "listening"; case "speaking": "speaking"; case "sentence_builder": "sentence"; default: "grammar" }
+    }
+}
+
+private struct ProfilePreferencesPayload: Encodable {
+    let userID: String
+    let currentLevel: String
+    let weeklyGoalMinutes: Int
+    let learningGoals: [String]
+    let reminderEnabled: Bool
+    let reminderHour: Int
+    let reminderMinute: Int
 }
 
 private struct ReviewRow: Decodable {

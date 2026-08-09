@@ -12,6 +12,7 @@ struct MiaHubView: View {
                     LevelSelector()
                     adaptiveCard
                     miaCard
+                    rolePlays
                     controls
                     privacy
                 }.padding(20).padding(.bottom, 16)
@@ -19,6 +20,25 @@ struct MiaHubView: View {
             .navigationTitle("Mia")
             .navigationBarTitleDisplayMode(.inline)
             .fallweiseBackground()
+        }
+    }
+
+    private var rolePlays: some View {
+        VStack(alignment: .leading, spacing: 13) {
+            HStack { Text("Practise real situations").font(.title3.bold()); Spacer(); Text("NO SCRIPT TO READ").font(.caption2.bold()).foregroundStyle(FallweiseTheme.green) }
+            if store.availableRolePlays.isEmpty {
+                Text("Choose more learning goals in Progress to unlock matching scenes.").font(.caption).foregroundStyle(.secondary)
+            } else {
+                ForEach(store.availableRolePlays) { scenario in
+                    Button { store.startRolePlay(scenario) } label: {
+                        HStack(spacing: 13) {
+                            Image(systemName: scenario.icon).font(.title2).frame(width: 42, height: 42).background(FallweiseTheme.blue.opacity(0.35), in: Circle())
+                            VStack(alignment: .leading, spacing: 3) { Text(scenario.title).font(.headline); Text(scenario.setting).font(.caption).foregroundStyle(.secondary) }
+                            Spacer(); Image(systemName: "chevron.right")
+                        }.padding(14).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 18))
+                    }.buttonStyle(.plain)
+                }
+            }
         }
     }
 

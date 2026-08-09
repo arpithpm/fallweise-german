@@ -13,6 +13,8 @@ struct AdaptiveReviewView: View {
     @State private var startedAt = Date.now
     @State private var completed = 0
     @State private var correct = 0
+    @State private var orderedWords: [String] = []
+    @State private var remainingWords: [String] = []
 
     private var items: [AdaptiveReviewItem] { store.activeReviewItems }
     private var item: AdaptiveReviewItem? { items.indices.contains(index) ? items[index] : nil }
@@ -65,7 +67,21 @@ struct AdaptiveReviewView: View {
                 }.buttonStyle(.borderedProminent).tint(FallweiseTheme.ink)
             }
 
-            if item.requiresArticleChoice && !revealed {
+            if item.format == .discrimination && !revealed {
+                VStack(spacing: 9) {
+                    ForEach(ExerciseGenerator.listeningOptions(for: item, vocabulary: store.vocabulary.items), id: \.self) { option in
+                        Button(option) { answer = option; check(item) }.buttonStyle(.bordered).frame(maxWidth: .infinity)
+                    }
+                }
+            } else if item.format == .ordering && !revealed {
+                orderingExercise(item)
+            } else if item.format == .correction && !revealed {
+                Text("Incorrect: \(ExerciseGenerator.incorrectSentence(for: item))").font(.headline).foregroundStyle(FallweiseTheme.coral)
+                TextField("Type the corrected sentence", text: $answer, axis: .vertical)
+                    .textFieldStyle(.roundedBorder).textInputAutocapitalization(.never).autocorrectionDisabled()
+                confidencePicker
+                Button("Check correction") { check(item) }.buttonStyle(.borderedProminent).tint(FallweiseTheme.green).disabled(answer.isEmpty)
+            } else if item.requiresArticleChoice && !revealed {
                 HStack {
                     ForEach(["der", "die", "das"], id: \.self) { article in
                         Button(article) { answer = article; check(item) }
@@ -90,6 +106,24 @@ struct AdaptiveReviewView: View {
         }
         .padding(22).background(FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 28))
         .overlay(RoundedRectangle(cornerRadius: 28).stroke(FallweiseTheme.ink.opacity(0.14)))
+    }
+
+    private func orderingExercise(_ item: AdaptiveReviewItem) -> some View {
+        VStack(alignment: .leading, spacing: 11) {
+            Text(orderedWords.isEmpty ? "Tap the words in German order" : orderedWords.joined(separator: " "))
+                .frame(maxWidth: .infinity, minHeight: 50, alignment: .leading).padding(12)
+                .background(FallweiseTheme.lime.opacity(0.18), in: RoundedRectangle(cornerRadius: 12))
+            FlowLayout(spacing: 7) {
+                ForEach(Array(remainingWords.enumerated()), id: \.offset) { index, word in
+                    Button(word) { orderedWords.append(word); remainingWords.remove(at: index); answer = orderedWords.joined(separator: " ") }.buttonStyle(.bordered)
+                }
+            }
+            HStack {
+                Button("Reset") { setUpOrdering(item) }.buttonStyle(.bordered)
+                Spacer()
+                Button("Check") { check(item) }.buttonStyle(.borderedProminent).tint(FallweiseTheme.green).disabled(!remainingWords.isEmpty)
+            }
+        }
     }
 
     private var confidencePicker: some View {
@@ -165,8 +199,9 @@ struct AdaptiveReviewView: View {
         withAnimation(.snappy) { index += 1 }
     }
 
-    private func resetItem() { answer = ""; confidence = .unsure; hintsUsed = 0; revealed = false; result = nil; startedAt = .now }
-    private func prepare() { if let item { pronunciation.prepare(item.audioText); if item.kind == .listening { Task { await pronunciation.play(item.audioText) } } } }
+    private func resetItem() { answer = ""; confidence = .unsure; hintsUsed = 0; revealed = false; result = nil; startedAt = .now; orderedWords = []; remainingWords = [] }
+    private func prepare() { if let item { if item.format == .ordering { setUpOrdering(item) }; pronunciation.prepare(item.audioText); if item.kind == .listening { Task { await pronunciation.play(item.audioText) } } } }
+    private func setUpOrdering(_ item: AdaptiveReviewItem) { orderedWords = []; remainingWords = ExerciseGenerator.scrambledWords(for: item); answer = "" }
     private func memoryLabel(_ item: AdaptiveReviewItem) -> String { let memory = store.memory(for: item); return memory.attempts == 0 ? "NEW" : "\(Int(memory.mastery * 100))% MEMORY" }
     private func icon(for kind: ReviewKind) -> String { switch kind { case .meaning: "brain"; case .article: "textformat"; case .listening: "ear"; case .sentence: "text.bubble"; case .grammar: "character.book.closed"; case .speaking: "waveform.and.mic" } }
 }
