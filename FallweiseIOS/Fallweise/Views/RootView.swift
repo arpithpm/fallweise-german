@@ -26,6 +26,7 @@ struct RootView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         Button { store.showingLesson = false } label: { Label("Close", systemImage: "xmark") }
+                            .accessibilityIdentifier("Close lesson")
                     }
                 }
             }

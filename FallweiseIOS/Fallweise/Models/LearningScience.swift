@@ -143,9 +143,10 @@ struct AdaptiveReviewItem: Identifiable, Hashable {
     var requiresArticleChoice: Bool { kind == .article }
     var isSpeaking: Bool { kind == .speaking }
     var format: ExerciseFormat {
-        if kind == .listening { return id.hashValue.isMultiple(of: 2) ? .dictation : .discrimination }
-        if kind == .sentence { return id.hashValue.isMultiple(of: 2) ? .ordering : .transfer }
-        if kind == .grammar { return id.hashValue.isMultiple(of: 2) ? .correction : .ordering }
+        let variant = id.utf8.reduce(0) { ($0 &* 31 &+ Int($1)) & 0x7fffffff }.isMultiple(of: 2)
+        if kind == .listening { return variant ? .dictation : .discrimination }
+        if kind == .sentence { return variant ? .ordering : .transfer }
+        if kind == .grammar { return variant ? .correction : .ordering }
         if kind == .speaking { return .transfer }
         return .recall
     }

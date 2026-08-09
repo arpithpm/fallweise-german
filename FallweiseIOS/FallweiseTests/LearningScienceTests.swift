@@ -69,6 +69,28 @@ final class LearningScienceTests: XCTestCase {
         XCTAssertTrue(RolePlayLibrary.available(for: .B1, goals: [.conversation]).contains { $0.id == "opinion" })
     }
 
+    func testEveryCurriculumLevelBuildsCompleteNavigableLessons() throws {
+        let expectedCounts: [CourseLevel: Int] = [.A1: 540, .A2: 500, .B1: 100]
+        for level in CourseLevel.allCases {
+            let data = try CurriculumLoader.loadVocabulary(level: level)
+            XCTAssertEqual(data.count, expectedCounts[level])
+            XCTAssertEqual(data.items.count, data.count)
+            XCTAssertEqual(data.units.flatMap(\.items).count, data.count)
+            XCTAssertTrue(data.items.allSatisfy { !$0.id.isEmpty && !$0.de.isEmpty && !$0.en.isEmpty })
+
+            let lessons = CurriculumLoader.lessons(from: data, level: level)
+            XCTAssertEqual(lessons.filter { $0.type == "VOCAB" }.count, data.units.count * 4)
+            XCTAssertEqual(lessons.filter { $0.type != "VOCAB" }.count, 12)
+            XCTAssertTrue(lessons.allSatisfy { !$0.title.isEmpty && !$0.goal.isEmpty && !$0.steps.isEmpty })
+
+            let taughtWordIDs = lessons.compactMap(\.unit).flatMap { unit in
+                // Each unit appears in four five-word lessons; compare unique words below.
+                unit.items
+            }
+            XCTAssertEqual(Set(taughtWordIDs.map(\.id)), Set(data.items.map(\.id)))
+        }
+    }
+
     private func sampleItem(kind: ReviewKind) -> AdaptiveReviewItem {
         AdaptiveReviewItem(id: "word:A1:zug:\(kind.rawValue)", skillID: "word:A1:zug", level: .A1,
             kind: kind, prompt: "Prompt", cue: "train", expected: ["der Zug"], displayAnswer: "der Zug",

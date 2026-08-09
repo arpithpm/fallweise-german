@@ -9,6 +9,9 @@ struct FallweiseApp: App {
             RootView()
                 .environment(store)
                 .preferredColorScheme(.light)
+                .transaction { transaction in
+                    if ProcessInfo.processInfo.arguments.contains("--uitesting-disable-animations") { transaction.disablesAnimations = true }
+                }
                 .onAppear { PhoneWatchSyncService.shared.start(store: store) }
         }
     }

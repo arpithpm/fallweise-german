@@ -68,6 +68,10 @@ final class LearningStore {
     private let preferencesKey = "fallweise.ios.learner-preferences"
 
     init() {
+        let arguments = ProcessInfo.processInfo.arguments
+        if arguments.contains("--uitesting-reset"), let bundleID = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundleID)
+        }
         var loaded: [CourseLevel: VocabularyData] = [:]
         for level in CourseLevel.allCases {
             loaded[level] = (try? CurriculumLoader.loadVocabulary(level: level)) ?? VocabularyData(units: [], items: [], count: 0)
@@ -86,7 +90,7 @@ final class LearningStore {
         preferences = (UserDefaults.standard.data(forKey: preferencesKey).flatMap { try? JSONDecoder().decode(LearnerPreferences.self, from: $0) }) ?? LearnerPreferences()
         loadLocal()
         migrateLearnedWords()
-        Task { await sync() }
+        if !arguments.contains("--uitesting-offline") { Task { await sync() } }
     }
 
     var vocabulary: VocabularyData { vocabularies[selectedLevel]! }

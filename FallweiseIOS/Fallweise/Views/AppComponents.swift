@@ -31,7 +31,7 @@ struct LevelSelector: View {
                     .frame(maxWidth: .infinity).padding(.vertical, 10)
                     .foregroundStyle(store.selectedLevel == level ? Color.white : FallweiseTheme.ink)
                     .background(store.selectedLevel == level ? FallweiseTheme.green : FallweiseTheme.paper, in: RoundedRectangle(cornerRadius: 14))
-                }.buttonStyle(.plain)
+                }.buttonStyle(.plain).accessibilityLabel("\(level.rawValue) \(level.title)")
             }
         }
         .padding(5).background(Color.black.opacity(0.05), in: RoundedRectangle(cornerRadius: 18))

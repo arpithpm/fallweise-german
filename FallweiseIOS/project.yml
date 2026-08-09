@@ -62,6 +62,17 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arpithpm.fallweise.tests
         GENERATE_INFOPLIST_FILE: YES
+  FallweiseUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: FallweiseUITests
+    dependencies:
+      - target: Fallweise
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.arpithpm.fallweise.uitests
+        GENERATE_INFOPLIST_FILE: YES
 schemes:
   Fallweise:
     build:
@@ -82,3 +93,10 @@ schemes:
         - FallweiseTests
     run:
       config: Debug
+  FallweiseUITests:
+    build:
+      targets:
+        FallweiseUITests: all
+    test:
+      targets:
+        - FallweiseUITests
