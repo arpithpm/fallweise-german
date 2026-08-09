@@ -159,7 +159,13 @@ struct AdaptiveReviewView: View {
     }
 
     private func ratingButton(_ rating: RecallRating, item: AdaptiveReviewItem) -> some View {
-        Button(rating.label) { finish(item, rating: rating) }
+        Button { finish(item, rating: rating) } label: {
+            Text(rating.label)
+                .font(.subheadline.bold())
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+                .frame(maxWidth: .infinity, minHeight: 32)
+        }
             .buttonStyle(.bordered)
             .tint(rating == .good ? FallweiseTheme.green : FallweiseTheme.ink)
             .frame(maxWidth: .infinity)
