@@ -91,6 +91,81 @@ final class LearningScienceTests: XCTestCase {
         }
     }
 
+    func testEveryLessonAdvancesExactlyOnceAndResumesAtTheNextActivity() throws {
+        for lesson in try allLessons() {
+            for completedStep in lesson.steps.indices.dropLast() {
+                XCTAssertEqual(LessonProgression.after(completedStep, stepCount: lesson.steps.count), .next(completedStep + 1), lesson.id)
+                let row = SavedLesson.advancing(lessonID: lesson.id, completedStep: completedStep,
+                    totalSteps: lesson.steps.count, complete: false)
+                XCTAssertEqual(row.status, "in_progress", lesson.id)
+                XCTAssertEqual(row.currentStep, completedStep + 2, lesson.id)
+                XCTAssertEqual(row.resumeIndex(stepCount: lesson.steps.count), completedStep + 1, lesson.id)
+            }
+
+            let finalStep = lesson.steps.count - 1
+            XCTAssertEqual(LessonProgression.after(finalStep, stepCount: lesson.steps.count), .complete, lesson.id)
+            let completed = SavedLesson.advancing(lessonID: lesson.id, completedStep: finalStep,
+                totalSteps: lesson.steps.count, complete: true)
+            XCTAssertEqual(completed.status, "completed", lesson.id)
+            XCTAssertEqual(completed.currentStep, lesson.steps.count, lesson.id)
+            XCTAssertEqual(completed.resumeIndex(stepCount: lesson.steps.count), 0, lesson.id)
+        }
+    }
+
+    func testProgressMergeNeverMovesBackwardEvenWhenSavesArriveOutOfOrder() {
+        let lessonID = "voice-tutor:A1:01-meet-greet"
+        let first = SavedLesson.advancing(lessonID: lessonID, completedStep: 0, totalSteps: 3, complete: false,
+            at: Date(timeIntervalSince1970: 300))
+        let second = SavedLesson.advancing(lessonID: lessonID, completedStep: 1, totalSteps: 3, complete: false,
+            at: Date(timeIntervalSince1970: 200))
+        let completed = SavedLesson.advancing(lessonID: lessonID, completedStep: 2, totalSteps: 3, complete: true,
+            at: Date(timeIntervalSince1970: 100))
+
+        XCTAssertEqual(second.preferred(over: first).currentStep, 3)
+        XCTAssertEqual(first.preferred(over: second).currentStep, 3)
+        XCTAssertEqual(completed.preferred(over: second).status, "completed")
+        XCTAssertEqual(second.preferred(over: completed).status, "completed")
+    }
+
+    func testEveryLessonAndActivityHasStableUniqueIdentityAndUsableContent() throws {
+        let lessons = try allLessons()
+        XCTAssertEqual(Set(lessons.map(\.id)).count, lessons.count)
+        for lesson in lessons {
+            XCTAssertFalse(lesson.steps.isEmpty, lesson.id)
+            XCTAssertEqual(Set(lesson.steps.map(\.id)).count, lesson.steps.count, lesson.id)
+            for step in lesson.steps {
+                XCTAssertFalse(step.id.isEmpty, lesson.id)
+                XCTAssertFalse(step.kind.isEmpty, "\(lesson.id):\(step.id)")
+                XCTAssertFalse(step.visual.isEmpty, "\(lesson.id):\(step.id)")
+                XCTAssertFalse(step.prompt.isEmpty, "\(lesson.id):\(step.id)")
+                if !step.answers.isEmpty {
+                    XCTAssertTrue(step.answers.allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty },
+                        "\(lesson.id):\(step.id)")
+                }
+            }
+        }
+    }
+
+    func testProgressRoundTripPreservesResumePosition() throws {
+        let original = SavedLesson.advancing(lessonID: "voice-tutor:B1:test", completedStep: 4,
+            totalSteps: 8, complete: false)
+        let data = try JSONEncoder.api.encode(original)
+        let restored = try JSONDecoder.api.decode(SavedLesson.self, from: data)
+        XCTAssertEqual(restored.lessonID, original.lessonID)
+        XCTAssertEqual(restored.status, original.status)
+        XCTAssertEqual(restored.mastery, original.mastery)
+        XCTAssertEqual(restored.currentStep, original.currentStep)
+        XCTAssertEqual(restored.totalSteps, original.totalSteps)
+        XCTAssertEqual(restored.lastActivityAt.timeIntervalSince1970, original.lastActivityAt.timeIntervalSince1970, accuracy: 1)
+        XCTAssertEqual(restored.resumeIndex(stepCount: 8), 5)
+    }
+
+    private func allLessons() throws -> [VoiceLesson] {
+        try CourseLevel.allCases.flatMap { level in
+            CurriculumLoader.lessons(from: try CurriculumLoader.loadVocabulary(level: level), level: level)
+        }
+    }
+
     private func sampleItem(kind: ReviewKind) -> AdaptiveReviewItem {
         AdaptiveReviewItem(id: "word:A1:zug:\(kind.rawValue)", skillID: "word:A1:zug", level: .A1,
             kind: kind, prompt: "Prompt", cue: "train", expected: ["der Zug"], displayAnswer: "der Zug",

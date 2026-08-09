@@ -72,6 +72,30 @@ final class FallweiseUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Choose your chapter"].waitForExistence(timeout: 3))
     }
 
+    func testLessonResumesNextActivityAfterRelaunchAndModeSwitch() {
+        app.tabBars.buttons["Learn"].tap()
+        app.buttons["Study"].firstMatch.tap()
+        app.buttons["Continue"].tap()
+        let field = app.textFields["Retrieve the German first"]
+        field.tap(); field.typeText("ich heisse arpith")
+        app.buttons["Check"].tap()
+        app.buttons["I knew it"].tap()
+        XCTAssertTrue(app.staticTexts["Wie heißt du?"].waitForExistence(timeout: 1))
+        app.buttons["Close lesson"].tap()
+
+        app.terminate()
+        app.launchArguments = ["--uitesting-offline", "--uitesting-disable-animations"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Learn"].waitForExistence(timeout: 8))
+        app.tabBars.buttons["Learn"].tap()
+        app.buttons["Study"].firstMatch.tap()
+        XCTAssertTrue(app.staticTexts["Wie heißt du?"].waitForExistence(timeout: 3))
+
+        app.buttons["Learn this lesson with Mia"].tap()
+        XCTAssertTrue(app.staticTexts["Wie heißt du?"].waitForExistence(timeout: 3))
+        XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "label CONTAINS 'ACTIVITY 3 OF 3'")).firstMatch.exists)
+    }
+
     func testWordsSearchExpansionAndLessonEntry() {
         app.tabBars.buttons["Words"].tap()
         let search = app.searchFields["German or English word"]

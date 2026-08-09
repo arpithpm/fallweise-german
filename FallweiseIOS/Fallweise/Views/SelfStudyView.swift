@@ -187,9 +187,12 @@ struct SelfStudyView: View {
     private func advance() {
         let completedStep = stepIndex
         let completedLesson = lesson
-        let isLast = completedStep == completedLesson.steps.count - 1
-        if isLast { withAnimation { finished = true } }
-        else { stepIndex += 1; resetActivity() }
+        let progression = LessonProgression.after(completedStep, stepCount: completedLesson.steps.count)
+        let isLast = progression == .complete
+        switch progression {
+        case .complete: withAnimation { finished = true }
+        case .next(let nextIndex): stepIndex = nextIndex; resetActivity()
+        }
         store.save(lesson: completedLesson, step: completedStep, complete: isLast)
     }
 

@@ -62,6 +62,16 @@ struct VoiceLesson: Identifiable, Hashable {
     let steps: [LessonStep]
 }
 
+enum LessonProgression: Equatable {
+    case next(Int)
+    case complete
+
+    static func after(_ currentIndex: Int, stepCount: Int) -> LessonProgression {
+        guard stepCount > 0, currentIndex < stepCount - 1 else { return .complete }
+        return .next(max(0, currentIndex + 1))
+    }
+}
+
 enum CurriculumLoader {
     static func loadVocabulary(level: CourseLevel) throws -> VocabularyData {
         guard let url = Bundle.main.url(forResource: "\(level.rawValue.lowercased())-vocabulary", withExtension: "json") else {

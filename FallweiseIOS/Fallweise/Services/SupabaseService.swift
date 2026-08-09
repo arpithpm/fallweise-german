@@ -6,6 +6,8 @@ actor SupabaseService {
     private let publishableKey = "sb_publishable_IDqV0lx_vx3OYR3RrJsA9g_rwuRDVV0"
     private let tokenKey = "fallweise.supabase.session"
     private var session: AuthSession?
+    private var pendingLessonProgress: [String: SavedLesson] = [:]
+    private var savingLessonIDs: Set<String> = []
 
     struct AuthSession: Codable {
         let accessToken: String
@@ -36,6 +38,20 @@ actor SupabaseService {
     }
 
     func saveLesson(_ progress: SavedLesson) async throws {
+        pendingLessonProgress[progress.lessonID] = progress.preferred(over: pendingLessonProgress[progress.lessonID])
+        guard savingLessonIDs.insert(progress.lessonID).inserted else { return }
+        defer { savingLessonIDs.remove(progress.lessonID) }
+
+        while let next = pendingLessonProgress.removeValue(forKey: progress.lessonID) {
+            do { try await writeLesson(next) }
+            catch {
+                pendingLessonProgress[next.lessonID] = next.preferred(over: pendingLessonProgress[next.lessonID])
+                throw error
+            }
+        }
+    }
+
+    private func writeLesson(_ progress: SavedLesson) async throws {
         let token = try await accessToken()
         guard let userID = session?.userID else { throw URLError(.userAuthenticationRequired) }
         var request = URLRequest(url: baseURL.appending(path: "/rest/v1/lesson_progress"))

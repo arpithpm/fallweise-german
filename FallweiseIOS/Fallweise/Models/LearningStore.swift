@@ -30,9 +30,40 @@ struct SavedLesson: Codable, Hashable {
     let lastActivityAt: Date
     let completedAt: Date?
 
+    enum CodingKeys: String, CodingKey {
+        // `JSONEncoder.api`/`JSONDecoder.api` apply snake-case conversion.
+        // Spell acronyms as `Id` here so `lesson_id` round-trips correctly.
+        case userID = "userId"
+        case lessonID = "lessonId"
+        case status, mastery, currentStep, totalSteps, lastActivityAt, completedAt
+    }
+
     init(lessonID: String, status: String, mastery: Double, currentStep: Int, totalSteps: Int, lastActivityAt: Date = .now, completedAt: Date? = nil) {
         userID = nil; self.lessonID = lessonID; self.status = status; self.mastery = mastery
         self.currentStep = currentStep; self.totalSteps = totalSteps; self.lastActivityAt = lastActivityAt; self.completedAt = completedAt
+    }
+
+    static func advancing(lessonID: String, completedStep: Int, totalSteps: Int, complete: Bool, at date: Date = .now) -> SavedLesson {
+        let safeTotal = max(1, totalSteps)
+        let safeStep = min(max(0, completedStep), safeTotal - 1)
+        let nextStep = complete ? safeTotal : min(safeTotal, safeStep + 2)
+        return SavedLesson(lessonID: lessonID, status: complete ? "completed" : "in_progress",
+            mastery: Double(safeStep + 1) / Double(safeTotal), currentStep: nextStep,
+            totalSteps: safeTotal, lastActivityAt: date, completedAt: complete ? date : nil)
+    }
+
+    func resumeIndex(stepCount: Int) -> Int {
+        guard status == "in_progress", stepCount > 0 else { return 0 }
+        return max(0, min(currentStep - 1, stepCount - 1))
+    }
+
+    func preferred(over other: SavedLesson?) -> SavedLesson {
+        guard let other else { return self }
+        if status == "completed" && other.status != "completed" { return self }
+        if other.status == "completed" && status != "completed" { return other }
+        if currentStep != other.currentStep { return currentStep > other.currentStep ? self : other }
+        if mastery != other.mastery { return mastery > other.mastery ? self : other }
+        return lastActivityAt >= other.lastActivityAt ? self : other
     }
 }
 
@@ -310,8 +341,7 @@ final class LearningStore {
     }
 
     func savedStep(for lesson: VoiceLesson) -> Int {
-        guard progress[lessonID(lesson)]?.status == "in_progress" else { return 0 }
-        return max(0, min((progress[lessonID(lesson)]?.currentStep ?? 1) - 1, lesson.steps.count - 1))
+        progress[lessonID(lesson)]?.resumeIndex(stepCount: lesson.steps.count) ?? 0
     }
 
     func markWord(_ word: VocabularyItem, correct: Bool) {
@@ -325,9 +355,9 @@ final class LearningStore {
     }
 
     func save(lesson: VoiceLesson, step: Int, complete: Bool) {
-        let nextStep = complete ? lesson.steps.count : min(lesson.steps.count, step + 2)
-        let row = SavedLesson(lessonID: lessonID(lesson), status: complete ? "completed" : "in_progress", mastery: Double(step + 1) / Double(lesson.steps.count), currentStep: nextStep, totalSteps: lesson.steps.count, completedAt: complete ? .now : nil)
-        if let existing = progress[row.lessonID], existing.status == "completed" || existing.currentStep > row.currentStep { return }
+        let candidate = SavedLesson.advancing(lessonID: lessonID(lesson), completedStep: step, totalSteps: lesson.steps.count, complete: complete)
+        let row = candidate.preferred(over: progress[candidate.lessonID])
+        guard progress[row.lessonID] != row else { return }
         progress[row.lessonID] = row
         saveLocal()
         Task {
@@ -404,8 +434,7 @@ final class LearningStore {
             async let remoteOutcomes = SupabaseService.shared.fetchRecentOutcomes()
             let rows = try await lessonRows
             for row in rows {
-                let local = progress[row.lessonID]
-                if local == nil || row.status == "completed" || row.lastActivityAt > local!.lastActivityAt { progress[row.lessonID] = row }
+                progress[row.lessonID] = row.preferred(over: progress[row.lessonID])
             }
             for memory in try await memoryRows {
                 let local = memories[memory.itemID]

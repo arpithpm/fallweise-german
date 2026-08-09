@@ -180,14 +180,15 @@ struct VoiceTutorView: View {
 
     private func advance() {
         Task {
-            if stepIndex == lesson.steps.count - 1 {
+            switch LessonProgression.after(stepIndex, stepCount: lesson.steps.count) {
+            case .complete:
                 store.save(lesson: lesson, step: stepIndex, complete: true)
                 transcript = "Great work. \(lesson.title) is complete."
                 if let next = store.nextLesson() { store.select(next); resetForSelection(); try? await Task.sleep(for: .milliseconds(600)); present() }
                 else { status = "\(lesson.level.rawValue) journey complete"; running = false; await voice.disconnect() }
-            } else {
+            case .next(let nextIndex):
                 store.save(lesson: lesson, step: stepIndex, complete: false)
-                stepIndex += 1; present()
+                stepIndex = nextIndex; present()
             }
         }
     }
