@@ -7,5 +7,11 @@
   "vars": {
     "LIVEKIT_URL": "wss://fallweise-voice-tutor-kj8dmd31.livekit.cloud",
     "SUPABASE_URL": "https://xysuwcwgcbbnbpmfdwor.supabase.co"
-  }
+  },
+  "r2_buckets": [
+    {
+      "binding": "AUDIO",
+      "bucket_name": "fallweise-audio"
+    }
+  ]
 }

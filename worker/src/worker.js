@@ -20,6 +20,22 @@ function json(value, status, origin) {
   return new Response(JSON.stringify(value), { status, headers: headers(origin) });
 }
 
+async function audio(request, env, key, origin) {
+  if (!/^[a-f0-9]{64}\.wav$/.test(key)) return json({ error: "Invalid audio key" }, 400, origin);
+  const object = await env.AUDIO.get(key, { range: request.headers });
+  if (!object) return json({ error: "Audio not found" }, 404, origin);
+
+  const responseHeaders = new Headers();
+  object.writeHttpMetadata(responseHeaders);
+  responseHeaders.set("etag", object.httpEtag);
+  responseHeaders.set("content-type", "audio/wav");
+  responseHeaders.set("cache-control", "public, max-age=31536000, immutable");
+  responseHeaders.set("accept-ranges", "bytes");
+  responseHeaders.set("access-control-allow-origin", ALLOWED_ORIGINS.has(origin) ? origin : "*");
+  responseHeaders.set("cross-origin-resource-policy", "cross-origin");
+  return new Response(request.method === "HEAD" ? null : object.body, { headers: responseHeaders });
+}
+
 async function supabaseUser(request, env) {
   const authorization = request.headers.get("authorization") || "";
   if (!authorization.startsWith("Bearer ")) return null;
@@ -59,6 +75,9 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: headers(origin) });
     const url = new URL(request.url);
     if (url.pathname === "/health") return json({ ok: true }, 200, origin);
+    if (url.pathname.startsWith("/audio/") && (request.method === "GET" || request.method === "HEAD")) {
+      return audio(request, env, url.pathname.slice("/audio/".length), origin);
+    }
     if (url.pathname !== "/api/livekit/session" || request.method !== "POST") return json({ error: "Not found" }, 404, origin);
     // Native clients do not send a browser Origin header. They are still
     // protected by the Supabase bearer-token verification below.

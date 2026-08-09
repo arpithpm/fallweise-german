@@ -107,10 +107,11 @@ In a browser, complete one exercise and confirm:
 - Location: Eastern Europe (`EEUR`)
 - Storage class: Standard
 - Public endpoint: `https://pub-b7374a734fb54fb19c76923b93a2e3b6.r2.dev`
+- Production mobile endpoint: `https://fallweise-voice-session.arpithpmuddi-0ee.workers.dev/audio/<hash>.wav`
 - Browser integration: `speech.js`, constant `AUDIO_CDN`
 - Local generated cache: `work/tts-cache/` (ignored by Git)
 
-The `r2.dev` URL is Cloudflare's rate-limited development endpoint. It works for the current learner traffic, but a custom domain should replace it before significant production traffic. When that happens, update `AUDIO_CDN` and the CORS policy.
+The native app uses the production Worker endpoint, which reads through the `AUDIO` R2 binding and adds immutable cache headers. The `r2.dev` URL remains the legacy browser endpoint and should not be used by new clients.
 
 ### Current CORS policy
 

@@ -65,6 +65,7 @@ struct AdaptiveReviewView: View {
                 Button { Task { await pronunciation.play(item.audioText) } } label: {
                     Label(pronunciation.state == .playing ? "Playing" : "Play audio", systemImage: "speaker.wave.2.fill")
                 }.buttonStyle(.borderedProminent).tint(FallweiseTheme.ink)
+                audioFallbackNotice
             }
 
             if item.format == .discrimination && !revealed {
@@ -143,7 +144,15 @@ struct AdaptiveReviewView: View {
             Text(item.displayAnswer).font(.system(size: 29, weight: .bold, design: .serif))
             Text(result?.feedback ?? item.explanation).font(.subheadline)
             Text(item.explanation).font(.caption).foregroundStyle(.secondary)
-            Button { Task { await pronunciation.play(item.audioText) } } label: { Label("Listen", systemImage: "speaker.wave.2.fill") }.buttonStyle(.bordered)
+            Button { Task { await pronunciation.play(item.audioText) } } label: {
+                Label(pronunciation.state == .playing ? "Playing" : "Listen again", systemImage: "speaker.wave.2.fill")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, minHeight: 30)
+            }
+            .buttonStyle(.bordered)
+            .tint(FallweiseTheme.green)
+            .disabled(pronunciation.state == .loading)
+            audioFallbackNotice
             if wasCorrect {
                 Text("How difficult was that retrieval?").font(.caption.bold())
                 HStack {
@@ -152,8 +161,14 @@ struct AdaptiveReviewView: View {
                     ratingButton(.easy, item: item)
                 }
             } else {
-                Button("Try it again soon") { finish(item, rating: .again) }
-                    .buttonStyle(.borderedProminent).tint(FallweiseTheme.ink).frame(maxWidth: .infinity)
+                Button { finish(item, rating: .again) } label: {
+                    Label("Continue", systemImage: "arrow.right")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, minHeight: 34)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(FallweiseTheme.ink)
+                .accessibilityHint("Schedules this item to return soon")
             }
         }.padding(16).background((wasCorrect ? FallweiseTheme.lime : FallweiseTheme.coral).opacity(0.18), in: RoundedRectangle(cornerRadius: 20))
     }
@@ -169,6 +184,14 @@ struct AdaptiveReviewView: View {
             .buttonStyle(.bordered)
             .tint(rating == .good ? FallweiseTheme.green : FallweiseTheme.ink)
             .frame(maxWidth: .infinity)
+    }
+
+    @ViewBuilder private var audioFallbackNotice: some View {
+        if pronunciation.isUsingDeviceVoice, let message = pronunciation.errorMessage {
+            Label(message, systemImage: "iphone.and.arrow.forward")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
     }
 
     private var completionCard: some View {
@@ -206,7 +229,14 @@ struct AdaptiveReviewView: View {
     }
 
     private func resetItem() { answer = ""; confidence = .unsure; hintsUsed = 0; revealed = false; result = nil; startedAt = .now; orderedWords = []; remainingWords = [] }
-    private func prepare() { if let item { if item.format == .ordering { setUpOrdering(item) }; pronunciation.prepare(item.audioText); if item.kind == .listening { Task { await pronunciation.play(item.audioText) } } } }
+    private func prepare() {
+        if let item {
+            if item.format == .ordering { setUpOrdering(item) }
+            let upcoming = items.indices.contains(index + 1) ? items[index + 1].audioText : nil
+            pronunciation.prepare([item.audioText, upcoming].compactMap { $0 })
+            if item.kind == .listening { Task { await pronunciation.play(item.audioText) } }
+        }
+    }
     private func setUpOrdering(_ item: AdaptiveReviewItem) { orderedWords = []; remainingWords = ExerciseGenerator.scrambledWords(for: item); answer = "" }
     private func memoryLabel(_ item: AdaptiveReviewItem) -> String { let memory = store.memory(for: item); return memory.attempts == 0 ? "NEW" : "\(Int(memory.mastery * 100))% MEMORY" }
     private func icon(for kind: ReviewKind) -> String { switch kind { case .meaning: "brain"; case .article: "textformat"; case .listening: "ear"; case .sentence: "text.bubble"; case .grammar: "character.book.closed"; case .speaking: "waveform.and.mic" } }

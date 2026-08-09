@@ -14,8 +14,9 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
 
     @Published private(set) var state: State = .idle
     @Published private(set) var errorMessage: String?
+    @Published private(set) var isUsingDeviceVoice = false
 
-    private let audioCDN = URL(string: "https://pub-b7374a734fb54fb19c76923b93a2e3b6.r2.dev")!
+    private let audioCDN = URL(string: "https://fallweise-voice-session.arpithpmuddi-0ee.workers.dev/audio")!
     private let model = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
     private let speaker = "Vivian"
     private let rate = "1.0"
@@ -66,6 +67,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         speechSynthesizer.stopSpeaking(at: .immediate)
         queuedTexts = Array(texts.dropFirst())
         errorMessage = nil
+        isUsingDeviceVoice = false
         state = .loading
         await playNext(first)
     }
@@ -92,16 +94,18 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
             guard player.prepareToPlay() else { throw AudioError.couldNotDecode }
             self.player = player
             guard player.play() else { throw AudioError.playbackFailed }
+            isUsingDeviceVoice = false
             state = .playing
         } catch {
             logger.error("Pronunciation failed for \(text, privacy: .public): \(error.localizedDescription, privacy: .public)")
-            playWithDeviceVoice(text)
+            playWithDeviceVoice(text, because: error)
         }
     }
 
-    private func playWithDeviceVoice(_ text: String) {
+    private func playWithDeviceVoice(_ text: String, because error: Error) {
         player = nil
-        errorMessage = nil
+        isUsingDeviceVoice = true
+        errorMessage = "Natural audio unavailable. Using your iPhone's German voice. \(userMessage(for: error))"
 
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = preferredGermanVoice()
@@ -128,6 +132,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         speechSynthesizer.stopSpeaking(at: .immediate)
         player = nil
         queuedTexts = []
+        isUsingDeviceVoice = false
         state = .idle
     }
 
@@ -136,7 +141,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
             self.player = nil
             guard flag else {
                 if let text = self.playingText {
-                    self.playWithDeviceVoice(text)
+                    self.playWithDeviceVoice(text, because: AudioError.playbackFailed)
                 } else {
                     self.state = .failed
                 }
@@ -172,7 +177,7 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         Task { @MainActor in
             self.player = nil
             if let text = self.playingText {
-                self.playWithDeviceVoice(text)
+                self.playWithDeviceVoice(text, because: error ?? AudioError.couldNotDecode)
             } else {
                 self.state = .failed
             }
@@ -190,11 +195,21 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         var request = URLRequest(url: url)
         request.cachePolicy = .returnCacheDataElseLoad
         request.timeoutInterval = 20
-        let (data, response) = try await URLSession.shared.data(for: request)
-        guard let http = response as? HTTPURLResponse else { throw AudioError.invalidResponse }
-        guard http.statusCode == 200 else { throw AudioError.httpStatus(http.statusCode) }
-        guard data.count > 44 else { throw AudioError.emptyAudio }
-        return data
+        var lastError: Error = AudioError.invalidResponse
+        for attempt in 0..<3 {
+            do {
+                let (data, response) = try await URLSession.shared.data(for: request)
+                guard let http = response as? HTTPURLResponse else { throw AudioError.invalidResponse }
+                guard http.statusCode == 200 else { throw AudioError.httpStatus(http.statusCode) }
+                guard data.count > 44 else { throw AudioError.emptyAudio }
+                return data
+            } catch {
+                lastError = error
+                guard attempt < 2, shouldRetry(error) else { break }
+                try? await Task.sleep(for: .milliseconds(250 * (attempt + 1)))
+            }
+        }
+        throw lastError
     }
 
     @discardableResult
@@ -211,7 +226,15 @@ final class PronunciationService: NSObject, ObservableObject, AVAudioPlayerDeleg
         let source = "\(model)|\(speaker)|\(rate)|\(text)"
         let digest = SHA256.hash(data: Data(source.utf8))
         let hash = digest.map { String(format: "%02x", $0) }.joined()
-        return URL.cachesDirectory.appending(path: "Pronunciations/\(hash).wav")
+        return URL.applicationSupportDirectory.appending(path: "Pronunciations/\(hash).wav")
+    }
+
+    private func shouldRetry(_ error: Error) -> Bool {
+        if let urlError = error as? URLError {
+            return [.timedOut, .networkConnectionLost, .cannotConnectToHost, .dnsLookupFailed, .notConnectedToInternet].contains(urlError.code)
+        }
+        if case AudioError.httpStatus(let status) = error { return status == 408 || status == 429 || status >= 500 }
+        return false
     }
 
     private func userMessage(for error: Error) -> String {
