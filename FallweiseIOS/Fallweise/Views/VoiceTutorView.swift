@@ -181,12 +181,12 @@ struct VoiceTutorView: View {
     private func advance() {
         Task {
             if stepIndex == lesson.steps.count - 1 {
-                await store.save(lesson: lesson, step: stepIndex, complete: true)
+                store.save(lesson: lesson, step: stepIndex, complete: true)
                 transcript = "Great work. \(lesson.title) is complete."
                 if let next = store.nextLesson() { store.select(next); resetForSelection(); try? await Task.sleep(for: .milliseconds(600)); present() }
                 else { status = "\(lesson.level.rawValue) journey complete"; running = false; await voice.disconnect() }
             } else {
-                await store.save(lesson: lesson, step: stepIndex, complete: false)
+                store.save(lesson: lesson, step: stepIndex, complete: false)
                 stepIndex += 1; present()
             }
         }

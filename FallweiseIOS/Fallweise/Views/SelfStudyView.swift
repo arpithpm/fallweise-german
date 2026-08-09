@@ -185,12 +185,12 @@ struct SelfStudyView: View {
     }
 
     private func advance() {
-        Task {
-            let isLast = stepIndex == lesson.steps.count - 1
-            await store.save(lesson: lesson, step: stepIndex, complete: isLast)
-            if isLast { withAnimation { finished = true } }
-            else { stepIndex += 1; resetActivity() }
-        }
+        let completedStep = stepIndex
+        let completedLesson = lesson
+        let isLast = completedStep == completedLesson.steps.count - 1
+        if isLast { withAnimation { finished = true } }
+        else { stepIndex += 1; resetActivity() }
+        store.save(lesson: completedLesson, step: completedStep, complete: isLast)
     }
 
     private var reviewItem: AdaptiveReviewItem? {

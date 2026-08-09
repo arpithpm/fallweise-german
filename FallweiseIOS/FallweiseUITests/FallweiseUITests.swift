@@ -62,6 +62,12 @@ final class FallweiseUITests: XCTestCase {
         app.buttons["Check"].tap()
         XCTAssertTrue(app.buttons["I knew it"].waitForExistence(timeout: 3))
         app.buttons["I knew it"].tap()
+        XCTAssertTrue(app.staticTexts["Wie heißt du?"].waitForExistence(timeout: 1))
+        let secondField = app.textFields["Retrieve the German first"]
+        secondField.tap(); secondField.typeText("ich heisse arpith")
+        app.buttons["Check"].tap()
+        app.buttons["I knew it"].tap()
+        XCTAssertTrue(app.staticTexts["LESSON COMPLETE"].waitForExistence(timeout: 1))
         app.buttons["Close lesson"].tap()
         XCTAssertTrue(app.staticTexts["Choose your chapter"].waitForExistence(timeout: 3))
     }

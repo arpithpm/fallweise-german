@@ -324,11 +324,16 @@ final class LearningStore {
         PhoneWatchSyncService.shared.sendProgress()
     }
 
-    func save(lesson: VoiceLesson, step: Int, complete: Bool) async {
-        let row = SavedLesson(lessonID: lessonID(lesson), status: complete ? "completed" : "in_progress", mastery: Double(step + 1) / Double(lesson.steps.count), currentStep: step + 1, totalSteps: lesson.steps.count, completedAt: complete ? .now : nil)
+    func save(lesson: VoiceLesson, step: Int, complete: Bool) {
+        let nextStep = complete ? lesson.steps.count : min(lesson.steps.count, step + 2)
+        let row = SavedLesson(lessonID: lessonID(lesson), status: complete ? "completed" : "in_progress", mastery: Double(step + 1) / Double(lesson.steps.count), currentStep: nextStep, totalSteps: lesson.steps.count, completedAt: complete ? .now : nil)
+        if let existing = progress[row.lessonID], existing.status == "completed" || existing.currentStep > row.currentStep { return }
         progress[row.lessonID] = row
         saveLocal()
-        do { try await SupabaseService.shared.saveLesson(row) } catch { errorMessage = "Saved on this iPhone. Cloud sync will retry later." }
+        Task {
+            do { try await SupabaseService.shared.saveLesson(row) }
+            catch { errorMessage = "Saved on this iPhone. Cloud sync will retry later." }
+        }
     }
 
     func lessonID(_ lesson: VoiceLesson) -> String { "voice-tutor:\(lesson.level.rawValue):\(lesson.id)" }
