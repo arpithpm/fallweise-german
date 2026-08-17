@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01C5171071C225F682E774FC /* a2-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = E0F8906A8352611BC2CCA778 /* a2-vocabulary.json */; };
+		052E3F6DDC3D5C157D34D67B /* WatchSessionSyncPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337AF1BF6166CD434869B1C /* WatchSessionSyncPolicy.swift */; };
 		053EC784D1EBB0129F146CF2 /* FallweiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758183FEE9DE432DE8168EEC /* FallweiseUITests.swift */; };
 		06A623ED4823ED1426FFAA0D /* WatchLearningStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D013EC4AE8BC21317B5A6 /* WatchLearningStore.swift */; };
 		0B419979069D06F56F181977 /* LearnerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA487DA3BD9FAA82E56EE856 /* LearnerProfile.swift */; };
@@ -38,6 +39,7 @@
 		AF8DD4B73E2EA136E99FEDEA /* FallweiseWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */; };
 		B07FD7CF3A68CFAEBC8FD50D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC974896CE59F5EED5626408 /* Theme.swift */; };
 		B41C2709A9B1026A7163F6DB /* AdvancedCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB9C18059C8DE57532FF7E /* AdvancedCurriculum.swift */; };
+		B53E6A167CCBC3F2BCFB0D76 /* WatchSessionSyncPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337AF1BF6166CD434869B1C /* WatchSessionSyncPolicy.swift */; };
 		BF8AB30342EAD16CCE9476D3 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C22E207D82D2142D40E29 /* AppComponents.swift */; };
 		D18F2A327B20D716EBE0723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37415F3ED59418D3CB147468 /* Assets.xcassets */; };
 		D4CC66290587638F59733BA9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF2A52ADF71AAF0E6E3888 /* PrivacyInfo.xcprivacy */; };
@@ -122,6 +124,7 @@
 		93BFE0CA7CD50C51BC8C1B2C /* Fallweise.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Fallweise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B099CA55CA82F3A08A85D2 /* AdaptiveVoiceReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveVoiceReviewView.swift; sourceTree = "<group>"; };
 		9D6169BF7FE8039AF24905F3 /* LearningScienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningScienceTests.swift; sourceTree = "<group>"; };
+		A337AF1BF6166CD434869B1C /* WatchSessionSyncPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionSyncPolicy.swift; sourceTree = "<group>"; };
 		A6A8CCFE024CD53988C37A21 /* WatchSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncService.swift; sourceTree = "<group>"; };
 		A7572FF179E539E365A906C7 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
 		B2886839087AFD297085F7E1 /* RolePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolePlayView.swift; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 				BA487DA3BD9FAA82E56EE856 /* LearnerProfile.swift */,
 				4DDE9ED37D2B23BEF40F25BA /* LearningScience.swift */,
 				5B14BDACE97D42DB76A4E99A /* LearningStore.swift */,
+				A337AF1BF6166CD434869B1C /* WatchSessionSyncPolicy.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -457,6 +461,7 @@
 				06A623ED4823ED1426FFAA0D /* WatchLearningStore.swift in Sources */,
 				EB34F953E5E20FBD49A8CE51 /* WatchModels.swift in Sources */,
 				DDFE1D13E68AB2923A5AA380 /* WatchPronunciationService.swift in Sources */,
+				052E3F6DDC3D5C157D34D67B /* WatchSessionSyncPolicy.swift in Sources */,
 				1411A296EFC7C76BB8DB865A /* WatchSyncService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +503,7 @@
 				F2D7D5352900E88F3F6DC988 /* VocabularyMemoryScene.swift in Sources */,
 				78CBC9AF24EC7187FBE4D054 /* VoiceService.swift in Sources */,
 				8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */,
+				B53E6A167CCBC3F2BCFB0D76 /* WatchSessionSyncPolicy.swift in Sources */,
 				751274B4E05D8CF66AAE327D /* WordsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,7 +4,12 @@ import WatchKit
 
 @MainActor @Observable
 final class WatchLearningStore {
-    enum Mode { case daily, articleQuiz }
+    enum Mode {
+        case daily, articleQuiz
+
+        var title: String { self == .daily ? "MEANING PRACTICE" : "ARTICLE PRACTICE" }
+        var instruction: String { self == .daily ? "Recall what the German word means" : "Choose der, die, or das" }
+    }
 
     private(set) var vocabulary: [WatchLevel: [WatchWord]] = [:]
     private(set) var learnedWords: Set<String> = []
@@ -18,6 +23,7 @@ final class WatchLearningStore {
     var articleOptions: [String] = ["der", "die", "das"]
     var selectedArticle: String?
     var answerWasCorrect: Bool?
+    private(set) var isTransitioning = false
 
     private let learnedKey = "fallweise.watch.learned"
     private let reviewsKey = "fallweise.watch.reviews"
@@ -71,7 +77,7 @@ final class WatchLearningStore {
     }
 
     func chooseArticle(_ article: String) {
-        guard let word = currentWord, selectedArticle == nil else { return }
+        guard let word = currentWord, selectedArticle == nil, !isTransitioning else { return }
         selectedArticle = article
         answerWasCorrect = article == word.article
         revealed = true
@@ -79,7 +85,8 @@ final class WatchLearningStore {
     }
 
     func rate(correct: Bool) {
-        guard let word = currentWord else { return }
+        guard let word = currentWord, !isTransitioning else { return }
+        isTransitioning = true
         var review = reviews[word.id] ?? WatchReview(dueAt: .now, intervalDays: 0, repetitions: 0)
         if correct {
             review.repetitions += 1
@@ -97,14 +104,21 @@ final class WatchLearningStore {
         persist()
         WatchSyncService.shared.send(wordID: word.id, correct: correct, level: level.rawValue)
         advance()
+        Task { [weak self] in
+            try? await Task.sleep(for: .milliseconds(350))
+            self?.isTransitioning = false
+        }
     }
 
     func importProgress(learned: [String], selectedLevel: String?, dueWordIDs: [String] = []) {
+        let shouldReplaceSession = WatchSessionSyncPolicy.shouldReplaceSession(
+            currentLevel: level.rawValue, incomingLevel: selectedLevel, hasActiveWords: !dailyWords.isEmpty
+        )
         learnedWords.formUnion(learned)
         phoneDueWordIDs = Set(dueWordIDs)
         if let selectedLevel, let value = WatchLevel(rawValue: selectedLevel) { level = value }
         persist()
-        refreshWordsForCurrentMode(force: true)
+        if shouldReplaceSession { refreshWordsForCurrentMode(force: true) }
     }
 
     private func advance() {

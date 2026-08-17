@@ -26,11 +26,15 @@ private struct ReviewPage: View {
             if let word = store.currentWord {
                 VStack(spacing: 9) {
                     HStack {
-                        Text(store.mode == .daily ? "DAILY FIVE" : "ARTICLE QUIZ")
+                        Text(store.mode.title)
                             .font(.system(size: 10, weight: .black)).tracking(0.8)
                         Spacer()
                         Text(store.progressLabel).font(.caption2.bold())
                     }
+                    Text(store.mode.instruction)
+                        .font(.system(size: 10, weight: .semibold))
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     Text(word.symbol ?? WatchPalette.symbol(for: word)).font(.system(size: 34))
                     if store.mode == .daily { DailyWordView(word: word, audio: audio) }
                     else { ArticleQuizView(word: word, audio: audio) }
@@ -55,8 +59,8 @@ private struct DailyWordView: View {
                 .multilineTextAlignment(.center).minimumScaleFactor(0.65)
             if store.revealed { answer }
             else {
-                Text("Do you remember it?").font(.caption).foregroundStyle(.secondary)
-                Button("Reveal") { store.reveal() }
+                Text("What does it mean?").font(.caption).foregroundStyle(.secondary)
+                Button("Show meaning") { store.reveal() }
                     .buttonStyle(.borderedProminent).tint(.white).foregroundStyle(.black)
             }
         }
@@ -64,13 +68,18 @@ private struct DailyWordView: View {
 
     private var answer: some View {
         VStack(spacing: 8) {
+            Text("MEANING").font(.system(size: 9, weight: .black)).tracking(0.8).foregroundStyle(.secondary)
             Text(word.en).font(.headline).foregroundStyle(.secondary)
             HStack(spacing: 7) {
                 WatchAudioButton(text: word.display, audio: audio)
-                Button { store.rate(correct: false) } label: { Image(systemName: "arrow.counterclockwise") }
-                    .tint(.orange).accessibilityLabel("Again")
-                Button { store.rate(correct: true) } label: { Image(systemName: "checkmark") }
-                    .tint(.green).accessibilityLabel("Got it")
+                Button { store.rate(correct: false) } label: {
+                    VStack(spacing: 1) { Image(systemName: "arrow.counterclockwise"); Text("Again").font(.system(size: 8, weight: .bold)) }
+                }
+                    .tint(.orange).accessibilityLabel("Again").disabled(store.isTransitioning)
+                Button { store.rate(correct: true) } label: {
+                    VStack(spacing: 1) { Image(systemName: "checkmark"); Text("Got it").font(.system(size: 8, weight: .bold)) }
+                }
+                    .tint(.green).accessibilityLabel("Got it").disabled(store.isTransitioning)
             }.buttonStyle(.borderedProminent)
             Text(word.example).font(.caption2).multilineTextAlignment(.center).foregroundStyle(.secondary)
         }
@@ -84,13 +93,14 @@ private struct ArticleQuizView: View {
 
     var body: some View {
         VStack(spacing: 8) {
+            Text("CHOOSE THE ARTICLE").font(.system(size: 9, weight: .black)).tracking(0.7).foregroundStyle(.secondary)
             Text(word.de).font(.system(size: 25, weight: .bold, design: .rounded)).minimumScaleFactor(0.7)
             HStack(spacing: 5) {
                 ForEach(store.articleOptions, id: \.self) { article in
                     Button(article) { store.chooseArticle(article) }
                         .buttonStyle(.borderedProminent)
                         .tint(tint(for: article))
-                        .disabled(store.selectedArticle != nil)
+                        .disabled(store.selectedArticle != nil || store.isTransitioning)
                 }
             }
             if let correct = store.answerWasCorrect {
@@ -98,7 +108,8 @@ private struct ArticleQuizView: View {
                     .font(.caption.bold()).multilineTextAlignment(.center)
                 HStack {
                     WatchAudioButton(text: word.display, audio: audio)
-                    Button("Next") { store.rate(correct: correct) }.buttonStyle(.borderedProminent)
+                    Button { store.rate(correct: correct) } label: { Label("Next word", systemImage: "arrow.right") }
+                        .buttonStyle(.borderedProminent).disabled(store.isTransitioning)
                 }
             }
         }

@@ -160,6 +160,21 @@ final class LearningScienceTests: XCTestCase {
         XCTAssertEqual(restored.resumeIndex(stepCount: 8), 5)
     }
 
+    func testWatchPhoneAcknowledgementDoesNotReplaceActiveWordSession() {
+        XCTAssertFalse(WatchSessionSyncPolicy.shouldReplaceSession(
+            currentLevel: "A1", incomingLevel: "A1", hasActiveWords: true
+        ))
+        XCTAssertFalse(WatchSessionSyncPolicy.shouldReplaceSession(
+            currentLevel: "A1", incomingLevel: nil, hasActiveWords: true
+        ))
+        XCTAssertTrue(WatchSessionSyncPolicy.shouldReplaceSession(
+            currentLevel: "A1", incomingLevel: "A2", hasActiveWords: true
+        ))
+        XCTAssertTrue(WatchSessionSyncPolicy.shouldReplaceSession(
+            currentLevel: "A1", incomingLevel: "A1", hasActiveWords: false
+        ))
+    }
+
     private func allLessons() throws -> [VoiceLesson] {
         try CourseLevel.allCases.flatMap { level in
             CurriculumLoader.lessons(from: try CurriculumLoader.loadVocabulary(level: level), level: level)
