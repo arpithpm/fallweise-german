@@ -150,6 +150,8 @@ private struct WatchMenuView: View {
                 }
                 Button { store.setMode(.daily) } label: { Label("Daily five", systemImage: "sparkles") }
                 Button { store.setMode(.articleQuiz) } label: { Label("Article quiz", systemImage: "questionmark.circle") }
+                Divider()
+                WatchPracticeWeekView()
                 Text("\(store.learnedCount)/\(store.wordCount) words learned").font(.caption2).foregroundStyle(.secondary)
             }.padding(.horizontal, 8)
         }
@@ -157,6 +159,34 @@ private struct WatchMenuView: View {
 
     private var levelBinding: Binding<WatchLevel> {
         Binding(get: { store.level }, set: { store.selectLevel($0) })
+    }
+}
+
+private struct WatchPracticeWeekView: View {
+    @Environment(WatchLearningStore.self) private var store
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 7) {
+            HStack {
+                Text("THIS WEEK").font(.system(size: 9, weight: .black)).tracking(0.8)
+                Spacer()
+                Text("\(store.completedPracticeDaysThisWeek)/5 DAYS").font(.system(size: 9, weight: .bold)).foregroundStyle(.green)
+            }
+            HStack(spacing: 4) {
+                ForEach(Array(store.practiceWeek.enumerated()), id: \.offset) { _, entry in
+                    VStack(spacing: 3) {
+                        Text(entry.date.formatted(.dateTime.weekday(.narrow))).font(.system(size: 8, weight: .bold)).foregroundStyle(.secondary)
+                        ZStack {
+                            Circle().fill(entry.day?.isComplete == true ? Color.green : Color.white.opacity(0.12))
+                            if entry.day?.isComplete == true { Image(systemName: "checkmark").font(.system(size: 7, weight: .black)) }
+                            else if entry.day?.isPartial == true { Circle().fill(.orange).frame(width: 4, height: 4) }
+                        }.frame(width: 18, height: 18)
+                    }.frame(maxWidth: .infinity)
+                }
+            }
+            Text(store.completedPracticeDaysThisWeek >= 5 ? "Weekly rhythm complete" : "One lesson or five reviews earns a tick")
+                .font(.system(size: 9)).foregroundStyle(.secondary)
+        }
     }
 }
 

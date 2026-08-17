@@ -19,6 +19,8 @@ struct HomeView: View {
                         Text("🇩🇪").font(.largeTitle)
                     }
                     LevelSelector()
+                    NavigationLink { PracticeCalendarView() } label: { WeeklyPracticeCard() }
+                        .buttonStyle(.plain)
                     memoryCard
                     continueCard
                     todayPlan

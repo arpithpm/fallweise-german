@@ -9,6 +9,8 @@ struct ProgressViewScreen: View {
                 VStack(alignment: .leading, spacing: 20) {
                     AppPageHeader(kicker: "Your learning", title: "Progress that helps", subtitle: "See what is becoming familiar and choose your next useful step.")
                     summary
+                    NavigationLink { PracticeCalendarView() } label: { WeeklyPracticeCard() }
+                        .buttonStyle(.plain)
                     retentionCard
                     weeklyGoalCard
                     preferencesCard

@@ -175,6 +175,41 @@ final class LearningScienceTests: XCTestCase {
         ))
     }
 
+    func testPracticeDayRequiresMeaningfulEffortForATick() {
+        var day = PracticeDay(day: "2026-08-17")
+        for _ in 0..<4 { day.recordAttempt(correct: true, responseMS: 12_000) }
+        XCTAssertEqual(day.status, .partial)
+        day.recordAttempt(correct: false, responseMS: 12_000)
+        XCTAssertEqual(day.status, .complete)
+
+        var lessonDay = PracticeDay(day: "2026-08-18")
+        lessonDay.recordLessonStep(completed: true)
+        XCTAssertEqual(lessonDay.status, .complete)
+    }
+
+    func testPracticeHistoryCalculatesCurrentAndBestRhythms() {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        calendar.firstWeekday = 2
+        let now = calendar.date(from: DateComponents(year: 2026, month: 8, day: 17, hour: 12))!
+        let complete = { (day: String) in PracticeDay(day: day, attempts: 5) }
+        let days = ["2026-08-11", "2026-08-12", "2026-08-13", "2026-08-16", "2026-08-17"]
+        let history = Dictionary(uniqueKeysWithValues: days.map { ($0, complete($0)) })
+        XCTAssertEqual(PracticeCalendarMath.currentStreak(in: history, now: now, calendar: calendar), 2)
+        XCTAssertEqual(PracticeCalendarMath.bestStreak(in: history, calendar: calendar), 3)
+    }
+
+    func testPracticeDayMergeNeverLosesCrossDeviceProgress() {
+        let phone = PracticeDay(day: "2026-08-17", attempts: 4, correctAttempts: 3, lessonSteps: 2, focusedSeconds: 90)
+        let watch = PracticeDay(day: "2026-08-17", attempts: 5, correctAttempts: 4, lessonSteps: 0, focusedSeconds: 50)
+        let merged = phone.preferred(over: watch)
+        XCTAssertEqual(merged.attempts, 5)
+        XCTAssertEqual(merged.correctAttempts, 4)
+        XCTAssertEqual(merged.lessonSteps, 2)
+        XCTAssertEqual(merged.focusedSeconds, 90)
+        XCTAssertEqual(merged.status, .complete)
+    }
+
     private func allLessons() throws -> [VoiceLesson] {
         try CourseLevel.allCases.flatMap { level in
             CurriculumLoader.lessons(from: try CurriculumLoader.loadVocabulary(level: level), level: level)

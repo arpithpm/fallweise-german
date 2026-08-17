@@ -13,9 +13,12 @@ final class WatchSyncService: NSObject, WCSessionDelegate {
         WCSession.default.activate()
     }
 
-    func send(wordID: String, correct: Bool, level: String) {
+    func send(wordID: String, correct: Bool, level: String, practiceDay: WatchPracticeDay) {
         guard WCSession.isSupported() else { return }
-        let payload: [String: Any] = ["wordID": wordID, "correct": correct, "level": level, "reviewedAt": Date().timeIntervalSince1970]
+        let payload: [String: Any] = ["wordID": wordID, "correct": correct, "level": level,
+            "reviewedAt": Date().timeIntervalSince1970, "practiceDay": practiceDay.day,
+            "practiceAttempts": practiceDay.attempts, "practiceCorrect": practiceDay.correctAttempts,
+            "practiceFocusedSeconds": practiceDay.focusedSeconds]
         if WCSession.default.isReachable { WCSession.default.sendMessage(payload, replyHandler: nil) }
         else { WCSession.default.transferUserInfo(payload) }
     }
@@ -34,6 +37,14 @@ final class WatchSyncService: NSObject, WCSessionDelegate {
         let learned = payload["learnedWords"] as? [String] ?? []
         let level = payload["selectedLevel"] as? String
         let due = payload["dueWordIDs"] as? [String] ?? []
-        Task { @MainActor [weak self] in self?.store?.importProgress(learned: learned, selectedLevel: level, dueWordIDs: due) }
+        let practice = (payload["practiceDays"] as? [[String: Any]] ?? []).compactMap { row -> WatchPracticeDay? in
+            guard let day = row["day"] as? String else { return nil }
+            return WatchPracticeDay(day: day, attempts: row["attempts"] as? Int ?? 0,
+                correctAttempts: row["correct"] as? Int ?? 0, lessonSteps: row["lessonSteps"] as? Int ?? 0,
+                completedLessons: row["completedLessons"] as? Int ?? 0, focusedSeconds: row["focusedSeconds"] as? Int ?? 0)
+        }
+        Task { @MainActor [weak self] in
+            self?.store?.importProgress(learned: learned, selectedLevel: level, dueWordIDs: due, practiceDays: practice)
+        }
     }
 }

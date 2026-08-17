@@ -55,6 +55,7 @@ The migration creates:
 - `review_items`
 - `study_sessions`
 - `exercise_attempts`
+- `practice_days` (monotonic daily evidence for the iPhone/Watch consistency calendar)
 - `learning_dashboard` view
 - `get_daily_review(integer)` function
 

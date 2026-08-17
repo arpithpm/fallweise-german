@@ -17,6 +17,7 @@
 		1743B2456724A1B12D217C25 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5D908133FFB641C0E5DEB /* RootView.swift */; };
 		1844289F48D426D54F37D15E /* LearningScienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6169BF7FE8039AF24905F3 /* LearningScienceTests.swift */; };
 		191674D0A5E747D8D032CDD0 /* FallweiseWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CB91295263A4B23F0A022993 /* FallweiseWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1CB2E232D7E3DDEE188FEB00 /* PracticeCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0DB9EF2B3546AE87F3A0B /* PracticeCalendarView.swift */; };
 		284B3387253EA8AE8FAB1306 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162C255CCD3950B7DFA2F16D /* SupabaseService.swift */; };
 		2A590BA252B1069AE267D33E /* b1-vocabulary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C73BAA75CA93E2443C981AF /* b1-vocabulary.json */; };
 		2E4A45181DBC16604B4FF7A9 /* MiaHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD22254804098C28D6E7469 /* MiaHubView.swift */; };
@@ -34,6 +35,7 @@
 		8295AD1FA31047FDA1B37C0A /* VoiceTutorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA597600731F1177D55CFC8 /* VoiceTutorView.swift */; };
 		94FEC98428B88272B923AFAD /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8100183758DE970DCD2338 /* ReminderService.swift */; };
 		9BA0F017ADCB7626006EBCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0CFF049B3253D8E9BCE1EA /* Assets.xcassets */; };
+		9F6928D79D3F48A9E7F0AA90 /* PracticeHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B13DACE218F26777E405F /* PracticeHistory.swift */; };
 		AD2CCAFCE3EE81A1E884B063 /* LearningScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE9ED37D2B23BEF40F25BA /* LearningScience.swift */; };
 		AF1FB764C39EE0F8E5C00DBD /* AdaptiveReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB53CEFC344666381CBA84F /* AdaptiveReviewView.swift */; };
 		AF8DD4B73E2EA136E99FEDEA /* FallweiseWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8D9633B9DB69E659169FF /* FallweiseWatchApp.swift */; };
@@ -101,6 +103,7 @@
 		13C4C51E774780913B833927 /* FallweiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallweiseApp.swift; sourceTree = "<group>"; };
 		162C255CCD3950B7DFA2F16D /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		16DCE9A444E2371BD9BFF368 /* WatchPronunciationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPronunciationService.swift; sourceTree = "<group>"; };
+		2E9B13DACE218F26777E405F /* PracticeHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeHistory.swift; sourceTree = "<group>"; };
 		37415F3ED59418D3CB147468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BAF2A52ADF71AAF0E6E3888 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		40F01C7B0004E93A5BD75E08 /* VocabularyMemoryScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMemoryScene.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		B9AF2CE89D4C46C12B3B88B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BA487DA3BD9FAA82E56EE856 /* LearnerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnerProfile.swift; sourceTree = "<group>"; };
 		BAB53CEFC344666381CBA84F /* AdaptiveReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveReviewView.swift; sourceTree = "<group>"; };
+		C4B0DB9EF2B3546AE87F3A0B /* PracticeCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCalendarView.swift; sourceTree = "<group>"; };
 		C6E6D643CA1D180669AB2BCB /* a1-vocabulary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "a1-vocabulary.json"; sourceTree = "<group>"; };
 		CB91295263A4B23F0A022993 /* FallweiseWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallweiseWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8100183758DE970DCD2338 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				BA487DA3BD9FAA82E56EE856 /* LearnerProfile.swift */,
 				4DDE9ED37D2B23BEF40F25BA /* LearningScience.swift */,
 				5B14BDACE97D42DB76A4E99A /* LearningStore.swift */,
+				2E9B13DACE218F26777E405F /* PracticeHistory.swift */,
 				A337AF1BF6166CD434869B1C /* WatchSessionSyncPolicy.swift */,
 			);
 			path = Models;
@@ -226,6 +231,7 @@
 				084642FCAF1BE7DF6CB033E2 /* JourneyView.swift */,
 				7793A2BD3806DEC395926DBB /* LearnView.swift */,
 				4CD22254804098C28D6E7469 /* MiaHubView.swift */,
+				C4B0DB9EF2B3546AE87F3A0B /* PracticeCalendarView.swift */,
 				8C466C458FF156873F78E92E /* ProgressViewScreen.swift */,
 				B2886839087AFD297085F7E1 /* RolePlayView.swift */,
 				87C5D908133FFB641C0E5DEB /* RootView.swift */,
@@ -492,6 +498,8 @@
 				50AD5ED58E5CD66E1FDEDA65 /* LearningStore.swift in Sources */,
 				2E4A45181DBC16604B4FF7A9 /* MiaHubView.swift in Sources */,
 				F0F825E0EF07948B0C1BE3F8 /* PhoneWatchSyncService.swift in Sources */,
+				1CB2E232D7E3DDEE188FEB00 /* PracticeCalendarView.swift in Sources */,
+				9F6928D79D3F48A9E7F0AA90 /* PracticeHistory.swift in Sources */,
 				E1D93BAAFC40C6CF81EBA5BB /* ProgressViewScreen.swift in Sources */,
 				E4DEFC6E9E3A75988C8C636E /* PronunciationService.swift in Sources */,
 				94FEC98428B88272B923AFAD /* ReminderService.swift in Sources */,

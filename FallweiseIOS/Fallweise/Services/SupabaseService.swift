@@ -135,6 +135,29 @@ actor SupabaseService {
         return try JSONDecoder.api.decode([AttemptRow].self, from: data).compactMap(\.outcome)
     }
 
+    func savePracticeDay(_ day: PracticeDay) async throws {
+        let token = try await accessToken()
+        guard let userID = session?.userID else { throw URLError(.userAuthenticationRequired) }
+        try await upsert(path: "/rest/v1/practice_days", payload: [PracticeDayPayload(day: day, userID: userID)], token: token)
+    }
+
+    func fetchPracticeDays() async throws -> [PracticeDay] {
+        let token = try await accessToken()
+        let cutoff = Calendar.current.date(byAdding: .year, value: -2, to: .now) ?? .distantPast
+        var components = URLComponents(url: baseURL.appending(path: "/rest/v1/practice_days"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [
+            .init(name: "select", value: "day,attempts,correct_attempts,lesson_steps,completed_lessons,focused_seconds"),
+            .init(name: "day", value: "gte.\(PracticeCalendarMath.dayID(for: cutoff))"),
+            .init(name: "order", value: "day.asc")
+        ]
+        var request = URLRequest(url: components.url!)
+        request.setValue(publishableKey, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw URLError(.badServerResponse) }
+        return try JSONDecoder.api.decode([PracticeDayRow].self, from: data).map(\.practiceDay)
+    }
+
     private func upsert<T: Encodable>(path: String, payload: T, token: String) async throws {
         var request = URLRequest(url: baseURL.appending(path: path))
         request.httpMethod = "POST"
@@ -255,6 +278,36 @@ private struct AttemptPayload: Encodable {
             "level": outcome.level.rawValue, "kind": outcome.kind.rawValue, "format": outcome.format?.rawValue ?? ""]
         correct = outcome.correct; hintsUsed = outcome.hintsUsed; responseMS = outcome.responseMS
         misconception = outcome.misconception; attemptedAt = outcome.attemptedAt
+    }
+}
+
+private struct PracticeDayPayload: Encodable {
+    let userID: String
+    let day: String
+    let attempts: Int
+    let correctAttempts: Int
+    let lessonSteps: Int
+    let completedLessons: Int
+    let focusedSeconds: Int
+
+    init(day: PracticeDay, userID: String) {
+        self.userID = userID; self.day = day.day; attempts = day.attempts
+        correctAttempts = day.correctAttempts; lessonSteps = day.lessonSteps
+        completedLessons = day.completedLessons; focusedSeconds = day.focusedSeconds
+    }
+}
+
+private struct PracticeDayRow: Decodable {
+    let day: String
+    let attempts: Int
+    let correctAttempts: Int
+    let lessonSteps: Int
+    let completedLessons: Int
+    let focusedSeconds: Int
+
+    var practiceDay: PracticeDay {
+        PracticeDay(day: day, attempts: attempts, correctAttempts: correctAttempts,
+            lessonSteps: lessonSteps, completedLessons: completedLessons, focusedSeconds: focusedSeconds)
     }
 }
 

@@ -75,6 +75,7 @@ final class LearningStore {
     private(set) var learnedWords: Set<String> = []
     private(set) var memories: [String: MemoryRecord] = [:]
     private(set) var recentOutcomes: [ReviewOutcome] = []
+    private(set) var practiceDays: [String: PracticeDay] = [:]
     private(set) var preferences: LearnerPreferences
     var selectedLevel: CourseLevel
     var selectedLessonID: String
@@ -97,6 +98,7 @@ final class LearningStore {
     private let sessionLengthKey = "fallweise.ios.session-length"
     private let weeklyGoalKey = "fallweise.ios.weekly-goal-minutes"
     private let preferencesKey = "fallweise.ios.learner-preferences"
+    private let practiceDaysKey = "fallweise.ios.practice-days.v1"
 
     init() {
         let arguments = ProcessInfo.processInfo.arguments
@@ -152,10 +154,11 @@ final class LearningStore {
         return values.isEmpty ? 0 : values.reduce(0, +) / Double(values.count)
     }
     var practicedMinutesThisWeek: Int {
-        let start = Calendar.current.dateInterval(of: .weekOfYear, for: .now)?.start ?? .distantPast
-        let outcomes = recentOutcomes.filter { $0.attemptedAt >= start }
-        return Int(ceil(Double(outcomes.reduce(0) { $0 + max(10_000, $1.responseMS) }) / 60_000))
+        PracticeCalendarMath.week().compactMap { practiceDay(on: $0) }.reduce(0) { $0 + $1.focusedMinutes }
     }
+    var completedPracticeDaysThisWeek: Int { PracticeCalendarMath.week().filter { practiceStatus(on: $0) == .complete }.count }
+    var currentPracticeStreak: Int { PracticeCalendarMath.currentStreak(in: practiceDays) }
+    var bestPracticeStreak: Int { PracticeCalendarMath.bestStreak(in: practiceDays) }
     var retentionSnapshots: [RetentionSnapshot] { [1, 7, 30].map(retentionSnapshot(days:)) }
     var calibratedIntervalFactor: Double {
         let eligible = recentOutcomes.filter { $0.attemptedAt < Date.now.addingTimeInterval(-86_400) }
@@ -231,6 +234,7 @@ final class LearningStore {
         memories[item.id] = updated
         recentOutcomes.append(enriched)
         recentOutcomes = Array(recentOutcomes.suffix(2_000))
+        recordPracticeAttempt(correct: correct, responseMS: responseMS, at: enriched.attemptedAt)
         if correct, let word = item.word { learnedWords.insert(word.id) }
         saveLearningState()
         PhoneWatchSyncService.shared.sendProgress()
@@ -359,6 +363,7 @@ final class LearningStore {
         let row = candidate.preferred(over: progress[candidate.lessonID])
         guard progress[row.lessonID] != row else { return }
         progress[row.lessonID] = row
+        recordLessonPractice(completed: complete, at: row.lastActivityAt)
         saveLocal()
         Task {
             do { try await SupabaseService.shared.saveLesson(row) }
@@ -368,11 +373,26 @@ final class LearningStore {
 
     func lessonID(_ lesson: VoiceLesson) -> String { "voice-tutor:\(lesson.level.rawValue):\(lesson.id)" }
 
+    func practiceDay(on date: Date) -> PracticeDay? { practiceDays[PracticeCalendarMath.dayID(for: date)] }
+
+    func practiceStatus(on date: Date) -> PracticeDayStatus { practiceDay(on: date)?.status ?? .none }
+
+    func mergePracticeDay(_ incoming: PracticeDay) {
+        practiceDays[incoming.day] = incoming.preferred(over: practiceDays[incoming.day])
+        savePracticeDays()
+        Task { try? await SupabaseService.shared.savePracticeDay(practiceDays[incoming.day]!) }
+    }
+
     private func loadLocal() {
         if let data = UserDefaults.standard.data(forKey: progressKey), let rows = try? JSONDecoder.api.decode([SavedLesson].self, from: data) { progress = Dictionary(uniqueKeysWithValues: rows.map { ($0.lessonID, $0) }) }
         learnedWords = Set(UserDefaults.standard.stringArray(forKey: wordsKey) ?? [])
         if let data = UserDefaults.standard.data(forKey: memoriesKey), let saved = try? JSONDecoder.api.decode([String: MemoryRecord].self, from: data) { memories = saved }
         if let data = UserDefaults.standard.data(forKey: outcomesKey), let saved = try? JSONDecoder.api.decode([ReviewOutcome].self, from: data) { recentOutcomes = saved }
+        if let data = UserDefaults.standard.data(forKey: practiceDaysKey), let saved = try? JSONDecoder.api.decode([PracticeDay].self, from: data) {
+            practiceDays = Dictionary(uniqueKeysWithValues: saved.map { ($0.day, $0) })
+        } else {
+            rebuildPracticeHistory()
+        }
     }
 
     private func saveLocal() { UserDefaults.standard.set(try? JSONEncoder.api.encode(Array(progress.values)), forKey: progressKey) }
@@ -381,6 +401,49 @@ final class LearningStore {
         UserDefaults.standard.set(Array(learnedWords), forKey: wordsKey)
         UserDefaults.standard.set(try? JSONEncoder.api.encode(memories), forKey: memoriesKey)
         UserDefaults.standard.set(try? JSONEncoder.api.encode(recentOutcomes), forKey: outcomesKey)
+    }
+
+    private func savePracticeDays() {
+        let cutoff = Calendar.current.date(byAdding: .year, value: -2, to: .now) ?? .distantPast
+        practiceDays = practiceDays.filter { PracticeCalendarMath.date(for: $0.key).map { $0 >= cutoff } ?? false }
+        UserDefaults.standard.set(try? JSONEncoder.api.encode(Array(practiceDays.values)), forKey: practiceDaysKey)
+    }
+
+    private func recordPracticeAttempt(correct: Bool, responseMS: Int, at date: Date) {
+        let id = PracticeCalendarMath.dayID(for: date)
+        var day = practiceDays[id] ?? PracticeDay(day: id)
+        day.recordAttempt(correct: correct, responseMS: responseMS)
+        practiceDays[id] = day
+        savePracticeDays()
+        Task { try? await SupabaseService.shared.savePracticeDay(day) }
+    }
+
+    private func recordLessonPractice(completed: Bool, at date: Date) {
+        let id = PracticeCalendarMath.dayID(for: date)
+        var day = practiceDays[id] ?? PracticeDay(day: id)
+        day.recordLessonStep(completed: completed)
+        practiceDays[id] = day
+        savePracticeDays()
+        PhoneWatchSyncService.shared.sendProgress()
+        Task { try? await SupabaseService.shared.savePracticeDay(day) }
+    }
+
+    private func rebuildPracticeHistory() {
+        var rebuilt: [String: PracticeDay] = [:]
+        for outcome in recentOutcomes {
+            let id = PracticeCalendarMath.dayID(for: outcome.attemptedAt)
+            var day = rebuilt[id] ?? PracticeDay(day: id)
+            day.recordAttempt(correct: outcome.correct, responseMS: outcome.responseMS)
+            rebuilt[id] = day
+        }
+        for row in progress.values {
+            let id = PracticeCalendarMath.dayID(for: row.lastActivityAt)
+            var day = rebuilt[id] ?? PracticeDay(day: id)
+            day.recordLessonStep(completed: row.status == "completed")
+            rebuilt[id] = day
+        }
+        for day in rebuilt.values { practiceDays[day.day] = day.preferred(over: practiceDays[day.day]) }
+        if !practiceDays.isEmpty { savePracticeDays() }
     }
 
     private func savePreferences() {
@@ -432,6 +495,7 @@ final class LearningStore {
             async let memoryRows = SupabaseService.shared.fetchMemories()
             async let remotePreferences = SupabaseService.shared.fetchPreferences()
             async let remoteOutcomes = SupabaseService.shared.fetchRecentOutcomes()
+            async let remotePracticeDays = SupabaseService.shared.fetchPracticeDays()
             let rows = try await lessonRows
             for row in rows {
                 progress[row.lessonID] = row.preferred(over: progress[row.lessonID])
@@ -459,6 +523,9 @@ final class LearningStore {
                     seen.insert("\($0.itemID)|\($0.attemptedAt.timeIntervalSince1970)|\($0.answer)").inserted
                 }.suffix(2_000).map { $0 }
             }
+            for day in try await remotePracticeDays { practiceDays[day.day] = day.preferred(over: practiceDays[day.day]) }
+            rebuildPracticeHistory()
+            for day in practiceDays.values { Task { try? await SupabaseService.shared.savePracticeDay(day) } }
             saveLocal()
             saveLearningState()
             _ = await ReminderService.shared.configure(enabled: preferences.reminderEnabled, hour: preferences.reminderHour, minute: preferences.reminderMinute, dueCount: dueReviewCount)
