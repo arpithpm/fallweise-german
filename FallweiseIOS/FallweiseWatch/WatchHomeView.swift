@@ -3,12 +3,15 @@ import SwiftUI
 struct WatchHomeView: View {
     @Environment(WatchLearningStore.self) private var store
     @StateObject private var audio = WatchPronunciationService()
+    @State private var selectedPage = ProcessInfo.processInfo.arguments.contains("--menu-page") ? 1 : 0
 
     var body: some View {
         NavigationStack {
-            TabView {
+            TabView(selection: $selectedPage) {
                 ReviewPage(audio: audio)
+                    .tag(0)
                 WatchMenuView()
+                    .tag(1)
             }
             .tabViewStyle(.verticalPage)
             .containerBackground(WatchPalette.color(for: store.currentWord).gradient, for: .navigation)
@@ -145,13 +148,19 @@ private struct WatchMenuView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text("fallweise.").font(.headline)
                 Text("One-minute German").font(.caption).foregroundStyle(.secondary)
-                Picker("Level", selection: levelBinding) {
-                    ForEach(WatchLevel.allCases) { level in Text(level.rawValue).tag(level) }
+                WatchPracticeWeekView()
+                HStack {
+                    Text("Level").font(.caption.bold())
+                    Spacer()
+                    Picker("Level", selection: levelBinding) {
+                        ForEach(WatchLevel.allCases) { level in Text(level.rawValue).tag(level) }
+                    }
+                    .labelsHidden()
+                    .frame(width: 84)
                 }
                 Button { store.setMode(.daily) } label: { Label("Daily five", systemImage: "sparkles") }
                 Button { store.setMode(.articleQuiz) } label: { Label("Article quiz", systemImage: "questionmark.circle") }
                 Divider()
-                WatchPracticeWeekView()
                 Text("\(store.learnedCount)/\(store.wordCount) words learned").font(.caption2).foregroundStyle(.secondary)
             }.padding(.horizontal, 8)
         }

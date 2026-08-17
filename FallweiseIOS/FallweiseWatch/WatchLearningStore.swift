@@ -50,6 +50,7 @@ final class WatchLearningStore {
         }
         level = WatchLevel(rawValue: UserDefaults.standard.string(forKey: levelKey) ?? "") ?? .A1
         refreshDailyWords()
+        configureForScreenshotCaptureIfNeeded()
         WatchSyncService.shared.start(store: self)
     }
 
@@ -184,6 +185,16 @@ final class WatchLearningStore {
         UserDefaults.standard.set(level.rawValue, forKey: levelKey)
         UserDefaults.standard.set(try? JSONEncoder().encode(reviews), forKey: reviewsKey)
         UserDefaults.standard.set(try? JSONEncoder().encode(Array(practiceDays.values)), forKey: practiceKey)
+    }
+
+    private func configureForScreenshotCaptureIfNeeded() {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard arguments.contains("--app-store-screenshot") else { return }
+        if arguments.contains("--article-practice") {
+            setMode(.articleQuiz)
+        } else if arguments.contains("--revealed-word") {
+            revealed = true
+        }
     }
 
     private var practiceCalendar: Calendar {
